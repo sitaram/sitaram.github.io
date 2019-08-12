@@ -22,24 +22,16 @@
         "companies": [  // "Where they work", or "facetCurrentCompany"
           {
             "@type": "EducationalOutcome",  // NEW
-            "numStudents": "1885",
-            "facet": "6076",
-            "company": {
-              "@context": "https://schema.org",
-              "@type": "Organization",  // https://schema.org/Organization
-              "name": "Rice University"
-              // TODO unique identifier
-            }
+            "name": "Rice University",
+            "identifier": "6076",
+            "count": "1885"
+            // TODO global identifier
           },
           {
             "@type": "EducationalOutcome",  // NEW
-            "numStudents": "328",
-            "facet": "162655",
-            "company": {
-              "@context": "https://schema.org",
-              "@type": "Organization",  // https://schema.org/Organization
-              "name": "Baylor College of Medicine"
-            }
+            "name": "Baylor College of Medicine",
+            "identifier": "162655",
+            "count": "328"
           }
           // More companies..
         ],
@@ -47,23 +39,15 @@
         "functions": [  // "What they do", or "facetCurrentFunction"
           {
             "@type": "EducationalOutcome",  // NEW
-            "numStudents": "7989",
-            "facet": "4",
-            "function": {
-              "@context": "https://schema.org",
-              "@type": "Occupation",  // https://schema.org/Occupation
-              "name": "Business Development"
-            }
+            "name": "Business Development",
+            "identifier": "4",
+            "count": "7989"
           },
           {
             "@type": "EducationalOutcome",  // NEW
-            "numStudents": "6385",
-            "facet": "7",
-            "function": {
-              "@context": "https://schema.org",
-              "@type": "Occupation",  // https://schema.org/Occupation
-              "name": "Education"
-            }
+            "name": "Education",
+            "identifier": "7",
+            "count": "6385"
           }
           // More functions..
         ],
@@ -71,23 +55,15 @@
         "fieldsOfStudy": [  // "What they studied", or "facetFieldOfStudy"
           {
             "@type": "EducationalOutcome",  // NEW
-            "numStudents": "3267",
-            "facet": "100990",
-            "fieldOfStudy": {
-              "@context": "https://schema.org",
-              "@type": "Course",  // https://schema.org/Course
-              "name": "Economics"
-            }
+            "name": "Economics",
+            "identifier": "100990",
+            "count": "3267"
           },
           {
             "@type": "EducationalOutcome",  // NEW
-            "numStudents": "3044",
-            "facet": "100189",
-            "fieldOfStudy": {
-              "@context": "https://schema.org",
-              "@type": "Course",  // https://schema.org/Course
-              "name": "Computer Science"
-            }
+            "name": "Computer Science",
+            "identifier": "100189",
+            "count": "3044"
           }
           // More fields of study..
         ]
