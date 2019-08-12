@@ -18,31 +18,83 @@
       "educationalOutcomes": {
         "@context": "https://schema.googleapis.com",
         "@type": "EducationalOutcomes",  // NEW
-        "employers": [
+
+        "companies": [  // "Where they work", or "facetCurrentCompany"
           {
             "@type": "EducationalOutcome",  // NEW
             "numStudents": "1885",
             "facet": "6076",
-            "employer": {
+            "company": {
               "@context": "https://schema.org",
               "@type": "Organization",  // https://schema.org/Organization
               "name": "Rice University"
+              // TODO unique identifier
             }
           },
           {
             "@type": "EducationalOutcome",  // NEW
             "numStudents": "328",
             "facet": "162655",
-            "employer": {
+            "company": {
               "@context": "https://schema.org",
               "@type": "Organization",  // https://schema.org/Organization
               "name": "Baylor College of Medicine"
             }
           }
+          // More companies..
         ],
-        "occupations": [
+
+        "functions": [  // "What they do", or "facetCurrentFunction"
+          {
+            "@type": "EducationalOutcome",  // NEW
+            "numStudents": "7989",
+            "facet": "4",
+            "function": {
+              "@context": "https://schema.org",
+              "@type": "Occupation",  // https://schema.org/Occupation
+              "name": "Business Development"
+            }
+          },
+          {
+            "@type": "EducationalOutcome",  // NEW
+            "numStudents": "6385",
+            "facet": "7",
+            "function": {
+              "@context": "https://schema.org",
+              "@type": "Occupation",  // https://schema.org/Occupation
+              "name": "Education"
+            }
+          }
+          // More functions..
         ],
-        "fieldsOfStudy": [
+
+        "fieldsOfStudy": [  // "What they studied", or "facetFieldOfStudy"
+          {
+            "@type": "EducationalOutcome",  // NEW
+            "numStudents": "3267",
+            "facet": "100990",
+            "fieldOfStudy": {
+              "@context": "https://schema.org",
+              "@type": "Course",  // https://schema.org/Course
+              "name": "Economics"
+            }
+          },
+          {
+            "@type": "EducationalOutcome",  // NEW
+            "numStudents": "3044",
+            "facet": "100189",
+            "fieldOfStudy": {
+              "@context": "https://schema.org",
+              "@type": "Course",  // https://schema.org/Course
+              "name": "Computer Science"
+            },
+
+            // NEXT LEVEL OF DETAIL FOR THIS COLLEGE + FIELD OF STUDY
+            "educationalOutcomes": {
+              "@type": "EducationalOutcomes",  // NEW
+            }
+          }
+          // More fields of study..
         ]
       }
     }
