@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>Example Educational Outcomes JSON/LD for Rice University graduates who work at Baylor College of Medicine</title>
+    <!-- https://www.linkedin.com/school/riceuniversity/people/?facetCurrentCompany=162655 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollegeOrUniversity",  // https://schema.org/CollegeOrUniversity
+      "name": "Rice University",
+      "sameAs": "http://en.wikipedia.org/wiki/Rice_University",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "postalCode": "77005",
+        "streetAddress": "6100 Main St"
+      },
+
+      "educationalOutcomes": {
+        "@context": "https://schema.googleapis.com",
+        "@type": "EducationalOutcomes",  // NEW
+
+        // -------------------------------------------------------------------
+        // Restrict for second-level breakdowns for an employer.
+        "companyRestrict": {
+          "@type": "EducationalRestrict",  // NEW
+          "name": "Baylor College of Medicine",
+          "sameAs": "www.bcm.edu",
+          "identifier": "162655"
+        },
+        // -------------------------------------------------------------------
+
+        // Outcomes.
+        "fieldsOfStudy": [  // "What they studied", or "facetFieldOfStudy"
+          {
+            "@type": "EducationalOutcome",  // NEW
+            "name": "Economics",
+            "identifier": "100990",
+            "count": "3267"
+          },
+          {
+            "@type": "EducationalOutcome",  // NEW
+            "name": "Computer Science",
+            "identifier": "100189",
+            "count": "3044"
+          }
+          // More fields of study..
+        ],
+
+        "companies": [  // "Where they work", or "facetCurrentCompany"
+          {
+            "@type": "EducationalOutcome",  // NEW
+            "name": "Rice University",
+            "sameAs": "http://www.rice.edu/",
+            "identifier": "6076",
+            "count": "1885"
+            // TODO logo? http://shortn/_K2TMZbtGRa
+          },
+          {
+            "@type": "EducationalOutcome",  // NEW
+            "name": "Baylor College of Medicine",
+            "sameAs": "www.bcm.edu",
+            "identifier": "162655",
+            "count": "328"
+          }
+          // More companies..
+        ],
+
+        "occupations": [  // "What they do", or "facetCurrentFunction"
+          {
+            "@type": "EducationalOutcome",  // NEW
+            "name": "Business Development",
+            "sameAs": "https://en.wikipedia.org/wiki/Business_development",
+            "identifier": "4",
+            "count": "7989"
+          },
+          {
+            "@type": "EducationalOutcome",  // NEW
+            "name": "Education",
+            "identifier": "7",
+            "count": "6385"
+          }
+          // More occupations..
+        ]
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <a href="https://www.linkedin.com/school/riceuniversity/people/?facetCurrentCompany=162655">This example
+    contains JSON/LD markup for a subset of LinkedIn's Rice University
+    graduates who work at Baylor College of Medicine</a>
+  </body>
+</html>
