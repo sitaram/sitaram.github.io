@@ -15,9 +15,15 @@
         "postalCode": "77005",
         "streetAddress": "6100 Main St"
       },
+      // option 1 for further breakdown: have an optional field-of-study restrict here,
+      // and show this markup on either college or breakdown-by-program page, and maybe
+      // also switch the top-level type to a custom one that extends CollegeOrUniversity
+
       "educationalOutcomes": {
         "@context": "https://schema.googleapis.com",
         "@type": "EducationalOutcomes",  // NEW
+        // option 2 for further breakdown: have an optional field-of-study restrict here,
+        // and show this markup on either college or breakdown-by-program page
 
         "companies": [  // "Where they work", or "facetCurrentCompany"
           {
@@ -58,6 +64,10 @@
             "name": "Economics",
             "identifier": "100990",
             "count": "3267"
+
+            // option 3 for further breakdown: have an EducationalOutcomes
+            // field here, most elegant but forces this breakdown to be on
+            // the same page as the parent one, which might have size issues
           },
           {
             "@type": "EducationalOutcome",  // NEW
