@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Example Educational Outcomes JSON/LD</title>
+    <!-- https://www.linkedin.com/school/riceuniversity/ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollegeOrUniversity",  // https://schema.org/CollegeOrUniversity
+      "name": "Rice University",
+      "sameAs": "http://en.wikipedia.org/wiki/Rice_University",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "postalCode": "77005",
+        "streetAddress": "6100 Main St"
+      },
+      "educationalOutcomes": {
+        "@context": "https://schema.googleapis.com",
+        "@type": "EducationalOutcomes",  // NEW
+        "employers": [
+          {
+            "@type": "EducationalOutcome",  // NEW
+            "numStudents": "1885",
+            "facet": "6076",
+            "employer": {
+              "@context": "https://schema.org",
+              "@type": "Organization",  // https://schema.org/Organization
+              "name": "Rice University"
+            }
+          },
+          {
+            "@type": "EducationalOutcome",  // NEW
+            "numStudents": "328",
+            "facet": "162655",
+            "employer": {
+              "@context": "https://schema.org",
+              "@type": "Organization",  // https://schema.org/Organization
+              "name": "Baylor College of Medicine"
+            }
+          }
+        ],
+        "occupations": [
+        ],
+        "fieldsOfStudy": [
+        ]
+      }
+    }
+    </script>
+  </head>
+  <body>
+    This example contains JSON/LD markup for a subset of LinkedIn's
+    <a href="https://www.linkedin.com/school/riceuniversity/">Rice University page</a>
+  </body>
+</html>
