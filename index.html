@@ -56,46 +56,7 @@
         Outcomes for (this slice of) college graduates.
         Three optional properties:  <a target="_blank" href="https://schema.googleapis.com/fieldOfStudyOutcomes">fieldOfStudyOutcomes</a>, <a target="_blank" href="https://schema.googleapis.com/companyOutcomes">companyOutcomes</a>, and <a target="_blank" href="https://schema.googleapis.com/functionOutcomes">functionOutcomes</a>.
         Each an array of type <a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>, with all the same fields
-        as <a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>
-        with name, identifier, optionally sameAs,
-
-        // -------------------------------------------------------------------
-        // Outcomes.
-
-        "fieldOfStudyOutcomes": [  // What they studied
-          {
-            "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
-            "name": "$field_name",
-            "identifier": "$id",
-            "numStudents": "$num",
-            "thumbnail": "$logo_url"
-          }
-          // More fields of study..
-        ],
-
-        "companyOutcomes": [  // Where they work
-          {
-            "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
-            "name": "$company_name",
-            "sameAs": "$url",
-            "identifier": "$id",
-            "numStudents": "$num",
-            "thumbnail": "$logo_url"
-          }
-          // More companies..
-        ],
-
-        "functionOutcomes": [  // What they do
-          {
-            "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
-            "name": "$function_name",
-            "sameAs": "$url",
-            "identifier": "$id",
-            "numStudents": "$num",
-            "thumbnail": "$logo_url"
-          },
-          // More functions..
-        ]
+        as <a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a> plus <a target="_blank" href="https://schema.googleapis.com/numStudents">numStudents</a>.
       }
     }
   </pre>
