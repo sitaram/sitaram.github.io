@@ -32,10 +32,10 @@
           "sameAs": "$url",
           "identifier": "$id"
         },
-        // Optional facet for occupation-level outcomes.
-        "occupationFacet": {
+        // Optional facet for function-level outcomes.
+        "functionFacet": {
           "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
-          "name": "$occupation_name",
+          "name": "$function_name",
           "sameAs": "$url",
           "identifier": "$id",
         },
@@ -66,16 +66,16 @@
           // More companies..
         ],
 
-        "occupations": [  // "What they do", or "facetCurrentFunction"
+        "functions": [  // "What they do", or "facetCurrentFunction"
           {
             "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
-            "name": "$occupation_name",
+            "name": "$function_name",
             "sameAs": "$url",
             "identifier": "$id",
             "numStudents": "$num",
             "thumbnail": "$logo_url"
           },
-          // More occupations..
+          // More functions..
         ]
       }
     }
