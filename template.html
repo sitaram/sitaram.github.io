@@ -1,7 +1,7 @@
   <pre>
     {
-      "@context": "https://schema.org",
-      "@type": "<a target="_blank" href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>",
+      "@context": "https://schema.googleapis.com",
+      "@type": "<a target="_blank" href="https://schema.googleapis.org/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a>",  // New type extending "<a target="_blank" href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>"
       "name": "$college_name",
       "sameAs": "$identifying_url",
       "address": {
@@ -12,72 +12,66 @@
         "streetAddress": "$street_address"
       },
 
-      <font color="red">"educationalOutcomes":</font> {  // New property of CollegeOrUniversity.
-        "@context": "https://schema.googleapis.com",
-        "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcomes">EducationalOutcomes</a>",  // New type.
+      // -------------------------------------------------------------------
+      // Facets.  None, any combination, or all of these can be set.
+      //
+      // Optional facet for program-level outcomes.
+      "fieldOfStudyFacet": {
+        "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
+        "name": "$field_name",
+        "identifier": "$id"
+      },
+      // Optional facet for company-level outcomes.
+      "companyFacet": {
+        "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
+        "name": "$company_name",
+        "sameAs": "$url",
+        "identifier": "$id"
+      },
+      // Optional facet for function-level outcomes.
+      "functionFacet": {
+        "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
+        "name": "$function_name",
+        "sameAs": "$url",
+        "identifier": "$id",
+      },
 
-        // -------------------------------------------------------------------
-        // Facets.  None, any combination, or all of these can be set.
-        //
-        // Optional facet for program-level outcomes.
-        "fieldOfStudyFacet": {
-          "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
+      // -------------------------------------------------------------------
+      // Outcomes.
+
+      "fieldOfStudyOutcomes": [  // What they studied
+        {
+          "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
           "name": "$field_name",
-          "identifier": "$id"
-        },
-        // Optional facet for company-level outcomes.
-        "companyFacet": {
-          "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
+          "identifier": "$id",
+          "numStudents": "$num",
+          "thumbnail": "$logo_url"
+        }
+        // More fields of study..
+      ],
+
+      "companyOutcomes": [  // Where they work
+        {
+          "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
           "name": "$company_name",
           "sameAs": "$url",
-          "identifier": "$id"
-        },
-        // Optional facet for function-level outcomes.
-        "functionFacet": {
-          "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
+          "identifier": "$id",
+          "numStudents": "$num",
+          "thumbnail": "$logo_url"
+        }
+        // More companies..
+      ],
+
+      "functionOutcomes": [  // What they do
+        {
+          "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
           "name": "$function_name",
           "sameAs": "$url",
           "identifier": "$id",
+          "numStudents": "$num",
+          "thumbnail": "$logo_url"
         },
-
-        // -------------------------------------------------------------------
-        // Outcomes.
-
-        "fieldOfStudyOutcomes": [  // What they studied
-          {
-            "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
-            "name": "$field_name",
-            "identifier": "$id",
-            "numStudents": "$num",
-            "thumbnail": "$logo_url"
-          }
-          // More fields of study..
-        ],
-
-        "companyOutcomes": [  // Where they work
-          {
-            "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
-            "name": "$company_name",
-            "sameAs": "$url",
-            "identifier": "$id",
-            "numStudents": "$num",
-            "thumbnail": "$logo_url"
-          }
-          // More companies..
-        ],
-
-        "functionOutcomes": [  // What they do
-          {
-            "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
-            "name": "$function_name",
-            "sameAs": "$url",
-            "identifier": "$id",
-            "numStudents": "$num",
-            "thumbnail": "$logo_url"
-          },
-          // More functions..
-        ]
-      }
+        // More functions..
+      ]
     }
   </pre>
-

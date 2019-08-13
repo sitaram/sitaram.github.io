@@ -29,10 +29,9 @@
 
   <h2>Schema</h2>
   <ul>
-    <li>New GoogleAPI property <a href="https://schema.googleapis.com/educationalOutcomes">educationalOutcomes</a>
-      for schema.org type <a href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>
-    <li>with expected value of the new GoogleAPI type
-      <a href="https://schema.googleapis.com/EducationalOutcomes">EducationalOutcomes</a>
+    <li>New GoogleAPI type <a href="https://schema.googleapis.com/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a>
+      that extends schema.org type <a href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>
+      with new properties defining facets and outcomes.
     <li>New GoogleAPI types <a href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a> and <a href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>
   </ul>
 
@@ -40,25 +39,22 @@
   <pre>
     &lt;script type="application/ld+json"&gt;
     {
-      "@context": "https://schema.org",
-      "@type": "<a target="_blank" href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>",
+      "@context": "https://schema.googleapis.com",
+      "@type": "<a target="_blank" href="https://schema.googleapis.org/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a>",  // New type extending "<a target="_blank" href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>"
+
       <font color="red">College info:</font> name, address, website, any other global identifiers.
 
-      "<a target="_blank" href="https://schema.googleapis.com/educationalOutcomes">educationalOutcomes</a>": {  // New property of CollegeOrUniversity.
-        An object of the new GoogleAPI type <a href="https://schema.googleapis.com/EducationalOutcomes">EducationalOutcomes</a>.
+      <font color="red">Facets</font> to restrict the cohort to a subset of graduates from this college.
+      Three optional properties:  <a target="_blank" href="https://schema.googleapis.com/fieldOfStudyFacet">fieldOfStudyFacet</a>, <a target="_blank" href="https://schema.googleapis.com/companyFacet">companyFacet</a>, and <a target="_blank" href="https://schema.googleapis.com/functionFacet">functionFacet</a>.
+      Each of type <a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>, with name, identifier, optionally sameAs, and
+      optionally thumbnail. These facets can be present in any combination, or none or
+      all of them, depending on which page is being marked up: the college page (<a href="https://www.linkedin.com/school/riceuniversity/people/">example</a>)
+      or one of the deeper pages (<a href="https://www.linkedin.com/school/riceuniversity/people/?facetFieldOfStudy=100189">example</a>) for a faceted slice of the college.
 
-        <font color="red">Facets</font> to restrict the cohort to a subset of graduates from this college.
-        Three optional properties:  <a target="_blank" href="https://schema.googleapis.com/fieldOfStudyFacet">fieldOfStudyFacet</a>, <a target="_blank" href="https://schema.googleapis.com/companyFacet">companyFacet</a>, and <a target="_blank" href="https://schema.googleapis.com/functionFacet">functionFacet</a>.
-        Each of type <a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>, with name, identifier, optionally sameAs, and
-        optionally thumbnail. These facets can be present in any combination, or none or
-        all of them, depending on which page is being marked up: the college page (<a href="https://www.linkedin.com/school/riceuniversity/people/">example</a>)
-        or one of the deeper pages (<a href="https://www.linkedin.com/school/riceuniversity/people/?facetFieldOfStudy=100189">example</a>) for a faceted slice of the college.
-
-        <font color="red">Outcomes</font> for (this slice of) college graduates.
-        Three optional properties:  <a target="_blank" href="https://schema.googleapis.com/fieldOfStudyOutcomes">fieldOfStudyOutcomes</a>, <a target="_blank" href="https://schema.googleapis.com/companyOutcomes">companyOutcomes</a>, and <a target="_blank" href="https://schema.googleapis.com/functionOutcomes">functionOutcomes</a>.
-        Each an array of type <a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>, with all the same fields
-        as <a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a> plus <a target="_blank" href="https://schema.googleapis.com/numStudents">numStudents</a>.
-      }
+      <font color="red">Outcomes</font> for (this slice of) college graduates.
+      Three optional properties:  <a target="_blank" href="https://schema.googleapis.com/fieldOfStudyOutcomes">fieldOfStudyOutcomes</a>, <a target="_blank" href="https://schema.googleapis.com/companyOutcomes">companyOutcomes</a>, and <a target="_blank" href="https://schema.googleapis.com/functionOutcomes">functionOutcomes</a>.
+      Each an array of type <a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>, with all the same fields
+      as <a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a> plus <a target="_blank" href="https://schema.googleapis.com/numStudents">numStudents</a>.
     }
     &lt;/script&gt;
   </pre>
