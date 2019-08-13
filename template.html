@@ -1,9 +1,9 @@
   <pre>
     {
       "@context": "https://schema.googleapis.com",
-      "@type": "<a target="_blank" href="https://schema.googleapis.org/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a>",  // New type extending "<a target="_blank" href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>"
+      "@type": "<a target="_blank" href="https://schema.googleapis.com/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a>",  // New type extending "<a target="_blank" href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>"
       "name": "$college_name",
-      "sameAs": "$identifying_url",
+      "sameAs": "$website_or_other_uniquely_identifying_url",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "$city",
@@ -19,21 +19,21 @@
       "fieldOfStudyFacet": {
         "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
         "name": "$field_name",
-        "identifier": "$id"
+        "identifier": "$field_id"
       },
       // Optional facet for company-level outcomes.
       "companyFacet": {
         "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
         "name": "$company_name",
         "sameAs": "$url",
-        "identifier": "$id"
+        "identifier": "$company_id"
       },
       // Optional facet for function-level outcomes.
       "functionFacet": {
         "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
         "name": "$function_name",
         "sameAs": "$url",
-        "identifier": "$id",
+        "identifier": "$function_id",
       },
 
       // -------------------------------------------------------------------
@@ -43,9 +43,9 @@
         {
           "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
           "name": "$field_name",
-          "identifier": "$id",
-          "numStudents": "$num",
-          "thumbnail": "$logo_url"
+          "identifier": "$field_id",
+          "thumbnail": "$logo_url",
+          "numStudents": "$num"
         }
         // More fields of study..
       ],
@@ -55,9 +55,9 @@
           "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
           "name": "$company_name",
           "sameAs": "$url",
-          "identifier": "$id",
-          "numStudents": "$num",
-          "thumbnail": "$logo_url"
+          "identifier": "$company_id",
+          "thumbnail": "$logo_url",
+          "numStudents": "$num"
         }
         // More companies..
       ],
@@ -67,9 +67,8 @@
           "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
           "name": "$function_name",
           "sameAs": "$url",
-          "identifier": "$id",
-          "numStudents": "$num",
-          "thumbnail": "$logo_url"
+          "identifier": "$function_id",
+          "numStudents": "$num"
         },
         // More functions..
       ]
