@@ -25,8 +25,9 @@
 <body>
   <h1>Educational Outcomes Markup</h1>
 
+  <i>Note: Links to schema.googleapis.com will work after the RDF is checked in to upload our schema.</i>
+
   <h2>Schema</h2>
-  <i>Note: Links in this section will work after the RDF is checked in to upload our schema to schema.googleapis.com.</i>
   <ul>
     <li>New GoogleAPI property <a href="https://schema.googleapis.com/educationalOutcomes">educationalOutcomes</a>
       for schema.org type <a href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>
@@ -37,10 +38,11 @@
 
   <h2>Template</h2>
   <pre>
+    &lt;script type="application/ld+json"&gt;
     {
       "@context": "https://schema.org",
       "@type": "<a target="_blank" href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>",
-      <font color="red">College</font> info: name, address, website, any other global identifiers.
+      <font color="red">College info:</font> name, address, website, any other global identifiers.
 
       "<a target="_blank" href="https://schema.googleapis.com/educationalOutcomes">educationalOutcomes</a>": {  // New property of CollegeOrUniversity.
         An object of the new GoogleAPI type <a href="https://schema.googleapis.com/EducationalOutcomes">EducationalOutcomes</a>.
@@ -49,8 +51,8 @@
         Three optional properties:  <a target="_blank" href="https://schema.googleapis.com/fieldOfStudyFacet">fieldOfStudyFacet</a>, <a target="_blank" href="https://schema.googleapis.com/companyFacet">companyFacet</a>, and <a target="_blank" href="https://schema.googleapis.com/functionFacet">functionFacet</a>.
         Each of type <a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>, with name, identifier, optionally sameAs, and
         optionally thumbnail. These facets can be present in any combination, or none or
-        all of them, depending on which page is being marked up (the college or one of
-        the deeper pages (<a href="https://www.linkedin.com/school/riceuniversity/people/?facetFieldOfStudy=100189">example</a>) for a faceted slice of the college).
+        all of them, depending on which page is being marked up: the college page (<a href="https://www.linkedin.com/school/riceuniversity/people/">example</a>)
+        or one of the deeper pages (<a href="https://www.linkedin.com/school/riceuniversity/people/?facetFieldOfStudy=100189">example</a>) for a faceted slice of the college.
 
         <font color="red">Outcomes</font> for (this slice of) college graduates.
         Three optional properties:  <a target="_blank" href="https://schema.googleapis.com/fieldOfStudyOutcomes">fieldOfStudyOutcomes</a>, <a target="_blank" href="https://schema.googleapis.com/companyOutcomes">companyOutcomes</a>, and <a target="_blank" href="https://schema.googleapis.com/functionOutcomes">functionOutcomes</a>.
@@ -58,8 +60,9 @@
         as <a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a> plus <a target="_blank" href="https://schema.googleapis.com/numStudents">numStudents</a>.
       }
     }
+    &lt;/script&gt;
   </pre>
-  <div style="text-indent:20px"><a href="template.html">Template</a></div>
+  <div style="text-indent:20px"><a href="template.html">Detailed template</a></div>
 
   <h2>Examples</h2>
   <table>
