@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proposed Schema</title>
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      span.h {
+        padding-left: 0px;
+        font-weight: bold;
+    }
+      span {
+        display: block;
+        padding-left: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Educational Outcomes Extensions</h1>
+
+    <div typeof="rdfs:Class" resource="http://schema.googleapis.com/CollegeOrUniversityWithOutcomes">
+      <span class="h" property="rdfs:label">CollegeOrUniversityWithOutcomes</span>
+      <span property="rdfs:comment">CollegeOrUniversityWithOutcomes is the google extesion of ColegeOrUniversity that adds educational outcome data.</span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CollegeOrUniversity">CollegeOrUniversity</a></span>
+    </div>
+
+    <div typeof="rdfs:Class" resource="http://schema.googleapis.com/EducationalFacet">
+      <span class="h" property="rdfs:label">EducationalFacet</span>
+      <span property="rdfs:comment">EducationalOutcome is the google extesion which allows for specifying a single piece of educational outcome data, such as the company a former student works for.</span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a></span>
+    </div>
+
+    <div typeof="rdf:Property" resource="http://schema.googleapis.com/fieldOfStudyFacet">
+      <span class="h" property="rdfs:label">fieldOfStudyFacet</span>
+      <span property="rdfs:comment">Specifies that the educational outcome data is for a particular field of study.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.googleapis.com/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.googleapis.com/EducationalFacet">EducationalFacet</a></span>
+    </div>
+
+    <div typeof="rdf:Property" resource="http://schema.googleapis.com/companyFacet">
+      <span class="h" property="rdfs:label">companyFacet</span>
+      <span property="rdfs:comment">Specifies that the educational outcome data is for a particular company.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.googleapis.com/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.googleapis.com/EducationalFacet">EducationalFacet</a></span>
+    </div>
+
+    <div typeof="rdf:Property" resource="http://schema.googleapis.com/functionFacet">
+      <span class="h" property="rdfs:label">functionFacet</span>
+      <span property="rdfs:comment">Specifies that the educational outcome data is for a particular occupation.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.googleapis.com/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.googleapis.com/EducationalFacet">EducationalFacet</a></span>
+    </div>
+
+    <div typeof="rdfs:Class" resource="http://schema.googleapis.com/EducationalOutcome">
+      <span class="h" property="rdfs:label">EducationalOutcome</span>
+      <span property="rdfs:comment">EducationalOutcome is the google extesion which allows for specifying the number of outcomes matching a single piece of outcome data, such as a specific field of study.</span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">EducationalFacet</a></span>
+    </div>
+
+    <div typeof="rdf:Property" resource="http://schema.googleapis.com/fieldOfStudyOutcomes">
+      <span class="h" property="rdfs:label">fieldOfStudyOutcomes</span>
+      <span property="rdfs:comment">Educational outcome data by field of study.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.googleapis.com/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a></span>
+    </div>
+
+    <div typeof="rdf:Property" resource="http://schema.googleapis.com/companyOutcomes">
+      <span class="h" property="rdfs:label">companyOutcomes</span>
+      <span property="rdfs:comment">Educational outcome data by company of employment.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.googleapis.com/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a></span>
+    </div>
+
+    <div typeof="rdf:Property" resource="http://schema.googleapis.com/functionOutcomes">
+      <span class="h" property="rdfs:label">functionOutcomes</span>
+      <span property="rdfs:comment">Educational outcome data by occupation.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.googleapis.com/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a></span>
+    </div>
+
+    <div typeof="rdf:Property" resource="http://schema.googleapis.com/numStudents">
+      <span class="h" property="rdfs:label">numStudents</span>
+      <span property="rdfs:comment">Count of matching educational outcomes.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Integer">Integer</a></span>
+    </div>
+  </body>
+</html>
