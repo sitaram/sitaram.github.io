@@ -19,7 +19,15 @@
       "fieldOfStudyFacet": {
         "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
         "name": "$field_name",
-        "identifier": "$field_id"
+        "identifier": [
+          "$field_id",
+          {
+            // CIP information, if available.
+            "@type": "PropertyValue",
+            "name": "cip6",
+            "value": "$cip6"
+          }
+        ]
       },
       // Optional facet for company-level outcomes.
       "companyFacet": {
@@ -43,7 +51,15 @@
         {
           "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
           "name": "$field_name",
-          "identifier": "$field_id",
+          "identifier": [
+            "$field_id",
+            {
+              // CIP information, if available.
+              "@type": "PropertyValue",
+              "name": "cip6",
+              "value": "$cip6"
+            }
+          ],
           "image": "$logo_url",
           "numStudents": "$num"
         }

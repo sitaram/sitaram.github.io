@@ -21,7 +21,14 @@
       "fieldOfStudyFacet": {
         "@type": "EducationalFacet",  // NEW
         "name": "Computer Science",
-        "identifier": "100189"
+        "identifier": [
+          "100189",
+          {
+              "@type": "PropertyValue",
+              "name": "cip6",
+              "value": "11.0101"
+          }
+        ]
       },
       // -------------------------------------------------------------------
 
@@ -29,17 +36,17 @@
       "fieldOfStudyOutcomes": [  // What they studied
         {
           "@type": "EducationalOutcome",  // NEW
-          "name": "Economics",
-          "identifier": "100990",
-          "numStudents": "3267"
-        },
-        {
-          "@type": "EducationalOutcome",  // NEW
           "name": "Computer Science",
-          "identifier": "100189",
-          "numStudents": "3044"
+          "identifier": [
+            "100189",
+            {
+                "@type": "PropertyValue",
+                "name": "cip6",
+                "value": "11.0101"
+            }
+          ],
+          "numStudents": "3049"
         }
-        // More fields of study..
       ],
 
       "companyOutcomes": [  // Where they work
@@ -48,14 +55,13 @@
           "name": "Rice University",
           "sameAs": "http://www.rice.edu/",
           "identifier": "6076",
-          "numStudents": "1885"
-          // TODO logo? http://shortn/_K2TMZbtGRa
+          "numStudents": "175"
         },
         {
           "@type": "EducationalOutcome",  // NEW
-          "name": "Baylor College of Medicine",
-          "sameAs": "www.bcm.edu",
-          "identifier": "162655",
+          "name": "Google",
+          "sameAs": "https://www.google.com/",
+          "identifier": "1441",
           "numStudents": "328"
         }
         // More companies..
@@ -64,16 +70,17 @@
       "functionOutcomes": [  // What they do
         {
           "@type": "EducationalOutcome",  // NEW
-          "name": "Business Development",
-          "sameAs": "https://en.wikipedia.org/wiki/Business_development",
-          "identifier": "4",
-          "numStudents": "7989"
+          "name": "Engineering",
+          "sameAs": "https://en.wikipedia.org/wiki/Engineering",
+          "identifier": "8",
+          "numStudents": "1321"
         },
         {
           "@type": "EducationalOutcome",  // NEW
-          "name": "Education",
-          "identifier": "7",
-          "numStudents": "6385"
+          "name": "Business Development",
+          "sameAs": "https://en.wikipedia.org/wiki/Business_development",
+          "identifier": "4",
+          "numStudents": "364"
         }
         // More functions..
       ]

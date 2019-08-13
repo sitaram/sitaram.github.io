@@ -21,14 +21,28 @@
         {
           "@type": "EducationalOutcome",  // NEW
           "name": "Economics",
-          "identifier": "100990",
-          "numStudents": "3267"
+          "identifier": [
+            "100990",
+            {
+                "@type": "PropertyValue",
+                "name": "cip6",
+                "value": "45.0602"
+            }
+          ],
+          "numStudents": "3258"
         },
         {
           "@type": "EducationalOutcome",  // NEW
           "name": "Computer Science",
-          "identifier": "100189",
-          "numStudents": "3044"
+          "identifier": [
+            "100189",
+            {
+                "@type": "PropertyValue",
+                "name": "cip6",
+                "value": "11.0101"
+            }
+          ],
+          "numStudents": "3049"
         }
         // More fields of study..
       ],
@@ -39,7 +53,7 @@
           "name": "Rice University",
           "sameAs": "http://www.rice.edu/",
           "identifier": "6076",
-          "numStudents": "1885"
+          "numStudents": "1880"
           // TODO logo? http://shortn/_K2TMZbtGRa
         },
         {
@@ -63,8 +77,9 @@
         {
           "@type": "EducationalOutcome",  // NEW
           "name": "Education",
+          "sameAs": "https://en.wikipedia.org/wiki/Education",
           "identifier": "7",
-          "numStudents": "6385"
+          "numStudents": "6389"
         }
         // More functions..
       ]

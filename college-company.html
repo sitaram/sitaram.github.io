@@ -30,15 +30,29 @@
       "fieldOfStudyOutcomes": [  // What they studied
         {
           "@type": "EducationalOutcome",  // NEW
-          "name": "Economics",
-          "identifier": "100990",
-          "numStudents": "3267"
+          "name": "Biochemistry",
+          "identifier": [
+            "100611",
+            {
+                "@type": "PropertyValue",
+                "name": "cip6",
+                "value": "26.0202"
+            }
+          ],
+          "numStudents": "64"
         },
         {
           "@type": "EducationalOutcome",  // NEW
-          "name": "Computer Science",
-          "identifier": "100189",
-          "numStudents": "3044"
+          "name": "Cell Biology and Anatomy",
+          "identifier": [
+            "100629",
+            {
+                "@type": "PropertyValue",
+                "name": "cip6",
+                "value": "26.0407"
+            }
+          ],
+          "numStudents": "39"
         }
         // More fields of study..
       ],
@@ -46,35 +60,27 @@
       "companyOutcomes": [  // Where they work
         {
           "@type": "EducationalOutcome",  // NEW
-          "name": "Rice University",
-          "sameAs": "http://www.rice.edu/",
-          "identifier": "6076",
-          "numStudents": "1885"
-          // TODO logo? http://shortn/_K2TMZbtGRa
-        },
-        {
-          "@type": "EducationalOutcome",  // NEW
           "name": "Baylor College of Medicine",
           "sameAs": "www.bcm.edu",
           "identifier": "162655",
           "numStudents": "328"
         }
-        // More companies..
       ],
 
       "functionOutcomes": [  // What they do
         {
           "@type": "EducationalOutcome",  // NEW
-          "name": "Business Development",
-          "sameAs": "https://en.wikipedia.org/wiki/Business_development",
-          "identifier": "4",
-          "numStudents": "7989"
+          "name": "Education",
+          "sameAs": "https://en.wikipedia.org/wiki/Education",
+          "identifier": "7",
+          "numStudents": "138"
         },
         {
           "@type": "EducationalOutcome",  // NEW
-          "name": "Education",
-          "identifier": "7",
-          "numStudents": "6385"
+          "name": "Research",
+          "sameAs": "https://en.wikipedia.org/wiki/Research",
+          "identifier": "24",
+          "numStudents": "133"
         }
         // More functions..
       ]
