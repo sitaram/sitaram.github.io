@@ -1,0 +1,83 @@
+  <pre>
+    {
+      "@context": "https://schema.org",
+      "@type": "<a target="_blank" href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>",
+      "name": "$college_name",
+      "sameAs": "$identifying_url",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "$city",
+        "addressRegion": "$state",
+        "postalCode": "$zip_code",
+        "streetAddress": "$street_address"
+      },
+
+      <font color="red">"educationalOutcomes":</font> {  // New property of CollegeOrUniversity.
+        "@context": "https://schema.googleapis.com",
+        "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcomes">EducationalOutcomes</a>",  // New type.
+
+        // -------------------------------------------------------------------
+        // Facets.  None, any combination, or all of these can be set.
+        //
+        // Optional facet for program-level outcomes.
+        "fieldOfStudyFacet": {
+          "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
+          "name": "$field_name",
+          "identifier": "$id"
+        },
+        // Optional facet for company-level outcomes.
+        "companyFacet": {
+          "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
+          "name": "$company_name",
+          "sameAs": "$url",
+          "identifier": "$id"
+        },
+        // Optional facet for occupation-level outcomes.
+        "occupationFacet": {
+          "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>",
+          "name": "$occupation_name",
+          "sameAs": "$url",
+          "identifier": "$id",
+        },
+
+        // -------------------------------------------------------------------
+        // Outcomes.
+
+        "fieldsOfStudy": [  // "What they studied", or "facetFieldOfStudy"
+          {
+            "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
+            "name": "$field_name",
+            "identifier": "$id",
+            "numStudents": "$num",
+            "thumbnail": "$logo_url"
+          }
+          // More fields of study..
+        ],
+
+        "companies": [  // "Where they work", or "facetCurrentCompany"
+          {
+            "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
+            "name": "$company_name",
+            "sameAs": "$url",
+            "identifier": "$id",
+            "numStudents": "$num",
+            "thumbnail": "$logo_url"
+          }
+          // More companies..
+        ],
+
+        "occupations": [  // "What they do", or "facetCurrentFunction"
+          {
+            "@type": "<a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>",
+            "name": "$occupation_name",
+            "sameAs": "$url",
+            "identifier": "$id",
+            "numStudents": "$num",
+            "thumbnail": "$logo_url"
+          },
+          // More occupations..
+        ]
+      }
+    }
+  </pre>
+

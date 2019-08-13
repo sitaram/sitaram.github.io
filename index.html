@@ -1,8 +1,93 @@
-<h1>Career Outcomes JSON/LD examples</h1>
-<ul>
-<li><a href="college.html">college: outcomes of Rice University graduates</a> - (<a href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege.html">sdtt</a>)
-<li><a href="college-fieldofstudy.html">college + fieldofstudy: outcomes of Rice University Computer Science graduates</a> - (<a href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege-fieldofstudy.html">sdtt</a>)
-<li><a href="college-company.html">college + company: outcomes of Rice University graduates who work at Baylor College of Medicine</a> - (<a href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege-company.html">sdtt</a>)
-<li><a href="college-occupation.html">college + occupation: outcomes of Rice University graduates who work in Business Development</a> - (<a href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege-occupation.html">sdtt</a>)
-</ul>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Educational Outcomes Markup</title>
+    <style>
+     body {
+       font-family: roboto, sans-serif, arial;
+     }
+     table, td, th {
+       border: .5px solid #ddd;
+     }
+     table {
+       border-collapse: collapse;
+     }
+     th, td {
+       padding: 10px;
+       text-align: left;
+     }
+     li {
+       margin: 6px 0;
+     }
+    </style>
+</head>
 
+<body>
+  <h1>Educational Outcomes Markup</h1>
+
+  <h2>Schema</h2>
+  <ul>
+    <li>New GoogleAPI property <a target="_blank" href="https://schema.googleapis.com/educationalOutcomes">educationalOutcomes</a> for type
+      <a target="_blank" href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>
+    <li>with expected value of the new GoogleAPI type
+      <a target="_blank" href="https://schema.googleapis.com/EducationalOutcomes">EducationalOutcomes</a>
+    <li>New GoogleAPI types <a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a> and <a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>
+  </ul>
+
+  <h2>Template</h2>
+  <div style="text-indent:20px"><a target="_blank" href="template.html">Template</a></div>
+
+  <h2>Examples</h2>
+  <table>
+    <tr><th>
+    Category
+    </th><th>
+    LinkedIn page
+    </th><th>
+    Markup
+    </th><th>
+    SDTT
+    </th></tr>
+
+    <tr><td>
+    college
+    </td><td>
+    <a target="_blank" href="https://www.linkedin.com/school/riceuniversity/">outcomes of Rice grads</a>
+    </td><td>
+    <a target="_blank" href="college.html">markup</a>
+    </td><td>
+    <a target="_blank" href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege.html">sdtt</a>
+    </td></tr>
+
+    <tr><td>
+    college + fieldofstudy
+    </td><td>
+    <a target="_blank" href="https://www.linkedin.com/school/riceuniversity/people/?facetFieldOfStudy=100189">outcomes of Rice CS grads</a>
+    </td><td>
+    <a target="_blank" href="college-fieldofstudy.html">markup</a>
+    </td><td>
+    <a target="_blank" href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege-fieldofstudy.html">sdtt</a>
+    </td></tr>
+
+    <tr><td>
+    college + company
+    </td><td>
+    <a target="_blank" href="https://www.linkedin.com/school/riceuniversity/people/?facetCurrentCompany=162655">outcomes of Rice grads who work at Baylor College of Medicine</a>
+    </td><td>
+    <a target="_blank" href="college-company.html">markup</a>
+    </td><td>
+    <a target="_blank" href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege-company.html">sdtt</a>
+    </td></tr>
+
+    <tr><td>
+    college + occupation
+    </td><td>
+    <a target="_blank" href="https://www.linkedin.com/school/riceuniversity/people/?facetCurrentFunction=4">outcomes of Rice grads who work in Business Development</a>
+    </td><td>
+    <a target="_blank" href="college-occupation.html">markup</a>
+    </td><td>
+    <a target="_blank" href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege-occupation.html">sdtt</a>
+    </td></tr>
+  </table>
+</body>
+</html>
