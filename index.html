@@ -30,10 +30,10 @@
 
   <h2>Schema</h2>
   <ul>
-    <li>New GoogleAPI type <a href="https://schema.googleapis.com/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a>
-      that extends the schema.org type <a href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>
-    <li>with 3 new facet properties: <a target="_blank" href="https://schema.googleapis.com/fieldOfStudyFacet">fieldOfStudyFacet</a>, <a target="_blank" href="https://schema.googleapis.com/companyFacet">companyFacet</a>, and <a target="_blank" href="https://schema.googleapis.com/functionFacet">functionFacet</a>, of the new type <a href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>
-    <li>and 3 new outcomes properties: <a target="_blank" href="https://schema.googleapis.com/fieldOfStudyOutcomes">fieldOfStudyOutcomes</a>, <a target="_blank" href="https://schema.googleapis.com/companyOutcomes">companyOutcomes</a>, and <a target="_blank" href="https://schema.googleapis.com/functionOutcomes">functionOutcomes</a>, of the new type <a href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>
+    <li>New GoogleAPI type <a target="_blank" href="https://schema.googleapis.com/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a>
+      that extends the schema.org type <a target="_blank" href="https://schema.org/CollegeOrUniversity">CollegeOrUniversity</a>
+    <li>with 3 new facet properties: <a target="_blank" href="https://schema.googleapis.com/fieldOfStudyFacet">fieldOfStudyFacet</a>, <a target="_blank" href="https://schema.googleapis.com/companyFacet">companyFacet</a>, and <a target="_blank" href="https://schema.googleapis.com/functionFacet">functionFacet</a>, of the new type <a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>
+    <li>and 3 new outcomes properties: <a target="_blank" href="https://schema.googleapis.com/fieldOfStudyOutcomes">fieldOfStudyOutcomes</a>, <a target="_blank" href="https://schema.googleapis.com/companyOutcomes">companyOutcomes</a>, and <a target="_blank" href="https://schema.googleapis.com/functionOutcomes">functionOutcomes</a>, of the new type <a target="_blank" href="https://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a>
   </ul>
 
   <h2>Summary</h2>
@@ -50,9 +50,9 @@
       // Each of type <a target="_blank" href="https://schema.googleapis.com/EducationalFacet">EducationalFacet</a>, with name, identifier, optionally sameAs, and
       // optionally an image.
       //
-      // - These facets may all be missing, for a college page (<a href="https://www.linkedin.com/school/riceuniversity/people/">example</a>)
-      // - or any of them can be present for one of the deeper slices (<a href="https://www.linkedin.com/school/riceuniversity/people/?facetFieldOfStudy=100189">example</a>)
-      // - or they can all be present together for a deep combination (<a href="https://www.linkedin.com/school/riceuniversity/people/?facetCurrentCompany=1441&facetCurrentFunction=19&facetFieldOfStudy=100189">example</a>)
+      //   - These facets may all be missing, for a college page (<a target="_blank" href="https://www.linkedin.com/school/riceuniversity/people/">example</a>)
+      //   - or any of them can be present for one of the deeper slices (<a target="_blank" href="https://www.linkedin.com/school/riceuniversity/people/?facetFieldOfStudy=100189">example</a>)
+      //   - or they can all be present together for a deep combination (<a target="_blank" href="https://www.linkedin.com/school/riceuniversity/people/?facetCurrentCompany=1441&facetCurrentFunction=19&facetFieldOfStudy=100189">example</a>)
 
       // <font color="red">Number</font> of students from this college matching facets (or all if no facets present).
       // Property <a target="_blank" href="https://schema.googleapis.com/numStudents">numStudents</a>
@@ -66,7 +66,7 @@
   </pre>
 
   <h2>Template</h2>
-  <div style="text-indent:20px"><a href="template.html">Detailed template for JSON/LD markup</a></div>
+  <div style="text-indent:20px"><a target="_blank" href="template.html">Detailed template for JSON/LD markup</a></div>
 
   <h2>Examples</h2>
   <table>
@@ -83,41 +83,41 @@
     <tr><td>
     college
     </td><td>
-    <a href="https://www.linkedin.com/school/riceuniversity/">outcomes of Rice grads</a>
+    <a target="_blank" href="https://www.linkedin.com/school/riceuniversity/">outcomes of Rice grads</a>
     </td><td>
-    <a href="college.html">markup</a>
+    <a target="_blank" href="college.html">markup</a>
     </td><td>
-    <a href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege.html">sdtt</a>
+    <a target="_blank" href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege.html">sdtt</a>
     </td></tr>
 
     <tr><td>
     college + fieldofstudy
     </td><td>
-    <a href="https://www.linkedin.com/school/riceuniversity/people/?facetFieldOfStudy=100189">outcomes of Rice CS grads</a>
+    <a target="_blank" href="https://www.linkedin.com/school/riceuniversity/people/?facetFieldOfStudy=100189">outcomes of Rice CS grads</a>
     </td><td>
-    <a href="college-fieldofstudy.html">markup</a>
+    <a target="_blank" href="college-fieldofstudy.html">markup</a>
     </td><td>
-    <a href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege-fieldofstudy.html">sdtt</a>
+    <a target="_blank" href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege-fieldofstudy.html">sdtt</a>
     </td></tr>
 
     <tr><td>
     college + company
     </td><td>
-    <a href="https://www.linkedin.com/school/riceuniversity/people/?facetCurrentCompany=162655">outcomes of Rice grads who work at Baylor College of Medicine</a>
+    <a target="_blank" href="https://www.linkedin.com/school/riceuniversity/people/?facetCurrentCompany=162655">outcomes of Rice grads who work at Baylor College of Medicine</a>
     </td><td>
-    <a href="college-company.html">markup</a>
+    <a target="_blank" href="college-company.html">markup</a>
     </td><td>
-    <a href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege-company.html">sdtt</a>
+    <a target="_blank" href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege-company.html">sdtt</a>
     </td></tr>
 
     <tr><td>
     college + function
     </td><td>
-    <a href="https://www.linkedin.com/school/riceuniversity/people/?facetCurrentFunction=4">outcomes of Rice grads who work in Business Development</a>
+    <a target="_blank" href="https://www.linkedin.com/school/riceuniversity/people/?facetCurrentFunction=4">outcomes of Rice grads who work in Business Development</a>
     </td><td>
-    <a href="college-function.html">markup</a>
+    <a target="_blank" href="college-function.html">markup</a>
     </td><td>
-    <a href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege-function.html">sdtt</a>
+    <a target="_blank" href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fsitaram.github.io%2Fcollege-function.html">sdtt</a>
     </td></tr>
   </table>
 </body>
