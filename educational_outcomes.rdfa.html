@@ -19,13 +19,13 @@
 
     <div typeof="rdfs:Class" resource="http://schema.googleapis.com/CollegeOrUniversityWithOutcomes">
       <span class="h" property="rdfs:label">CollegeOrUniversityWithOutcomes</span>
-      <span property="rdfs:comment">CollegeOrUniversityWithOutcomes is the google extesion of ColegeOrUniversity that adds educational outcome data.</span>
+      <span property="rdfs:comment">CollegeOrUniversityWithOutcomes is the google extension of CollegeOrUniversity that adds educational outcome data.</span>
       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CollegeOrUniversity">CollegeOrUniversity</a></span>
     </div>
 
     <div typeof="rdfs:Class" resource="http://schema.googleapis.com/EducationalFacet">
       <span class="h" property="rdfs:label">EducationalFacet</span>
-      <span property="rdfs:comment">EducationalOutcome is the google extesion which allows for specifying a single piece of educational outcome data, such as the company a former student works for.</span>
+      <span property="rdfs:comment">EducationalOutcome is the google extension which allows for specifying a single piece of educational outcome data, such as the company a former student works for.</span>
       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a></span>
     </div>
 
@@ -52,7 +52,7 @@
 
     <div typeof="rdfs:Class" resource="http://schema.googleapis.com/EducationalOutcome">
       <span class="h" property="rdfs:label">EducationalOutcome</span>
-      <span property="rdfs:comment">EducationalOutcome is the google extesion which allows for specifying the number of outcomes matching a single piece of outcome data, such as a specific field of study.</span>
+      <span property="rdfs:comment">EducationalOutcome is the google extension which allows for specifying the number of outcomes matching a single piece of outcome data, such as a specific field of study.</span>
       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">EducationalFacet</a></span>
     </div>
 
@@ -80,6 +80,7 @@
     <div typeof="rdf:Property" resource="http://schema.googleapis.com/numStudents">
       <span class="h" property="rdfs:label">numStudents</span>
       <span property="rdfs:comment">Count of matching educational outcomes.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.googleapis.com/CollegeOrUniversityWithOutcomes">CollegeOrUniversityWithOutcomes</a></span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.googleapis.com/EducationalOutcome">EducationalOutcome</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Integer">Integer</a></span>
     </div>
