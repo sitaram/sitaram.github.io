@@ -17,31 +17,34 @@
      }
 
      #titlebar {
-       padding: 16px 24px;
+       padding: 12px 51px 12px 18px;
        border-bottom: 1px solid #add6ff;
        background-color: #d6ebff;
        position: relative;
        font-size: 20px;
        color: #333;
+       min-height: 24px;
      }
      #back {
        display: none;
        position: absolute;
-       top: 32%;
+       top: 0;
        fill: #333;
-       margin: -17px 0 0 -24px;
+       margin-left: -18px;
      }
-     #backsvg {
+     svg {
        padding: 13px;
      }
      #title {
-       display: inline-block;
+       display: block;
      }
      #view {
        position: absolute;
        right: 16px;
-       top: 32%;
+       top: 0;
+       fill: #333;
        font-style: italic;
+       margin-right: -16px;
      }
      #add {
        background-color: #d6ebff;
@@ -65,22 +68,19 @@
        border: none;
        box-shadow: 0 1px 2px 1px #ccc;
        font-size: 18px;
-       min-height: 47px;
-       padding: 4px 8px 4px 32px;
+       min-height: 48px;
+       padding: 2px 8px 2px 37px;
        position: relative;
      }
-     #list .grip-icon {
-       left: 12px;
+     #list .drag-icon {
        position: absolute;
-       top: 20px;
-       border: 3px solid rgba(0,0,0,0);
-       transform: scale(2, 2);
+       top: 0;
+       left: 0;
      }
      #list .edit-icon {
-       border: 16px solid white;
        position: absolute;
-       top: 7px;
-       right: 0px;
+       top: 0;
+       right: 0;
      }
      #list .item {
        display: block;
@@ -89,11 +89,17 @@
      }
      #list .input {
        font-family: Roboto, sans-serif, arial;
-       padding: 4px;
+       padding: 8px;
        width: 100%;
-       margin: -10px -6px;
+       margin: -9px -9px;
        font-size: 18px;
-       height: 20px;
+       min-height: 20px;
+     }
+     #list .input:focus {
+       box-shadow: inset 0 0 4px 1px #add6ff;
+       border: 1px solid #9dc6ef;
+       outline: none;
+       color: #2471bf;
      }
   </style>
 
@@ -146,7 +152,7 @@
       // Title.
       if (node != root) {
         $('#back').show();
-        $('#title').css('margin-left', '24px');
+        $('#title').css('margin-left', '34px');
       }
       $('#title').text(node);
       $("#titlebar").disableSelection();
@@ -158,11 +164,14 @@
         else location.href += '/' + node;
       }
 
+      var dragSVG = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#555"><path d="M11 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
+      var editSVG = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#555"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/><path d="M0 0h24v24H0z" fill="none"/></svg>';
+
       function addItem(child) {
-        var editElement = $('<span/>', { "class": "edit-icon ui-icon ui-icon-pencil" }).click(editFn);
+        var editElement = $('<span/>', { "class": "edit-icon" }).append(editSVG).click(editFn);
         $('#list').append(
           $('<li/>', { "class": "row ui-state-default ui-sortable-handle" }).append(
-            $('<span/>', { "class": "grip-icon ui-icon ui-icon-grip-dotted-vertical" }),
+            $('<span/>', { "class": "drag-icon" }).append(dragSVG),
             $('<span/>', { "class": "item" }).click(child, visitFn).text(child),
             editElement));
         return editElement;
@@ -171,7 +180,7 @@
         addItem(child);
       }
 
-      $("#list").sortable({ handle: '.grip-icon' });
+      $("#list").sortable({ handle: '.drag-icon' });
       document.getSelection().removeAllRanges();
       $("#list").disableSelection();
 
@@ -204,7 +213,8 @@
           .bind("keyup", keyUpFn)
           .appendTo(item)
           .focus()
-          .val(text);
+          .val(text)
+          .scrollLeft(10000);
       }
 
       // Add.
@@ -227,10 +237,12 @@
 
 <div id="titlebar">
   <span id="back" onClick="history.back()">
-    <svg id="backsvg" focusable="false" xmlns="http://www.w3.org/2000/svg" width=24 height=24>
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
       <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg></span>
   <span id="title">How to X</span>
-  <span id="view">view</span>
+  <span id="view">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+      <path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm12 15.59l-2.2-2.2c.44-.69.7-1.51.7-2.39 0-2.48-2.02-4.5-4.5-4.5S7.5 10.52 7.5 13s2.02 4.5 4.5 4.5c.88 0 1.69-.26 2.39-.7l3.2 3.2H6V4h7.17L18 8.83v8.76zm-6-2.09c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg></span>
 </div>
 
 <ul id="list" class="ui-sortable"></ul>
