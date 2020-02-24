@@ -135,7 +135,7 @@
 
     $(document).ready(function() {
       // Where are we?
-      var qidx = location.href.indexOf('?');
+      var qidx = location.href.indexOf('#');
       var query = '';
       if (qidx != -1) query = unescape(location.href.substr(qidx+1)) + '/';
 
@@ -159,10 +159,9 @@
 
       // List.
       function visitFn(e) {
-        var node = e.data;
-        if (location.href.indexOf('?') == -1) location.href += '?' + node;
-        else location.href += '/' + node;
+        window.location.hash += (window.location.hash == '' ? '' : '/') + e.data;
       }
+      $(window).on('hashchange', function() { location.reload(); });
 
       var dragSVG = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#555"><path d="M11 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
       var editSVG = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#555"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/><path d="M0 0h24v24H0z" fill="none"/></svg>';
