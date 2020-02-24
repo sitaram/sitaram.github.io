@@ -17,20 +17,20 @@
      }
 
      #titlebar {
-       padding: 12px 51px 12px 18px;
-       border-bottom: 1px solid #add6ff;
        background-color: #d6ebff;
-       position: relative;
-       font-size: 20px;
+       border-bottom: 1px solid #add6ff;
        color: #333;
+       font-size: 20px;
        min-height: 24px;
+       padding: 12px 51px 12px 18px;
+       position: relative;
      }
      #back {
        display: none;
-       position: absolute;
-       top: 0;
        fill: #333;
        margin-left: -18px;
+       position: absolute;
+       top: 0;
      }
      svg {
        padding: 13px;
@@ -53,7 +53,7 @@
        color: #333;
        font-size: 20px;
        margin: 12px;
-       padding: 8px 16px;
+       padding: 10px 16px;
        position: absolute;
        right: 0;
      }
@@ -87,7 +87,7 @@
        padding: 13px;
        margin-right: 34px;
      }
-     #list .input {
+     #list input {
        font-family: Roboto, sans-serif, arial;
        padding: 8px;
        width: 100%;
@@ -95,7 +95,7 @@
        font-size: 18px;
        min-height: 20px;
      }
-     #list .input:focus {
+     #list input:focus {
        box-shadow: inset 0 0 4px 1px #add6ff;
        border: 1px solid #9dc6ef;
        outline: none;
@@ -105,33 +105,57 @@
 
   <script>
     var root = "How to X";
-    var tree = {
-      'Financial Aid': {
-        'How to compute cost': {
-          'How to estimate tuition': null,
-          'Cost of housing': null,
-          'Cost of books': null,
-          'Cost of living': null,
-        },
-        'How to get scholarships': null,
-        'How to apply for fafsa': null,
-        'How to obtain transfer of financial aid funds': null,
-        'How to get student loan': null,
-        'How to retain qualification for student loan': null,
-        'How to refinance student loan': null,
-        'How to manage student debt': null,
-        'How to refinance student loan': null,
-        'How to get student loan forgiveness': null,
-      },
-      'Civic services': {
-        'How to get unemployment benefits': null,
-      },
-      Miscellaneous: {
-        'How to play chess': null,
-        'How to water plants': null,
-        'How to draw something': null,
-      },
-    };
+
+    // BOOTSTRAP
+    // TO RE-BOOTSTRAP, RUN "delete localStorage.h2xTree" on the console.
+    var tree = [
+      ['Financial Aid', [
+        ['How to compute cost', [
+          'How to estimate tuition',
+          'Cost of housing',
+          'Cost of books',
+          'Cost of living',
+        ]],
+        'How to get scholarships',
+        'How to apply for fafsa',
+        'How to obtain transfer of financial aid funds',
+        'How to get student loan',
+        'How to retain qualification for student loan',
+        'How to refinance student loan',
+        'How to manage student debt',
+        'How to refinance student loan',
+        'How to get student loan forgiveness',
+      ]],
+      ['Civic services', [
+        'How to get unemployment benefits',
+      ]],
+      ['Miscellaneous', [
+        'How to play chess',
+        'How to water plants',
+        'How to draw something',
+      ]],
+    ];
+    // Replace "string" by ["string", []]
+    function fixTree(tree) {
+      for (var i in tree) {
+        if (typeof(tree[i]) == "string") {
+          tree[i] = [tree[i], []];
+        } else if (typeof(tree[i]) == "object" && tree[i][1] != null) {
+          fixTree(tree[i][1]);
+        }
+      }
+    }
+    fixTree(tree);
+    // END BOOTSTRAP.
+
+    // Persist.
+    if (typeof(Storage) == "function") {
+      if (localStorage.h2xTree == null) {
+        localStorage.h2xTree = JSON.stringify(tree);
+      } else {
+        tree = JSON.parse(localStorage.h2xTree);
+      }
+    }
 
     $(document).ready(function() {
       // Where are we?
@@ -145,8 +169,13 @@
         var idx = query.indexOf('/');
         if (idx == -1) break;
         node = query.substr(0, idx);
-        children = children[node];
-        query = query.substr(idx + 1);
+        for (var i in children) {
+          if (children[i][0] == node) {
+            children = children[i][1];
+            query = query.substr(idx + 1);
+            break;
+          }
+        }
       }
 
       // Title.
@@ -158,35 +187,49 @@
       $("#titlebar").disableSelection();
 
       // List.
-      function visitFn(e) {
-        window.location.hash += (window.location.hash == '' ? '' : '/') + e.data;
+      function visitFn() {
+        window.location.hash += (window.location.hash == '' ? '' : '/') + $(this).text();
       }
       $(window).on('hashchange', function() { location.reload(); });
 
       var dragSVG = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#555"><path d="M11 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
       var editSVG = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#555"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/><path d="M0 0h24v24H0z" fill="none"/></svg>';
 
-      function addItem(child) {
-        var editElement = $('<span/>', { "class": "edit-icon" }).append(editSVG).click(editFn);
+      function addItem(node, children) {
+        var editElement;
         $('#list').append(
           $('<li/>', { "class": "row ui-state-default ui-sortable-handle" }).append(
             $('<span/>', { "class": "drag-icon" }).append(dragSVG),
-            $('<span/>', { "class": "item" }).click(child, visitFn).text(child),
-            editElement));
+            $('<span/>', { "class": "item" })
+              .text(node)
+              .data('children', children)
+              .click(visitFn),
+            editElement = $('<span/>', { "class": "edit-icon" }).append(editSVG).click(editFn)));
         return editElement;
       }
-      for (var child in children) {
-        addItem(child);
+      for (var i in children) {
+        addItem(children[i][0], children[i][1]);
       }
 
-      $("#list").sortable({ handle: '.drag-icon' });
+      function updateFn() {
+        children.splice(0, children.length);
+        $('#list').children().each(function(i, li) {
+          var item = $(li).find(".item");
+          children.push([item.text(), item.data('children') || []]);
+        });
+        // Persist.
+        if (typeof(Storage) == "function") {
+          localStorage.h2xTree = JSON.stringify(tree);
+        }
+      }
+
+      $("#list").sortable({ handle: '.drag-icon' }).on("sortupdate", updateFn);
       document.getSelection().removeAllRanges();
       $("#list").disableSelection();
 
       // List editing.
       function editFn() {
         var item = $(this).parent().find('.item');
-        // item.off("click");
         var text = item.text();
         item.html('');
         item.val(text);
@@ -195,8 +238,9 @@
         function blurFn(e, p) {
           var me = $(this).parent().find('input').remove().end();
           me.text(p == "escape" ? me.val() : $(this).val());
-          // Special case: if value is empty then delete the item.
+          // If value is empty then delete the item.
           if (me.text() == "") me.parent().remove();
+          if (p != "escape") updateFn();
           document.getSelection().removeAllRanges();
           $("#list").disableSelection();
         };
@@ -207,7 +251,6 @@
         }
 
         $('<input/>')
-          .addClass('input')
           .blur(blurFn)
           .bind("keyup", keyUpFn)
           .appendTo(item)
@@ -217,10 +260,7 @@
       }
 
       // Add.
-      function addFn() {
-        addItem("").trigger("click");
-      }
-      $("#add").click(addFn);
+      $("#add").click(function() { addItem("").trigger("click"); });
 
       /*
         // delete (trash icon)
