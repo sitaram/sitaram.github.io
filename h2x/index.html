@@ -113,6 +113,32 @@
        box-shadow: inset 0 0 10px 0px #add6ff;
        background: white;
      }
+
+     /* In the panel */
+     .chipsbox {
+       padding: 4px;
+       margin-bottom: 4px;
+     }
+     .chipstitle {
+       font-weight: bold;
+       font-size: 16px;
+       padding: 4px;
+     }
+     .chipsbar {
+       white-space: nowrap;
+       overflow-x: auto;
+     }
+     .chipsbar::-webkit-scrollbar {
+       display: none;
+     }
+     .chip {
+       font-size: 15px;
+       display: inline-block;
+       border: 1px solid #ddd;
+       border-radius: 16px;
+       padding: 8px 12px;
+       margin: 4px;
+     }
   </style>
 
   <script>
@@ -227,24 +253,18 @@
           // .bind("keydown", function(e) { if (e.keyCode == 27) history.back(); });
         $('.placeholder-for-query').text(node);
         $('.placeholder-for-query-input').val(node.toLowerCase());
-        $('.main').prepend('<style>.chips { \
-          white-space: nowrap; \
-          overflow-x: auto; \
-        } \
-        ::-webkit-scrollbar { display: none; } \
-        .chip { \
-          font-size: 14px; \
-          display: inline-block; \
-          border: 1px solid #ccc; \
-          border-radius: 16px; \
-          padding: 8px; \
-          margin: 8px 4px; \
-        }</style>');
-        var chips = $('<div/>', { 'class': 'chips' });
+
+        var chipsbar, chipsbox = $('<div/>', { 'class': 'chipsbox' }).append(
+            $('<div/>', { 'class': 'chipstitle' }).text(
+              "How to " + node.toLowerCase()),
+            chipsbar = $('<div/>', { 'class': 'chipsbar' }));
         for (var i in children) {
-          chips.append('<div class=chip>' + children[i][0] + '</div>');
+          chipsbar.append('<div class=chip>' + children[i][0] + '</div>');
         }
-        $('.main').prepend(chips);
+        $('.chip').click(function() {
+          location.href = 'https://www.google.com/search?q=' + escape($(this).text().toLowerCase());
+        });
+        $('.main').prepend(chipsbox);
 
         // XXX generic SRP :(
 
