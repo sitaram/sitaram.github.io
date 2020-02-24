@@ -29,7 +29,10 @@
        position: absolute;
        top: 32%;
        fill: #333;
-       margin: -3px 0 0 -8px;
+       margin: -17px 0 0 -24px;
+     }
+     #backsvg {
+       padding: 13px;
      }
      #title {
        display: inline-block;
@@ -125,7 +128,7 @@
     };
 
     $(document).ready(function() {
-
+      // Where are we?
       var qidx = location.href.indexOf('?');
       var query = '';
       if (qidx != -1) query = unescape(location.href.substr(qidx+1)) + '/';
@@ -139,51 +142,41 @@
         children = children[node];
         query = query.substr(idx + 1);
       }
-      console.log(node, children);
 
+      // Title.
       if (node != root) {
         $('#back').show();
         $('#title').css('margin-left', '24px');
       }
       $('#title').text(node);
+      $("#titlebar").disableSelection();
 
+      // List.
       function visitFn(e) {
         var node = e.data;
         if (location.href.indexOf('?') == -1) location.href += '?' + node;
         else location.href += '/' + node;
       }
 
-      for (var child in children) {
-        // document.write('<div class="item" onClick="visit(\'' + child + '\')">' + child + '</div>');
-
+      function addItem(child) {
+        var editElement = $('<span/>', { "class": "edit-icon ui-icon ui-icon-pencil" }).click(editFn);
         $('#list').append(
           $('<li/>', { "class": "row ui-state-default ui-sortable-handle" }).append(
             $('<span/>', { "class": "grip-icon ui-icon ui-icon-grip-dotted-vertical" }),
-            $('<span/>', { "class": "item" }).click(child, visitFn).append(child),
-            $('<span/>', { "class": "edit-icon ui-icon ui-icon-pencil" })));
+            $('<span/>', { "class": "item" }).click(child, visitFn).text(child),
+            editElement));
+        return editElement;
       }
-
-      function addFn() {
-      console.log("add");
-      /*
-        children['new'] = null;
-        // TODO add a dom entry
-
-        // delete (trash icon)
-        // label vs. query
-        // recursively edit subtopic
-        // ... persist for the user, cross-reviews, etc.
-        // ... v2: forks, steps vs. options, taking user input
-        // DO THIS COLLABORATIVELY
-      */
+      for (var child in children) {
+        addItem(child);
       }
-
 
       $("#list").sortable({ handle: '.grip-icon' });
       document.getSelection().removeAllRanges();
       $("#list").disableSelection();
 
-      var editFn = function() {
+      // List editing.
+      function editFn() {
         var item = $(this).parent().find('.item');
         // item.off("click");
         var text = item.text();
@@ -191,15 +184,16 @@
         item.val(text);
         $("#list").enableSelection();
 
-        var blurFn = function(e, p) {
+        function blurFn(e, p) {
           var me = $(this).parent().find('input').remove().end();
           me.text(p == "escape" ? me.val() : $(this).val());
-          // item.click(editFn);
+          // Special case: if value is empty then delete the item.
+          if (me.text() == "") me.parent().remove();
           document.getSelection().removeAllRanges();
           $("#list").disableSelection();
         };
 
-        var keyUpFn = function(e) {
+        function keyUpFn(e) {
           if (e.keyCode == 13) $(this).trigger("blur");
           else if (e.keyCode == 27) $(this).trigger("blur", "escape");
         }
@@ -212,9 +206,20 @@
           .focus()
           .val(text);
       }
-      $("#list .edit-icon").click(editFn);
 
+      // Add.
+      function addFn() {
+        addItem("").trigger("click");
+      }
       $("#add").click(addFn);
+
+      /*
+        // delete (trash icon)
+        // label vs. query
+        // ... persist for the user, cross-reviews, etc.
+        // ... v2: forks, steps vs. options, taking user input
+        // DO THIS COLLABORATIVELY
+      */
     });
   </script>
 </head>
@@ -222,8 +227,8 @@
 
 <div id="titlebar">
   <span id="back" onClick="history.back()">
-    <svg focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
-  </span>
+    <svg id="backsvg" focusable="false" xmlns="http://www.w3.org/2000/svg" width=24 height=24>
+      <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg></span>
   <span id="title">How to X</span>
   <span id="view">view</span>
 </div>
