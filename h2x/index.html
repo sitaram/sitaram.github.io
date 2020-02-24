@@ -39,6 +39,7 @@
        display: block;
      }
      #view {
+       display: none;
        position: absolute;
        right: 16px;
        top: 0;
@@ -110,14 +111,16 @@
     // TO RE-BOOTSTRAP, RUN "delete localStorage.h2xTree" on the console.
     var tree = [
       ['Financial Aid', [
-        ['How to compute cost', [
-          'How to estimate tuition',
-          'Cost of housing',
-          'Cost of books',
-          'Cost of living',
+        ['How to pay for college', [
+          ['How to compute cost', [
+            'How to estimate tuition',
+            'Cost of housing',
+            'Cost of books',
+            'Cost of living',
+          ]],
+          'How to get scholarships',
+          'How to apply for fafsa',
         ]],
-        'How to get scholarships',
-        'How to apply for fafsa',
         'How to obtain transfer of financial aid funds',
         'How to get student loan',
         'How to retain qualification for student loan',
@@ -154,6 +157,10 @@
         localStorage.h2xTree = JSON.stringify(tree);
       } else {
         tree = JSON.parse(localStorage.h2xTree);
+        function compress(tree) {
+          return tree.map(x => x[1].length > 0 ? [x[0], compress(x[1])] : x[0]);
+        }
+        console.log(JSON.stringify(compress(tree), null, 2));
       }
     }
 
@@ -169,18 +176,22 @@
         var idx = query.indexOf('/');
         if (idx == -1) break;
         node = query.substr(0, idx);
+        var found = false;
         for (var i in children) {
           if (children[i][0] == node) {
             children = children[i][1];
             query = query.substr(idx + 1);
+            found = true;
             break;
           }
         }
+        if (!found) break;  // Url malformed, break infinite loop.
       }
 
       // Title.
       if (node != root) {
         $('#back').show();
+        $('#view').show();
         $('#title').css('margin-left', '34px');
       }
       $('#title').text(node);
@@ -237,7 +248,7 @@
 
         function blurFn(e, p) {
           var me = $(this).parent().find('input').remove().end();
-          me.text(p == "escape" ? me.val() : $(this).val());
+          me.text(p == "escape" ? me.val() : $(this).val().trim());
           // If value is empty then delete the item.
           if (me.text() == "") me.parent().remove();
           if (p != "escape") updateFn();
@@ -259,13 +270,24 @@
           .scrollLeft(10000);
       }
 
+      // Back.
+      $("#back").click(function() { history.back(); });
+
       // Add.
       $("#add").click(function() { addItem("").trigger("click"); });
+
+      // View.
+      function viewFn() {
+        console.log(node);
+        console.log(children);
+      }
+      $("#view").click(function() { viewFn(); });
 
       /*
         // delete (trash icon)
         // label vs. query
-        // ... persist for the user, cross-reviews, etc.
+        // ... persist on cloud
+        // ... cross-reviews
         // ... v2: forks, steps vs. options, taking user input
         // DO THIS COLLABORATIVELY
       */
@@ -275,7 +297,7 @@
 <body>
 
 <div id="titlebar">
-  <span id="back" onClick="history.back()">
+  <span id="back">
     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
       <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg></span>
   <span id="title">How to X</span>
