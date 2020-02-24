@@ -102,6 +102,18 @@
        outline: none;
        color: #2471bf;
      }
+
+     #panel {
+       display: none;
+       position: absolute;;
+       top: 0;
+       left: 100%;
+       height: 100%;
+       width: 100%;
+       z-index: 10000;
+       box-shadow: inset 0 0 10px 0px #add6ff;
+       background: white;
+     }
   </style>
 
   <script>
@@ -111,44 +123,43 @@
     // TO RE-BOOTSTRAP, RUN "delete localStorage.h2xTree" on the console.
     var tree = [
       ['Financial Aid', [
-        ['How to pay for college', [
-          ['How to compute cost', [
-            'How to estimate tuition',
-            'Cost of housing',
-            'Cost of books',
+        ['Pay for college', [
+          ['Calculate college cost', [
+            'Estimate tuition',
+            'Housing cost',
+            'Books cost',
             'Cost of living',
           ]],
-          'How to get scholarships',
-          'How to apply for fafsa',
+          'Apply for FAFSA',
+          'Get scholarships',
+          'Get student loans',
         ]],
-        'How to obtain transfer of financial aid funds',
-        'How to get student loan',
-        'How to retain qualification for student loan',
-        'How to refinance student loan',
-        'How to manage student debt',
-        'How to refinance student loan',
-        'How to get student loan forgiveness',
+        'Obtain transfer of financial aid funds',
+        'Retain qualification for student loans',
+        'Refinance student loans',
+        'Manage student debt',
+        'Get student loan forgiveness',
       ]],
       ['Civic services', [
-        'How to get unemployment benefits',
+        'Get unemployment benefits',
       ]],
       ['Miscellaneous', [
-        'How to play chess',
-        'How to water plants',
-        'How to draw something',
+        'Play chess',
+        'Water plants',
+        'Draw a dragon',
       ]],
     ];
     // Replace "string" by ["string", []]
-    function fixTree(tree) {
+    function decompressTree(tree) {
       for (var i in tree) {
         if (typeof(tree[i]) == "string") {
           tree[i] = [tree[i], []];
         } else if (typeof(tree[i]) == "object" && tree[i][1] != null) {
-          fixTree(tree[i][1]);
+          decompressTree(tree[i][1]);
         }
       }
     }
-    fixTree(tree);
+    decompressTree(tree);
     // END BOOTSTRAP.
 
     // Persist.
@@ -280,6 +291,7 @@
       function viewFn() {
         console.log(node);
         console.log(children);
+        $('#panel').show().animate({left: '0'}, 150);
       }
       $("#view").click(function() { viewFn(); });
 
@@ -309,6 +321,8 @@
 <ul id="list" class="ui-sortable"></ul>
 
 <div id="add">+</div>
+
+<div id="panel"></div>
 
 </body>
 </html>
