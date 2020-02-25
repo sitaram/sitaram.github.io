@@ -2,6 +2,11 @@
   bugs:
    - chips don't click
    - generic SRP :( need jsonp
+   - reload lag
+  ideas:
+   - Actually I would make it so once you created a topic and then you tap on it you would see a SRP
+     I would like to see the outcome of what I just created right away
+   - Put both buttons on top next to each other
 -->
 
 <!DOCTYPE html>
@@ -337,7 +342,7 @@
     }
 
     function run() {
-      $(window).on('hashchange', function() { location.reload(); });
+      $(window).on('hashchange', function() { location.reload(false); });
 
       // $(document).html('');
       // $('#list').html('');
