@@ -14,6 +14,7 @@
      body {
        font-family: Roboto, sans-serif, arial;
        margin: 0;
+       overflow-x: hidden;
      }
 
      #titlebar {
@@ -389,7 +390,7 @@
         }
       }
 
-      $("#list").sortable({ handle: '.drag-icon' }).on("sortupdate", updateFn);
+      $("#list").sortable({ handle: '.drag-icon', axis: 'y' }).on("sortupdate", updateFn);
       document.getSelection().removeAllRanges();
       $("#list").disableSelection();
 
