@@ -434,6 +434,7 @@
           .focus()
           .val(text)
           .scrollLeft(10000);
+        // Don't end up with a new input below the phone keyboard.
         $('html, body').scrollTop(input.offset().top - 8);
       }
 
