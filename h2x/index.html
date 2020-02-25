@@ -1,3 +1,9 @@
+<!--
+  bugs:
+   - chips don't click
+   - generic SRP :( need jsonp
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,7 +136,7 @@
      .chipstitle {
        font-weight: bold;
        font-size: 16px;
-       padding: 4px;
+       padding: 6px;
      }
      .chipsbar {
        white-space: nowrap;
@@ -157,15 +163,92 @@
     var tree = [
       ['Financial Aid', [
         ['Pay for college', [
-          ['Calculate college cost', [
-            'Estimate tuition',
-            'Housing cost',
-            'Books cost',
-            'Cost of living',
+          ['College costs', [
+            'Tuition & fees',
+            'Room and board',
+            'Books and supplies',
+            'Equipment',
+            'Personal expenses',
+            'Transportation',
+            'Activity fees',
           ]],
-          'Apply for FAFSA',
-          'Get scholarships',
-          'Get student loans',
+          [ 'Financial aid', [
+            'Timeline',
+            [ 'Types of aid', [
+             [ 'Federal aid', [
+                'Scholarships',
+                'Grants',
+                'Work study',
+              [ 'Loans', [
+                 'Subsidized',
+                 'Unsubsidized',
+              ]],
+                'International study aid',
+                'Tax benefits',
+             ]],
+             [ 'State aid', [
+                'Grants',
+                'Scholarships',
+             ]],
+             [ 'College aid', [
+                'Book advances',
+                'Tuition allowance',
+                'Scholarships',
+             ]],
+             [ 'Private', [
+                 'Scholarships',
+                 'Loans',
+             ]],
+             'Employer tuition Assistance',
+            ]],
+            [ 'Eligibility', [
+             'Basic',
+             [ 'Specific group', [
+                'Non-US citizens',
+                'Homeless',
+                'Parent killed in Iraq or Afghanistan',
+                'Intellectual disabilities',
+             ]],
+             'Regaining eligibility',
+             'Staying eligible',
+            ]],
+            [ 'Application process', [
+               'Required information',
+               'Application steps',
+               'Modiying application',
+               'Check status',
+            ]],
+            [ 'Deadlines', [
+               'Federal',
+               'State',
+               'College',
+            ]],
+            [ 'Accepting aid', [
+               'Comparing aid packages',
+               'Appealing aid',
+               'Accepting awards',
+               'Disbursements',
+            ]],
+            [ 'Additional considerations', [
+               'Parent-specific information',
+               'Part-time',
+               'Withdrawal',
+            ]],
+            [ 'Resources', [
+               'Counselors',
+               'Assistance programs',
+               'Events',
+               'Organizations',
+               'Online communities',
+               'Forms',
+               'Contacts',
+            ]],
+          ]],
+          [ 'Terminology', [
+            'Cost of attendance',
+            'Expected family contribution',
+            'Loan management',
+          ]],
         ]],
         ['Manage student debt', [
           'Obtain transfer of financial aid funds',
@@ -313,8 +396,7 @@
 
         if (children.length > 0) {
           var chipsbar, chipsbox = $('<div/>', { 'class': 'chipsbox' }).append(
-              $('<div/>', { 'class': 'chipstitle' }).text(
-                "How to " + node.toLowerCase()),
+              $('<div/>', { 'class': 'chipstitle' }).text(node),  // "How to" variant?
               chipsbar = $('<div/>', { 'class': 'chipsbar' }));
           for (var i in children) {
             chipsbar.append('<div class=chip>' + children[i][0] + '</div>');
@@ -324,8 +406,6 @@
           });
           $('.main').prepend(chipsbox);
         }
-
-        // XXX generic SRP :(
 
         /*
         GET https://www.googleapis.com/customsearch/v1?key=INSERT_YOUR_API_KEY&cx=017576662512468239146:omuauf_lfve&q=lectures
