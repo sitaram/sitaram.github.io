@@ -374,6 +374,7 @@
 
         $('<input/>')
           .blur(blurFn)
+          .bind("click", function(e) { e.stopPropagation(); })
           .bind("keyup", keyUpFn)
           .appendTo(item)
           .focus()
