@@ -1,0 +1,92 @@
+[ 'Paying for College', [
+ [ 'Financial Literacy', [
+    'Cost of Attendance',
+    'Expected Family Contribution',
+    'Loan Management',
+ ]],
+ [ 'Cost', [
+  [ 'Direct', [
+     'Tuition & Fees',
+     'Room and Board',
+  ]],
+  [ 'Indirect', [
+     'Books and Supplies',
+     'Equipments',
+     'Personal Expenses',
+     'Transportation',
+     'Activity Fees',
+  ]],
+ ]],
+ [ 'Student Financial Aid', [
+  'Timeline',
+  [ 'Types', [
+   [ 'Federal Aid', [
+      'Scholarships',
+      'Grants',
+      'Work Study',
+    [ 'Loans', [
+       'Subsidized',
+       'Unsubsidized',
+    ]],
+      'International Study Aid',
+      'Tax Benefits',
+   ]],
+   [ 'State Aid', [
+      'Grants',
+      'Scholarships',
+   ]],
+   [ 'College Aid', [
+      'Book Advances',
+      'Tuition Allowance',
+      'Scholarships',
+   ]],
+   [ 'Private', [
+       'Scholarships',
+       'Loans',
+   ]],
+   'Employer Tuition Assistance',
+  ]],
+  [ 'Eligibility', [
+   'Basic',
+   [ 'Specific Group', [
+      'Non-US Citizens',
+      'Homeless',
+      'Parent Killed in Iraq or Afghanistan',
+      'Intellectual Disabilities',
+   ]],
+   'Regain Eligibility',
+   'Staying Eligible',
+  ]],
+  [ 'Application Process', [
+     'Required Information',
+     'Application Steps',
+     'Modiying application',
+     'Check status',
+  ]],
+  [ 'Deadlines', [
+     'Federal',
+     'State',
+     'College',
+  ]],
+  [ 'Accepting Aid', [
+     'Comparing Aid Package',
+     'Appealing Aid',
+     'Accepting Award',
+     'Disbursements',
+  ]],
+  [ 'Additional Considerations', [
+     'Parent Specific Information',
+     'Part time',
+     'Withdraw',
+  ]],
+  [ 'Resources', [
+     'Counselors',
+     'Assistance Programs',
+     'Events',
+     'Organizations',
+     'Online Communities',
+     'Forms',
+     'Contacts',
+  ]],
+]],
+]],
