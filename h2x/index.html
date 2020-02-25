@@ -58,6 +58,13 @@
        position: absolute;
        right: 0;
      }
+     #reset {
+       font-size: 12px;
+       position: fixed;
+       bottom: 8px;
+       right: 8px;
+       color: #aaa;
+     }
 
      #list {
        list-style-type: none;
@@ -432,6 +439,14 @@
       // Add.
       $("#add").click(function() { addItem("").trigger("click"); });
 
+      // Reset.
+      $("#reset").click(function() {
+        if (confirm("Lose any edits and reset to original state?")) {
+          delete localStorage.h2xTree;
+          location.reload();
+        }
+      });
+
       /*
         // delete (trash icon)
         // label vs. query
@@ -462,6 +477,8 @@
 <ul id="list" class="ui-sortable"></ul>
 
 <div id="add">+</div>
+
+<div id="reset">Reset to defaults</div>
 
 <div id="panel">
 
