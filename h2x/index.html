@@ -426,7 +426,7 @@
           else if (e.keyCode == 27) $(this).trigger("blur", "escape");
         }
 
-        $('<input/>')
+        var input = $('<input/>')
           .blur(blurFn)
           .bind("click", function(e) { e.stopPropagation(); })
           .bind("keyup", keyUpFn)
@@ -434,6 +434,7 @@
           .focus()
           .val(text)
           .scrollLeft(10000);
+        $('html, body').scrollTop(input.offset().top - 8);
       }
 
       // Add.
