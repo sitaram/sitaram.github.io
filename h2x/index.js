@@ -42,7 +42,9 @@ function showList(children) {
   $("#list").disableSelection();
 }
 
-function updateFn() {
+function updateFn(e) {
+  e.stopPropagation();
+
   // Find our place (based on state) in the tree.
   var node = root;
   var children = tree;
@@ -59,7 +61,7 @@ function updateFn() {
     if (!found) break;  // Url malformed, break infinite loop.
   }
   console.log('update.node:', node);
-  console.log('update.children:', children);
+  console.log('      .children:', children);
 
   children.splice(0, children.length);
   $('#list').children().each(function(i, li) {
@@ -68,8 +70,8 @@ function updateFn() {
   });
   // Persist.
   if (typeof(Storage) == "function") {
-    console.log('store', localStorage.h2xTree.substr(0,50));
     localStorage.h2xTree = JSON.stringify(tree);
+    console.log('      .store', localStorage.h2xTree.substr(0,50));
   }
 }
 
@@ -81,14 +83,12 @@ function editFn() {
   item.val(text);
   $("#list").enableSelection();
 
-  function keyUpFn(e) {
-    if (e.keyCode == 13) $(this).trigger("blur");
-    else if (e.keyCode == 27) $(this).trigger("blur", "escape");
-  }
-
   var input = $('<input/>')
     .bind("click", function(e) { e.stopPropagation(); })
-    .bind("keyup", keyUpFn)
+    .bind("keyup", function (e) {
+      if (e.keyCode == 13) $(this).trigger("blur");
+      else if (e.keyCode == 27) $(this).trigger("blur", "escape");
+    })
     .appendTo(item)
     .focus()
     .blur(function (e, key) {
@@ -97,7 +97,7 @@ function editFn() {
       me.text(key == "escape" ? me.val() : newVal);
       // If value is empty then delete the item.
       if (me.text() == "") me.parent().remove();
-      if (key != "escape") updateFn();
+      if (key != "escape") updateFn(e);
       document.getSelection().removeAllRanges();
       $("#list").disableSelection();
     })
@@ -123,7 +123,8 @@ function addItem(node, children) {
            window.history.pushState(state, null, "");
            render(state);
          }),
-      editElement = $('<span/>', { "class": "edit-icon" }).append(editSVG).click(editFn)));
+      editElement = $('<span/>', { "class": "edit-icon" })
+        .append(editSVG).click(editFn)));
   return editElement;
 }
 
@@ -171,8 +172,8 @@ function render(state) {
     }
     if (!found) break;  // Url malformed, break infinite loop.
   }
-  console.log('render.node:', node);
-  console.log('render.children:', children);
+  console.log('      .node:', node);
+  console.log('      .children:', children);
 
   // Title.
   $('#title').text(node);
