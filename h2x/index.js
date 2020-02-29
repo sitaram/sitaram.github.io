@@ -114,7 +114,6 @@ function render(state) {
     console.log('bootstrap', localStorage.h2xTree.substr(0,50));
   } else if (tree == null) {
     tree = JSON.parse(localStorage.h2xTree);
-    // TO PRETTY PRINT THE DATA STRUCTURE:
     // function compress(tree) { return tree.map(x => x[1].length > 0 ? [x[0], compress(x[1])] : x[0]); }
     // console.log(JSON.stringify(compress(tree), null, 2));
     console.log('parse', localStorage.h2xTree.substr(0,50));
