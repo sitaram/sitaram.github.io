@@ -1,7 +1,7 @@
 var tree;
 let state = { path: [], demo: false };
 
-function demoFn() {
+function showDemo(node, children) {
   $('#panel').show().animate({left: 0}, 200);
   $('.placeholder-for-query').text(node);
   $('.placeholder-for-query-input').val(node.toLowerCase());
@@ -24,8 +24,43 @@ function demoFn() {
   $('#demo-close').show();
 }
 
+function showList(children) {
+  $('#list').html('');
+  if (!$('#panel').is(':hidden')) {
+    $('#panel').animate({left: '100%'}, 200, function() { $(this).hide(); });
+  }
+  $('#demo-close').hide();
+
+  for (var i in children) {
+    addItem(children[i][0], children[i][1]);
+  }
+
+  $("#list")
+    .sortable({ handle: '.drag-icon', axis: 'y' })
+    .on("sortupdate", updateFn);
+  document.getSelection().removeAllRanges();
+  $("#list").disableSelection();
+}
+
 function updateFn() {
-  console.log(children);
+  // Find our place (based on state) in the tree.
+  var node = root;
+  var children = tree;
+  for (var p in state.path) {
+    node = state.path[p];
+    var found = false;
+    for (var i in children) {
+      if (children[i][0] == node) {
+        children = children[i][1];
+        found = true;
+        break;
+      }
+    }
+    if (!found) break;  // Url malformed, break infinite loop.
+  }
+  console.log('update.node:', node);
+  console.log('update.children:', children);
+
   children.splice(0, children.length);
   $('#list').children().each(function(i, li) {
     var item = $(li).find(".item");
@@ -56,14 +91,13 @@ function editFn() {
     .bind("keyup", keyUpFn)
     .appendTo(item)
     .focus()
-    .blur(function (e, p) {
-      console.log('blur', p);
+    .blur(function (e, key) {
       var me = $(this).parent().find('input').remove().end();
       var newVal = $(this).val().trim();
-      me.text(p == "escape" ? me.val() : newVal);
+      me.text(key == "escape" ? me.val() : newVal);
       // If value is empty then delete the item.
       if (me.text() == "") me.parent().remove();
-      if (p != "escape") updateFn();
+      if (key != "escape") updateFn();
       document.getSelection().removeAllRanges();
       $("#list").disableSelection();
     })
@@ -93,7 +127,8 @@ function addItem(node, children) {
   return editElement;
 }
 
-function readOrBootstrapTree() {
+function getTree() {
+  var tree;
   if (typeof(Storage) != "function" || localStorage.h2xTree == null) {
     // Replace "string" by ["string", []]
     function decompressTree(tree) {
@@ -115,13 +150,11 @@ function readOrBootstrapTree() {
     // console.log(JSON.stringify(compress(tree), null, 2));
     console.log('parse', localStorage.h2xTree.substr(0,50));
   }
+  return tree;
 }
 
 function render(state) {
-  console.log('render', state);
-
-  // Bootstrap from storage.
-  readOrBootstrapTree();
+  console.log('render.state:', JSON.stringify(state));
 
   // Find our place (based on state) in the tree.
   var node = root;
@@ -138,6 +171,8 @@ function render(state) {
     }
     if (!found) break;  // Url malformed, break infinite loop.
   }
+  console.log('render.node:', node);
+  console.log('render.children:', children);
 
   // Title.
   $('#title').text(node);
@@ -145,28 +180,17 @@ function render(state) {
   if (node == root) { $('#back').hide(); $('#demo').hide(); $('#title').css('margin-left', '0'); }
   else { $('#back').show(); $('#demo').show(); $('#title').css('margin-left', '34px'); }
 
-  // In demo mode.
-  if (state.demo) { demoFn(); return; }
-
-  // In list mode.
-  $('#list').html('');
-  if (!$('#panel').is(':hidden')) {
-    $('#panel').animate({left: '100%'}, 200, function() { $(this).hide(); });
+  if (state.demo) {
+    showDemo(node, children);
+  } else {
+    showList(children);
   }
-  $('#demo-close').hide();
-
-  for (var i in children) {
-    addItem(children[i][0], children[i][1]);
-  }
-
-  $("#list")
-    .sortable({ handle: '.drag-icon', axis: 'y' })
-    .on("sortupdate", updateFn);
-  document.getSelection().removeAllRanges();
-  $("#list").disableSelection();
 }
 
 $(document).ready(function() {
+  // Bootstrap from storage.
+  tree = getTree();
+
   // Back button.
   window.onpopstate = function (event) {
     if (event.state) { state = event.state; }
