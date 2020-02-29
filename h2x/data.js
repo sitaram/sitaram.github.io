@@ -1,3 +1,5 @@
+var root = "How to X";
+
 // BOOTSTRAP
 var baseTree = [
   ['Financial Aid', [
@@ -149,4 +151,3 @@ var baseTree = [
     'Draw a dragon',
   ]],
 ];
-
