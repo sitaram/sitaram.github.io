@@ -135,24 +135,15 @@ function render(state) {
   }
 
   // Title.
-  if (node == root) {
-    $('#back').hide();
-    $('#demo').hide();
-    $('#title').css('margin-left', '0');
-  } else {
-    $('#back').show();
-    $('#demo').show();
-    $('#title').css('margin-left', '34px');
-  }
   $('#title').text(node);
   $("#titlebar").disableSelection();
+  if (node == root) { $('#back').hide(); $('#demo').hide(); $('#title').css('margin-left', '0'); }
+  else { $('#back').show(); $('#demo').show(); $('#title').css('margin-left', '34px'); }
 
   // In demo mode.
-  if (state.demo) {
-    demoFn();
-    return;
-  }
+  if (state.demo) { demoFn(); return; }
 
+  // In list mode.
   $('#list').html('');
   if (!$('#panel').is(':hidden')) {
     $('#panel').animate({left: '100%'}, 200, function() { $(this).hide(); });
