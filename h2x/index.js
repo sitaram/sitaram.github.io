@@ -217,13 +217,13 @@ function render(state) {
   */
 }
 
-// Tell your browser to give you old state and re-render on back
-window.onpopstate = function (event) {
-  if (event.state) { state = event.state; }
-  render(state);
-};
-
 $(document).ready(function() {
+  // Back button.
+  window.onpopstate = function (event) {
+    if (event.state) { state = event.state; }
+    render(state);
+  };
+
   // Demo.
   $("#demo").click(function() {
     state.demo = true;
@@ -235,6 +235,7 @@ $(document).ready(function() {
   $("#back").click(function() { history.back(); });
   $("#demo-close").click(function() { history.back(); });
 
+  // Initial.
   window.history.replaceState(state, null, "");
   render(state);
 });
