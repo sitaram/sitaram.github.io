@@ -93,10 +93,7 @@ function addItem(node, children) {
   return editElement;
 }
 
-function render(state) {
-  console.log('render', state);
-
-  // Persist.
+function readOrBootstrapTree() {
   if (typeof(Storage) != "function" || localStorage.h2xTree == null) {
     // Replace "string" by ["string", []]
     function decompressTree(tree) {
@@ -118,7 +115,15 @@ function render(state) {
     // console.log(JSON.stringify(compress(tree), null, 2));
     console.log('parse', localStorage.h2xTree.substr(0,50));
   }
+}
 
+function render(state) {
+  console.log('render', state);
+
+  // Bootstrap from storage.
+  readOrBootstrapTree();
+
+  // Find our place (based on state) in the tree.
   var node = root;
   var children = tree;
   for (var p in state.path) {
