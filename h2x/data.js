@@ -13,7 +13,7 @@ var baseTree = [
         'Transportation',
         'Activity fees',
       ]],
-      [ 'Financial aid', [
+      [ 'Get financial aid', [
         'Timeline',
         [ 'Types of aid', [
          [ 'Federal aid', [
@@ -95,7 +95,20 @@ var baseTree = [
       'Obtain transfer of financial aid funds',
       'Retain qualification for student loans',
       'Refinance student loans',
-      'Get student loan forgiveness',
+      ['Get student loan forgiveness', [
+       'What is..',
+       ['Career-based', [
+        'Become a teacher',
+        'Become a doctor or a lawyer',
+        'Volunteer for a non-profit',
+        'Join the military',
+        'Public service',
+       ]],
+       'Income-based',
+       ['Other methods', [
+        'Permanent disability',
+       ]],
+      ]],
     ]],
   ]],
   ['Civic services', [

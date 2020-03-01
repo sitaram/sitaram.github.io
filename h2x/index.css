@@ -24,9 +24,6 @@ body {
 #menu {
   display: none;
 }
-svg {
-  padding: 13px;
-}
 #title {
   display: block;
   font-weight: 500;
@@ -70,8 +67,15 @@ svg {
   z-index: 2;
   box-shadow: 0 4px 4px #ddd;
 }
-.add-svg {
+.icon-svg {
+  padding: 13px;
+}
+.add-icon-svg {
   padding: 6px;
+}
+.chip-icon-svg {
+  margin: 0 4px -4px 0;
+  fill: #3C4043;
 }
 #reset {
   font-size: 12px;
@@ -197,7 +201,8 @@ svg {
   font-size: 15px;
   display: inline-block;
   border: 1px solid #ddd;
-  border-radius: 16px;
-  padding: 8px 12px;
+  border-radius: 24px;
+  padding: 8px 16px;
   margin: 4px;
+  cursor: pointer;
 }

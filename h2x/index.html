@@ -1,8 +1,9 @@
 <!--
   bugs:
-   * [+] doesn't work on actual mobile device
-   - chips don't click
+   * [+] finishes but list doesn't scroll
    - generic SRP :( need jsonp
+   - migrate data structure from pairs to hashes with more info like query string
+   - float the add button
    - breadcrumbs
    - tree view
    - workflow and assigned tasks, not just a tree
@@ -45,21 +46,21 @@
 
 <div id="titlebar">
   <span id="back">
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+    <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
       <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg></span>
   <span id="menu">
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+    <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
       <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg></span>
   <span id="title"></span>
   <span id="demo">
     <div class="icon">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+      <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
         <path d="M20.49 19l-5.73-5.73C15.53 12.2 16 10.91 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.41 0 2.7-.47 3.77-1.24L19 20.49 20.49 19zM5 9.5C5 7.01 7.01 5 9.5 5S14 7.01 14 9.5 11.99 14 9.5 14 5 11.99 5 9.5z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>
     </div>
     <div class="icontext">Demo</div>
   </span>
   <span id="demo-close">
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+    <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
       <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg></span>
 </div>
 
@@ -68,7 +69,7 @@
 
   <div id="add">
     <div class="add-icon">
-      <svg class="add-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+      <svg class="add-icon-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
         <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg></div>
     <div class="icontext">Add</div>
   </div>
