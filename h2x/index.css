@@ -60,6 +60,7 @@ body {
 }
 
 #add {
+  display: none;
   position: fixed;
   background-color: #d6ebff;
   border-radius: 32px;

@@ -32,6 +32,13 @@ function showDemo(node, children) {
   if (is_mobile) $('#demo-close').show();
 }
 
+function positionAddButton() {
+  var top = $('#list').offset().top + $('#list').height() + 8;
+  var maxTop = $(window).height() - 100;
+  if (top > maxTop) top = maxTop;
+  $('#add').css('top', top).css('bottom', 'initial').show();
+}
+
 function showList(children) {
   $('#listbox').css('top', $('#titlebar').outerHeight());
   $('#list').html('');
@@ -51,6 +58,8 @@ function showList(children) {
     .on("sortupdate", updateFn);
   document.getSelection().removeAllRanges();
   $("#list").disableSelection();
+
+  positionAddButton();
 }
 
 function updateFn(e) {
@@ -114,6 +123,7 @@ function editFn() {
       if (key != "escape") updateFn(e);
       document.getSelection().removeAllRanges();
       $("#list").disableSelection();
+      positionAddButton();
     })
     .val(text)
     .scrollLeft(10000);
@@ -234,7 +244,10 @@ $(document).ready(function() {
   $("#demo-close").click(function() { history.back(); });
 
   // Add.
-  $("#add").click(function() { addItem("").trigger("click"); });
+  $("#add").click(function() {
+    addItem("").trigger("click");
+    positionAddButton();
+  });
 
   // Reset.
   $("#reset").click(function() {
