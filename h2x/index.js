@@ -210,6 +210,7 @@ function render(state) {
 
   if (!is_mobile || state.demo) showDemo(node, children);
   if (!is_mobile || !state.demo) showList(children);
+  positionAddButton();
 }
 
 $(document).ready(function() {
@@ -220,6 +221,7 @@ $(document).ready(function() {
       was_mobile = is_mobile;
       render(state);
     }
+    positionAddButton();
   });
   $(window).trigger("resize");
 
