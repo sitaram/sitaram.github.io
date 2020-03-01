@@ -175,9 +175,20 @@ svg {
   font-size: 16px;
   padding: 6px;
 }
+.chips-attribution,
+.chips-attribution:visited,
+.chips-attribution:hover,
+.chips-attribution:active {
+  border-top: 1px solid #ddd;
+  display: block;
+  padding: 6px;
+  color: #70757a;
+  font-size: 12px;
+}
 .chipsbar {
   white-space: nowrap;
   overflow-x: auto;
+  margin-bottom: 6px;
 }
 .chipsbar::-webkit-scrollbar {
   display: none;

@@ -15,7 +15,10 @@ function showDemo(node, children) {
   if (children.length > 0) {
     var chipsbar, chipsbox = $('<div/>', { 'class': 'chipsbox' }).append(
         $('<div/>', { 'class': 'chipstitle' }).text(node),  // "How to" variant?
-        chipsbar = $('<div/>', { 'class': 'chipsbar' }));
+        chipsbar = $('<div/>', { 'class': 'chipsbar' }),
+        $('<a/>', { 'class': 'chips-attribution',
+        'href': 'https://www.nasfaa.org/About_NASFAA' })
+          .append('Source: National Association of Student Financial Aid Administrators'));
     for (var i in children) {
       chipsbar.append('<div class=chip>' + children[i][0] + '</div>');
     }
