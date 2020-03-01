@@ -128,7 +128,7 @@ function editFn() {
     .val(text)
     .scrollLeft(10000);
   // Don't end up with a new input below the phone keyboard.
-  if (is_mobile) $('#listbox').scrollTop(input.offset().top);
+  $('#listbox').scrollTop(10000000);
 }
 
 function addItem(node, children) {
