@@ -1,9 +1,12 @@
 var tree;
 let state = { path: [], demo: false };
-let is_mobile = true;
+let is_mobile = true, was_mobile = true;
 
 function showDemo(node, children) {
   if (is_mobile) $('#panel').show().animate({left: 0}, 200);
+  else $('#panel').show().css('left', '400px');
+
+  $('#panel').css('top', $('#titlebar').outerHeight());
 
   $('.placeholder-for-query').text(node);
   $('.placeholder-for-query-input').val(node.toLowerCase());
@@ -23,14 +26,17 @@ function showDemo(node, children) {
   }
 
   $('#demo').hide();
-  $('#demo-close').show();
+  if (is_mobile) $('#demo-close').show();
 }
 
 function showList(children) {
+  $('#listbox').css('top', $('#titlebar').outerHeight());
   $('#list').html('');
-  if (is_mobile && !$('#panel').is(':hidden')) {
-    $('#panel').animate({left: '100%'}, 200, function() { $(this).hide(); });
-  }
+
+  if (is_mobile) {
+    if (!$('#panel').is(':hidden'))
+      $('#panel').animate({left: '100%'}, 200, function() { $(this).hide(); });
+  } else $('#panel').show().css('left', '400px');
   $('#demo-close').hide();
 
   for (var i in children) {
@@ -64,7 +70,7 @@ function updateFn(e) {
   }
   if (children == null) children = [];
   console.log('update.node:', node);
-  console.log('      .children:', children);
+  // console.log('      .children:', children);
 
   children.splice(0, children.length);
   $('#list').children().each(function(i, li) {
@@ -74,7 +80,7 @@ function updateFn(e) {
   // Persist.
   if (typeof(Storage) == "function") {
     localStorage.h2xTree = JSON.stringify(tree);
-    console.log('      .store', localStorage.h2xTree.substr(0,50));
+    // console.log('      .store', localStorage.h2xTree.substr(0,50));
   }
 
   if (!is_mobile) showDemo(node, children);
@@ -178,14 +184,14 @@ function render(state) {
     if (!found) break;  // Url malformed, break infinite loop.
   }
   if (children == null) children = [];
-  console.log('      .node:', node);
-  console.log('      .children:', children);
+  // console.log('      .node:', node);
+  // console.log('      .children:', children);
 
   // Title.
   $('#title').text(node);
   $("#titlebar").disableSelection();
   if (node == root) { $('#back').hide(); $('#menu').show(); $('#demo').hide(); }
-  else { $('#back').show(); $('#menu').hide(); $('#demo').show(); }
+  else { $('#back').show(); $('#menu').hide(); if (is_mobile) $('#demo').show(); }
 
   if (!is_mobile || state.demo) showDemo(node, children);
   if (!is_mobile || !state.demo) showList(children);
@@ -194,7 +200,11 @@ function render(state) {
 $(document).ready(function() {
   $(window).resize(function() {
     is_mobile = $('#is_mobile').is(':visible');
-    render(state);
+    if (!is_mobile) state.demo = false;
+    if (was_mobile != is_mobile) {
+      was_mobile = is_mobile;
+      render(state);
+    }
   });
   $(window).trigger("resize");
 
