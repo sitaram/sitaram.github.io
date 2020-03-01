@@ -89,7 +89,8 @@ body {
 #listbox {
   position: fixed;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+  top: 61px;
   width: 100%;
   bottom: 0;
 }
