@@ -192,6 +192,8 @@ function render(state) {
 
   // Title.
   $('#title').text(node);
+  $('#breadcrumbs').text(state.path.length > 1 ?
+      state.path.slice(0, state.path.length-1).join(' > ') + ' >': '');
   $("#titlebar").disableSelection();
   if (node == root) { $('#back').hide(); $('#menu').show(); $('#demo').hide(); }
   else { $('#back').show(); $('#menu').hide(); if (is_mobile) $('#demo').show(); }

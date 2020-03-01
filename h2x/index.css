@@ -24,11 +24,17 @@ body {
 #menu {
   display: none;
 }
-#title {
+#titlechunk {
   display: block;
-  font-weight: 500;
   margin-left: 40px;
   margin-right: 80px;
+}
+#breadcrumbs {
+  margin: -4px 0 4px 0;
+  font-size: 12px;
+}
+#title {
+  font-weight: 500;
 }
 #demo, #demo-close {
   z-index: 2;

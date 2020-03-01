@@ -4,7 +4,6 @@
    - generic SRP :( need jsonp
    - migrate data structure from pairs to hashes with more info like query string
    - float the add button
-   - breadcrumbs
    - tree view
    - workflow and assigned tasks, not just a tree
    - app engine backend
@@ -51,7 +50,10 @@
   <span id="menu">
     <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
       <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg></span>
-  <span id="title"></span>
+  <div id="titlechunk">
+    <div id="breadcrumbs"></div>
+    <div id="title"></div>
+  </div>
   <span id="demo">
     <div class="icon">
       <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
