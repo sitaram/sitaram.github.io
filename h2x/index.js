@@ -1,8 +1,10 @@
 var tree;
 let state = { path: [], demo: false };
+let is_mobile = true;
 
 function showDemo(node, children) {
-  $('#panel').show().animate({left: 0}, 200);
+  if (is_mobile) $('#panel').show().animate({left: 0}, 200);
+
   $('.placeholder-for-query').text(node);
   $('.placeholder-for-query-input').val(node.toLowerCase());
 
@@ -26,7 +28,7 @@ function showDemo(node, children) {
 
 function showList(children) {
   $('#list').html('');
-  if (!$('#panel').is(':hidden')) {
+  if (is_mobile && !$('#panel').is(':hidden')) {
     $('#panel').animate({left: '100%'}, 200, function() { $(this).hide(); });
   }
   $('#demo-close').hide();
@@ -60,6 +62,7 @@ function updateFn(e) {
     }
     if (!found) break;  // Url malformed, break infinite loop.
   }
+  if (children == null) children = [];
   console.log('update.node:', node);
   console.log('      .children:', children);
 
@@ -73,6 +76,8 @@ function updateFn(e) {
     localStorage.h2xTree = JSON.stringify(tree);
     console.log('      .store', localStorage.h2xTree.substr(0,50));
   }
+
+  if (!is_mobile) showDemo(node, children);
 }
 
 // List editing.
@@ -104,7 +109,7 @@ function editFn() {
     .val(text)
     .scrollLeft(10000);
   // Don't end up with a new input below the phone keyboard.
-  $('html, body').scrollTop(input.offset().top - 16);
+  // if (is_mobile) $('#list').scrollTop(input.offset().top - 16);
 }
 
 function addItem(node, children) {
@@ -172,23 +177,27 @@ function render(state) {
     }
     if (!found) break;  // Url malformed, break infinite loop.
   }
+  if (children == null) children = [];
   console.log('      .node:', node);
   console.log('      .children:', children);
 
   // Title.
   $('#title').text(node);
   $("#titlebar").disableSelection();
-  if (node == root) { $('#back').hide(); $('#demo').hide(); $('#title').css('margin-left', '0'); }
-  else { $('#back').show(); $('#demo').show(); $('#title').css('margin-left', '34px'); }
+  if (node == root) { $('#back').hide(); $('#menu').show(); $('#demo').hide(); }
+  else { $('#back').show(); $('#menu').hide(); $('#demo').show(); }
 
-  if (state.demo) {
-    showDemo(node, children);
-  } else {
-    showList(children);
-  }
+  if (!is_mobile || state.demo) showDemo(node, children);
+  if (!is_mobile || !state.demo) showList(children);
 }
 
 $(document).ready(function() {
+  $(window).resize(function() {
+    is_mobile = $('#is_mobile').is(':visible');
+    render(state);
+  });
+  $(window).trigger("resize");
+
   // Bootstrap from storage.
   tree = getTree();
 
