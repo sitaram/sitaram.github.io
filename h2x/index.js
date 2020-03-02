@@ -111,7 +111,7 @@ function editFn() {
   var deleteSVG = '<svg class="trash-icon-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M15 4V3H9v1H4v2h1v13c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V6h1V4h-5zm2 15H7V6h10v13zM9 8h2v9H9zm4 0h2v9h-2z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
   li.append($(deleteSVG).mousedown(function(e) {
     var input = $(this).parent().find('input');
-    if (confirm("Delete this topic '" + input.val() + "' with any of its subtopics?")) {
+    if (confirm("Delete this topic '" + input.val() + "' and all its subtopics?")) {
       input.val('').trigger('blur');
     }
   }));
