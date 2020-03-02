@@ -100,11 +100,18 @@ function updateFn(e) {
 
 // List editing.
 function editFn() {
-  var item = $(this).parent().find('.item');
+  var li = $(this).parent();
+  var item = li.find('.item');
+
+  // move text to val.
   var text = item.text();
-  item.html('');
+  item.text('');
   item.val(text);
-  $("#list").enableSelection();
+
+  var deleteSVG = '<svg class="trash-icon-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M15 4V3H9v1H4v2h1v13c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V6h1V4h-5zm2 15H7V6h10v13zM9 8h2v9H9zm4 0h2v9h-2z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
+  li.append($(deleteSVG).mousedown(function(e) {
+    $(this).parent().find('input').val('').trigger('blur');
+  }));
 
   var input = $('<input/>')
     .bind("click", function(e) { e.stopPropagation(); })
@@ -115,11 +122,14 @@ function editFn() {
     .appendTo(item)
     .focus()
     .blur(function (e, key) {
-      var me = $(this).parent().find('input').remove().end();
-      var newVal = $(this).val().trim();
-      me.text(key == "escape" ? me.val() : newVal);
-      // If value is empty then delete the item.
-      if (me.text() == "") me.parent().remove();
+      var input = $(this);
+      var item = input.parent();
+      var li = item.parent();
+      item.text(key == "escape" ? item.val() : input.val().trim());
+      // If value is empty then delete the list item.
+      if (item.text() == "") li.remove();
+      input.remove();
+      li.find('.trash-icon-svg').remove();
       if (key != "escape") updateFn(e);
       document.getSelection().removeAllRanges();
       $("#list").disableSelection();
@@ -127,8 +137,10 @@ function editFn() {
     })
     .val(text)
     .scrollLeft(10000);
+
   // Don't end up with a new input below the phone keyboard.
   $('#listbox').scrollTop(10000000);
+  $("#list").enableSelection();
 }
 
 function addItem(node, children) {

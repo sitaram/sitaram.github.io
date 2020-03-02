@@ -129,21 +129,31 @@ body {
 #list .item {
   display: block;
   padding: 19px;
-  margin-right: 34px;
+  margin-right: 50px;
+  word-break: break-word;
 }
 #list input {
   font-family: Roboto, sans-serif, arial;
   padding: 8px;
+  padding-right: 34px;
   width: 100%;
   margin: -9px -9px;
   font-size: 18px;
   min-height: 20px;
 }
 #list input:focus {
-  box-shadow: inset 0 0 4px 1px #add6ff;
-  border: 1px solid #9dc6ef;
-  outline: none;
   color: #2471bf;
+  outline: none;
+  border: 1px solid #9dc6ef;
+  box-shadow: inset 0 0 4px 1px #add6ff;
+}
+.trash-icon-svg {
+  position: absolute;
+  right: 0;
+  margin: -48px 42px 0 0;
+  padding: 6px 6px 6px 2px;
+  fill: #9dc6ef;
+  z-index: 100;
 }
 
 #panel {
