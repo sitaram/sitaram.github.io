@@ -86,45 +86,34 @@ var baseTree = [
     ],
   },
 
-  {
-    query: 'Pay for college',
+  { query: 'Calculate college cost' },
+  { query: 'Apply for fafsa' },
+  { query: 'Get scholarships' },
+  { query: 'Get student loans' },
+  { query: 'Transfer financial aid funds' },
+  { query: 'Understand my award letter' },
+  { query: 'Get an application fee waiver' },
+  { query: 'Retain qualification for student loan' },
+  { query: 'Refinance a student loan' },
+  { query: 'Manage student debt' },
+  { query: 'Get student loan forgiveness',
     subtopics: [
-      { query: 'Calculate college cost' },
-      { query: 'Apply for fafsa' },
-      { query: 'Get scholarships' },
-      { query: 'Get student loans' },
-      { query: 'Obtain transfer of financial aid funds' },
-      { query: 'Understand my award letter' },
-      { query: 'Get an application fee waiver' },
-    ]
-  },
-
-  {
-    query: 'Manage student debt',
-    subtopics: [
-      { query: 'Retain qualification for student loan' },
-      { query: 'Refinance a student loan' },
-      { query: 'Manage student debt' },
-      { query: 'Get student loan forgiveness',
+      { query: 'What is it' },
+      {
+        query: 'Career-based methods',
         subtopics: [
-          { query: 'What is it' },
-          {
-            query: 'Career-based methods',
-            subtopics: [
-              { query: 'Become a teacher' },
-              { query: 'Become a doctor or a lawyer' },
-              { query: 'Volunteer for a non-profit' },
-              { query: 'Join the military' },
-              { query: 'Public service' },
-            ]
-          },
-          { query: 'Income-based methods' },
-          {
-            query: 'Other methods',
-            subtopics: [
-              'Permanent disability',
-            ]
-          }
+          { query: 'Become a teacher' },
+          { query: 'Become a doctor or a lawyer' },
+          { query: 'Volunteer for a non-profit' },
+          { query: 'Join the military' },
+          { query: 'Public service' },
+        ]
+      },
+      { query: 'Income-based methods' },
+      {
+        query: 'Other methods',
+        subtopics: [
+          'Permanent disability',
         ]
       }
     ]

@@ -169,7 +169,6 @@ function addItem(node, children) {
 
 function getTree() {
   var tree;
-  delete localStorage.h2xTree;  // XXX
   if (typeof(Storage) != "function" || localStorage.h2xTree == null) {
     tree = baseTree;
     localStorage.h2xTree = JSON.stringify(tree);
