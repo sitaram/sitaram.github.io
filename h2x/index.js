@@ -67,28 +67,34 @@ function updateFn(e) {
 
   // Find our place (based on state) in the tree.
   var node = root;
-  var children = tree;
+  var parent = children = tree;
+  var found_i = -1;
   for (var p in state.path) {
     node = state.path[p];
     var found = false;
     for (var i in children) {
       if (children[i].query == node) {
+        parent = children;
         children = children[i].subtopics;
         found = true;
+        found_i = i;
         break;
       }
     }
     if (!found) break;  // Url malformed, break infinite loop.
   }
-  if (children == null) children = [];
-  console.log('update.node:', node);
-  // console.log('      .children:', children);
 
-  children.splice(0, children.length);
+  var children = [];
   $('#list').children().each(function(i, li) {
     var item = $(li).find(".item");
-    children.push([item.text(), item.data('children') || []]);
+    var child = { query: item.text() };
+    if (item.data('children')) child.subtopics = item.data('children');
+    children.push(child);
   });
+  if (found) parent[found_i].subtopics = children;
+  else tree = children;
+  console.log('update.node:', node);
+  // console.log('      .children:', children);
   // Persist.
   if (typeof(Storage) == "function") {
     localStorage.h2xTree = JSON.stringify(tree);
