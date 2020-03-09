@@ -96,7 +96,7 @@ var baseTree = [
   { query: 'Retain qualification for student loan' },
   { query: 'Refinance a student loan' },
   { query: 'Manage student debt' },
-  { query: 'Get student loan forgiveness',
+  { query: 'Example 3: Get student loan forgiveness',
     subtopics: [
       { query: 'What is it' },
       {
