@@ -1,5 +1,5 @@
 var root = "How to X";
-var baseTreeVersion = 1;  // CAUTION: Bumping this loses local data and rebootstraps.
+var baseTreeVersion = 1;  // Bumping this loses local data and rebootstraps.
 
 // BOOTSTRAP
 var baseTree = [
