@@ -92,7 +92,6 @@ function updateFn(e) {
   // Persist.
   if (typeof(Storage) == "function") {
     localStorage.h2xTree = JSON.stringify(tree);
-    // console.log('      .store', localStorage.h2xTree.substr(0,50));
   }
 
   if (!is_mobile) showDemo(node, children);
@@ -169,9 +168,11 @@ function addItem(node, children) {
 
 function getTree() {
   var tree;
-  if (typeof(Storage) != "function" || localStorage.h2xTree == null) {
+  if (typeof(Storage) != "function" || localStorage.h2xTree == null ||
+      localStorage.h2xTreeVersion != baseTreeVersion) {
     tree = baseTree;
     localStorage.h2xTree = JSON.stringify(tree);
+    localStorage.h2xTreeVersion = baseTreeVersion;
     console.log('bootstrap', localStorage.h2xTree.substr(0,50));
   } else if (tree == null) {
     tree = JSON.parse(localStorage.h2xTree);
@@ -257,6 +258,7 @@ $(document).ready(function() {
   $("#reset").click(function() {
     if (confirm("Lose all edits and reset to original state?")) {
       delete localStorage.h2xTree;
+      delete localStorage.h2xTreeVersion;
       location.reload();
     }
   });
