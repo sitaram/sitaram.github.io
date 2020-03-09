@@ -87,16 +87,6 @@ var baseTree = [
     ],
   },
 
-  { query: 'Calculate college cost' },
-  { query: 'Apply for fafsa' },
-  { query: 'Get scholarships' },
-  { query: 'Get student loans' },
-  { query: 'Transfer financial aid funds' },
-  { query: 'Understand my award letter' },
-  { query: 'Get an application fee waiver' },
-  { query: 'Retain qualification for student loan' },
-  { query: 'Refinance a student loan' },
-  { query: 'Manage student debt' },
   { query: 'Example 3: Get student loan forgiveness',
     subtopics: [
       { query: 'What is it' },
@@ -118,5 +108,16 @@ var baseTree = [
         ]
       }
     ]
-  }
+  },
+
+  { query: 'Calculate college cost' },
+  { query: 'Apply for fafsa' },
+  { query: 'Get scholarships' },
+  { query: 'Get student loans' },
+  { query: 'Transfer financial aid funds' },
+  { query: 'Understand my award letter' },
+  { query: 'Get an application fee waiver' },
+  { query: 'Retain qualification for student loan' },
+  { query: 'Refinance a student loan' },
+  { query: 'Manage student debt' },
 ];
