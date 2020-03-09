@@ -4,7 +4,7 @@ var baseTreeVersion = 1;  // Bumping this loses local data and rebootstraps.
 // BOOTSTRAP
 var baseTree = [
   {
-    query: 'Example1: Get a drivers license',
+    query: 'Example 1: Get a drivers license',
     subtopics: [
       { query: 'Overview' },
       { query: 'Types of drivers licence' },
@@ -18,7 +18,7 @@ var baseTree = [
   },
 
   {
-    query: 'Example2: Learn chess',
+    query: 'Example 2: Learn chess',
     subtopics: [
       {
         query: 'Pieces & movement',
