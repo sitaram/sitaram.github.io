@@ -2,165 +2,131 @@ var root = "How to X";
 
 // BOOTSTRAP
 var baseTree = [
-  ['Financial Aid', [
-    ['Pay for college', [
-      ['College costs', [
-        'Tuition & fees',
-        'Room and board',
-        'Books and supplies',
-        'Equipment',
-        'Personal expenses',
-        'Transportation',
-        'Activity fees',
-      ]],
-      [ 'Get financial aid', [
-        'Timeline',
-        [ 'Types of aid', [
-         [ 'Federal aid', [
-            'Scholarships',
-            'Grants',
-            'Work study',
-          [ 'Loans', [
-             'Subsidized',
-             'Unsubsidized',
-          ]],
-            'International study aid',
-            'Tax benefits',
-         ]],
-         [ 'State aid', [
-            'Grants',
-            'Scholarships',
-         ]],
-         [ 'College aid', [
-            'Book advances',
-            'Tuition allowance',
-            'Scholarships',
-         ]],
-         [ 'Private', [
-             'Scholarships',
-             'Loans',
-         ]],
-         'Employer tuition Assistance',
-        ]],
-        [ 'Eligibility', [
-         'Basic',
-         [ 'Specific group', [
-            'Non-US citizens',
-            'Homeless',
-            'Parent killed in Iraq or Afghanistan',
-            'Intellectual disabilities',
-         ]],
-         'Regaining eligibility',
-         'Staying eligible',
-        ]],
-        [ 'Application process', [
-           'Required information',
-           'Application steps',
-           'Modiying application',
-           'Check status',
-        ]],
-        [ 'Deadlines', [
-           'Federal',
-           'State',
-           'College',
-        ]],
-        [ 'Accepting aid', [
-           'Comparing aid packages',
-           'Appealing aid',
-           'Accepting awards',
-           'Disbursements',
-        ]],
-        [ 'Additional considerations', [
-           'Parent-specific information',
-           'Part-time',
-           'Withdrawal',
-        ]],
-        [ 'Resources', [
-           'Counselors',
-           'Assistance programs',
-           'Events',
-           'Organizations',
-           'Online communities',
-           'Forms',
-           'Contacts',
-        ]],
-      ]],
-      [ 'Terminology', [
-        'Cost of attendance',
-        'Expected family contribution',
-        'Loan management',
-      ]],
-    ]],
-    ['Manage student debt', [
-      'Obtain transfer of financial aid funds',
-      'Retain qualification for student loans',
-      'Refinance student loans',
-      ['Get student loan forgiveness', [
-       'What is..',
-       ['Career-based', [
-        'Become a teacher',
-        'Become a doctor or a lawyer',
-        'Volunteer for a non-profit',
-        'Join the military',
-        'Public service',
-       ]],
-       'Income-based',
-       ['Other methods', [
-        'Permanent disability',
-       ]],
-      ]],
-    ]],
-  ]],
-  ['Civic services', [
-    'Get unemployment benefits',
-  ]],
-  ['Miscellaneous', [
-    ['Learn chess', [
-       ['Pieces & movement', [
-        'How to set up a chess board',
-        'How the chess pawn moves',
-        'How the chess rook moves',
-        'How the chess bishop moves',
-        'How the chess knight moves',
-        'How the chess king moves',
-        'How the chess queen moves',
-      ]],
-      ['Objective', [
-        'What is a check in chess',
-        'What is a checkmate',
-        'What is a stalemate',
-      ]],
-      ['Advanced moves', [
-        'Castling in chess',
-        'En passant in chess',
-        'Promotion in chess',
-      ]],
-      ['Tactics', [
-        'Forks in chess',
-        'Skewers in chess',
-        'Pinned pieces in chess',
-      ]],
-      ['Strategy', [
-        'Developing pieces in chess',
-        'Rook lifts in chess',
-        'Doubled rooks in chess',
-        'Bishop pairs in chess',
-        'Battery in chess',
-      ]],
-      ['Openings', [
-        'Ruy lopez opening',
-        'Sicilian opening',
-        'French opening',
-        'English opening',
-      ]],
-      ['Endgames', [
-        'Queen/king endgame',
-        'Rook/king endgame',
-        'Bishop endgame',
-        'Knight endgame',
-      ]],
-    ]],
-    'Water plants',
-    'Draw a dragon',
-  ]],
+  {
+    query: 'Example1: Get a drivers license',
+    subtopics: [
+      { query: 'Overview' },
+      { query: 'Types of drivers licence' },
+      { query: 'First time vs. renewal' },
+      { query: 'Basic steps' },
+      { query: 'Make a DMV appointment' },
+      { query: 'What to take to the DMV' },
+      { query: 'Do I need a Real ID' },
+      { query: 'Study for a drivers test' },
+    ]
+  },
+
+  {
+    query: 'Example2: Learn chess',
+    subtopics: [
+      {
+        query: 'Pieces & movement',
+        subtopics: [
+          { query: 'How to set up a chess board' },
+          { query: 'How the chess pawn moves' },
+          { query: 'How the chess rook moves' },
+          { query: 'How the chess bishop moves' },
+          { query: 'How the chess knight moves' },
+          { query: 'How the chess king moves' },
+          { query: 'How the chess queen moves' },
+        ]
+      },
+      {
+        query: 'Objective',
+        subtopics: [
+          { query: 'What is a check in chess' },
+          { query: 'What is a checkmate' },
+          { query: 'What is a stalemate' },
+        ]
+      },
+      {
+        query: 'Advanced moves',
+        subtopics: [
+          { query: 'Castling in chess' },
+          { query: 'En passant in chess' },
+          { query: 'Promotion in chess' },
+        ]
+      },
+      {
+        query: 'Tactics',
+        subtopics: [
+          { query: 'Forks in chess' },
+          { query: 'Skewers in chess' },
+          { query: 'Pinned pieces in chess' },
+        ]
+      },
+      {
+        query: 'Strategy',
+        subtopics: [
+          { query: 'Developing pieces in chess' },
+          { query: 'Rook lifts in chess' },
+          { query: 'Doubled rooks in chess' },
+          { query: 'Bishop pairs in chess' },
+          { query: 'Battery in chess' },
+        ]
+      },
+      {
+        query: 'Openings',
+        subtopics: [
+          { query: 'Ruy lopez opening' },
+          { query: 'Sicilian opening' },
+          { query: 'French opening' },
+          { query: 'English opening' },
+        ]
+      },
+      {
+        query: 'Endgames',
+        subtopics: [
+          { query: 'Queen/king endgame' },
+          { query: 'Rook/king endgame' },
+          { query: 'Bishop endgame' },
+          { query: 'Knight endgame' },
+        ]
+      },
+    ],
+  },
+
+  {
+    query: 'Pay for college',
+    subtopics: [
+      { query: 'Calculate college cost' },
+      { query: 'Apply for fafsa' },
+      { query: 'Get scholarships' },
+      { query: 'Get student loans' },
+      { query: 'Obtain transfer of financial aid funds' },
+      { query: 'Understand my award letter' },
+      { query: 'Get an application fee waiver' },
+    ]
+  },
+
+  {
+    query: 'Manage student debt',
+    subtopics: [
+      { query: 'Retain qualification for student loan' },
+      { query: 'Refinance a student loan' },
+      { query: 'Manage student debt' },
+      { query: 'Get student loan forgiveness',
+        subtopics: [
+          { query: 'What is it' },
+          {
+            query: 'Career-based methods',
+            subtopics: [
+              { query: 'Become a teacher' },
+              { query: 'Become a doctor or a lawyer' },
+              { query: 'Volunteer for a non-profit' },
+              { query: 'Join the military' },
+              { query: 'Public service' },
+            ]
+          },
+          { query: 'Income-based methods' },
+          {
+            query: 'Other methods',
+            subtopics: [
+              'Permanent disability',
+            ]
+          }
+        ]
+      }
+    ]
+  }
 ];

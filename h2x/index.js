@@ -23,7 +23,7 @@ function showDemo(node, children) {
       var searchSVG = '<svg class="chip-icon-svg" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M20.49 19l-5.73-5.73C15.53 12.2 16 10.91 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.41 0 2.7-.47 3.77-1.24L19 20.49 20.49 19zM5 9.5C5 7.01 7.01 5 9.5 5S14 7.01 14 9.5 11.99 14 9.5 14 5 11.99 5 9.5z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
       chipsbar.append($('<div/>', {class: 'chip'}).click(function() {
         window.open('https://www.google.com/search?q=' + escape($(this).text().toLowerCase()));
-      }).append(searchSVG, children[i][0]));
+      }).append(searchSVG, children[i].query));
     }
     $('.main').prepend(chipsbox);
   }
@@ -50,7 +50,7 @@ function showList(children) {
   $('#demo-close').hide();
 
   for (var i in children) {
-    addItem(children[i][0], children[i][1]);
+    addItem(children[i].query, children[i].subtopics);
   }
 
   $("#list")
@@ -72,8 +72,8 @@ function updateFn(e) {
     node = state.path[p];
     var found = false;
     for (var i in children) {
-      if (children[i][0] == node) {
-        children = children[i][1];
+      if (children[i].query == node) {
+        children = children[i].subtopics;
         found = true;
         break;
       }
@@ -169,25 +169,13 @@ function addItem(node, children) {
 
 function getTree() {
   var tree;
+  delete localStorage.h2xTree;  // XXX
   if (typeof(Storage) != "function" || localStorage.h2xTree == null) {
-    // Replace "string" by ["string", []]
-    function decompressTree(tree) {
-      for (var i in tree) {
-        if (typeof(tree[i]) == "string") {
-          tree[i] = [tree[i], []];
-        } else if (typeof(tree[i]) == "object" && tree[i][1] != null) {
-          decompressTree(tree[i][1]);
-        }
-      }
-    }
     tree = baseTree;
-    decompressTree(tree);
     localStorage.h2xTree = JSON.stringify(tree);
     console.log('bootstrap', localStorage.h2xTree.substr(0,50));
   } else if (tree == null) {
     tree = JSON.parse(localStorage.h2xTree);
-    // function compress(tree) { return tree.map(x => x[1].length > 0 ? [x[0], compress(x[1])] : x[0]); }
-    // console.log(JSON.stringify(compress(tree), null, 2));
     console.log('parse', localStorage.h2xTree.substr(0,50));
   }
   return tree;
@@ -203,8 +191,8 @@ function render(state) {
     node = state.path[p];
     var found = false;
     for (var i in children) {
-      if (children[i][0] == node) {
-        children = children[i][1];
+      if (children[i].query == node) {
+        children = children[i].subtopics;
         found = true;
         break;
       }
