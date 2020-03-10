@@ -104,7 +104,7 @@ var baseTree = [
       {
         query: 'Other methods',
         subtopics: [
-          'Permanent disability',
+          { query: 'Permanent disability' },
         ]
       }
     ]
