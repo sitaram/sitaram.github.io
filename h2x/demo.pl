@@ -119,6 +119,10 @@ sub printonecase($$) {
         margin-right: 50%;
         font-weight: bold;
       }
+      .expando:hover {
+        text-decoration: underline;
+        color: #1a0dab;
+      }
       .toc {
         display: none;
         line-height: 20px;
