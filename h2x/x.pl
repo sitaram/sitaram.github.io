@@ -148,65 +148,61 @@ Thank you for participating in this study.
 <ol>
 <li> For complex and important topics that students encounter, for example
 <b>how to pay for college</b>, <b>how to calculate cost of college</b>, or
-<b>how to get student loan forgiveness</b>,
-(other topics are listed on the next page),
-often Google search results are
-only moderately useful today. They show a number of different
+<b>how to get student loan forgiveness</b>, (more topics listed below),
+sometimes Google search results are only moderately useful today. They show a
+number of different
 articles on the topic, but often each one brings in a different perspective -
 such as a different number of options for how to proceed (from 5, 8, to 80
 different ways in the case of student loan forgiveness).  Digesting these
-articles to form a coherent mental model takes time and experience, which
-many users (in this case mostly students) lack.  This leads to the student
-getting overwhelmed and not getting the information they need. <a
+articles to distill the key ideas and form a single coherent mental model takes
+time and experience, which many users (in this case mostly students) often lack.
+This leads to students getting overwhelmed and not getting the information
+they need. <a
 id="link" href="https://www.google.com/search?q=how+to+get+student+loan+forgiveness&pws=0&gl=us&gws_rd=cr"
 target=_blank>Check out this example search page</a>.
 
-<li> We would like to guide the user through these complex topics. For that, we
-want to <b>unpack such topics into a set of subtopics</b> for the user to digest
-in bite-sized pieces.  Some of these topics are themselves complex, and can be
-further decomposed to create a hierarchy of subtopics.  These subtopics may be key questions
-to think about, or a breakdown of options,
-or the standard steps to follow, or a combination
-of all of these.
-They need
-to be subtopics to explore rather than prescriptive instructions.
-They need to be understandable rather than comprehensive: a
-hierarchy of depth 2 or 3, with 4-5 subtopics per level would be ideal.  There may
-not be one right way to break down a topic, and that is okay.
-For example, for
-student loan forgiveness, there are broadly three paths: repayment-plan based options,
-career-based options, and extraordinary circumstances.  There are also common
-questions such as "do I qualify" and "where to sign up". Career-based options
-further break down into programs for nurses, teachers, military, etc. <a
-href="" target=_blank>See this example
+<li> We think it would be helpful for Google to guide the user through these
+complex topics. For that, we want to <b>unpack such topics into a set of
+subtopics</b> for the user to digest in bite-sized pieces.  Some of these
+topics are themselves complex, and should be further decomposed to create a
+hierarchy of subtopics.  These subtopics may be key questions to think about,
+or a breakdown of options, or the basic steps to follow, or a combination of
+these. They need to be subtopics to explore rather than prescriptive
+instructions. They need to be understandable rather than comprehensive, e.g. a
+hierarchy of depth 2 or 3, with 4-5 subtopics per level would be ideal.  There
+may not be one right way to break down a topic, and that is okay. For example,
+for student loan forgiveness, there are broadly three paths: repayment-plan
+based options, career-based options, and extraordinary circumstances. There are
+also some common questions such as "do I qualify" and "where to sign up" that
+make sense to include. Career-based options further break down into programs
+for nurses, teachers, military, etc. <a href="" target=_blank>See this example
 hierarchy</a>.
 
-<li> In addition to showing users the hierarchy of subtopics, for each
-subtopic, we would like to guide the user to a <b>well-chosen Google search query</b>
-whose search results provide high-quality information on that subtopic.  We would ask you
-to try out a few different queries until the search page (including results, the answer panel, etc.) collectively contain
-useful information.  In our experience we have found that the choice of words matters a lot.
-For
-example, for the option "career-based", a search query that brings up a useful
+<li> Beyond showing users the hierarchy of subtopics, for each
+subtopic we would like to guide the user to a <b>well-chosen Google search query</b>
+whose search results provide high-quality information on that subtopic.  This usually
+involves trying out a few different queries and tweaking the choice of query terms until
+the search page (including web results, the answer panel, etc.) collectively represents
+useful information. For example, for the option "career-based", a search query that brings up a useful
 search result page is <a
-href="https://www.google.com/search?q=career-based+student+loan+forgiveness+programs&pws=0&gl=us&gws_rd=cr"
-target=_blank>career-based student loan forgiveness programs</a>.
+href="https://www.google.com/search?q=career-based+student+loan+forgiveness+options&pws=0&gl=us&gws_rd=cr"
+target=_blank>career-based student loan forgiveness options</a>.
 
-<li> That way, we
-can enable the user to go deeper if they want to into each subtopic, by using the ability
-of Search to return a diverse set of high-quality articles, videos, and
-other Search features for each query, rather than send the user to a single article for
-all the subtopics.  Putting these subtopics and queries together, the Search
-experience for student loan forgiveness could now look like <a href="../demo/"
-target=_blank>this demo</a>, for example.
+<li> This way, we
+can enable the user to go deeper into each subtopic if they wish, by leveraging
+Google Search to return a diverse set of high-quality articles, videos, and
+other Search features for each query, instead of sending the user to a single article for
+the entire topic.  Putting these subtopics and queries together, the Search
+experience for student loan forgiveness could, for example, look like <a href="../demo/"
+target=_blank>this demo</a>.
 
-<li> We would like to leverage a combination of your domain expertise and a
-synthesis of information from the top web results, to construct this hierarchy of
-subtopics and choose the search queries. On the next page, we have collected
-the sections listed in the top 20 results for the query "how to get student
-loan forgiveness".  For easy viewing we have partially collapsed the information, but
-use the "Expand" link on the top of each page (or the equivalent
-"&#xBB;" links) to see more details.  <a href="00.html" target=_blank>See this page for raw material</a>.
+<li> We would like to combine your domain expertise with some information from
+the top 20 web results to construct this hierarchy of subtopics and the search
+queries. To make this easier, <a href="00.html" target=_blank>on the next
+page</a>, we have collected the sections listed in the top 20 results for the
+query "how to get student loan forgiveness".  For a birds-eye view, we have
+partially collapsed the information, but use the "Expand" link on the top of
+each page (or the "&#xBB;" links) to see more details.
 
 <li> We would like to ask you to make a copy of <a
 href="https://docs.google.com/document/d/1QaPGS90GRlmqh3CMMBfjCKdrlE6gr5oOjhwq1REUP2E/edit?usp=sharing"
