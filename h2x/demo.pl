@@ -121,6 +121,7 @@ sub printonecase($$) {
       .expando {
         float: right;
         margin-right: 50%;
+        margin-left: 8px;
         font-weight: bold;
       }
       .expando, .expando:link, .expando:active, .expando:visited {
