@@ -154,6 +154,10 @@ sub printcase {
       <script>
         \$(document).ready(function() {
           \$('.expando').click(function() {
+            if (\$('.toc').is(':hidden'))
+              \$(this).text('Collapse');
+            else
+              \$(this).text('View all');
             \$('.toc').slideToggle(150);
           });
         });
