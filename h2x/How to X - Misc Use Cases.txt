@@ -1,0 +1,80 @@
+﻿How to X - Misc Use Cases
+[Please make a copy and share with sitaram@google.com]
+[Format: for each topic, a hierarchy of <subtopic> / <search query>, and number these 12+]
+
+
+12. How to play chess
+
+
+* Pieces & movement / chess pieces and movement
+   * How to set up a chess board / How to set up a chess board
+   * How the pawn moves    / How the chess pawn moves 
+   * How the rook moves    / How the chess rook moves 
+   * How the bishop moves  / How the chess bishop moves 
+   * How the knight moves  / How the chess knight moves 
+   * How the king moves    / How the chess king moves 
+   * How the queen moves   / How the chess queen moves 
+* Objective / objective of a chess game
+   * Check / what is a check in chess
+   * Checkmate / what is a checkmate
+   * Stalemate / what is a stalemate
+* Advanced moves / advanced moves in chess
+   * Castling / Castling in chess
+   * En passsant / En passant in chess
+   * Promotion / Promotion in chess
+* Tactics / chess tactics
+   * Forks / forks in chess
+   * Skewers / skewers in chess
+   * Pinned pieces / pinned pieces in chess
+* Strategy / chess strategy
+   * Developing pieces / developing pieces in chess
+   * Rook lifts / Rook lifts in chess
+   * Doubled rooks / Doubled rooks in chess
+   * Bishop pairs / Bishop pairs in chess
+   * Battery / Battery in chess
+* Openings / chess openings
+   * Ruy lopez / Ruy lopez opening
+   * Sicilian / Sicilian opening
+   * French / French opening
+   * English / English opening
+* Endgames / chess endgames
+   * Queen/king endgame / Queen/king endgame
+   * Rook/king endgame / Rook/king endgame
+   * Bishop endgame / Bishop endgame
+   * Knight endgame / Knight endgame
+
+
+13. How to get a drivers license
+
+
+* Types of drivers licence / types of drivers license
+* First time vs. renewal / drivers license first time vs renewal
+* Basic steps / drivers license basic steps
+* Make a DMV appointment / make a DMV appointment
+* What to take to the DMV / what to take to the dmv
+* Do I need a Real ID / do I need a real id
+* Study for a drivers test / study for drivers test
+
+
+14. How to buy a house
+
+
+* Before you start / how to prepare to buy a house
+   * Do I want to rent or buy? / rent or buy a house
+* Research / how to research a house to buy
+   * Where do you want to live? / how to decide where to live
+   * What do you want in a house? / what factors are important for buying a house
+   * How much you can afford? / How much house you can afford?
+   * Review listings / houses for sale
+* Explore / how to find a house to buy
+   * Prepare to see houses / what to look for when viewing a house for the first time
+   * Go see some open houses / open houses near me
+   * Review more listings / houses for sale
+   * Learn how to choose a real-estate agent / how to choose a real-estate agent
+   * Choose a real-estate agent / real-estate agents near me
+* Bid and buy / how to bid and buy a house
+   * Pre-approval / mortgage preapproval
+   * Put in a bid / how to bid on a house
+   * Get into contract / getting into house contract
+   * Get a mortgage / get house mortgage
+   * Close the purchase / closing a house deal
