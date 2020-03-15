@@ -58,7 +58,6 @@ my $maxdepth = 1;
 while (<>) {
   s/[\r\n]*$//;
   next if /^$/;
-
   # drop header
   next if /Algorithmic extraction.clustering candidates/ ||
     /make a copy of this doc to collect your set of candidates/ ||
@@ -66,19 +65,18 @@ while (<>) {
 
   if (/^(\d+\.|\*|-) *(.*)/) {  # top level is use case
     $case = $2;
-    next if $case =~ /buy a house$/;  # skip this example.
-    #$case .= " [example]" if $case =~ /buy a house$/;
+    next if $case =~ /buy a house/;  # skip this example.
     push @cases, $case;
     @{$urls{$case}} = ();
     %{$data{$case}} = ();
   } elsif (/^   (\d+\.|\*|-) *(.*)/) {  # second level is url
-    next if $case =~ /buy a house$/;  # skip this example.
+    next if $case =~ /buy a house/;  # skip this example.
     $url = $2;
     push @{$urls{$case}}, $url;
     @{$data{$case}{$url}} = ();
     $cur = 0;
   } else {  # third+ levels are the taxonomy
-    next if $case =~ /buy a house$/;  # skip this example.
+    next if $case =~ /buy a house/;  # skip this example.
     s/^      //;
     next if /^         /;  # remove stuff too deep
 
@@ -240,8 +238,8 @@ can enable the user to <b>go deeper into each subtopic</b> if they wish, by leve
 Google Search to return a diverse set of high-quality articles, videos, and
 other Search features for each query, instead of sending the user to a single article for
 the entire topic.  Putting these subtopics and queries together, the Search
-experience for student loan forgiveness could, for example, look like <a href="../demo/"
-target=_blank>this demo</a>.
+experience for student loan forgiveness could, for example, look like <a
+href="../demo/01-00.html" target=_blank>this demo</a>.
 
 <li> We would like to combine your domain expertise with information from the
 top 20 web results for each topic, to construct this hierarchy of subtopics and
