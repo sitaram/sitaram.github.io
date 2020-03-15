@@ -115,8 +115,10 @@ print F<<"EOF";
   .text {
     margin: 16px 0;
   }
-  .start:hover {
-    text-decoration: underline;
+  \@media (hover: hover) {
+    .start:hover {
+      text-decoration: underline;
+    }
   }
   .start {
     display: inline-block;

@@ -112,22 +112,26 @@ sub printonecase($$) {
       .bc:active, .bc:visited, .bc:link {
         color: #222;
       }
-      .bc:hover {
-        text-decoration: underline;
-        color: #1a0dab;
+      \@media (hover: hover) {
+        .bc:hover {
+          text-decoration: underline;
+          color: #1a0dab;
+        }
       }
       .expando {
         float: right;
         margin-right: 50%;
         font-weight: bold;
       }
-      .expando:link, .expando:active, .expando:visited {
+      .expando, .expando:link, .expando:active, .expando:visited {
         text-decoration: none;
         color: #222;
       }
-      .expando:hover {
-        text-decoration: underline;
-        color: #1a0dab;
+      \@media (hover: hover) {
+        .expando:hover {
+          text-decoration: underline;
+          color: #1a0dab;
+        }
       }
       .toc {
         display: none;
@@ -152,9 +156,11 @@ sub printonecase($$) {
         cursor: pointer;
         color: #222;
       }
-      .chip:hover {
-        text-decoration: underline;
-        color: #1a0dab;
+      \@media (hover: hover) {
+        .chip:hover {
+          text-decoration: underline;
+          color: #1a0dab;
+        }
       }
       .icon {
         margin: 0 4px -4px 0;
