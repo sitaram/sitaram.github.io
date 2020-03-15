@@ -22,6 +22,7 @@ while (<>) {
     if ($case) { printcase(); }
     $casenum = $1;
     $case = $2;
+    $case =~ s/ \[demo\]//;
     push @cases, $case;
     %children = ();
     %query = ();
