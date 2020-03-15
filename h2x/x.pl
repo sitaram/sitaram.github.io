@@ -111,7 +111,7 @@ print F<<"EOF";
   $htmlstuff
   <style>
   .main {
-    margin: 16px;
+    padding: 16px;
   }
   .text {
     margin: 16px 0;
@@ -130,6 +130,9 @@ print F<<"EOF";
   li {
     margin-bottom: 12px;
   }
+  #link:focus {
+    outline: 0;
+  }
   </style>
 </head>
 <body onLoad="document.getElementById('link').focus();">
@@ -141,7 +144,7 @@ print F<<"EOF";
 <div class="text">
 Hello focus group participant,
 <p>
-Thank you for participating in this focus group study.
+Thank you for participating in this study.
 <ol>
 <li> For complex and important topics that students encounter, for example
 <b>how to pay for college</b>, <b>how to calculate cost of college</b>, or
