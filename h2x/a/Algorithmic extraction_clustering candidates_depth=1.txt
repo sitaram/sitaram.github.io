@@ -1,0 +1,899 @@
+﻿Algorithmic extraction/clustering candidates
+[make a copy of this doc to collect your set of candidates]
+[either add the candidate decompositions under each query directly OR link the corresponding text / html / spreadsheet file]
+
+
+1. How to buy a house [example]
+   * https://www.discover.com/home-loans/articles/10-steps-to-buying-a-home
+      * Start Your Research Early
+      * Determine How Much House You Can Afford
+      * Get Prequalified and Preapproved for credit for Your Mortgage
+      * Find the Right Real Estate Agent
+      * Shop for Your Home and Make an Offer
+      * Get a Home Inspection
+      * Work with a Mortgage Banker to Select Your Loan
+      * Have the Home Appraised
+      * Coordinate the Paperwork
+      * Close the Sale
+   * https://www.daveramsey.com/blog/how-to-buy-a-house 
+   * https://www.bankrate.com/real-estate/how-to-buy-a-house/
+   * https://www.investopedia.com/articles/mortgages-real-estate/10/ready-to-buy-house.asp
+   * https://www.moneysavingexpert.com/mortgages/house-buying-guide/
+   * https://www.nerdwallet.com/blog/mortgages/buying-a-house-whats-changed/
+   * https://www.trulia.com/guides/how-to-buy-a-house-in-10-steps/
+      * Hire a real estate agent
+      * Shop for a mortgage
+      * Make a list of needs and wants
+      * Browse online house listings
+      * Go to house viewings
+      * Make an offer and negotiate
+      * Get your loan approved
+      * Wait for the appraisal
+      * Hire a home inspector
+      * Close on your house
+   * https://www.which.co.uk/money/mortgages-and-property/first-time-buyers/buying-a-home/how-to-buy-a-house-alm0r9l4yf5x
+   * https://www.gov.uk/government/publications/how-to-buy-a-home/how-to-buy
+   * https://www.rocketmortgage.com/learn/how-to-buy-a-house
+   * https://michaelbluejay.com/house/
+   * https://hoa.org.uk/advice/guides-for-homeowners/i-am-buying/the-hoa-step-by-step-guide-to-buying-a-home/
+   * https://www.opendoor.com/w/guides/how-to-buy-a-house
+   * https://www.nytimes.com/guides/realestate/how-to-buy-a-house
+      * The Decision to Buy
+         * Rent vs. Buy?
+         * How Much House Can I Afford?
+      * Organize Your Finances
+         * Check Your Credit Score
+         * Get a Mortgage Preapproval
+         * Line Up Cash
+      * The Search for a New Home
+         * Choose a Neighborhood
+         * Comparison Shop
+         * Time to Visit
+         * Find a Real Estate Broker
+      * Making an Offer
+         * Analyze Your Market
+         * Be Willing to Negotiate
+         * Be Prepared For a Bidding War
+         * Make a Formal Offer
+         * Hire a Real Estate Lawyer
+         * Don't Fall in Love
+      * Closing
+         * Apply for a Mortgage
+         * Get a Home Inspection
+         * Get an Appraisal
+         * Shop for Homeowner's and Title Insurance
+         * Do a Final Walk-Through
+         * Close the Deal
+   * https://www.thebalance.com/how-to-buy-your-first-home-2385826
+   * https://www.moneyadviceservice.org.uk/en/articles/first-time-buyer-money-tips
+   * https://www.npr.org/2019/04/10/711932487/how-to-buy-a-house-in-7-steps
+   * https://howtobuya.house/
+   * https://www.realestate.com.au/advice/buying/how-to-buy-a-home/
+   * https://www.asb.co.nz/home-loans-mortgages/ways-to-buy-home-guide.html
+2. How to get student loan forgiveness
+   * https://thecollegeinvestor.com/21541/different-ways-to-get-student-loan-forgiveness/
+      * repayment plan based student loan forgiveness
+      * career - based student loan forgiveness options
+      * us military student loan forgiveness options
+      * state - based student loan forgiveness options
+      * employer - based student loan repayment assistance programs
+      * volunteering - based student loan forgiveness options
+      * student loan discharge options
+      * perkins loan cancellation options
+      * notice for private student loan debt
+      * final thoughts
+   * https://studentaid.gov/manage-loans/forgiveness-cancellation
+      * understanding loan forgiveness
+      * differences between forgiveness , cancellation , and discharge
+      * types of forgiveness , cancellation , and discharge
+      * eligibility for parent borrowers
+      * how to apply for forgiveness
+      * loan payments during the application review period
+      * my application was approved
+      * my application was denied
+   * https://www.nerdwallet.com/article/loans/student-loans/student-loan-forgiveness
+   * https://mygreatlakes.org/educate/knowledge-center/know-your-options-forgiveness.html
+      * teacher loan forgiveness
+      * public service loan forgiveness ( pslf )
+      * you ' ve got options if you were denied pslf
+      * closed school discharge
+      * borrower defense to repayment
+      * total and permanent disability discharge
+      * not eligible for total and permanent disability ?
+      * not finding the right repayment option ?
+      * free expert help !
+      * get in touch
+   * https://www.debt.org/students/loan-forgiveness/
+      * teacher loan forgiveness program
+      * loan forgiveness for nurses
+      * loan forgiveness for doctors
+      * loan forgiveness for lawyers
+      * loan forgiveness for military
+   * https://www.thebalance.com/student-loan-forgiveness-960819
+      * 1 . volunteer
+      * 2 . become a full - time teacher
+      * 3 . join the military
+      * 4 . become a doctor or lawyer
+      * who pays for student loan forgiveness
+      * drawbacks of student loan forgiveness
+   * https://www.usatoday.com/story/money/personalfinance/2013/09/06/student-loan-forgiveness-options/2776545/
+   * https://www.forbes.com/sites/robertfarrington/2020/01/02/ways-you-can-actually-get-your-student-loans-forgiven-today/
+   * https://www.huffpost.com/entry/quit-paying-student-loans-legally_n_5afe0700e4b07309e0564a1c
+      * 1 . enroll in income - driven repayment .
+      * 2 . pursue a career in public service .
+      * 3 . apply for disability discharge .
+      * 4 . investigate loan repayment assistance programs ( lraps ) .
+      * 5 . ask your employer .
+      * 6 . serve your country .
+      * 7 . play a game .
+      * 8 . file for bankruptcy .
+   * https://studentloanhero.com/featured/the-complete-list-of-student-loan-forgiveness-programs/
+      * dori zinn
+      * 1 . public service loan forgiveness ( pslf )
+      * 2 . forgiveness with income - based repayment ( ibr )
+      * 3 . forgiveness with pay as you earn ( paye )
+      * 4 . forgiveness with revised pay as you earn ( repaye )
+      * 5 . forgiveness with income - contingent repayment ( icr )
+      * 6 . federal perkins loan cancellation
+      * 7 . student loan forgiveness for teachers
+      * 8 . student loan forgiveness for nurses
+      * 9 . loan repayment assistance for doctors and other health care professionals
+      * 10 . loan repayment assistance for lawyers
+      * 11 . student loan repayment assistance programs for other careers
+      * 12 . military student loan forgiveness and assistance
+      * 13 . student loan discharge for special circumstances
+      * don ' t qualify for student loan forgiveness ? alternatives for conquering your debt
+      * interested in refinancing student loans ?
+      * more posts
+   * https://studentloanhero.com/featured/student-loan-forgiveness-jobs/
+      * rebecca safier
+      * 11 jobs that offer student loan forgiveness
+      * should you pursue jobs that offer student loan forgiveness ?
+      * interested in refinancing student loans ?
+      * related posts
+      * student loan calculators
+   * https://www.studentloanplanner.com/student-loan-forgiveness/
+      * federal student loan forgiveness programs
+      * total and permanent disability discharge
+      * state - sponsored loan repayment programs
+   * https://www.studentdebtrelief.us/student-loan-forgiveness/
+      * public service loan forgiveness
+      * teacher loan forgiveness
+      * disability discharge student loan forgiveness
+      * bankruptcy and undue hardship student loan discharge
+      * student loan interest forgiveness
+      * student loan forgiveness at the end of the loan term
+      * student loan forgiveness for nurses
+      * student loan death discharge
+      * closed school discharge
+      * military college loan repayment program ( mclrp )
+      * perkins loan cancellation ( plc )
+      * state - sponsored student loan forgiveness programs
+      * why do people call it obama student loan forgiveness ?
+      * compare the best student loan refinance rates
+   * https://nurse.org/education/student-loan-forgiveness-for-nurses/
+   * https://www2.ed.gov/fund/grants-college.html?src=rn
+   * https://abcnews.go.com/Politics/wireStory/senate-passes-rebuke-devos-student-loan-forgiveness-69538648
+   * https://www.investopedia.com/terms/s/student-loan-forgiveness.asp
+   * https://novascotia.ca/student-loan-forgiveness/
+   * https://www.daveramsey.com/blog/student-loan-forgiveness
+   * https://myfedloan.org/borrowers/special-programs/
+3. How to calculate college cost
+   * https://bigfuture.collegeboard.org/pay-for-college/college-costs/college-costs-calculator
+   * https://www.calculator.net/college-cost-calculator.html
+      * college - specific net price calculators
+      * higher education in the us
+      * how much does college cost ?
+      * financial aid
+      * 529 prepaid plan
+   * https://blog.ctrust.com/how-to-calculate-the-true-cost-of-college
+   * https://www.savingforcollege.com/calculators/college-savings-calculator
+   * https://vanguard.wealthmsi.com/collcost.php
+   * https://www.affordablecollegesonline.org/financial-aid/college-calculators/
+   * https://www.npr.org/2019/04/11/709528694/how-to-calculate-the-cost-of-college-a-guide-to-financial-aid-terms
+   * https://www.cnbc.com/2017/04/24/best-ways-to-figure-out-what-college-really-costs.html
+   * https://www.edmit.me/resources/how-to-calculate-college-net-price
+      * key takeaways :
+      * what's the difference between sticker price and net price ?
+      * what is the meaning of net price ?
+      * will i have to pay the sticker price ?
+      * how do you calculate the net price of a college ?
+      * how do you compare net price among several colleges ?
+   * https://blog.scholarshipamerica.org/calculate-the-real-cost-of-attendance-at-any-college
+   * https://midpennbank.com/how-to-calculate-the-real-cost-of-college/
+      * tuition and school fees
+      * room and board
+      * books and school supplies
+      * transportation
+      * traveling home
+      * life's necessities
+      * social life and extracurricular activities
+   * https://www.finaid.org/calculators/costprojector.phtml
+   * https://myintuition.org/
+   * https://www.edupass.org/paying-for-college/planning/costs/
+   * https://www.collegecalc.org/
+   * https://www.vawizard.org/wizard/financing-college
+   * https://collegescorecard.ed.gov/
+   * https://study.com/articles/10_Free_Online_Calculators_to_Estimate_College_Costs.html
+      * 1 . ) cnn money college cost finder
+      * 2 . ) college board college cost calculator
+      * 3 . ) ny times college cost calculator
+      * 4 . ) finaid college cost projector
+      * 5 . ) college tuition planner
+      * 6 . ) salary . com cost of living wizard
+      * 7 . ) citi student loan calculator
+      * 8 . ) adventures in education loan payment calculator
+      * 9 . ) sallie mae loan repayment calculator
+      * online classes guide
+      * popular schools
+   * https://students.collegefactual.com/blog/breaking-down-college-costs
+   * https://www.usnews.com/education/best-colleges/features/net-price-calculator
+4. How to apply for fafsa
+   * https://studentaid.gov/h/apply-for-aid/fafsa
+   * https://studentaid.gov/apply-for-aid/fafsa/filling-out
+      * fafsa ® topics
+      * creating an fsa id
+      * gathering the documents needed to apply
+      * getting help
+      * starting your fafsa ® form and providing your basic personal information
+      * listing colleges and / or career schools
+      * determining your dependency status
+      * reporting parents ' information
+      * providing financial information
+      * signing and submitting the fafsa ® form
+      * taking the next steps
+   * https://www.salliemae.com/college-planning/financial-aid/fafsa/
+      * what is the fafsa
+      * ready to conquer the fafsa ?
+      * where and how to apply for federal student aid — the beginner's guide
+      * how is your fafsa used to calculate your federal student aid eligibility
+      * what happens after your fafsa submission
+      * add these fasfa dates to your calendar
+      * financial aid tip
+      * debunking financial aid myths
+   * https://www.collegeavestudentloans.com/resources/how-to-apply-for-fafsa/
+      * 1 . gather your information
+      * 2 . create a federal student aid ( fsa ) id
+      * 3 . fill in student information
+      * 4 . enter parent information
+      * 5 . provide your financial information
+      * 6 . review your fafsa
+      * 7 . sign and submit your fafsa form
+   * https://blog.ed.gov/2017/09/8-steps-to-filling-out-the-fafsa-form/
+      * 1 . create an account ( fsa id ) .
+      * 2 . start the fafsa ® form at fafsa . gov .
+      * 3 . fill out the student demographics section .
+      * 4 . list the schools to which you want your fafsa ® information sent .
+      * 5 . answer the dependency status questions .
+      * 6 . fill out the parent demographics section .
+      * 7 . supply your financial information .
+      * 8 . sign and submit your fafsa form .
+      * email updates
+      * archives
+   * https://www.benefits.gov/benefit/4426
+   * https://www.forbes.com/sites/brianboswell/2018/10/01/how-to-apply-for-financial-aid/
+   * https://www.youtube.com/watch?v=LK0bbu0y5AM
+   * https://www.savingforcollege.com/article/how-to-apply-for-financial-aid-for-college
+   * https://www.credible.com/blog/student-loans/applying-for-fafsa/
+      * step - by - step guide to applying for fafsa
+      * what is the fafsa and why is it important ?
+      * what are some common fafsa mistake i should avoid ?
+      * who should submit a fafsa application ?
+      * when is the fafsa due and when can i start applying for financial aid ?
+      * which documents will i need to fill out the fafsa ?
+      * best tips for filling out fafsa
+   * https://bigfuture.collegeboard.org/pay-for-college/financial-aid-101/how-to-complete-the-fafsa
+   * https://cssprofile.collegeboard.org/
+   * https://www.finaid.txstate.edu/undergraduate/how.html
+   * https://www.nerdwallet.com/article/loans/student-loans/fafsa-deadline
+   * https://studentloanhero.com/featured/do-i-qualify-for-financial-aid-eligibility-requirements/
+      * elyssa kirkham
+      * 1 . check basic eligibility requirements for financial aid
+      * 2 . submit the fafsa
+      * 3 . maintain satisfactory academic progress
+      * 4 . demonstrate financial need
+      * explore non - need - based student loans
+      * related posts
+      * student loan calculators
+   * https://www.ohe.state.mn.us/mPg.cfm?pageID=130
+      * free application for federal student aid
+      * what is the fafsa ?
+      * completing the fafsa
+      * information you need on hand before you start
+      * where to find help in completing the fafsa
+      * tips to help you complete your fafsa accurately
+   * https://students-residents.aamc.org/financial-aid/article/financial-aid-application-process/
+      * step 1 : complete the fafsa
+      * step 2 : investigate sources of aid
+      * step 3 : apply early
+      * step 4 : receive your award letter
+      * remember :
+      * search financial aid resources
+      * medloans ® organizer and calculator ( mloc )
+      * aamc financial wellness
+      * education debt manager ( edm ) for matriculating and graduating medical school students
+   * https://www.tcc.edu/paying-for-college/federal-financial-aid/
+   * https://www.edvisors.com/fafsa/eligibility/filing-fafsa-deadline-2019-2020/
+      * who should file the fafsa ® , what you ' ll need , and when to start
+      * who should file the fafsa ?
+      * what do i need to file the fafsa ?
+      * where do i file the fafsa ?
+      * why should i file the fafsa ?
+   * http://www.finaid.ucsb.edu/how-to-apply
+5. How to get scholarships
+   * https://www.salliemae.com/college-planning/college-scholarships/apply-for-scholarships/
+   * https://studentaid.gov/understand-aid/types/scholarships
+      * what kinds of scholarships are available ?
+      * how do i find scholarships ?
+      * when do i apply for scholarships ?
+      * how do i apply for scholarships ?
+      * how do i get my scholarship money ?
+      * how does a scholarship affect my other student aid ?
+   * https://www.topuniversities.com/student-info/scholarship-advice/how-get-full-scholarship
+      * know where to look
+      * prepare in advance
+      * work hard and keep motivated
+      * make yourself stand out from other applicants
+      * read the application instructions carefully
+      * submit an exceptional scholarship essay or cover letter
+      * be realistic
+   * https://www.iwillteachyoutoberich.com/blog/how-to-get-scholarships/
+   * https://www.usnews.com/education/best-colleges/paying-for-college/articles/how-to-find-and-secure-scholarships-for-college
+      * what's the difference between grants and scholarships ?
+      * how do i find scholarships for college ?
+      * can college students still apply for scholarships ?
+      * what types of scholarships are available ?
+      * when do i start applying for scholarships ?
+      * how do i apply for college scholarships ?
+      * do all scholarships require an essay ?
+      * do i need a letter of recommendation to apply for a scholarship ?
+      * what's the best strategy to win a scholarship ?
+   * https://www.cbsnews.com/news/10-great-ways-to-win-a-college-scholarship/
+      * 1 . give the scholarship sponsor what it wants .
+      * 2 . get involved with your community .
+      * 3 . look professional .
+      * 5 . don ' t ignore the optional questions .
+      * 6 . learn more about scholarship odds .
+      * 7 . apply to every eligible scholarship .
+      * 8 . look for essay contests .
+      * 9 . be passionate .
+      * 10 . think local .
+      * more on cbs moneywatch :
+   * https://www.nerdwallet.com/blog/loans/student-loans/how-to-get-a-scholarship/
+   * https://www.fastweb.com/college-scholarships/articles/ten-scholarships-you-can-apply-for-today
+      * because college is expensive scholarship
+      * project yellow light video contest scholarship
+      * " frame my future " scholarship
+      * pulse of perseverance scholarship
+      * gamers helping gamers scholarship
+      * gold medal portfolio award
+      * american legion national high school oratorical contest
+      * optimist international oratorical contest
+      * scholars program
+      * need money to pay for college ?
+   * https://www.scholarships.com/
+   * https://www.scholarships.com/apply-for-scholarships.aspx
+   * https://www.unigo.com/scholarships
+      * athletic scholarships
+      * college - specific scholarships
+      * company - sponsored scholarships
+      * grants for college
+      * merit - based scholarships
+      * military scholarships
+      * minority scholarships
+      * our scholarships
+      * scholarship contests & sweepstakes
+      * scholarships by major
+      * scholarships by state
+      * scholarships by type
+      * scholarships for graduate students
+      * scholarships for high school students
+      * scholarships for undergraduate students
+      * weird scholarships
+   * https://www.goabroad.com/articles/scholarships-abroad/how-to-apply-for-study-abroad-scholarships-without-wasting-your-time
+      * step 1 . ask for help
+      * step 2 . research , research , research
+      * step 3 . contact the scholarship / grant funder directly
+      * step 4 . tweak your resume
+      * step 5 . check your references
+      * step 7 . apply , apply apply !
+      * step 8 . take your time & take it seriously
+      * step 9 . have the grades
+      * step 10 . the proof is in the passion
+   * https://www.youtube.com/watch?v=42-w-tMyl3Y
+   * https://www.scholarshipportal.com/
+   * https://blog.prepscholar.com/how-to-get-a-full-ride-scholarship
+      * what is a full ride scholarship ?
+      * private full ride scholarship awards
+      * full ride scholarships from schools
+      * 5 steps to winning a full ride scholarship
+      * what you should do if you don ' t think you ' ll get a full ride scholarship
+      * what's next ?
+      * ask a question below
+      * improve with our famous guides
+      * stay informed
+   * https://blog.prepscholar.com/colleges-with-full-ride-scholarships
+      * 82 colleges with full - ride scholarships
+      * what kind of schools offer full - tuition scholarships ?
+      * are international students eligible for these scholarships ?
+      * where should you look for a full - ride scholarship ?
+      * top national schools that offer full - ride scholarships
+      * what do you need to get a full - ride scholarship ?
+      * what's next ?
+      * ask a question below
+      * improve with our famous guides
+      * stay informed
+   * http://money.com/collection-post/tips-winning-college-scholarships/
+      * 1 . apply for local scholarships
+      * 2 . apply for scholarships with smaller awards
+      * 3 . more work = fewer applicants = better chances
+      * 4 . get personal
+      * 5 . don ' t introduce yourself in your essay
+      * 6 . don ' t repeat the essay prompt
+      * 7 . don ' t use quotes
+      * 8 . satisfy all the requirements
+      * 9 . stick to the word limit
+      * 10 . proofread
+      * 11 . submit early
+      * 12 . apply for as many scholarships as you can
+      * 13 . don ' t give up !
+   * https://www.internationalstudent.com/study_usa/financing/scholarships/
+   * https://www.goingmerry.com/blog/how-to-get-scholarships/
+   * https://www.studyinholland.nl/finances/scholarships/find-a-scholarship
+6. How to get student loans
+   * https://www.gov.uk/student-finance
+   * https://www.nerdwallet.com/blog/loans/student-loans/how-to-get-student-loan/
+   * https://studentaid.gov/understand-aid/types/loans
+      * what types of federal student loans are available ?
+      * how much money can i borrow in federal student loans ?
+      * why should i take out federal student loans ?
+      * what should i consider when taking out federal student loans ?
+      * how do i get a federal student loan ?
+      * is the us department of education responsible for health education assistance loan ( heal ) program loans ?
+      * what is the federal perkins loan program ?
+   * https://www.thebalance.com/how-to-get-a-student-loan-315839
+      * try to not borrow
+      * know your options
+      * start with government loans
+      * start with the end in mind
+      * if you don ' t qualify
+   * https://www.simpletuition.com/student-loans/how-to-get/
+   * https://www.salliemae.com/college-planning/student-loans-and-borrowing/
+   * https://www.salliemae.com/student-loans/
+   * https://thecollegeinvestor.com/18701/requirements-get-student-loan/
+   * https://www.discover.com/student-loans/college-planning/how-to-pay/loans
+      * what do student loans cover ?
+      * my biggest student loan regrets
+      * how rising interest rates affect your student loans
+      * what you need to know about student loan refunds
+      * how i reduced how much i needed to borrow in student loans
+      * what is a direct stafford loan ?
+      * determine how much to borrow
+      * consider federal student loans
+      * 4 smart tips for comparing student loan interest rates
+      * are making in - school payments worth it ?
+      * what determines your private student loan interest rate
+   * https://www.wellsfargo.com/student/
+   * https://loans.usnews.com/student-loans
+   * https://www.fool.com/student-loans/how-get-student-loans-bad-credit/
+      * borrowing money for college is possible even when your credit is poor . here's how to do it .
+      * what's considered bad credit ?
+      * getting student loans when your credit is bad
+      * 1 . apply for federal loans
+      * 2 . get a cosigner and borrow privately
+      * 3 . find a private lender that's willing to take a chance on you
+      * alternatives to explore
+      * refinancing your student loans after the fact
+      * something big just happened
+      * motley fool returns
+   * https://www.edvisors.com/ask/faq/how-do-student-loans-work/
+      * what is a student loan ?
+      * what is interest ?
+      * who provides student loans ?
+      * how much can you borrow ?
+      * how do you apply for a student loan ?
+      * how do you get your student loan money ?
+      * how do you repay a student loan ?
+      * what happens if you don ' t repay your student loans ?
+   * https://www.studylink.govt.nz/products/a-z-products/student-loan/index.html
+   * https://metro.co.uk/2020/03/10/im-getting-118-student-loans-company-overpaid-can-12372722/
+   * https://www.standardbank.co.za/southafrica/personal/products-and-services/borrow-for-your-needs/student-loans/student-loans
+   * https://www.forbes.com/sites/zackfriedman/2020/03/11/senate-overturns-student-loan-forgiveness-rule/
+   * https://studentaidbc.ca/apply/how-to-apply
+   * https://www.axisbank.com/retail/loans/education-loan/eligibility
+   * https://smartasset.com/student-loans/student-loan-calculator
+      * add your existing student loan details to calculate monthly payments and your student loan amortization over time .
+      * student loan calculator
+      * here to help
+      * different loans for different folks
+      * stafford loans
+      * plus loans
+      * perkins loans
+      * private loans
+      * applying for federal financial aid
+      * at what cost ?
+      * best value colleges
+7. How to transfer financial aid funds
+   * https://www.fastweb.com/financial-aid/articles/how-do-i-transfer-financial-aid-from-one-college-to-another
+   * https://studentaid.gov/complete-aid-process/receive-aid
+   * https://students.asu.edu/financialaid/apply/transfer
+   * https://studentcentral.iupui.edu/funding/apply-financial-aid/steps-to-apply/transfer.html
+   * https://www.valdosta.edu/administration/finance-admin/auxiliary-services/1-card-services/transfer-financial-aid-to-flex.php
+   * https://financialaid.utah.edu/types-of-aid/scholarships/transfer/index.php
+   * https://www.kent.edu/transfer/transfer-student-financial-aid
+   * https://www.uhd.edu/financial/apply/Pages/financial-apply-transfer.aspx
+   * https://financialaid.arizona.edu/apply-for-aid/transfer
+   * https://www.dvc.edu/student-services/financial-aid/pdfs/financial-aid-disbursement-options-faq.pdf
+   * https://finaid.gatech.edu/transfer-student
+   * https://www.hacc.edu/Paying/CanIGetAid/ApplyingforAid/Transfer.cfm
+   * https://books.google.com/books?id=g9yVIiSirikC&pg=PA262&lpg=PA262&dq=&source=bl&ots=IoRmrnJimD&sig=ACfU3U1P0NxNV1UYSHA6aNpftiULoEuWfg
+   * http://www.bu.edu/finaid/apply/transfer/
+   * https://www.colorado.edu/financialaid/apply-aid/transfer-students
+   * https://www.collin.edu/gettingstarted/financialaid/FrequentlyAskedQuestions.html
+      * why are you asking for my high school transcript ?
+      * why did i not get my full pell grant ?
+      * how do i use my financial aid to pay for my classes ?
+      * how do i use my financial aid to purchase my books and supplies ?
+      * how many hours do i have to attend to qualify for financial aid ?
+      * do i have to apply for financial aid again for next year ?
+      * do i need to include my stepparent's income on the fafsa ?
+      * how do i transfer my financial aid to another school ?
+      * does financial aid pay for summer ?
+      * how do i qualify for federal work study ?
+      * i know that i am on financial aid suspension , but can i still get a student loan ?
+      * what if my parents live together but were never married ?
+      * am i considered an independent student if i am expecting a child during the academic year for which i will receive financial aid ?
+      * does hazelwood pay for continuing education classes ?
+      * what does selected for " verification " mean ?
+      * why have i not received my money when other students already have theirs ?
+      * why did i get dropped from my classes ?
+      * what is sap ? why am i not eligible for financial aid ?
+   * https://www.barry.edu/future-students/undergraduate/financial-aid/transfer-student.html
+   * https://books.google.com/books?id=PrsrJLCB008C&pg=RA3-PA148&lpg=RA3-PA148&dq=&source=bl&ots=7ypzjk_d_S&sig=ACfU3U1zxUE9na2z4t3Avz_inQv5Og_DGg
+   * https://www.jjc.edu/getting-started/pay-college/financial-aid
+   * https://www.uab.edu/students/paying-for-college/first-professional/faq
+      * when can i expect my disbursements ?
+      * can i get my money before the academic year begins for books and moving in expenses ?
+      * where can i find the cost of attendance for my year in school ?
+      * how much can i borrow throughout my academic career ?
+      * when should i apply for financial aid each year ?
+      * does " efc / expected family contribution ” mean that i or my parents must write a check to uab for that amount each year ?
+      * what forms do i need to fill out this year ?
+      * do i need my parents tax information on the fafsa ?
+      * should i include my parents ' fafsa information even if i am married ?
+      * does it matter if my parents claimed me on their taxes ?
+      * how do i find out how much i owe in student debt before i enter professional school ?
+      * what are some things i can do to prepare myself financially for entry into professional school ?
+      * can i use my student loans for purposes other than educational expenses ?
+      * does uab include health insurance for my spouse as part of my educational expenses ( will it lend me student loans for this purpose ? )
+      * why should i apply for direct deposit ?
+      * why should i sign a title iv form ?
+      * why should i complete the questionnaire ?
+      * where can i find information about student loan interest rates , bank origination fees , loan repayment options , and applying for deferment during residency ?
+      * do i have to make interest payments on my unsubsidized federal direct and / or graduate plus loans while i am in school ?
+      * what happens to my financial aid if i withdraw from school ?
+      * what happens if i become delinquent or i default on my institutional , federal , state or private loans ?
+      * paying for college : first professional students
+8. How to understand my award letter
+   * https://www.edvisors.com/fafsa/after-submitting/award-letter/
+      * timeline
+      * award letters can be confusing
+      * how to calculate the net price
+      * using net price to compare colleges
+      * net price limitations
+      * example of a problematic award letter
+      * example of an improved award letter
+      * financial aid shopping sheet
+      * ten questions to ask the college financial aid administrator
+      * cutting college costs
+   * https://www.collegeavestudentloans.com/resources/understanding-and-comparing-financial-aid-letters/
+      * elements of financial aid letters
+      * additional costs
+      * estimated tuition cost increases
+      * the average graduation rate at the university
+      * scholarship terms
+      * loan terms
+      * work - study program terms
+      * additional questions
+      * why need is not just a number
+      * what to do next with financial aid letters
+   * https://www.nerdwallet.com/blog/loans/student-loans/understanding-financial-aid-award-letter/
+   * https://www.nitrocollege.com/blog/how-to-read-your-financial-aid-award-letter
+      * final thoughts
+   * https://www.salliemae.com/college-planning/financial-aid/financial-aid-award-letter/
+      * think comparing financial aid offers is " ruff " ?
+      * the financial aid piece of the school puzzle
+      * what's in a financial aid offer
+      * graduate school financial aid offers
+      * free money vs borrowed money vs earned
+      * when will you get financial aid offers ?
+      * compare your financial aid packages
+      * a financial aid offer isn ' t always set in stone
+      * making the big decision
+   * https://withfrank.org/how-to-pay-for-college/how-do-i-apply/next-steps-after-fafsa/how-to-read-your-financial-aid-award-letter/
+      * your award letter — step by step
+      * cost of attendance
+      * eligibility factors – factors impacting the size of your aid award
+      * financial aid award
+      * outside resources
+      * your gift aid simplified
+      * calculating your net price
+      * calculating your net cost
+      * compare your aid award packages
+      * appealing your aid award
+   * https://www.forbes.com/sites/kristenmoon/2019/04/02/understanding-your-financial-aid-award-letter/
+   * https://www.investopedia.com/understanding-your-financial-aid-award-letter-4783535
+      * it starts with filling out the fafsa
+      * what is financial aid ?
+      * how to apply for financial aid
+      * when is fafsa due ?
+      * how does financial aid work ?
+      * what is a financial aid award letter ?
+      * types of financial aid
+      * how to apply for financial aid
+      * financial aid appeal letter
+      * the bottom line
+   * https://www.cod.edu/costs/financial_aid/understanding_your_award_letter.aspx
+   * https://finaid.yale.edu/award-letter/understanding-your-award
+      * your estimated cost of attendance
+      * gift ​ aid
+      * your estimated net cost
+      * expected family contribution and options to pay net cost
+      * estimated yale term bills
+      * special notes about your award
+   * https://financialaid.kennesaw.edu/student-resources/awarding.php
+      * how to accept , decline , or reduce an award
+      * additional steps
+      * deadlines and payment information
+      * new and prospective undergraduates
+      * current undergraduates
+      * rights and responsibilities of accepting financial aid
+   * https://www.raise.me/blog/paying-for-college/award-letters/
+   * https://www.betterfutureforward.org/understanding-your-financial-aid-award-letter
+      * cost of attendance ( coa )
+      * total grants and scholarships
+      * net costs
+      * work study
+      * loans
+      * family contribution ( also referred to as expected family contribution )
+      * graduation rate
+      * repayment rate
+      * median borrowing
+      * learning center
+   * https://www.youtube.com/watch?v=RB-dVP5sU9A
+   * https://financialaid.unt.edu/fan
+   * https://emu.edu/financial-aid/award-letter
+   * https://studentaffairs.vancouver.wsu.edu/student-financial-services/understanding-my-financial-aid-award-letter
+   * https://finaid.cornell.edu/videos/understanding-your-award-letter
+   * https://www.finaid.org/fafsa/awardletters.phtml
+   * https://www.earnest.com/blog/how-to-read-your-financial-aid-award-letter/
+9. How to get an application fee waiver
+   * https://www.accreditedschoolsonline.org/resources/college-application-fee-waiver/
+   * https://blog.prepscholar.com/college-application-fee-waiver
+      * how much do college applications cost ?
+      * how to qualify for college application fee waivers
+      * how do you get college application fee waivers ?
+      * how do you use college application fee waivers ?
+      * what to remember about college application fee waivers
+      * what's next ?
+      * ask a question below
+   * https://bigfuture.collegeboard.org/get-in/applying-101/college-application-fee-waivers
+      * why did i receive college application fee waivers ?
+      * i have registered and taken the sat using a fee waiver . when can i expect to receive my college application fee waivers ?
+      * if i am applying to colleges using the coalition , common , or universal applications , can i still use a college application fee waiver ?
+      * how many of these college application fee waivers am i allowed to use ?
+      * do i need to have my college application fee waivers verified or signed by my school counselor ?
+      * can i share college application fee waivers with my friends ?
+      * what's the difference between a college application fee waiver and an sat fee waiver ?
+      * do all colleges accept application fee waivers ?
+      * i don ' t have access to a printer . what should i do ?
+      * will the college board share my personal information with anyone ?
+      * my address listed on the college application fee waivers has changed . how do i update my contact information ?
+   * https://www.nerdwallet.com/blog/loans/student-loans/college-application-fee-waiver/
+      * 1 . ask for act and sat fee waivers
+      * 2 . request college application fee waivers
+      * 3 . find colleges with no application fee
+      * 4 . ask the college to waive the fee
+      * next steps
+      * what's next ?
+   * https://studentloanhero.com/featured/fee-waiver-college-application/
+      * kat tretina
+      * don ' t let application fees stop you from applying
+      * need a student loan ?
+      * related posts
+      * student loan calculators
+   * https://appsupport.commonapp.org/applicantsupport/s/article/What-do-I-need-to-know-about-the-Common-App-fee-waiver
+   * https://www.nacacfairs.org/learn/fee-waiver/
+   * https://blog.collegevine.com/how-to-receive-a-common-app-fee-waiver/
+   * https://www.acenet.edu/Documents/College%20Application%20Fee%20Waiver%20Worksheet%20final%20.pdf
+   * https://www2.calstate.edu/apply/paying-for-college/Pages/fee-waiver.aspx
+   * https://www.gov.uk/government/publications/applications-for-a-fee-waiver-and-refunds
+   * https://admissions.northwestern.edu/tuition-aid/fee-waiver.html
+   * https://www.usatoday.com/story/college/2012/08/10/how-to-avoid-college-application-fees/37396463/
+   * https://www.freemovement.org.uk/fee-waiver-policy-who-qualifies-and-what-does-the-home-office-policy-say/
+   * https://uwhelp.wisconsin.edu/counselors/admission-process/application-fee-waiver/
+   * https://admissions.dartmouth.edu/glossary-term/application-fee-waiver
+   * https://uadmissions.georgetown.edu/applying/fee-waiver/
+      * how do i request a fee waiver ?
+      * does the fee waiver form have to be completed by a guidance counselor ?
+      * how can i ( or my counselor ) submit the application fee waiver request ?
+      * can international applicants request a fee waiver ?
+      * can transfer students request a fee waiver ?
+      * if i am submitting a fee waiver request , when should i send in my application to georgetown ?
+      * if i have already paid the application fee , can i still request a fee waiver ?
+      * i am not sure if i am eligible for a fee waiver . what should i do ?
+      * more information
+   * http://www.coalitionforcollegeaccess.org/fee-waiver.html
+   * https://www.ucf.edu/admissions/undergraduate/question/how-can-i-request-a-waiver-of-the-application-fee/
+   * https://www.suny.edu/media/suny/content-assets/documents/application-forms/fee_waiver.pdf
+10. How to retain qualification for student loan
+   * https://www.finder.com/ways-you-can-lose-student-loan-eligibility
+   * https://studentaid.gov/understand-aid/eligibility/requirements
+   * https://www.nerdwallet.com/blog/loans/student-loans/does-refinancing-student-loans-save-money/
+   * https://www.nerdwallet.com/article/loans/student-loans/student-loan-refinance-calculator
+   * https://www.gov.uk/student-finance/new-fulltime-students
+   * https://studentaidbc.ca/maintain/responsibilities
+   * https://blog.ed.gov/2019/09/public-service-loan-forgiveness-tips/
+      * 1 . understand the requirements .
+      * 2 . check other factors that impact your pslf eligibility .
+      * 3 . submit your employment certification form yearly .
+      * 4 . be aware of the pslf and ecf process .
+      * 5 . save and archive your documentation .
+      * email updates
+      * archives
+   * https://books.google.com/books?id=DJE_JeajMQUC&pg=PA3&lpg=PA3&dq=&source=bl&ots=kJuy4DRLba&sig=ACfU3U32bgy-38FhiyWKNA16JGgecRU-4A
+   * https://www.ird.govt.nz/student-loans/when-can-i-keep-my-student-loan-interest-free-overseas/apply-to-keep-my-student-loan-interest-free
+   * https://www.investopedia.com/terms/s/student-loan-forgiveness.asp
+   * https://www.credit.com/blog/2014/08/how-a-deferred-student-loan-could-keep-you-from-buying-a-house-94181/
+   * https://www.credit.com/loans/student-loans/student-articles/can-student-loans-keep-me-from-getting-auto-loan/
+   * https://books.google.com/books?id=PsWGZV5m4iAC&pg=PA1831&lpg=PA1831&dq=&source=bl&ots=wXWniC9o1J&sig=ACfU3U2LeqCzIbezTcSphqrxHsVdk7O8uw
+   * https://studentaid.alberta.ca/before-you-apply/eligibility/
+   * https://studentloanhero.com/featured/the-complete-list-of-student-loan-forgiveness-programs/
+      * dori zinn
+      * 1 . public service loan forgiveness ( pslf )
+      * 2 . forgiveness with income - based repayment ( ibr )
+      * 3 . forgiveness with pay as you earn ( paye )
+      * 4 . forgiveness with revised pay as you earn ( repaye )
+      * 5 . forgiveness with income - contingent repayment ( icr )
+      * 6 . federal perkins loan cancellation
+      * 7 . student loan forgiveness for teachers
+      * 8 . student loan forgiveness for nurses
+      * 9 . loan repayment assistance for doctors and other health care professionals
+      * 10 . loan repayment assistance for lawyers
+      * 11 . student loan repayment assistance programs for other careers
+      * 12 . military student loan forgiveness and assistance
+      * 13 . student loan discharge for special circumstances
+      * don ' t qualify for student loan forgiveness ? alternatives for conquering your debt
+      * interested in refinancing student loans ?
+      * more posts
+   * https://books.google.com/books?id=qoHNPa5iJVYC&pg=RA1-PA60&lpg=RA1-PA60&dq=&source=bl&ots=6opTve0hY3&sig=ACfU3U2QlpBJcjJPUz4LAO12eNiPabmwqQ
+   * https://www.studentloanplanner.com/public-service-loan-forgiveness/
+   * https://www.opm.gov/policy-data-oversight/pay-leave/student-loan-repayment/
+      * employee coverage
+      * limitations
+      * discretionary authority
+      * service agreement
+      * periods in a non - pay status
+      * annual reporting
+      * references
+   * https://www.savethestudent.org/student-finance/the-big-fat-guide-to-student-finance-2012.html
+   * https://www.savethestudent.org/international-students/a-guide-to-uk-tuition-fees-for-eu-students.html
+      * what's in this guide ?
+      * can eu students get student loans in the uk ?
+      * can eu students apply for a uk maintenance loan ?
+      * which university courses are eligible for student finance ?
+      * do eu students pay tuition fees in scotland ?
+      * bursaries and scholarships for eu students
+      * repaying your uk student loan
+      * how much does it cost to live in the uk ?
+11. How to refinance a student loan
+   * https://studentloanhero.com/featured/how-to-refinance-student-loans/
+      * rebecca safier
+      * 4 steps to easily refinance student loans
+      * refinancing is a strategic way to get rid of student loan debt
+      * interested in refinancing student loans ?
+      * more posts
+   * https://www.nerdwallet.com/refinancing-student-loans
+   * https://www.nerdwallet.com/article/loans/student-loans/student-loan-refinance-calculator
+   * https://www.forbes.com/sites/zackfriedman/2017/02/17/refinance-student-loans/
+   * https://www.credible.com/refinance-student-loans
+   * https://loans.usnews.com/student-loans-consolidation-refinancing
+   * https://www.acorns.com/money-basics/student-debt/how-to-refinance-student-loans/
+      * what is student loan refinancing ?
+      * can you refinance federal student loans ?
+      * refinancing vs . consolidation
+      * why do people refinance their student loans ?
+      * what if you aren ' t approved ?
+      * related articles
+   * https://www.fool.com/student-loans/how-to-refinance-your-student-loans/
+      * get the terms you want for your student loans by refinancing them . image source : getty images .
+      * what is student loan refinancing ?
+      * why you should be careful about refinancing federal student loans
+      * what to do before refinancing your student loans
+      * a better deal on your student loans
+      * something big just happened
+      * motley fool returns
+   * https://www.sofi.com/refinance-student-loan/
+   * https://www.moneycrashers.com/how-to-refinance-student-loans-pros-cons/
+      * how student loan refinancing works
+      * should you refinance ?
+      * advantages of student loan refinancing
+      * disadvantages of student loan refinancing
+      * options to consider instead
+      * final word
+   * https://www.earnest.com/refinance-student-loans
+   * https://www.studentloanplanner.com/refinance-student-loans/
+      * get the best student loan refinancing deal anywhere
+      * use a student loan refinance calculator , see potential savings
+      * student loan refinancing faq
+      * testimonials from student loan planner readers who refinanced
+      * experience getting a lower interest rate through student loan planner
+      * start applying or take the student loan refinancing quiz
+   * https://thecollegeinvestor.com/21558/best-places-refinance-student-loans/
+      * 1 . citizens bank
+      * 2 . commonbond
+      * 3 . earnest
+      * 4 . elfi
+      * 5 . figure
+      * 6 . first republic
+      * 7 . laurel road
+      * 8 . lendkey
+      * 9 . sofi
+      * 10 . splash financial
+      * the requirements to refinance student loans
+      * things to consider when refinancing
+      * more student loan refinancing faqs
+      * final thoughts
+   * https://huecu.org/education-loans/refinance/
+   * https://www.moneyunder30.com/should-i-refinance-my-student-loans
+   * https://www.mefa.org/products/student-loans-refinancing/
+   * https://www.firstrepublic.com/student-loan-refinancing
+   * https://www.elfi.com/
+   * https://www.whitecoatinvestor.com/student-loan-refinancing/
+   * https://www.thebalance.com/refinancing-federal-student-loans-4136471
+12. How to manage student debt
+   * https://www.thesimpledollar.com/loans/student/15-ways-to-deal-with-student-loan-debt/
+   * https://www.debt.org/students/debt/
+   * https://www.investopedia.com/articles/personal-finance/082115/10-tips-managing-your-student-loan-debt.asp
+   * https://www.moneyunder30.com/student-loans
+   * https://www.accreditedschoolsonline.org/resources/student-loans/
+      * what's on this page
+      * repaying federal student loans
+      * repaying private student loans
+      * debt loads and mental health
+      * consolidating your loans
+      * refinancing your loans
+   * https://www.petersons.com/blog/how-to-manage-student-debt/
+   * https://www.ucas.com/finance/managing-money/managing-student-debt
+   * https://www.nbcnews.com/feature/maria-shriver/life-ed-how-manage-student-loan-debt-n129521
+   * https://www.nerdwallet.com/blog/loans/how-to-manage-student-loan-debt-without-making-it-worse/
+   * https://studentaid.gov/h/manage-loans
+   * https://www.forbes.com/sites/financialfinesse/2019/04/28/7-steps-to-deal-with-student-loans/
+   * https://www.forbes.com/sites/lawrencelight/2016/08/23/how-to-managing-student-loan-debt-part-i/
+   * https://studentloanhero.com/featured/steps-to-managing-student-debt/
+      * christy rakoczy
+      * 1 . compile a list of your debt
+      * 2 . make a list of your financial goals
+      * 3 . create a budget with your goals in mind
+      * 4 . put your plan into action
+      * interested in refinancing student loans ?
+      * more posts
+   * https://studentloanhero.com/featured/6-unconventional-ways-to-manage-and-repay-student-loans/
+      * stephanie halligan
+      * 6 student loan management tips
+      * tackling your student loans
+      * interested in refinancing student loans ?
+      * related posts
+      * student loan calculators
+   * https://www.salliemae.com/student-loans/graduate-school-information/manage-your-debt/
+   * https://ticas.org/affordability-2/top-10-student-loan-tips-recent-graduates/
+   * https://www.youtube.com/watch?v=Wdq8SRQqYI8
+   * https://www.53.com/content/fifth-third/en/personal-banking/resource-center/money-management/how-to-manage-college-debt.html
+      * 1 . take advantage of flexible repayment options
+      * 2 . consider refinancing your student loans
+      * 3 . develop a realistic budget and stick to it
+      * 4 . put extra money toward student loans to pay them down quicker
+      * managing student loans with fifth third bank
+      * branch & atm locator
+   * https://www.equaljusticeworks.org/wp-content/uploads/2018/09/A-Guide-to-Managing-Your-Student-Debt-Ebook.pdf
+   * https://www.gov.uk/sign-in-to-your-student-loan-repayment-account

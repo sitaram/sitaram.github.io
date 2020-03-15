@@ -1,0 +1,157 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>3. How to calculate college cost</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+    body, pre {
+      font-family: Roboto, sans-serif, arial;
+      margin: 0;
+    }
+    .header {
+      background-color: #dfefff;
+      position: fixed;
+      height: 28px;
+      padding: 16px;
+      width: calc(100% - 32px);
+      border-bottom: 1px solid #ccc;
+      box-shadow: 0px 3px 3px #ddd;
+    }
+    .prev {
+      float: left;
+      padding: 0 16px;
+    }
+    .next {
+      float: right;
+      padding: 0 16px;
+    }
+    .title {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    body {
+      position: relative;
+    }
+    .main {
+      position: fixed;
+      overflow: auto;
+      top: 60px;
+      bottom:0;
+      max-height: 100%;
+    }
+    </style>
+
+    <style>
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+    td {
+      border: 1px solid #ccc;
+      outline: 0;
+      padding: 8px 8px 0 8px;
+      width: 33%;
+      vertical-align: top;
+    }
+    #link {
+      font-weight: bold;
+    }
+    #link:focus {
+      outline: 0;
+    }
+    .collapsed {
+      display: none;
+    }
+    .expando {
+      width: 60px;
+    }
+    </style>
+
+    <script>
+      $(document).ready(function() {
+        $('.expando').each(function() {
+          if ($('.collapsed').get().length == 0) {
+            $(this).css('visibility', 'hidden');
+          }
+        });
+
+        $('.expando').click(function() {
+          $('.collapsed').each(function() {
+            if ($(this).is(':hidden')) $(this).slideDown(200);
+            else $(this).slideUp(200);
+          });
+          $('.expando').each(function() {
+            $(this).text($(this).text() == "Expand" ? "Collapse" :
+                          $(this).text() == "Collapse" ? "Expand" :
+                          $(this).text() == "\u00bb" ? "\u00ab" :
+                          $(this).text() == "\u00ab" ? "\u00bb" : "");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body onLoad="document.getElementById('link').focus();">
+  <div class="header">
+    <a class="prev" href="01.html">&lt; Previous</a>
+    <a class="prev" href="index.html">Main page</a>
+    <a class="next" href="03.html">Next &gt;</a>
+    <a class="next expando" href="javascript:void(0);">Expand</a>
+    <span class="title">3.&nbsp;&nbsp;How to calculate college cost</span>
+  </div>
+  <div class="main">
+  <table>
+
+<tr>
+<td>
+<a id="link" href="https://www.calculator.net/college-cost-calculator.html" target=_blank>Calculator.net</a>
+<ul>
+<li>College - specific net price calculators
+<li>Higher education in the us
+<li>How much does college cost?
+<li>Financial aid
+<li>529 prepaid plan
+</ul></td>
+<td>
+<a id="link" href="https://www.edmit.me/resources/how-to-calculate-college-net-price" target=_blank>Edmit.me</a>
+<ul>
+<li>Key takeaways :
+<li>What's the difference between sticker price and net price?
+<li>What is the meaning of net price?
+<li>Will i have to pay the sticker price?
+<li>How do you calculate the net price of a college?
+<li>How do you compare net price among several colleges?
+</ul></td>
+<td>
+<a id="link" href="https://midpennbank.com/how-to-calculate-the-real-cost-of-college/" target=_blank>Midpennbank.com</a>
+<ul>
+<li>Tuition and school fees
+<li>Room and board
+<li>Books and school supplies
+<li>Transportation
+<li>Traveling home
+<li>Life's necessities
+<li>Social life and extracurricular activities
+</ul></td>
+</tr>
+<tr>
+<td>
+<a id="link" href="https://study.com/articles/10_Free_Online_Calculators_to_Estimate_College_Costs.html" target=_blank>Study.com</a>
+<ul>
+<li>1.) cnn money college cost finder
+<li>2.) college board college cost calculator
+<li>3.) ny times college cost calculator
+<li>4.) finaid college cost projector
+<li>5.) college tuition planner
+<li>6.) salary. com cost of living wizard
+<li>7.) citi student loan calculator
+<li>8.) adventures in education loan payment calculator
+<li>9.) sallie mae loan repayment calculator
+<li>Online classes guide
+<li>Popular schools
+</ul></td>
+</table></div></body></html>

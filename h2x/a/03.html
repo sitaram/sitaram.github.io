@@ -1,0 +1,222 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>4. How to apply for fafsa</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+    body, pre {
+      font-family: Roboto, sans-serif, arial;
+      margin: 0;
+    }
+    .header {
+      background-color: #dfefff;
+      position: fixed;
+      height: 28px;
+      padding: 16px;
+      width: calc(100% - 32px);
+      border-bottom: 1px solid #ccc;
+      box-shadow: 0px 3px 3px #ddd;
+    }
+    .prev {
+      float: left;
+      padding: 0 16px;
+    }
+    .next {
+      float: right;
+      padding: 0 16px;
+    }
+    .title {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    body {
+      position: relative;
+    }
+    .main {
+      position: fixed;
+      overflow: auto;
+      top: 60px;
+      bottom:0;
+      max-height: 100%;
+    }
+    </style>
+
+    <style>
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+    td {
+      border: 1px solid #ccc;
+      outline: 0;
+      padding: 8px 8px 0 8px;
+      width: 33%;
+      vertical-align: top;
+    }
+    #link {
+      font-weight: bold;
+    }
+    #link:focus {
+      outline: 0;
+    }
+    .collapsed {
+      display: none;
+    }
+    .expando {
+      width: 60px;
+    }
+    </style>
+
+    <script>
+      $(document).ready(function() {
+        $('.expando').each(function() {
+          if ($('.collapsed').get().length == 0) {
+            $(this).css('visibility', 'hidden');
+          }
+        });
+
+        $('.expando').click(function() {
+          $('.collapsed').each(function() {
+            if ($(this).is(':hidden')) $(this).slideDown(200);
+            else $(this).slideUp(200);
+          });
+          $('.expando').each(function() {
+            $(this).text($(this).text() == "Expand" ? "Collapse" :
+                          $(this).text() == "Collapse" ? "Expand" :
+                          $(this).text() == "\u00bb" ? "\u00ab" :
+                          $(this).text() == "\u00ab" ? "\u00bb" : "");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body onLoad="document.getElementById('link').focus();">
+  <div class="header">
+    <a class="prev" href="02.html">&lt; Previous</a>
+    <a class="prev" href="index.html">Main page</a>
+    <a class="next" href="04.html">Next &gt;</a>
+    <a class="next expando" href="javascript:void(0);">Expand</a>
+    <span class="title">4.&nbsp;&nbsp;How to apply for fafsa</span>
+  </div>
+  <div class="main">
+  <table>
+
+<tr>
+<td>
+<a id="link" href="https://studentaid.gov/apply-for-aid/fafsa/filling-out" target=_blank>Studentaid.gov</a>
+<ul>
+<li>Fafsa ® topics
+<li>Creating an fsa id
+<li>Gathering the documents needed to apply
+<li>Getting help
+<li>Starting your fafsa ® form and providing your basic personal information
+<li>Listing colleges and / or career schools
+<li>Determining your dependency status
+<li>Reporting parents ' information
+<li>Providing financial information
+<li>Signing and submitting the fafsa ® form
+<li>Taking the next steps
+</ul></td>
+<td>
+<a id="link" href="https://www.salliemae.com/college-planning/financial-aid/fafsa/" target=_blank>Salliemae.com</a>
+<ul>
+<li>What is the fafsa
+<li>Ready to conquer the fafsa?
+<li>Where and how to apply for federal student aid — the beginner's guide
+<li>How is your fafsa used to calculate your federal student aid eligibility
+<li>What happens after your fafsa submission
+<li>Add these fasfa dates to your calendar
+<li>Financial aid tip
+<li>Debunking financial aid myths
+</ul></td>
+<td>
+<a id="link" href="https://www.collegeavestudentloans.com/resources/how-to-apply-for-fafsa/" target=_blank>Collegeavestudentloans.com</a>
+<ul>
+<li>1. gather your information
+<li>2. create a federal student aid (fsa) id
+<li>3. fill in student information
+<li>4. enter parent information
+<li>5. provide your financial information
+<li>6. review your fafsa
+<li>7. sign and submit your fafsa form
+</ul></td>
+</tr>
+<tr>
+<td>
+<a id="link" href="https://blog.ed.gov/2017/09/8-steps-to-filling-out-the-fafsa-form/" target=_blank>Ed.gov</a>
+<ul>
+<li>1. create an account (fsa id)
+<li>2. start the fafsa ® form at fafsa. gov
+<li>3. fill out the student demographics section
+<li>4. list the schools to which you want your fafsa ® information sent
+<li>5. answer the dependency status questions
+<li>6. fill out the parent demographics section
+<li>7. supply your financial information
+<li>8. sign and submit your fafsa form
+<li>Email updates
+<li>Archives
+</ul></td>
+<td>
+<a id="link" href="https://www.credible.com/blog/student-loans/applying-for-fafsa/" target=_blank>Credible.com</a>
+<ul>
+<li>Step - by - step guide to applying for fafsa
+<li>What is the fafsa and why is it important?
+<li>What are some common fafsa mistake i should avoid?
+<li>Who should submit a fafsa application?
+<li>When is the fafsa due and when can i start applying for financial aid?
+<li>Which documents will i need to fill out the fafsa?
+<li>Best tips for filling out fafsa
+</ul></td>
+<td>
+<a id="link" href="https://studentloanhero.com/featured/do-i-qualify-for-financial-aid-eligibility-requirements/" target=_blank>Studentloanhero.com</a>
+<ul>
+<li>Elyssa kirkham
+<li>1. check basic eligibility requirements for financial aid
+<li>2. submit the fafsa
+<li>3. maintain satisfactory academic progress
+<li>4. demonstrate financial need
+<li>Explore non - need - based student loans
+<li>Related posts
+<li>Student loan calculators
+</ul></td>
+</tr>
+<tr>
+<td>
+<a id="link" href="https://www.ohe.state.mn.us/mPg.cfm?pageID=130" target=_blank>State.mn.us</a>
+<ul>
+<li>Free application for federal student aid
+<li>What is the fafsa?
+<li>Completing the fafsa
+<li>Information you need on hand before you start
+<li>Where to find help in completing the fafsa
+<li>Tips to help you complete your fafsa accurately
+</ul></td>
+<td>
+<a id="link" href="https://students-residents.aamc.org/financial-aid/article/financial-aid-application-process/" target=_blank>Aamc.org</a>
+<ul>
+<li>Step 1 : complete the fafsa
+<li>Step 2 : investigate sources of aid
+<li>Step 3 : apply early
+<li>Step 4 : receive your award letter
+<li>Remember :
+<li>Search financial aid resources
+<li>Medloans ® organizer and calculator (mloc)
+<li>Aamc financial wellness
+<li>Education debt manager (edm) for matriculating and graduating medical school students
+</ul></td>
+<td>
+<a id="link" href="https://www.edvisors.com/fafsa/eligibility/filing-fafsa-deadline-2019-2020/" target=_blank>Edvisors.com</a>
+<ul>
+<li>Who should file the fafsa ®, what you ' ll need, and when to start
+<li>Who should file the fafsa?
+<li>What do i need to file the fafsa?
+<li>Where do i file the fafsa?
+<li>Why should i file the fafsa?
+</ul></td>
+</tr>
+</table></div></body></html>

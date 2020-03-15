@@ -1,0 +1,178 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>1. How to buy a house [example]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+    body, pre {
+      font-family: Roboto, sans-serif, arial;
+      margin: 0;
+    }
+    .header {
+      background-color: #dfefff;
+      position: fixed;
+      height: 28px;
+      padding: 16px;
+      width: calc(100% - 32px);
+      border-bottom: 1px solid #ccc;
+      box-shadow: 0px 3px 3px #ddd;
+    }
+    .prev {
+      float: left;
+      padding: 0 16px;
+    }
+    .next {
+      float: right;
+      padding: 0 16px;
+    }
+    .title {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    body {
+      position: relative;
+    }
+    .main {
+      position: fixed;
+      overflow: auto;
+      top: 60px;
+      bottom:0;
+      max-height: 100%;
+    }
+    </style>
+
+    <style>
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+    td {
+      border: 1px solid #ccc;
+      outline: 0;
+      padding: 8px 8px 0 8px;
+      width: 33%;
+      vertical-align: top;
+    }
+    #link {
+      font-weight: bold;
+    }
+    #link:focus {
+      outline: 0;
+    }
+    .collapsed {
+      display: none;
+    }
+    .expando {
+      width: 60px;
+    }
+    </style>
+
+    <script>
+      $(document).ready(function() {
+        $('.expando').each(function() {
+          if ($('.collapsed').get().length == 0) {
+            $(this).css('visibility', 'hidden');
+          }
+        });
+
+        $('.expando').click(function() {
+          $('.collapsed').each(function() {
+            if ($(this).is(':hidden')) $(this).slideDown(200);
+            else $(this).slideUp(200);
+          });
+          $('.expando').each(function() {
+            $(this).text($(this).text() == "Expand" ? "Collapse" :
+                          $(this).text() == "Collapse" ? "Expand" :
+                          $(this).text() == "\u00bb" ? "\u00ab" :
+                          $(this).text() == "\u00ab" ? "\u00bb" : "");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body onLoad="document.getElementById('link').focus();">
+  <div class="header">
+    <a class="prev" href="11.html">&lt; Previous</a>
+    <a class="prev" href="index.html">Main page</a>
+    <a class="next" href="01.html">Next &gt;</a>
+    <a class="next expando" href="javascript:void(0);">Expand</a>
+    <span class="title">1.&nbsp;&nbsp;How to buy a house [example]</span>
+  </div>
+  <div class="main">
+  <table>
+
+<tr>
+<td>
+<a id="link" href="https://www.discover.com/home-loans/articles/10-steps-to-buying-a-home" target=_blank>Discover.com</a>
+<ul>
+<li>Start Your Research Early
+<li>Determine How Much House You Can Afford
+<li>Get Prequalified and Preapproved for credit for Your Mortgage
+<li>Find the Right Real Estate Agent
+<li>Shop for Your Home and Make an Offer
+<li>Get a Home Inspection
+<li>Work with a Mortgage Banker to Select Your Loan
+<li>Have the Home Appraised
+<li>Coordinate the Paperwork
+<li>Close the Sale
+</ul></td>
+<td>
+<a id="link" href="https://www.trulia.com/guides/how-to-buy-a-house-in-10-steps/" target=_blank>Trulia.com</a>
+<ul>
+<li>Hire a real estate agent
+<li>Shop for a mortgage
+<li>Make a list of needs and wants
+<li>Browse online house listings
+<li>Go to house viewings
+<li>Make an offer and negotiate
+<li>Get your loan approved
+<li>Wait for the appraisal
+<li>Hire a home inspector
+<li>Close on your house
+</ul></td>
+<td>
+<a id="link" href="https://www.nytimes.com/guides/realestate/how-to-buy-a-house" target=_blank>Nytimes.com</a>
+<ul>
+<li>The Decision to Buy
+<ul>
+<li>Rent vs. Buy?
+<li>How Much House Can I Afford?
+</ul>
+<li>Organize Your Finances
+<ul>
+<li>Check Your Credit Score
+<li>Get a Mortgage Preapproval
+<li>Line Up Cash
+</ul>
+<li>The Search for a New Home
+<ul>
+<li>Choose a Neighborhood
+<li>Comparison Shop
+<li>Time to Visit
+<li>Find a Real Estate Broker
+</ul>
+<li>Making an Offer
+<ul>
+<li>Analyze Your Market
+<li>Be Willing to Negotiate
+<li>Be Prepared For a Bidding War
+<li>Make a Formal Offer
+<li>Hire a Real Estate Lawyer
+<li>Don't Fall in Love
+</ul>
+<li>Closing
+<ul>
+<li>Apply for a Mortgage
+<li>Get a Home Inspection
+<li>Get an Appraisal
+<li>Shop for Homeowner's and Title Insurance
+<li>Do a Final Walk-Through
+<li>Close the Deal
+</ul></td>
+</tr>
+</table></div></body></html>
