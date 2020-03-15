@@ -91,6 +91,7 @@ sub printonecase($$) {
       <style>
       #promos { display: none; }
       #taw { display: none; }
+      #cnt { overflow-y: hidden; }
       .box {
         border: 1px solid #a8c8ff;
         background-color: #f0f6ff;
