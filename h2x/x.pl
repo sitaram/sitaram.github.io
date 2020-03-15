@@ -197,7 +197,6 @@ hierarchy</a>.
 <div class="treebox">
 <b>How to get student loan forgiveness</b>
 <ul>
-<li> What is it
 <li> Career-based
 <ul>
 <li> Public service
