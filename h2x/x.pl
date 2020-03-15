@@ -132,7 +132,7 @@ print F<<"EOF";
   }
   </style>
 </head>
-<body>
+<body onLoad="document.getElementById('link').focus();">
 <div class="header">
   <span class="title">$title</span>
 </div>
@@ -149,7 +149,7 @@ and a different number of options for how to proceed, from 5, 8, to 80
 different ways in this case.  Digesting these articles to form a mental model
 and a course of action takes time and experience, which many users (in this
 case mostly students) lack.  <a
-href="https://www.google.com/search?q=how+to+get+student+loan+forgiveness&pws=0&gl=us&gws_rd=cr"
+id="link" href="https://www.google.com/search?q=how+to+get+student+loan+forgiveness&pws=0&gl=us&gws_rd=cr"
 target=_blank>Check out this search page</a>.
 
 <li> We would like to guide the user through these complex topics. For that, we
