@@ -256,7 +256,8 @@ Google Search to return a diverse set of high-quality articles, videos, and
 other Search features for each query, instead of sending the user to a single article for
 the entire topic.  Putting these subtopics and queries together, the Search
 experience for student loan forgiveness could, for example, look like <b><a
-class="demolink" href="../demo/d/01-00.html">this demo</a></b>.
+class="demolink" href="../demo/d/01-00.html">this demo</a></b> (see <a
+class="demolink" href="../demo/d/">all demos</a>).
 
 <li> We would like to combine your domain expertise with information from the
 top 20 web results for each topic, to construct this hierarchy of subtopics and
