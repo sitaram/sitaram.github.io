@@ -92,7 +92,7 @@ sub printonecase($$) {
       #promos { display: none; }
       #taw { display: none; }
       #cnt { overflow-y: hidden; }
-      .QmUzgb, .U5LfPc  { height: initial !important; }  /* shorten some divs */
+      .QmUzgb, .U5LfPc, .NFQFxe { height: fit-content !important; }  /* shorten some divs */
       .box {
         border: 1px solid #a8c8ff;
         background-color: #f0f6ff;
