@@ -264,17 +264,17 @@ experience for student loan forgiveness could, for example, look like <b><a
 class="demolink" href="../demo/d/01-00.html">this demo</a></b> (or see <a
 class="demolink" href="../demo/d/index.html">all demos</a>).
 
-<li> We would like to combine your domain expertise with information from the
-top 20 web results for each topic, to construct this hierarchy of subtopics and
+<li> We would like to <b>combine your domain expertise with information from the
+top 20 web results for each topic</b>, to construct this hierarchy of subtopics and
 the search queries. To make this easier, <a href="00.html" target=_blank>on the
 next page</a>, we have collected the sections listed in the top 20 results for
 the query "how to get student loan forgiveness".  For a birds-eye view, we have
 partially collapsed the information, but use the "Expand" link on the top of
 each page (or the "&#xBB;" links) to see more details.
 
-<li> To capture your work, we would like to ask you to make a copy of <a
+<li> To capture your work, we would like to ask you to <b>make a copy of <a
 href="https://docs.google.com/document/d/1QaPGS90GRlmqh3CMMBfjCKdrlE6gr5oOjhwq1REUP2E/edit?usp=sharing"
-target=_blank>this Google doc</a>, and share it with us
+target=_blank>this Google doc</a></b>, and share it with us
 (sitaram\@google.com).  For each use case listed in the doc, please look at
 the raw material from web results, then step back and think about how you would
 explain it to a student seeking advice. Then try to formulate a hierarchical breakdown of
