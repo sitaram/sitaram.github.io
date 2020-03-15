@@ -133,7 +133,25 @@ print F<<"EOF";
   #link:focus {
     outline: 0;
   }
+  .treebox {
+    display: none;
+    border: 1px solid #82a5Ff;
+    background-color: #dfefff;
+    width: 300px;
+    padding: 8px;
+    margin: 8px;
+  }
+  .treebox li, .treebox ul {
+    margin: 4px;
+  }
   </style>
+  <script>
+    \$(document).ready(function() {
+      \$('.treelink').click(function() {
+        \$('.treebox').slideToggle();
+      });
+    });
+  </script>
 </head>
 <body onLoad="document.getElementById('link').focus();">
 <div class="header">
@@ -171,15 +189,43 @@ these. They need to be subtopics to explore rather than prescriptive
 instructions. They need to be understandable rather than comprehensive, e.g. a
 hierarchy of depth 2 or 3, with 4-5 subtopics per level would be ideal.  There
 may not be one right way to break down a topic, and that is okay. For example,
-for student loan forgiveness, there are broadly three paths: repayment-plan
-based options, career-based options, and extraordinary circumstances. There are
-also some common questions such as "do I qualify" and "where to sign up" that
-make sense to include. Career-based options further break down into programs
-for nurses, teachers, military, etc. <a href="" target=_blank>See this example
+for student loan forgiveness, there are a few main paths: repayment-plan
+based options, career-based options, etc. Students also commonly ask questions
+such as "do I qualify" and "where to sign up" that make sense to include.
+Career-based options further break down into programs for nurses, teachers,
+military, etc. <a href="javascript:void(0);" class="treelink">See this example
 hierarchy</a>.
+<div class="treebox">
+<b>How to get student loan forgiveness</b>
+<ul>
+<li> What is it
+<li> Career-based
+<ul>
+<li> Public service
+<li> Teacher
+<li> Nurse
+<li> Doctor or lawyer
+<li> Military
+<li> Employer-based
+<li> Volunteering
+</ul>
+<li> Repayment-based
+<ul>
+<li> Income-based
+<li> Income-contingent
+<li> Pay as you earn
+<li> Revised pay as you earn
+</ul>
+<li> State-based
+<li> Discharge
+<li> Do I qualify
+<li> Where do I sign up
+</ul>
+(<a href="javascript:void(0);" class="treelink">hide</a>)
+</div>
 
-<li> Beyond showing users the hierarchy of subtopics, for each
-subtopic we would like to guide the user to a <b>well-chosen Google search query</b>
+<li> Besides showing users the hierarchy of subtopics, for each
+subtopic we would also like to guide the user to a <b>well-chosen Google search query</b>
 whose search results provide high-quality information on that subtopic.  This usually
 involves trying out a few different queries and tweaking the choice of query terms until
 the search page (including web results, the answer panel, etc.) collectively represents
