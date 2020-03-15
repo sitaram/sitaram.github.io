@@ -1,5 +1,5 @@
 #!/usr/bin/perl -lw
-# (echo a; cd a; ../x.pl Algorithmic\ extraction_clustering\ candidates_depth\=1.txt ; echo z; cd ../z; ../x.pl candidates.txt)
+# (echo a; cd a; ../extract.pl Algorithmic\ extraction_clustering\ candidates_depth\=1.txt ; echo z; cd ../z; ../extract.pl candidates.txt)
 
 my $htmlstuff = <<EOF;
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
