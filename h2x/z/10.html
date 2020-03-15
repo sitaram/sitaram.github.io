@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://www.thesimpledollar.com/loans/student/15-ways-to-deal-with-student-loan-debt/" target=_blank>Thesimpledollar.com</a>
+<div class="linkbox"><a id="link" href="https://www.thesimpledollar.com/loans/student/15-ways-to-deal-with-student-loan-debt/" target=_blank>Thesimpledollar.com</a></div>
 <ul>
 <li>How to Pay Off Student Loans Fast: 15 Ways to Deal With Your Debt
 <ul>
@@ -131,7 +157,7 @@
 <li>15. Don’t tack on more big debts right away
 </ul></td>
 <td>
-<a id="link" href="https://www.debt.org/students/debt/" target=_blank>Debt.org</a>
+<div class="linkbox"><a id="link" href="https://www.debt.org/students/debt/" target=_blank>Debt.org</a></div>
 <ul>
 <li>Managing Student Loan Debt
 <ul>
@@ -147,7 +173,7 @@
 <li>What can we help you with today?
 </ul></td>
 <td>
-<a id="link" href="https://www.investopedia.com/articles/personal-finance/082115/10-tips-managing-your-student-loan-debt.asp" target=_blank>Investopedia.com</a>
+<div class="linkbox"><a id="link" href="https://www.investopedia.com/articles/personal-finance/082115/10-tips-managing-your-student-loan-debt.asp" target=_blank>Investopedia.com</a></div>
 <ul>
 <li>10 Tips for Managing Your Student Loan Debt
 <ul>
@@ -175,7 +201,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.moneyunder30.com/student-loans" target=_blank>Moneyunder30.com</a>
+<div class="linkbox"><a id="link" href="https://www.moneyunder30.com/student-loans" target=_blank>Moneyunder30.com</a></div>
 <ul>
 <li>How To Manage Student Loan Debt
 <ul>
@@ -217,7 +243,7 @@
 <li>Fed Up With Your Student Loans?
 </ul></td>
 <td>
-<a id="link" href="https://www.accreditedschoolsonline.org/resources/student-loans/" target=_blank>Accreditedschoolsonline.org</a>
+<div class="linkbox"><a id="link" href="https://www.accreditedschoolsonline.org/resources/student-loans/" target=_blank>Accreditedschoolsonline.org</a></div>
 <ul>
 <li>Your Stress-Free Guide to Student Loans How to Understand and Manage College-Related Debt
 <ul>
@@ -252,7 +278,7 @@
 <li>CONS
 </ul></td>
 <td>
-<a id="link" href="https://www.petersons.com/blog/how-to-manage-student-debt/" target=_blank>Petersons.com</a>
+<div class="linkbox"><a id="link" href="https://www.petersons.com/blog/how-to-manage-student-debt/" target=_blank>Petersons.com</a></div>
 <ul>
 <li>Student Loans: How to Manage Student Debt
 <li>1. Understand your loan
@@ -272,7 +298,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.ucas.com/finance/managing-money/managing-student-debt" target=_blank>Ucas.com</a>
+<div class="linkbox"><a id="link" href="https://www.ucas.com/finance/managing-money/managing-student-debt" target=_blank>Ucas.com</a></div>
 <ul>
 <ul>
 <li>Help finding your career
@@ -305,7 +331,7 @@
 <li>Finding a work, life, study balance
 </ul></td>
 <td>
-<a id="link" href="https://www.nbcnews.com/feature/maria-shriver/life-ed-how-manage-student-loan-debt-n129521" target=_blank>Nbcnews.com</a>
+<div class="linkbox"><a id="link" href="https://www.nbcnews.com/feature/maria-shriver/life-ed-how-manage-student-loan-debt-n129521" target=_blank>Nbcnews.com</a></div>
 <ul>
 <ul>
 <li>Secondary Navigation
@@ -321,7 +347,7 @@
 <li>Life Ed: How To Manage Student Loan Debt
 </ul></td>
 <td>
-<a id="link" href="https://www.nerdwallet.com/blog/loans/how-to-manage-student-loan-debt-without-making-it-worse/" target=_blank>Nerdwallet.com</a>
+<div class="linkbox"><a id="link" href="https://www.nerdwallet.com/blog/loans/how-to-manage-student-loan-debt-without-making-it-worse/" target=_blank>Nerdwallet.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -348,7 +374,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://studentaid.gov/h/manage-loans" target=_blank>Studentaid.gov</a>
+<div class="linkbox"><a id="link" href="https://studentaid.gov/h/manage-loans" target=_blank>Studentaid.gov</a></div>
 <ul>
 <li>Manage Loans
 <li>Understanding Student Loan Repayment
@@ -363,7 +389,7 @@
 <li>Need Help Managing Your Loans?
 </ul></td>
 <td>
-<a id="link" href="https://www.forbes.com/sites/financialfinesse/2019/04/28/7-steps-to-deal-with-student-loans/" target=_blank>Forbes.com</a>
+<div class="linkbox"><a id="link" href="https://www.forbes.com/sites/financialfinesse/2019/04/28/7-steps-to-deal-with-student-loans/" target=_blank>Forbes.com</a></div>
 <ul>
 <ul>
 <li>Please help us continue to provide you with free, quality journalism by turning off your ad bloc..
@@ -382,7 +408,7 @@
 <li>Here are some simple ways to reduce stress and and increase joy at work
 </ul></td>
 <td>
-<a id="link" href="https://www.forbes.com/sites/lawrencelight/2016/08/23/how-to-managing-student-loan-debt-part-i/" target=_blank>Forbes.com</a>
+<div class="linkbox"><a id="link" href="https://www.forbes.com/sites/lawrencelight/2016/08/23/how-to-managing-student-loan-debt-part-i/" target=_blank>Forbes.com</a></div>
 <ul>
 <li>How To Manage Student Loan Debt -- Part I
 <ul>
@@ -396,7 +422,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://studentloanhero.com/featured/steps-to-managing-student-debt/" target=_blank>Studentloanhero.com</a>
+<div class="linkbox"><a id="link" href="https://studentloanhero.com/featured/steps-to-managing-student-debt/" target=_blank>Studentloanhero.com</a></div>
 <ul>
 <li>4 Steps to Managing Student Debt in Your 30s
 <ul>
@@ -431,7 +457,7 @@
 <li>You're on your way..
 </ul></td>
 <td>
-<a id="link" href="https://studentloanhero.com/featured/6-unconventional-ways-to-manage-and-repay-student-loans/" target=_blank>Studentloanhero.com</a>
+<div class="linkbox"><a id="link" href="https://studentloanhero.com/featured/6-unconventional-ways-to-manage-and-repay-student-loans/" target=_blank>Studentloanhero.com</a></div>
 <ul>
 <li>Student Loan Management: 6 Ways to Repay Your Loans
 <ul>
@@ -471,7 +497,7 @@
 <li>You're on your way..
 </ul></td>
 <td>
-<a id="link" href="https://www.salliemae.com/student-loans/graduate-school-information/manage-your-debt/" target=_blank>Salliemae.com</a>
+<div class="linkbox"><a id="link" href="https://www.salliemae.com/student-loans/graduate-school-information/manage-your-debt/" target=_blank>Salliemae.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -493,7 +519,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://ticas.org/affordability-2/top-10-student-loan-tips-recent-graduates/" target=_blank>Ticas.org</a>
+<div class="linkbox"><a id="link" href="https://ticas.org/affordability-2/top-10-student-loan-tips-recent-graduates/" target=_blank>Ticas.org</a></div>
 <ul>
 <ul>
 <li>Search Form Overlay
@@ -506,7 +532,7 @@
 <li>99999
 </ul></td>
 <td>
-<a id="link" href="https://www.youtube.com/watch?v=Wdq8SRQqYI8" target=_blank>Youtube.com</a>
+<div class="linkbox"><a id="link" href="https://www.youtube.com/watch?v=Wdq8SRQqYI8" target=_blank>Youtube.com</a></div>
 <ul>
 <li>This video is unavailable
 <ul>
@@ -527,7 +553,7 @@
 <li>Add to
 </ul></td>
 <td>
-<a id="link" href="https://www.53.com/content/fifth-third/en/personal-banking/resource-center/money-management/how-to-manage-college-debt.html" target=_blank>53.com</a>
+<div class="linkbox"><a id="link" href="https://www.53.com/content/fifth-third/en/personal-banking/resource-center/money-management/how-to-manage-college-debt.html" target=_blank>53.com</a></div>
 <ul>
 <li>How to Manage College Debt
 <ul>
@@ -545,7 +571,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.equaljusticeworks.org/wp-content/uploads/2018/09/A-Guide-to-Managing-Your-Student-Debt-Ebook.pdf" target=_blank>Equaljusticeworks.org</a>
+<div class="linkbox"><a id="link" href="https://www.equaljusticeworks.org/wp-content/uploads/2018/09/A-Guide-to-Managing-Your-Student-Debt-Ebook.pdf" target=_blank>Equaljusticeworks.org</a></div>
 <ul>
 <li>Page 1
 <li>How to Manage Your Student
@@ -1603,7 +1629,7 @@
 <li>Provisions?
 </ul></td>
 <td>
-<a id="link" href="https://www.gov.uk/sign-in-to-your-student-loan-repayment-account" target=_blank>Www.gov.uk</a>
+<div class="linkbox"><a id="link" href="https://www.gov.uk/sign-in-to-your-student-loan-repayment-account" target=_blank>Www.gov.uk</a></div>
 <ul>
 <li>Sign in to your student loan repayment account
 <ul>

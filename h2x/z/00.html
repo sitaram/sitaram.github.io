@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://thecollegeinvestor.com/21541/different-ways-to-get-student-loan-forgiveness/" target=_blank>Thecollegeinvestor.com</a>
+<div class="linkbox"><a id="link" href="https://thecollegeinvestor.com/21541/different-ways-to-get-student-loan-forgiveness/" target=_blank>Thecollegeinvestor.com</a></div>
 <ul>
 <li>80 Different Ways To Get Student Loan Forgiveness
 <ul>
@@ -177,7 +203,7 @@
 <li>Popular PostsFun ResourcesUltimate Guides
 </ul></td>
 <td>
-<a id="link" href="https://studentaid.gov/manage-loans/forgiveness-cancellation" target=_blank>Studentaid.gov</a>
+<div class="linkbox"><a id="link" href="https://studentaid.gov/manage-loans/forgiveness-cancellation" target=_blank>Studentaid.gov</a></div>
 <ul>
 <ul>
 <li>You are here
@@ -208,7 +234,7 @@
 <li>Additional Links
 </ul></td>
 <td>
-<a id="link" href="https://www.nerdwallet.com/article/loans/student-loans/student-loan-forgiveness" target=_blank>Nerdwallet.com</a>
+<div class="linkbox"><a id="link" href="https://www.nerdwallet.com/article/loans/student-loans/student-loan-forgiveness" target=_blank>Nerdwallet.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -226,7 +252,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://mygreatlakes.org/educate/knowledge-center/know-your-options-forgiveness.html" target=_blank>Mygreatlakes.org</a>
+<div class="linkbox"><a id="link" href="https://mygreatlakes.org/educate/knowledge-center/know-your-options-forgiveness.html" target=_blank>Mygreatlakes.org</a></div>
 <ul>
 <li>Do You Qualify for Student Loan Forgiveness or Discharge?
 <ul>
@@ -256,7 +282,7 @@
 <li>Federal Student Loans Are Unique
 </ul></td>
 <td>
-<a id="link" href="https://www.debt.org/students/loan-forgiveness/" target=_blank>Debt.org</a>
+<div class="linkbox"><a id="link" href="https://www.debt.org/students/loan-forgiveness/" target=_blank>Debt.org</a></div>
 <ul>
 <li>Student Loan Forgiveness & Discharge
 <ul>
@@ -275,7 +301,7 @@
 <li>Student Loan Discharge
 </ul></td>
 <td>
-<a id="link" href="https://www.thebalance.com/student-loan-forgiveness-960819" target=_blank>Thebalance.com</a>
+<div class="linkbox"><a id="link" href="https://www.thebalance.com/student-loan-forgiveness-960819" target=_blank>Thebalance.com</a></div>
 <ul>
 <li>5 Ways to Get Your Student Loans Forgiven
 <ul>
@@ -307,7 +333,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.usatoday.com/story/money/personalfinance/2013/09/06/student-loan-forgiveness-options/2776545/" target=_blank>Usatoday.com</a>
+<div class="linkbox"><a id="link" href="https://www.usatoday.com/story/money/personalfinance/2013/09/06/student-loan-forgiveness-options/2776545/" target=_blank>Usatoday.com</a></div>
 <ul>
 <li>Student loan forgiveness: What you don't know (but should)
 <ul>
@@ -319,7 +345,7 @@
 <li>4. Get a public service, government or non-profit job
 </ul></td>
 <td>
-<a id="link" href="https://www.forbes.com/sites/robertfarrington/2020/01/02/ways-you-can-actually-get-your-student-loans-forgiven-today/" target=_blank>Forbes.com</a>
+<div class="linkbox"><a id="link" href="https://www.forbes.com/sites/robertfarrington/2020/01/02/ways-you-can-actually-get-your-student-loans-forgiven-today/" target=_blank>Forbes.com</a></div>
 <ul>
 <ul>
 <li>Please help us continue to provide you with free, quality journalism by turning off your ad bloc..
@@ -338,7 +364,7 @@
 <li>Actor and comedian Aidy Bryant opens up on her 50/50 approach to drowning out the noise of naysa..
 </ul></td>
 <td>
-<a id="link" href="https://www.huffpost.com/entry/quit-paying-student-loans-legally_n_5afe0700e4b07309e0564a1c" target=_blank>Huffpost.com</a>
+<div class="linkbox"><a id="link" href="https://www.huffpost.com/entry/quit-paying-student-loans-legally_n_5afe0700e4b07309e0564a1c" target=_blank>Huffpost.com</a></div>
 <ul>
 <li>8 Ways You Can Quit Paying Your Student Loans (Legally)
 <ul>
@@ -379,7 +405,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://studentloanhero.com/featured/the-complete-list-of-student-loan-forgiveness-programs/" target=_blank>Studentloanhero.com</a>
+<div class="linkbox"><a id="link" href="https://studentloanhero.com/featured/the-complete-list-of-student-loan-forgiveness-programs/" target=_blank>Studentloanhero.com</a></div>
 <ul>
 <li>The Complete List of Student Loan Forgiveness Programs and Options
 <ul>
@@ -484,7 +510,7 @@
 <li>You're on your way..
 </ul></td>
 <td>
-<a id="link" href="https://studentloanhero.com/featured/student-loan-forgiveness-jobs/" target=_blank>Studentloanhero.com</a>
+<div class="linkbox"><a id="link" href="https://studentloanhero.com/featured/student-loan-forgiveness-jobs/" target=_blank>Studentloanhero.com</a></div>
 <ul>
 <li>11 Jobs That Offer Student Loan Forgiveness
 <ul>
@@ -528,7 +554,7 @@
 <li>You're on your way..
 </ul></td>
 <td>
-<a id="link" href="https://www.studentloanplanner.com/student-loan-forgiveness/" target=_blank>Studentloanplanner.com</a>
+<div class="linkbox"><a id="link" href="https://www.studentloanplanner.com/student-loan-forgiveness/" target=_blank>Studentloanplanner.com</a></div>
 <ul>
 <li>The Ultimate Guide to Student Loan Forgiveness Programs in 2020
 <ul>
@@ -579,7 +605,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.studentdebtrelief.us/student-loan-forgiveness/" target=_blank>Studentdebtrelief.us</a>
+<div class="linkbox"><a id="link" href="https://www.studentdebtrelief.us/student-loan-forgiveness/" target=_blank>Studentdebtrelief.us</a></div>
 <ul>
 <li>The Top Student Loan Forgiveness Programs
 <ul>
@@ -659,7 +685,7 @@
 <li>We appreciate your helpful feedback!
 </ul></td>
 <td>
-<a id="link" href="https://nurse.org/education/student-loan-forgiveness-for-nurses/" target=_blank>Nurse.org</a>
+<div class="linkbox"><a id="link" href="https://nurse.org/education/student-loan-forgiveness-for-nurses/" target=_blank>Nurse.org</a></div>
 <ul>
 <ul>
 <li>In this article
@@ -686,7 +712,7 @@
 <li>Find a job, learn, connect and laugh. Try us out
 </ul></td>
 <td>
-<a id="link" href="https://www2.ed.gov/fund/grants-college.html?src=rn" target=_blank>Ed.gov</a>
+<div class="linkbox"><a id="link" href="https://www2.ed.gov/fund/grants-college.html?src=rn" target=_blank>Ed.gov</a></div>
 <ul>
 <ul>
 <li>Login—Account Info
@@ -723,7 +749,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://abcnews.go.com/Politics/wireStory/senate-passes-rebuke-devos-student-loan-forgiveness-69538648" target=_blank>Go.com</a>
+<div class="linkbox"><a id="link" href="https://abcnews.go.com/Politics/wireStory/senate-passes-rebuke-devos-student-loan-forgiveness-69538648" target=_blank>Go.com</a></div>
 <ul>
 <li>Senate passes rebuke of DeVos over student loan forgiveness
 <ul>
@@ -732,7 +758,7 @@
 <li>ABC News Live
 </ul></td>
 <td>
-<a id="link" href="https://www.investopedia.com/terms/s/student-loan-forgiveness.asp" target=_blank>Investopedia.com</a>
+<div class="linkbox"><a id="link" href="https://www.investopedia.com/terms/s/student-loan-forgiveness.asp" target=_blank>Investopedia.com</a></div>
 <ul>
 <li>Student Loan Forgiveness
 <ul>
@@ -756,7 +782,7 @@
 <li>The Most Common Student Loan Scams and How to Avoid Them
 </ul></td>
 <td>
-<a id="link" href="https://novascotia.ca/student-loan-forgiveness/" target=_blank>Novascotia.ca</a>
+<div class="linkbox"><a id="link" href="https://novascotia.ca/student-loan-forgiveness/" target=_blank>Novascotia.ca</a></div>
 <ul>
 <li>Nova Scotia Student Loan Forgiveness Program
 <ul>
@@ -778,7 +804,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.daveramsey.com/blog/student-loan-forgiveness" target=_blank>Daveramsey.com</a>
+<div class="linkbox"><a id="link" href="https://www.daveramsey.com/blog/student-loan-forgiveness" target=_blank>Daveramsey.com</a></div>
 <ul>
 <li>Should I Apply for Student Loan Forgiveness?
 <ul>
@@ -807,7 +833,7 @@
 <li>Our Company
 </ul></td>
 <td>
-<a id="link" href="https://myfedloan.org/borrowers/special-programs/" target=_blank>Myfedloan.org</a>
+<div class="linkbox"><a id="link" href="https://myfedloan.org/borrowers/special-programs/" target=_blank>Myfedloan.org</a></div>
 <ul>
 <li>Javascript Required
 <ul>

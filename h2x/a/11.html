@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://www.accreditedschoolsonline.org/resources/student-loans/" target=_blank>Accreditedschoolsonline.org</a>
+<div class="linkbox"><a id="link" href="https://www.accreditedschoolsonline.org/resources/student-loans/" target=_blank>Accreditedschoolsonline.org</a></div>
 <ul>
 <li>What's on this page
 <li>Repaying federal student loans
@@ -118,7 +144,7 @@
 <li>Refinancing your loans
 </ul></td>
 <td>
-<a id="link" href="https://studentloanhero.com/featured/steps-to-managing-student-debt/" target=_blank>Studentloanhero.com</a>
+<div class="linkbox"><a id="link" href="https://studentloanhero.com/featured/steps-to-managing-student-debt/" target=_blank>Studentloanhero.com</a></div>
 <ul>
 <li>Christy rakoczy
 <li>1. compile a list of your debt
@@ -129,7 +155,7 @@
 <li>More posts
 </ul></td>
 <td>
-<a id="link" href="https://studentloanhero.com/featured/6-unconventional-ways-to-manage-and-repay-student-loans/" target=_blank>Studentloanhero.com</a>
+<div class="linkbox"><a id="link" href="https://studentloanhero.com/featured/6-unconventional-ways-to-manage-and-repay-student-loans/" target=_blank>Studentloanhero.com</a></div>
 <ul>
 <li>Stephanie halligan
 <li>6 student loan management tips
@@ -141,7 +167,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.53.com/content/fifth-third/en/personal-banking/resource-center/money-management/how-to-manage-college-debt.html" target=_blank>53.com</a>
+<div class="linkbox"><a id="link" href="https://www.53.com/content/fifth-third/en/personal-banking/resource-center/money-management/how-to-manage-college-debt.html" target=_blank>53.com</a></div>
 <ul>
 <li>1. take advantage of flexible repayment options
 <li>2. consider refinancing your student loans

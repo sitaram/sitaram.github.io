@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://www.edvisors.com/fafsa/after-submitting/award-letter/" target=_blank>Edvisors.com</a>
+<div class="linkbox"><a id="link" href="https://www.edvisors.com/fafsa/after-submitting/award-letter/" target=_blank>Edvisors.com</a></div>
 <ul>
 <li>Timeline
 <li>Award letters can be confusing
@@ -122,7 +148,7 @@
 <li>Cutting college costs
 </ul></td>
 <td>
-<a id="link" href="https://www.collegeavestudentloans.com/resources/understanding-and-comparing-financial-aid-letters/" target=_blank>Collegeavestudentloans.com</a>
+<div class="linkbox"><a id="link" href="https://www.collegeavestudentloans.com/resources/understanding-and-comparing-financial-aid-letters/" target=_blank>Collegeavestudentloans.com</a></div>
 <ul>
 <li>Elements of financial aid letters
 <li>Additional costs
@@ -136,14 +162,14 @@
 <li>What to do next with financial aid letters
 </ul></td>
 <td>
-<a id="link" href="https://www.nitrocollege.com/blog/how-to-read-your-financial-aid-award-letter" target=_blank>Nitrocollege.com</a>
+<div class="linkbox"><a id="link" href="https://www.nitrocollege.com/blog/how-to-read-your-financial-aid-award-letter" target=_blank>Nitrocollege.com</a></div>
 <ul>
 <li>Final thoughts
 </ul></td>
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.salliemae.com/college-planning/financial-aid/financial-aid-award-letter/" target=_blank>Salliemae.com</a>
+<div class="linkbox"><a id="link" href="https://www.salliemae.com/college-planning/financial-aid/financial-aid-award-letter/" target=_blank>Salliemae.com</a></div>
 <ul>
 <li>Think comparing financial aid offers is " ruff "?
 <li>The financial aid piece of the school puzzle
@@ -156,7 +182,7 @@
 <li>Making the big decision
 </ul></td>
 <td>
-<a id="link" href="https://withfrank.org/how-to-pay-for-college/how-do-i-apply/next-steps-after-fafsa/how-to-read-your-financial-aid-award-letter/" target=_blank>Withfrank.org</a>
+<div class="linkbox"><a id="link" href="https://withfrank.org/how-to-pay-for-college/how-do-i-apply/next-steps-after-fafsa/how-to-read-your-financial-aid-award-letter/" target=_blank>Withfrank.org</a></div>
 <ul>
 <li>Your award letter — step by step
 <li>Cost of attendance
@@ -170,7 +196,7 @@
 <li>Appealing your aid award
 </ul></td>
 <td>
-<a id="link" href="https://www.investopedia.com/understanding-your-financial-aid-award-letter-4783535" target=_blank>Investopedia.com</a>
+<div class="linkbox"><a id="link" href="https://www.investopedia.com/understanding-your-financial-aid-award-letter-4783535" target=_blank>Investopedia.com</a></div>
 <ul>
 <li>It starts with filling out the fafsa
 <li>What is financial aid?
@@ -186,7 +212,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://finaid.yale.edu/award-letter/understanding-your-award" target=_blank>Yale.edu</a>
+<div class="linkbox"><a id="link" href="https://finaid.yale.edu/award-letter/understanding-your-award" target=_blank>Yale.edu</a></div>
 <ul>
 <li>Your estimated cost of attendance
 <li>Gift ​ aid
@@ -196,7 +222,7 @@
 <li>Special notes about your award
 </ul></td>
 <td>
-<a id="link" href="https://financialaid.kennesaw.edu/student-resources/awarding.php" target=_blank>Kennesaw.edu</a>
+<div class="linkbox"><a id="link" href="https://financialaid.kennesaw.edu/student-resources/awarding.php" target=_blank>Kennesaw.edu</a></div>
 <ul>
 <li>How to accept, decline, or reduce an award
 <li>Additional steps
@@ -206,7 +232,7 @@
 <li>Rights and responsibilities of accepting financial aid
 </ul></td>
 <td>
-<a id="link" href="https://www.betterfutureforward.org/understanding-your-financial-aid-award-letter" target=_blank>Betterfutureforward.org</a>
+<div class="linkbox"><a id="link" href="https://www.betterfutureforward.org/understanding-your-financial-aid-award-letter" target=_blank>Betterfutureforward.org</a></div>
 <ul>
 <li>Cost of attendance (coa)
 <li>Total grants and scholarships

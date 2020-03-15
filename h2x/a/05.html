@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://studentaid.gov/understand-aid/types/loans" target=_blank>Studentaid.gov</a>
+<div class="linkbox"><a id="link" href="https://studentaid.gov/understand-aid/types/loans" target=_blank>Studentaid.gov</a></div>
 <ul>
 <li>What types of federal student loans are available?
 <li>How much money can i borrow in federal student loans?
@@ -119,7 +145,7 @@
 <li>What is the federal perkins loan program?
 </ul></td>
 <td>
-<a id="link" href="https://www.thebalance.com/how-to-get-a-student-loan-315839" target=_blank>Thebalance.com</a>
+<div class="linkbox"><a id="link" href="https://www.thebalance.com/how-to-get-a-student-loan-315839" target=_blank>Thebalance.com</a></div>
 <ul>
 <li>Try to not borrow
 <li>Know your options
@@ -128,7 +154,7 @@
 <li>If you don ' t qualify
 </ul></td>
 <td>
-<a id="link" href="https://www.discover.com/student-loans/college-planning/how-to-pay/loans" target=_blank>Discover.com</a>
+<div class="linkbox"><a id="link" href="https://www.discover.com/student-loans/college-planning/how-to-pay/loans" target=_blank>Discover.com</a></div>
 <ul>
 <li>What do student loans cover?
 <li>My biggest student loan regrets
@@ -145,7 +171,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.fool.com/student-loans/how-get-student-loans-bad-credit/" target=_blank>Fool.com</a>
+<div class="linkbox"><a id="link" href="https://www.fool.com/student-loans/how-get-student-loans-bad-credit/" target=_blank>Fool.com</a></div>
 <ul>
 <li>Borrowing money for college is possible even when your credit is poor. here's how to do it
 <li>What's considered bad credit?
@@ -159,7 +185,7 @@
 <li>Motley fool returns
 </ul></td>
 <td>
-<a id="link" href="https://www.edvisors.com/ask/faq/how-do-student-loans-work/" target=_blank>Edvisors.com</a>
+<div class="linkbox"><a id="link" href="https://www.edvisors.com/ask/faq/how-do-student-loans-work/" target=_blank>Edvisors.com</a></div>
 <ul>
 <li>What is a student loan?
 <li>What is interest?
@@ -171,7 +197,7 @@
 <li>What happens if you don ' t repay your student loans?
 </ul></td>
 <td>
-<a id="link" href="https://smartasset.com/student-loans/student-loan-calculator" target=_blank>Smartasset.com</a>
+<div class="linkbox"><a id="link" href="https://smartasset.com/student-loans/student-loan-calculator" target=_blank>Smartasset.com</a></div>
 <ul>
 <li>Add your existing student loan details to calculate monthly payments and your student loan amortization over time
 <li>Student loan calculator

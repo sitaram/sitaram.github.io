@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://www.fastweb.com/financial-aid/articles/how-do-i-transfer-financial-aid-from-one-college-to-another" target=_blank>Fastweb.com</a>
+<div class="linkbox"><a id="link" href="https://www.fastweb.com/financial-aid/articles/how-do-i-transfer-financial-aid-from-one-college-to-another" target=_blank>Fastweb.com</a></div>
 <ul>
 <li>How Do I Transfer Financial Aid from One College to Another?
 <ul>
@@ -124,7 +150,7 @@
 <li>Trending
 </ul></td>
 <td>
-<a id="link" href="https://studentaid.gov/complete-aid-process/receive-aid" target=_blank>Studentaid.gov</a>
+<div class="linkbox"><a id="link" href="https://studentaid.gov/complete-aid-process/receive-aid" target=_blank>Studentaid.gov</a></div>
 <ul>
 <ul>
 <li>You are here
@@ -150,7 +176,7 @@
 <li>Additional Links
 </ul></td>
 <td>
-<a id="link" href="https://students.asu.edu/financialaid/apply/transfer" target=_blank>Asu.edu</a>
+<div class="linkbox"><a id="link" href="https://students.asu.edu/financialaid/apply/transfer" target=_blank>Asu.edu</a></div>
 <ul>
 <ul>
 <li>You are here
@@ -187,7 +213,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://studentcentral.iupui.edu/funding/apply-financial-aid/steps-to-apply/transfer.html" target=_blank>Iupui.edu</a>
+<div class="linkbox"><a id="link" href="https://studentcentral.iupui.edu/funding/apply-financial-aid/steps-to-apply/transfer.html" target=_blank>Iupui.edu</a></div>
 <ul>
 <li>Student Central
 <li>Steps for Transfer Students
@@ -200,7 +226,7 @@
 <li>Get started
 </ul></td>
 <td>
-<a id="link" href="https://www.valdosta.edu/administration/finance-admin/auxiliary-services/1-card-services/transfer-financial-aid-to-flex.php" target=_blank>Valdosta.edu</a>
+<div class="linkbox"><a id="link" href="https://www.valdosta.edu/administration/finance-admin/auxiliary-services/1-card-services/transfer-financial-aid-to-flex.php" target=_blank>Valdosta.edu</a></div>
 <ul>
 <li>Transfer Financial Aid to FLEX
 <ul>
@@ -217,7 +243,7 @@
 <li>Contact Us
 </ul></td>
 <td>
-<a id="link" href="https://financialaid.utah.edu/types-of-aid/scholarships/transfer/index.php" target=_blank>Utah.edu</a>
+<div class="linkbox"><a id="link" href="https://financialaid.utah.edu/types-of-aid/scholarships/transfer/index.php" target=_blank>Utah.edu</a></div>
 <ul>
 <li>University Office of Scholarships and Financial Aid
 <ul>
@@ -248,7 +274,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.kent.edu/transfer/transfer-student-financial-aid" target=_blank>Kent.edu</a>
+<div class="linkbox"><a id="link" href="https://www.kent.edu/transfer/transfer-student-financial-aid" target=_blank>Kent.edu</a></div>
 <ul>
 <ul>
 <li>A-Z Index
@@ -268,7 +294,7 @@
 <li>Information
 </ul></td>
 <td>
-<a id="link" href="https://www.uhd.edu/financial/apply/Pages/financial-apply-transfer.aspx" target=_blank>Uhd.edu</a>
+<div class="linkbox"><a id="link" href="https://www.uhd.edu/financial/apply/Pages/financial-apply-transfer.aspx" target=_blank>Uhd.edu</a></div>
 <ul>
 <li>Student Resources
 <li>Transfer Student Financial Aid
@@ -302,7 +328,7 @@
 <li>$h2
 </ul></td>
 <td>
-<a id="link" href="https://financialaid.arizona.edu/apply-for-aid/transfer" target=_blank>Arizona.edu</a>
+<div class="linkbox"><a id="link" href="https://financialaid.arizona.edu/apply-for-aid/transfer" target=_blank>Arizona.edu</a></div>
 <ul>
 <li>Apply for Aid
 <li>Transfer
@@ -327,7 +353,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.dvc.edu/student-services/financial-aid/pdfs/financial-aid-disbursement-options-faq.pdf" target=_blank>Dvc.edu</a>
+<div class="linkbox"><a id="link" href="https://www.dvc.edu/student-services/financial-aid/pdfs/financial-aid-disbursement-options-faq.pdf" target=_blank>Dvc.edu</a></div>
 <ul>
 <li>Page 1
 <li>Financial Aid Disbursement Options FAQs
@@ -355,7 +381,7 @@
 <li>Email:
 </ul></td>
 <td>
-<a id="link" href="https://finaid.gatech.edu/transfer-student" target=_blank>Gatech.edu</a>
+<div class="linkbox"><a id="link" href="https://finaid.gatech.edu/transfer-student" target=_blank>Gatech.edu</a></div>
 <ul>
 <li>Georgia Institute of Technology
 <ul>
@@ -368,7 +394,7 @@
 <li>Visitor Resources
 </ul></td>
 <td>
-<a id="link" href="https://www.hacc.edu/Paying/CanIGetAid/ApplyingforAid/Transfer.cfm" target=_blank>Hacc.edu</a>
+<div class="linkbox"><a id="link" href="https://www.hacc.edu/Paying/CanIGetAid/ApplyingforAid/Transfer.cfm" target=_blank>Hacc.edu</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -407,7 +433,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="http://www.bu.edu/finaid/apply/transfer/" target=_blank>Bu.edu</a>
+<div class="linkbox"><a id="link" href="http://www.bu.edu/finaid/apply/transfer/" target=_blank>Bu.edu</a></div>
 <ul>
 <li>Transfer Students
 <ul>
@@ -421,7 +447,7 @@
 <li>Applying for Aid
 </ul></td>
 <td>
-<a id="link" href="https://www.colorado.edu/financialaid/apply-aid/transfer-students" target=_blank>Colorado.edu</a>
+<div class="linkbox"><a id="link" href="https://www.colorado.edu/financialaid/apply-aid/transfer-students" target=_blank>Colorado.edu</a></div>
 <ul>
 <ul>
 <li>Main menu
@@ -448,7 +474,7 @@
 <li>University of Colorado Boulder
 </ul></td>
 <td>
-<a id="link" href="https://www.collin.edu/gettingstarted/financialaid/FrequentlyAskedQuestions.html" target=_blank>Collin.edu</a>
+<div class="linkbox"><a id="link" href="https://www.collin.edu/gettingstarted/financialaid/FrequentlyAskedQuestions.html" target=_blank>Collin.edu</a></div>
 <ul>
 <li>Collin College
 <ul>
@@ -486,7 +512,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.barry.edu/future-students/undergraduate/financial-aid/transfer-student.html" target=_blank>Barry.edu</a>
+<div class="linkbox"><a id="link" href="https://www.barry.edu/future-students/undergraduate/financial-aid/transfer-student.html" target=_blank>Barry.edu</a></div>
 <ul>
 <li>May I help you?
 <li>Transfer Students
@@ -509,7 +535,7 @@
 <li>Email:
 </ul></td>
 <td>
-<a id="link" href="https://www.jjc.edu/getting-started/pay-college/financial-aid" target=_blank>Jjc.edu</a>
+<div class="linkbox"><a id="link" href="https://www.jjc.edu/getting-started/pay-college/financial-aid" target=_blank>Jjc.edu</a></div>
 <ul>
 <li>JJC COVID-19 March 12 Operations Update
 <li>Financial Aid
@@ -553,7 +579,7 @@
 <li>Cookie Notice
 </ul></td>
 <td>
-<a id="link" href="https://www.uab.edu/students/paying-for-college/first-professional/faq" target=_blank>Uab.edu</a>
+<div class="linkbox"><a id="link" href="https://www.uab.edu/students/paying-for-college/first-professional/faq" target=_blank>Uab.edu</a></div>
 <ul>
 <li>Frequently Asked Financial Aid Questions for First Professional Students
 <ul>

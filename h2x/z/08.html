@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://www.finder.com/ways-you-can-lose-student-loan-eligibility" target=_blank>Finder.com</a>
+<div class="linkbox"><a id="link" href="https://www.finder.com/ways-you-can-lose-student-loan-eligibility" target=_blank>Finder.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -138,7 +164,7 @@
 <li>Modal Box
 </ul></td>
 <td>
-<a id="link" href="https://studentaid.gov/understand-aid/eligibility/requirements" target=_blank>Studentaid.gov</a>
+<div class="linkbox"><a id="link" href="https://studentaid.gov/understand-aid/eligibility/requirements" target=_blank>Studentaid.gov</a></div>
 <ul>
 <ul>
 <li>You are here
@@ -152,7 +178,7 @@
 <li>Additional Links
 </ul></td>
 <td>
-<a id="link" href="https://www.nerdwallet.com/blog/loans/student-loans/does-refinancing-student-loans-save-money/" target=_blank>Nerdwallet.com</a>
+<div class="linkbox"><a id="link" href="https://www.nerdwallet.com/blog/loans/student-loans/does-refinancing-student-loans-save-money/" target=_blank>Nerdwallet.com</a></div>
 <ul>
 <li>Does Refinancing Student Loans Save Money?
 <ul>
@@ -174,7 +200,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.nerdwallet.com/article/loans/student-loans/student-loan-refinance-calculator" target=_blank>Nerdwallet.com</a>
+<div class="linkbox"><a id="link" href="https://www.nerdwallet.com/article/loans/student-loans/student-loan-refinance-calculator" target=_blank>Nerdwallet.com</a></div>
 <ul>
 <li>Should I Refinance My Student Loans?
 <ul>
@@ -191,7 +217,7 @@
 <li>Other student loan calculators
 </ul></td>
 <td>
-<a id="link" href="https://www.gov.uk/student-finance/new-fulltime-students" target=_blank>Www.gov.uk</a>
+<div class="linkbox"><a id="link" href="https://www.gov.uk/student-finance/new-fulltime-students" target=_blank>Www.gov.uk</a></div>
 <ul>
 <li>Student finance
 <ul>
@@ -229,7 +255,7 @@
 <li>Support links
 </ul></td>
 <td>
-<a id="link" href="https://studentaidbc.ca/maintain/responsibilities" target=_blank>Studentaidbc.ca</a>
+<div class="linkbox"><a id="link" href="https://studentaidbc.ca/maintain/responsibilities" target=_blank>Studentaidbc.ca</a></div>
 <ul>
 <li>Your loan responsibilities
 <ul>
@@ -244,7 +270,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://blog.ed.gov/2019/09/public-service-loan-forgiveness-tips/" target=_blank>Ed.gov</a>
+<div class="linkbox"><a id="link" href="https://blog.ed.gov/2019/09/public-service-loan-forgiveness-tips/" target=_blank>Ed.gov</a></div>
 <ul>
 <ul>
 <li>Connect with us
@@ -270,7 +296,7 @@
 <li>Archives
 </ul></td>
 <td>
-<a id="link" href="https://www.ird.govt.nz/student-loans/when-can-i-keep-my-student-loan-interest-free-overseas/apply-to-keep-my-student-loan-interest-free" target=_blank>Govt.nz</a>
+<div class="linkbox"><a id="link" href="https://www.ird.govt.nz/student-loans/when-can-i-keep-my-student-loan-interest-free-overseas/apply-to-keep-my-student-loan-interest-free" target=_blank>Govt.nz</a></div>
 <ul>
 <li>Te tono kia noho itarete kore taku pūtea taurewa ākonga Apply to keep my student loan interest..
 <ul>
@@ -284,7 +310,7 @@
 <li>Moving between Inland Revenue sites
 </ul></td>
 <td>
-<a id="link" href="https://www.investopedia.com/terms/s/student-loan-forgiveness.asp" target=_blank>Investopedia.com</a>
+<div class="linkbox"><a id="link" href="https://www.investopedia.com/terms/s/student-loan-forgiveness.asp" target=_blank>Investopedia.com</a></div>
 <ul>
 <li>Student Loan Forgiveness
 <ul>
@@ -310,7 +336,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.credit.com/blog/2014/08/how-a-deferred-student-loan-could-keep-you-from-buying-a-house-94181/" target=_blank>Credit.com</a>
+<div class="linkbox"><a id="link" href="https://www.credit.com/blog/2014/08/how-a-deferred-student-loan-could-keep-you-from-buying-a-house-94181/" target=_blank>Credit.com</a></div>
 <ul>
 <li>How a Deferred Student Loan Could Keep You From Buying a House
 <ul>
@@ -328,7 +354,7 @@
 <li>Sign up for our weekly newsletter
 </ul></td>
 <td>
-<a id="link" href="https://www.credit.com/loans/student-loans/student-articles/can-student-loans-keep-me-from-getting-auto-loan/" target=_blank>Credit.com</a>
+<div class="linkbox"><a id="link" href="https://www.credit.com/loans/student-loans/student-articles/can-student-loans-keep-me-from-getting-auto-loan/" target=_blank>Credit.com</a></div>
 <ul>
 <li>Can My Student Loans Keep Me From Getting An Auto Loan?
 <ul>
@@ -339,7 +365,7 @@
 <li>Meet Our Expert
 </ul></td>
 <td>
-<a id="link" href="https://studentaid.alberta.ca/before-you-apply/eligibility/" target=_blank>Alberta.ca</a>
+<div class="linkbox"><a id="link" href="https://studentaid.alberta.ca/before-you-apply/eligibility/" target=_blank>Alberta.ca</a></div>
 <ul>
 <li>Eligibility
 <ul>
@@ -360,7 +386,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://studentloanhero.com/featured/the-complete-list-of-student-loan-forgiveness-programs/" target=_blank>Studentloanhero.com</a>
+<div class="linkbox"><a id="link" href="https://studentloanhero.com/featured/the-complete-list-of-student-loan-forgiveness-programs/" target=_blank>Studentloanhero.com</a></div>
 <ul>
 <li>The Complete List of Student Loan Forgiveness Programs and Options
 <ul>
@@ -465,7 +491,7 @@
 <li>You're on your way..
 </ul></td>
 <td>
-<a id="link" href="https://www.studentloanplanner.com/public-service-loan-forgiveness/" target=_blank>Studentloanplanner.com</a>
+<div class="linkbox"><a id="link" href="https://www.studentloanplanner.com/public-service-loan-forgiveness/" target=_blank>Studentloanplanner.com</a></div>
 <ul>
 <li>Top 40 Tips to Save Thousands with Public Service Loan Forgiveness
 <ul>
@@ -561,7 +587,7 @@
 <li>Editorial Integrity
 </ul></td>
 <td>
-<a id="link" href="https://www.opm.gov/policy-data-oversight/pay-leave/student-loan-repayment/" target=_blank>Opm.gov</a>
+<div class="linkbox"><a id="link" href="https://www.opm.gov/policy-data-oversight/pay-leave/student-loan-repayment/" target=_blank>Opm.gov</a></div>
 <ul>
 <ul>
 <li>Featured Topics
@@ -617,7 +643,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.savethestudent.org/student-finance/the-big-fat-guide-to-student-finance-2012.html" target=_blank>Savethestudent.org</a>
+<div class="linkbox"><a id="link" href="https://www.savethestudent.org/student-finance/the-big-fat-guide-to-student-finance-2012.html" target=_blank>Savethestudent.org</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -702,7 +728,7 @@
 <li>The student money website
 </ul></td>
 <td>
-<a id="link" href="https://www.savethestudent.org/international-students/a-guide-to-uk-tuition-fees-for-eu-students.html" target=_blank>Savethestudent.org</a>
+<div class="linkbox"><a id="link" href="https://www.savethestudent.org/international-students/a-guide-to-uk-tuition-fees-for-eu-students.html" target=_blank>Savethestudent.org</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">

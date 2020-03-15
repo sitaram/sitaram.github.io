@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://www.accreditedschoolsonline.org/resources/college-application-fee-waiver/" target=_blank>Accreditedschoolsonline.org</a>
+<div class="linkbox"><a id="link" href="https://www.accreditedschoolsonline.org/resources/college-application-fee-waiver/" target=_blank>Accreditedschoolsonline.org</a></div>
 <ul>
 <li>College Application Fee Waivers
 <ul>
@@ -125,7 +151,7 @@
 <li>An Expert Discusses Fee Waivers
 </ul></td>
 <td>
-<a id="link" href="https://blog.prepscholar.com/college-application-fee-waiver" target=_blank>Prepscholar.com</a>
+<div class="linkbox"><a id="link" href="https://blog.prepscholar.com/college-application-fee-waiver" target=_blank>Prepscholar.com</a></div>
 <ul>
 <ul>
 <li>Choose Your Test
@@ -154,7 +180,7 @@
 <li>Ask a Question Below
 </ul></td>
 <td>
-<a id="link" href="https://bigfuture.collegeboard.org/get-in/applying-101/college-application-fee-waivers" target=_blank>Collegeboard.org</a>
+<div class="linkbox"><a id="link" href="https://bigfuture.collegeboard.org/get-in/applying-101/college-application-fee-waivers" target=_blank>Collegeboard.org</a></div>
 <ul>
 <li>The College Board
 <ul>
@@ -183,7 +209,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.nerdwallet.com/blog/loans/student-loans/college-application-fee-waiver/" target=_blank>Nerdwallet.com</a>
+<div class="linkbox"><a id="link" href="https://www.nerdwallet.com/blog/loans/student-loans/college-application-fee-waiver/" target=_blank>Nerdwallet.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -216,7 +242,7 @@
 <li>Check your credit
 </ul></td>
 <td>
-<a id="link" href="https://studentloanhero.com/featured/fee-waiver-college-application/" target=_blank>Studentloanhero.com</a>
+<div class="linkbox"><a id="link" href="https://studentloanhero.com/featured/fee-waiver-college-application/" target=_blank>Studentloanhero.com</a></div>
 <ul>
 <li>How to Get a College Application Fee Waiver
 <ul>
@@ -252,7 +278,7 @@
 <li>You're on your way..
 </ul></td>
 <td>
-<a id="link" href="https://appsupport.commonapp.org/applicantsupport/s/article/What-do-I-need-to-know-about-the-Common-App-fee-waiver" target=_blank>Commonapp.org</a>
+<div class="linkbox"><a id="link" href="https://appsupport.commonapp.org/applicantsupport/s/article/What-do-I-need-to-know-about-the-Common-App-fee-waiver" target=_blank>Commonapp.org</a></div>
 <ul>
 <li>What do I need to know about the Common App fee waiver?
 <ul>
@@ -265,7 +291,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.nacacfairs.org/learn/fee-waiver/" target=_blank>Nacacfairs.org</a>
+<div class="linkbox"><a id="link" href="https://www.nacacfairs.org/learn/fee-waiver/" target=_blank>Nacacfairs.org</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -298,7 +324,7 @@
 <li>Support
 </ul></td>
 <td>
-<a id="link" href="https://blog.collegevine.com/how-to-receive-a-common-app-fee-waiver/" target=_blank>Collegevine.com</a>
+<div class="linkbox"><a id="link" href="https://blog.collegevine.com/how-to-receive-a-common-app-fee-waiver/" target=_blank>Collegevine.com</a></div>
 <ul>
 <li>How to Receive A Common App Fee Waiver
 <ul>
@@ -317,7 +343,7 @@
 <li>Speak to an expert today
 </ul></td>
 <td>
-<a id="link" href="https://www.acenet.edu/Documents/College%20Application%20Fee%20Waiver%20Worksheet%20final%20.pdf" target=_blank>Acenet.edu</a>
+<div class="linkbox"><a id="link" href="https://www.acenet.edu/Documents/College%20Application%20Fee%20Waiver%20Worksheet%20final%20.pdf" target=_blank>Acenet.edu</a></div>
 <ul>
 <li>Page 1
 <li>COLLEGE APPLICATION FEE WAIVERS
@@ -343,7 +369,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www2.calstate.edu/apply/paying-for-college/Pages/fee-waiver.aspx" target=_blank>Calstate.edu</a>
+<div class="linkbox"><a id="link" href="https://www2.calstate.edu/apply/paying-for-college/Pages/fee-waiver.aspx" target=_blank>Calstate.edu</a></div>
 <ul>
 <li>Application Fee Waiver
 <ul>
@@ -352,7 +378,7 @@
 <li>Learn about applying to the CSU as a:
 </ul></td>
 <td>
-<a id="link" href="https://www.gov.uk/government/publications/applications-for-a-fee-waiver-and-refunds" target=_blank>Www.gov.uk</a>
+<div class="linkbox"><a id="link" href="https://www.gov.uk/government/publications/applications-for-a-fee-waiver-and-refunds" target=_blank>Www.gov.uk</a></div>
 <ul>
 <li>Applications for a fee waiver and refunds
 <ul>
@@ -374,7 +400,7 @@
 <li>Support links
 </ul></td>
 <td>
-<a id="link" href="https://admissions.northwestern.edu/tuition-aid/fee-waiver.html" target=_blank>Northwestern.edu</a>
+<div class="linkbox"><a id="link" href="https://admissions.northwestern.edu/tuition-aid/fee-waiver.html" target=_blank>Northwestern.edu</a></div>
 <ul>
 <li>UNDERGRADUATE ADMISSIONS
 <li>Application Fee Waiver
@@ -387,7 +413,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.usatoday.com/story/college/2012/08/10/how-to-avoid-college-application-fees/37396463/" target=_blank>Usatoday.com</a>
+<div class="linkbox"><a id="link" href="https://www.usatoday.com/story/college/2012/08/10/how-to-avoid-college-application-fees/37396463/" target=_blank>Usatoday.com</a></div>
 <ul>
 <li>How to avoid college application fees
 <ul>
@@ -401,7 +427,7 @@
 <li>Alumni support
 </ul></td>
 <td>
-<a id="link" href="https://www.freemovement.org.uk/fee-waiver-policy-who-qualifies-and-what-does-the-home-office-policy-say/" target=_blank>Freemovement.org.uk</a>
+<div class="linkbox"><a id="link" href="https://www.freemovement.org.uk/fee-waiver-policy-who-qualifies-and-what-does-the-home-office-policy-say/" target=_blank>Freemovement.org.uk</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -443,7 +469,7 @@
 <li>Updates, commentary, training and advice on immigration and asylum law
 </ul></td>
 <td>
-<a id="link" href="https://uwhelp.wisconsin.edu/counselors/admission-process/application-fee-waiver/" target=_blank>Wisconsin.edu</a>
+<div class="linkbox"><a id="link" href="https://uwhelp.wisconsin.edu/counselors/admission-process/application-fee-waiver/" target=_blank>Wisconsin.edu</a></div>
 <ul>
 <li>Application Fee Waiver
 <ul>
@@ -463,7 +489,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://admissions.dartmouth.edu/glossary-term/application-fee-waiver" target=_blank>Dartmouth.edu</a>
+<div class="linkbox"><a id="link" href="https://admissions.dartmouth.edu/glossary-term/application-fee-waiver" target=_blank>Dartmouth.edu</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -483,7 +509,7 @@
 <li>Connect With Us
 </ul></td>
 <td>
-<a id="link" href="https://uadmissions.georgetown.edu/applying/fee-waiver/" target=_blank>Georgetown.edu</a>
+<div class="linkbox"><a id="link" href="https://uadmissions.georgetown.edu/applying/fee-waiver/" target=_blank>Georgetown.edu</a></div>
 <ul>
 <li>Application Fee Waiver
 <ul>
@@ -492,7 +518,7 @@
 <li>More Information
 </ul></td>
 <td>
-<a id="link" href="http://www.coalitionforcollegeaccess.org/fee-waiver.html" target=_blank>Coalitionforcollegeaccess.org</a>
+<div class="linkbox"><a id="link" href="http://www.coalitionforcollegeaccess.org/fee-waiver.html" target=_blank>Coalitionforcollegeaccess.org</a></div>
 <ul>
 <li>Application Fee Waivers
 <ul>
@@ -502,7 +528,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.ucf.edu/admissions/undergraduate/question/how-can-i-request-a-waiver-of-the-application-fee/" target=_blank>Ucf.edu</a>
+<div class="linkbox"><a id="link" href="https://www.ucf.edu/admissions/undergraduate/question/how-can-i-request-a-waiver-of-the-application-fee/" target=_blank>Ucf.edu</a></div>
 <ul>
 <li>How can I request a waiver of the application fee?
 <ul>
@@ -522,7 +548,7 @@
 <li>Let’s Get Social
 </ul></td>
 <td>
-<a id="link" href="https://www.suny.edu/media/suny/content-assets/documents/application-forms/fee_waiver.pdf" target=_blank>Suny.edu</a>
+<div class="linkbox"><a id="link" href="https://www.suny.edu/media/suny/content-assets/documents/application-forms/fee_waiver.pdf" target=_blank>Suny.edu</a></div>
 <ul>
 <li>Page 1
 <li>NEW YORK

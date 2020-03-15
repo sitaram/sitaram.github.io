@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://www.collin.edu/gettingstarted/financialaid/FrequentlyAskedQuestions.html" target=_blank>Collin.edu</a>
+<div class="linkbox"><a id="link" href="https://www.collin.edu/gettingstarted/financialaid/FrequentlyAskedQuestions.html" target=_blank>Collin.edu</a></div>
 <ul>
 <li>Why are you asking for my high school transcript?
 <li>Why did i not get my full pell grant?
@@ -130,7 +156,7 @@
 <li>What is sap? why am i not eligible for financial aid?
 </ul></td>
 <td>
-<a id="link" href="https://www.uab.edu/students/paying-for-college/first-professional/faq" target=_blank>Uab.edu</a>
+<div class="linkbox"><a id="link" href="https://www.uab.edu/students/paying-for-college/first-professional/faq" target=_blank>Uab.edu</a></div>
 <ul>
 <li>When can i expect my disbursements?
 <li>Can i get my money before the academic year begins for books and moving in expenses?

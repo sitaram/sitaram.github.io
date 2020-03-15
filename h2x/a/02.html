@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://www.calculator.net/college-cost-calculator.html" target=_blank>Calculator.net</a>
+<div class="linkbox"><a id="link" href="https://www.calculator.net/college-cost-calculator.html" target=_blank>Calculator.net</a></div>
 <ul>
 <li>College - specific net price calculators
 <li>Higher education in the us
@@ -117,7 +143,7 @@
 <li>529 prepaid plan
 </ul></td>
 <td>
-<a id="link" href="https://www.edmit.me/resources/how-to-calculate-college-net-price" target=_blank>Edmit.me</a>
+<div class="linkbox"><a id="link" href="https://www.edmit.me/resources/how-to-calculate-college-net-price" target=_blank>Edmit.me</a></div>
 <ul>
 <li>Key takeaways :
 <li>What's the difference between sticker price and net price?
@@ -127,7 +153,7 @@
 <li>How do you compare net price among several colleges?
 </ul></td>
 <td>
-<a id="link" href="https://midpennbank.com/how-to-calculate-the-real-cost-of-college/" target=_blank>Midpennbank.com</a>
+<div class="linkbox"><a id="link" href="https://midpennbank.com/how-to-calculate-the-real-cost-of-college/" target=_blank>Midpennbank.com</a></div>
 <ul>
 <li>Tuition and school fees
 <li>Room and board
@@ -140,7 +166,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://study.com/articles/10_Free_Online_Calculators_to_Estimate_College_Costs.html" target=_blank>Study.com</a>
+<div class="linkbox"><a id="link" href="https://study.com/articles/10_Free_Online_Calculators_to_Estimate_College_Costs.html" target=_blank>Study.com</a></div>
 <ul>
 <li>1.) cnn money college cost finder
 <li>2.) college board college cost calculator

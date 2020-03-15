@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://studentaid.gov/h/apply-for-aid/fafsa" target=_blank>Studentaid.gov</a>
+<div class="linkbox"><a id="link" href="https://studentaid.gov/h/apply-for-aid/fafsa" target=_blank>Studentaid.gov</a></div>
 <ul>
 <li>Complete the FAFSA® Form
 <li>New To The FAFSA® Process?
@@ -127,7 +153,7 @@
 <li>Renew Your Form
 </ul></td>
 <td>
-<a id="link" href="https://studentaid.gov/apply-for-aid/fafsa/filling-out" target=_blank>Studentaid.gov</a>
+<div class="linkbox"><a id="link" href="https://studentaid.gov/apply-for-aid/fafsa/filling-out" target=_blank>Studentaid.gov</a></div>
 <ul>
 <ul>
 <li>You are here
@@ -153,7 +179,7 @@
 <li>Additional Links
 </ul></td>
 <td>
-<a id="link" href="https://www.salliemae.com/college-planning/financial-aid/fafsa/" target=_blank>Salliemae.com</a>
+<div class="linkbox"><a id="link" href="https://www.salliemae.com/college-planning/financial-aid/fafsa/" target=_blank>Salliemae.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -181,7 +207,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.collegeavestudentloans.com/resources/how-to-apply-for-fafsa/" target=_blank>Collegeavestudentloans.com</a>
+<div class="linkbox"><a id="link" href="https://www.collegeavestudentloans.com/resources/how-to-apply-for-fafsa/" target=_blank>Collegeavestudentloans.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -224,7 +250,7 @@
 <li>Relevant Articles
 </ul></td>
 <td>
-<a id="link" href="https://blog.ed.gov/2017/09/8-steps-to-filling-out-the-fafsa-form/" target=_blank>Ed.gov</a>
+<div class="linkbox"><a id="link" href="https://blog.ed.gov/2017/09/8-steps-to-filling-out-the-fafsa-form/" target=_blank>Ed.gov</a></div>
 <ul>
 <ul>
 <li>Connect with us
@@ -252,7 +278,7 @@
 <li>Archives
 </ul></td>
 <td>
-<a id="link" href="https://www.benefits.gov/benefit/4426" target=_blank>Benefits.gov</a>
+<div class="linkbox"><a id="link" href="https://www.benefits.gov/benefit/4426" target=_blank>Benefits.gov</a></div>
 <ul>
 <li>Free Application for Federal Student Aid (FAFSA)
 <ul>
@@ -271,7 +297,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.forbes.com/sites/brianboswell/2018/10/01/how-to-apply-for-financial-aid/" target=_blank>Forbes.com</a>
+<div class="linkbox"><a id="link" href="https://www.forbes.com/sites/brianboswell/2018/10/01/how-to-apply-for-financial-aid/" target=_blank>Forbes.com</a></div>
 <ul>
 <ul>
 <li>Please help us continue to provide you with free, quality journalism by turning off your ad bloc..
@@ -287,7 +313,7 @@
 <li>Share: New FICO Scoring Model- How To Protect Your Score From The Changes
 </ul></td>
 <td>
-<a id="link" href="https://www.youtube.com/watch?v=LK0bbu0y5AM" target=_blank>Youtube.com</a>
+<div class="linkbox"><a id="link" href="https://www.youtube.com/watch?v=LK0bbu0y5AM" target=_blank>Youtube.com</a></div>
 <ul>
 <li>This video is unavailable
 <ul>
@@ -309,7 +335,7 @@
 <li>Add to
 </ul></td>
 <td>
-<a id="link" href="https://www.savingforcollege.com/article/how-to-apply-for-financial-aid-for-college" target=_blank>Savingforcollege.com</a>
+<div class="linkbox"><a id="link" href="https://www.savingforcollege.com/article/how-to-apply-for-financial-aid-for-college" target=_blank>Savingforcollege.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -349,7 +375,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.credible.com/blog/student-loans/applying-for-fafsa/" target=_blank>Credible.com</a>
+<div class="linkbox"><a id="link" href="https://www.credible.com/blog/student-loans/applying-for-fafsa/" target=_blank>Credible.com</a></div>
 <ul>
 <li>How to Apply for FAFSA: Deadlines, Tips, Timeline & Common Questions for 2020-21
 <ul>
@@ -388,7 +414,7 @@
 <li>Every College You Might be Interested in Should be on Your FAFSA
 </ul></td>
 <td>
-<a id="link" href="https://bigfuture.collegeboard.org/pay-for-college/financial-aid-101/how-to-complete-the-fafsa" target=_blank>Collegeboard.org</a>
+<div class="linkbox"><a id="link" href="https://bigfuture.collegeboard.org/pay-for-college/financial-aid-101/how-to-complete-the-fafsa" target=_blank>Collegeboard.org</a></div>
 <ul>
 <li>The College Board
 <ul>
@@ -411,7 +437,7 @@
 <li>College Board
 </ul></td>
 <td>
-<a id="link" href="https://cssprofile.collegeboard.org/" target=_blank>Collegeboard.org</a>
+<div class="linkbox"><a id="link" href="https://cssprofile.collegeboard.org/" target=_blank>Collegeboard.org</a></div>
 <ul>
 <li>The College Board
 <ul>
@@ -445,7 +471,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.finaid.txstate.edu/undergraduate/how.html" target=_blank>Txstate.edu</a>
+<div class="linkbox"><a id="link" href="https://www.finaid.txstate.edu/undergraduate/how.html" target=_blank>Txstate.edu</a></div>
 <ul>
 <ul>
 <li>Financial Aid and Scholarships
@@ -464,7 +490,7 @@
 <li>Financial Aid and Scholarships
 </ul></td>
 <td>
-<a id="link" href="https://www.nerdwallet.com/article/loans/student-loans/fafsa-deadline" target=_blank>Nerdwallet.com</a>
+<div class="linkbox"><a id="link" href="https://www.nerdwallet.com/article/loans/student-loans/fafsa-deadline" target=_blank>Nerdwallet.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -479,7 +505,7 @@
 <li>Next steps
 </ul></td>
 <td>
-<a id="link" href="https://studentloanhero.com/featured/do-i-qualify-for-financial-aid-eligibility-requirements/" target=_blank>Studentloanhero.com</a>
+<div class="linkbox"><a id="link" href="https://studentloanhero.com/featured/do-i-qualify-for-financial-aid-eligibility-requirements/" target=_blank>Studentloanhero.com</a></div>
 <ul>
 <li>4 Important Eligibility Requirements to Qualify for Financial Aid
 <ul>
@@ -507,7 +533,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.ohe.state.mn.us/mPg.cfm?pageID=130" target=_blank>State.mn.us</a>
+<div class="linkbox"><a id="link" href="https://www.ohe.state.mn.us/mPg.cfm?pageID=130" target=_blank>State.mn.us</a></div>
 <ul>
 <li>How to Apply for Financial Aid
 <ul>
@@ -553,7 +579,7 @@
 <li>Quick Links
 </ul></td>
 <td>
-<a id="link" href="https://students-residents.aamc.org/financial-aid/article/financial-aid-application-process/" target=_blank>Aamc.org</a>
+<div class="linkbox"><a id="link" href="https://students-residents.aamc.org/financial-aid/article/financial-aid-application-process/" target=_blank>Aamc.org</a></div>
 <ul>
 <li>Store
 <li>The Financial Aid Application Process
@@ -573,7 +599,7 @@
 <li>Contact FIRST
 </ul></td>
 <td>
-<a id="link" href="https://www.tcc.edu/paying-for-college/federal-financial-aid/" target=_blank>Tcc.edu</a>
+<div class="linkbox"><a id="link" href="https://www.tcc.edu/paying-for-college/federal-financial-aid/" target=_blank>Tcc.edu</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -594,7 +620,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.edvisors.com/fafsa/eligibility/filing-fafsa-deadline-2019-2020/" target=_blank>Edvisors.com</a>
+<div class="linkbox"><a id="link" href="https://www.edvisors.com/fafsa/eligibility/filing-fafsa-deadline-2019-2020/" target=_blank>Edvisors.com</a></div>
 <ul>
 <li>FAFSA Deadline for 2019-2020
 <ul>
@@ -620,7 +646,7 @@
 <li>You Got In - Now How Do You Pay for It?
 </ul></td>
 <td>
-<a id="link" href="http://www.finaid.ucsb.edu/how-to-apply" target=_blank>Ucsb.edu</a>
+<div class="linkbox"><a id="link" href="http://www.finaid.ucsb.edu/how-to-apply" target=_blank>Ucsb.edu</a></div>
 <ul>
 <ul>
 <li>Navigation

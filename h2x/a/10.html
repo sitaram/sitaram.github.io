@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://studentloanhero.com/featured/how-to-refinance-student-loans/" target=_blank>Studentloanhero.com</a>
+<div class="linkbox"><a id="link" href="https://studentloanhero.com/featured/how-to-refinance-student-loans/" target=_blank>Studentloanhero.com</a></div>
 <ul>
 <li>Rebecca safier
 <li>4 steps to easily refinance student loans
@@ -117,7 +143,7 @@
 <li>More posts
 </ul></td>
 <td>
-<a id="link" href="https://www.acorns.com/money-basics/student-debt/how-to-refinance-student-loans/" target=_blank>Acorns.com</a>
+<div class="linkbox"><a id="link" href="https://www.acorns.com/money-basics/student-debt/how-to-refinance-student-loans/" target=_blank>Acorns.com</a></div>
 <ul>
 <li>What is student loan refinancing?
 <li>Can you refinance federal student loans?
@@ -127,7 +153,7 @@
 <li>Related articles
 </ul></td>
 <td>
-<a id="link" href="https://www.fool.com/student-loans/how-to-refinance-your-student-loans/" target=_blank>Fool.com</a>
+<div class="linkbox"><a id="link" href="https://www.fool.com/student-loans/how-to-refinance-your-student-loans/" target=_blank>Fool.com</a></div>
 <ul>
 <li>Get the terms you want for your student loans by refinancing them. image source : getty images
 <li>What is student loan refinancing?
@@ -140,7 +166,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.moneycrashers.com/how-to-refinance-student-loans-pros-cons/" target=_blank>Moneycrashers.com</a>
+<div class="linkbox"><a id="link" href="https://www.moneycrashers.com/how-to-refinance-student-loans-pros-cons/" target=_blank>Moneycrashers.com</a></div>
 <ul>
 <li>How student loan refinancing works
 <li>Should you refinance?
@@ -150,7 +176,7 @@
 <li>Final word
 </ul></td>
 <td>
-<a id="link" href="https://www.studentloanplanner.com/refinance-student-loans/" target=_blank>Studentloanplanner.com</a>
+<div class="linkbox"><a id="link" href="https://www.studentloanplanner.com/refinance-student-loans/" target=_blank>Studentloanplanner.com</a></div>
 <ul>
 <li>Get the best student loan refinancing deal anywhere
 <li>Use a student loan refinance calculator, see potential savings
@@ -160,7 +186,7 @@
 <li>Start applying or take the student loan refinancing quiz
 </ul></td>
 <td>
-<a id="link" href="https://thecollegeinvestor.com/21558/best-places-refinance-student-loans/" target=_blank>Thecollegeinvestor.com</a>
+<div class="linkbox"><a id="link" href="https://thecollegeinvestor.com/21558/best-places-refinance-student-loans/" target=_blank>Thecollegeinvestor.com</a></div>
 <ul>
 <li>1. citizens bank
 <li>2. commonbond

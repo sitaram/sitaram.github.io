@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://bigfuture.collegeboard.org/pay-for-college/college-costs/college-costs-calculator" target=_blank>Collegeboard.org</a>
+<div class="linkbox"><a id="link" href="https://bigfuture.collegeboard.org/pay-for-college/college-costs/college-costs-calculator" target=_blank>Collegeboard.org</a></div>
 <ul>
 <li>The College Board
 <ul>
@@ -125,7 +151,7 @@
 <li>College Board
 </ul></td>
 <td>
-<a id="link" href="https://www.calculator.net/college-cost-calculator.html" target=_blank>Calculator.net</a>
+<div class="linkbox"><a id="link" href="https://www.calculator.net/college-cost-calculator.html" target=_blank>Calculator.net</a></div>
 <ul>
 <li>College Cost Calculator
 <ul>
@@ -140,7 +166,7 @@
 <li>529 Prepaid Plan
 </ul></td>
 <td>
-<a id="link" href="https://blog.ctrust.com/how-to-calculate-the-true-cost-of-college" target=_blank>Ctrust.com</a>
+<div class="linkbox"><a id="link" href="https://blog.ctrust.com/how-to-calculate-the-true-cost-of-college" target=_blank>Ctrust.com</a></div>
 <ul>
 <li>Caldwell Trust Company Blog
 <li>How to Calculate the True Cost of College
@@ -157,7 +183,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.savingforcollege.com/calculators/college-savings-calculator" target=_blank>Savingforcollege.com</a>
+<div class="linkbox"><a id="link" href="https://www.savingforcollege.com/calculators/college-savings-calculator" target=_blank>Savingforcollege.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -191,7 +217,7 @@
 <li>What is your state of residence?
 </ul></td>
 <td>
-<a id="link" href="https://www.affordablecollegesonline.org/financial-aid/college-calculators/" target=_blank>Affordablecollegesonline.org</a>
+<div class="linkbox"><a id="link" href="https://www.affordablecollegesonline.org/financial-aid/college-calculators/" target=_blank>Affordablecollegesonline.org</a></div>
 <ul>
 <li>The Ultimate List of College Cost Calculators Calculate College Cost, Student Loan Payments & Sa..
 <ul>
@@ -221,7 +247,7 @@
 <li>From the Expert
 </ul></td>
 <td>
-<a id="link" href="https://www.npr.org/2019/04/11/709528694/how-to-calculate-the-cost-of-college-a-guide-to-financial-aid-terms" target=_blank>Npr.org</a>
+<div class="linkbox"><a id="link" href="https://www.npr.org/2019/04/11/709528694/how-to-calculate-the-cost-of-college-a-guide-to-financial-aid-terms" target=_blank>Npr.org</a></div>
 <ul>
 <ul>
 <li>Changing Face Of College
@@ -243,7 +269,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.cnbc.com/2017/04/24/best-ways-to-figure-out-what-college-really-costs.html" target=_blank>Cnbc.com</a>
+<div class="linkbox"><a id="link" href="https://www.cnbc.com/2017/04/24/best-ways-to-figure-out-what-college-really-costs.html" target=_blank>Cnbc.com</a></div>
 <ul>
 <li>College Game Plan
 <li>Best ways to figure out what college really costs
@@ -257,7 +283,7 @@
 <li>CNBC Newsletters
 </ul></td>
 <td>
-<a id="link" href="https://www.edmit.me/resources/how-to-calculate-college-net-price" target=_blank>Edmit.me</a>
+<div class="linkbox"><a id="link" href="https://www.edmit.me/resources/how-to-calculate-college-net-price" target=_blank>Edmit.me</a></div>
 <ul>
 <li>How To Calculate a College's Net Price
 <ul>
@@ -276,7 +302,7 @@
 <li>Edmit's advice helps you to be better off after graduation
 </ul></td>
 <td>
-<a id="link" href="https://blog.scholarshipamerica.org/calculate-the-real-cost-of-attendance-at-any-college" target=_blank>Scholarshipamerica.org</a>
+<div class="linkbox"><a id="link" href="https://blog.scholarshipamerica.org/calculate-the-real-cost-of-attendance-at-any-college" target=_blank>Scholarshipamerica.org</a></div>
 <ul>
 <li>Calculate The Real Cost Of Attendance At Any College
 <ul>
@@ -302,7 +328,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://midpennbank.com/how-to-calculate-the-real-cost-of-college/" target=_blank>Midpennbank.com</a>
+<div class="linkbox"><a id="link" href="https://midpennbank.com/how-to-calculate-the-real-cost-of-college/" target=_blank>Midpennbank.com</a></div>
 <ul>
 <li>How to Calculate the Real Cost of College
 <li>Common College Costs
@@ -363,14 +389,14 @@
 <li>Contact Us
 </ul></td>
 <td>
-<a id="link" href="https://www.finaid.org/calculators/costprojector.phtml" target=_blank>Finaid.org</a>
+<div class="linkbox"><a id="link" href="https://www.finaid.org/calculators/costprojector.phtml" target=_blank>Finaid.org</a></div>
 <ul>
 <li>College Cost Projector
 <li>College Type 4 Year 2 Year Current One-Year Costs: Tuition Inflation Rate: Years until Enrollmen..
 <li>Calculators
 </ul></td>
 <td>
-<a id="link" href="https://myintuition.org/" target=_blank>Myintuition.org</a>
+<div class="linkbox"><a id="link" href="https://myintuition.org/" target=_blank>Myintuition.org</a></div>
 <ul>
 <li>MyIntuition
 <ul>
@@ -394,7 +420,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.edupass.org/paying-for-college/planning/costs/" target=_blank>Edupass.org</a>
+<div class="linkbox"><a id="link" href="https://www.edupass.org/paying-for-college/planning/costs/" target=_blank>Edupass.org</a></div>
 <ul>
 <li>Calculating College Costs
 <ul>
@@ -410,7 +436,7 @@
 <li>Don't miss important scholarship announcements and other vital news - sign up for the monthly ed..
 </ul></td>
 <td>
-<a id="link" href="https://www.collegecalc.org/" target=_blank>Collegecalc.org</a>
+<div class="linkbox"><a id="link" href="https://www.collegecalc.org/" target=_blank>Collegecalc.org</a></div>
 <ul>
 <li>College Cost Data
 <ul>
@@ -431,7 +457,7 @@
 <li>Contact Us
 </ul></td>
 <td>
-<a id="link" href="https://www.vawizard.org/wizard/financing-college" target=_blank>Vawizard.org</a>
+<div class="linkbox"><a id="link" href="https://www.vawizard.org/wizard/financing-college" target=_blank>Vawizard.org</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -457,7 +483,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://collegescorecard.ed.gov/" target=_blank>Ed.gov</a>
+<div class="linkbox"><a id="link" href="https://collegescorecard.ed.gov/" target=_blank>Ed.gov</a></div>
 <ul>
 <li>Find the Right Fit
 <ul>
@@ -469,7 +495,7 @@
 <li>Learn More About Paying for College
 </ul></td>
 <td>
-<a id="link" href="https://study.com/articles/10_Free_Online_Calculators_to_Estimate_College_Costs.html" target=_blank>Study.com</a>
+<div class="linkbox"><a id="link" href="https://study.com/articles/10_Free_Online_Calculators_to_Estimate_College_Costs.html" target=_blank>Study.com</a></div>
 <ul>
 <li>10 Free Online Calculators to Estimate College Costs
 <ul>
@@ -503,7 +529,7 @@
 <li>We use cookies on our site
 </ul></td>
 <td>
-<a id="link" href="https://students.collegefactual.com/blog/breaking-down-college-costs" target=_blank>Collegefactual.com</a>
+<div class="linkbox"><a id="link" href="https://students.collegefactual.com/blog/breaking-down-college-costs" target=_blank>Collegefactual.com</a></div>
 <ul>
 <li>Student Success Tips for College and Beyond!
 <li>How Much Does College Cost? Breaking Down Cost Per Class
@@ -520,7 +546,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.usnews.com/education/best-colleges/features/net-price-calculator" target=_blank>Usnews.com</a>
+<div class="linkbox"><a id="link" href="https://www.usnews.com/education/best-colleges/features/net-price-calculator" target=_blank>Usnews.com</a></div>
 <ul>
 <li>Find Out Your Net Price of College
 <ul>

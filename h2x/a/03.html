@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://studentaid.gov/apply-for-aid/fafsa/filling-out" target=_blank>Studentaid.gov</a>
+<div class="linkbox"><a id="link" href="https://studentaid.gov/apply-for-aid/fafsa/filling-out" target=_blank>Studentaid.gov</a></div>
 <ul>
 <li>Fafsa ® topics
 <li>Creating an fsa id
@@ -123,7 +149,7 @@
 <li>Taking the next steps
 </ul></td>
 <td>
-<a id="link" href="https://www.salliemae.com/college-planning/financial-aid/fafsa/" target=_blank>Salliemae.com</a>
+<div class="linkbox"><a id="link" href="https://www.salliemae.com/college-planning/financial-aid/fafsa/" target=_blank>Salliemae.com</a></div>
 <ul>
 <li>What is the fafsa
 <li>Ready to conquer the fafsa?
@@ -135,7 +161,7 @@
 <li>Debunking financial aid myths
 </ul></td>
 <td>
-<a id="link" href="https://www.collegeavestudentloans.com/resources/how-to-apply-for-fafsa/" target=_blank>Collegeavestudentloans.com</a>
+<div class="linkbox"><a id="link" href="https://www.collegeavestudentloans.com/resources/how-to-apply-for-fafsa/" target=_blank>Collegeavestudentloans.com</a></div>
 <ul>
 <li>1. gather your information
 <li>2. create a federal student aid (fsa) id
@@ -148,7 +174,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://blog.ed.gov/2017/09/8-steps-to-filling-out-the-fafsa-form/" target=_blank>Ed.gov</a>
+<div class="linkbox"><a id="link" href="https://blog.ed.gov/2017/09/8-steps-to-filling-out-the-fafsa-form/" target=_blank>Ed.gov</a></div>
 <ul>
 <li>1. create an account (fsa id)
 <li>2. start the fafsa ® form at fafsa. gov
@@ -162,7 +188,7 @@
 <li>Archives
 </ul></td>
 <td>
-<a id="link" href="https://www.credible.com/blog/student-loans/applying-for-fafsa/" target=_blank>Credible.com</a>
+<div class="linkbox"><a id="link" href="https://www.credible.com/blog/student-loans/applying-for-fafsa/" target=_blank>Credible.com</a></div>
 <ul>
 <li>Step - by - step guide to applying for fafsa
 <li>What is the fafsa and why is it important?
@@ -173,7 +199,7 @@
 <li>Best tips for filling out fafsa
 </ul></td>
 <td>
-<a id="link" href="https://studentloanhero.com/featured/do-i-qualify-for-financial-aid-eligibility-requirements/" target=_blank>Studentloanhero.com</a>
+<div class="linkbox"><a id="link" href="https://studentloanhero.com/featured/do-i-qualify-for-financial-aid-eligibility-requirements/" target=_blank>Studentloanhero.com</a></div>
 <ul>
 <li>Elyssa kirkham
 <li>1. check basic eligibility requirements for financial aid
@@ -187,7 +213,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.ohe.state.mn.us/mPg.cfm?pageID=130" target=_blank>State.mn.us</a>
+<div class="linkbox"><a id="link" href="https://www.ohe.state.mn.us/mPg.cfm?pageID=130" target=_blank>State.mn.us</a></div>
 <ul>
 <li>Free application for federal student aid
 <li>What is the fafsa?
@@ -197,7 +223,7 @@
 <li>Tips to help you complete your fafsa accurately
 </ul></td>
 <td>
-<a id="link" href="https://students-residents.aamc.org/financial-aid/article/financial-aid-application-process/" target=_blank>Aamc.org</a>
+<div class="linkbox"><a id="link" href="https://students-residents.aamc.org/financial-aid/article/financial-aid-application-process/" target=_blank>Aamc.org</a></div>
 <ul>
 <li>Step 1 : complete the fafsa
 <li>Step 2 : investigate sources of aid
@@ -210,7 +236,7 @@
 <li>Education debt manager (edm) for matriculating and graduating medical school students
 </ul></td>
 <td>
-<a id="link" href="https://www.edvisors.com/fafsa/eligibility/filing-fafsa-deadline-2019-2020/" target=_blank>Edvisors.com</a>
+<div class="linkbox"><a id="link" href="https://www.edvisors.com/fafsa/eligibility/filing-fafsa-deadline-2019-2020/" target=_blank>Edvisors.com</a></div>
 <ul>
 <li>Who should file the fafsa ®, what you ' ll need, and when to start
 <li>Who should file the fafsa?

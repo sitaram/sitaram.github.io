@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://studentaid.gov/understand-aid/types/scholarships" target=_blank>Studentaid.gov</a>
+<div class="linkbox"><a id="link" href="https://studentaid.gov/understand-aid/types/scholarships" target=_blank>Studentaid.gov</a></div>
 <ul>
 <li>What kinds of scholarships are available?
 <li>How do i find scholarships?
@@ -118,7 +144,7 @@
 <li>How does a scholarship affect my other student aid?
 </ul></td>
 <td>
-<a id="link" href="https://www.topuniversities.com/student-info/scholarship-advice/how-get-full-scholarship" target=_blank>Topuniversities.com</a>
+<div class="linkbox"><a id="link" href="https://www.topuniversities.com/student-info/scholarship-advice/how-get-full-scholarship" target=_blank>Topuniversities.com</a></div>
 <ul>
 <li>Know where to look
 <li>Prepare in advance
@@ -129,7 +155,7 @@
 <li>Be realistic
 </ul></td>
 <td>
-<a id="link" href="https://www.usnews.com/education/best-colleges/paying-for-college/articles/how-to-find-and-secure-scholarships-for-college" target=_blank>Usnews.com</a>
+<div class="linkbox"><a id="link" href="https://www.usnews.com/education/best-colleges/paying-for-college/articles/how-to-find-and-secure-scholarships-for-college" target=_blank>Usnews.com</a></div>
 <ul>
 <li>What's the difference between grants and scholarships?
 <li>How do i find scholarships for college?
@@ -144,7 +170,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.cbsnews.com/news/10-great-ways-to-win-a-college-scholarship/" target=_blank>Cbsnews.com</a>
+<div class="linkbox"><a id="link" href="https://www.cbsnews.com/news/10-great-ways-to-win-a-college-scholarship/" target=_blank>Cbsnews.com</a></div>
 <ul>
 <li>1. give the scholarship sponsor what it wants
 <li>2. get involved with your community
@@ -158,7 +184,7 @@
 <li>More on cbs moneywatch :
 </ul></td>
 <td>
-<a id="link" href="https://www.fastweb.com/college-scholarships/articles/ten-scholarships-you-can-apply-for-today" target=_blank>Fastweb.com</a>
+<div class="linkbox"><a id="link" href="https://www.fastweb.com/college-scholarships/articles/ten-scholarships-you-can-apply-for-today" target=_blank>Fastweb.com</a></div>
 <ul>
 <li>Because college is expensive scholarship
 <li>Project yellow light video contest scholarship
@@ -172,7 +198,7 @@
 <li>Need money to pay for college?
 </ul></td>
 <td>
-<a id="link" href="https://www.unigo.com/scholarships" target=_blank>Unigo.com</a>
+<div class="linkbox"><a id="link" href="https://www.unigo.com/scholarships" target=_blank>Unigo.com</a></div>
 <ul>
 <li>Athletic scholarships
 <li>College - specific scholarships
@@ -194,7 +220,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.goabroad.com/articles/scholarships-abroad/how-to-apply-for-study-abroad-scholarships-without-wasting-your-time" target=_blank>Goabroad.com</a>
+<div class="linkbox"><a id="link" href="https://www.goabroad.com/articles/scholarships-abroad/how-to-apply-for-study-abroad-scholarships-without-wasting-your-time" target=_blank>Goabroad.com</a></div>
 <ul>
 <li>Step 1. ask for help
 <li>Step 2. research, research, research
@@ -207,7 +233,7 @@
 <li>Step 10. the proof is in the passion
 </ul></td>
 <td>
-<a id="link" href="https://blog.prepscholar.com/how-to-get-a-full-ride-scholarship" target=_blank>Prepscholar.com</a>
+<div class="linkbox"><a id="link" href="https://blog.prepscholar.com/how-to-get-a-full-ride-scholarship" target=_blank>Prepscholar.com</a></div>
 <ul>
 <li>What is a full ride scholarship?
 <li>Private full ride scholarship awards
@@ -220,7 +246,7 @@
 <li>Stay informed
 </ul></td>
 <td>
-<a id="link" href="https://blog.prepscholar.com/colleges-with-full-ride-scholarships" target=_blank>Prepscholar.com</a>
+<div class="linkbox"><a id="link" href="https://blog.prepscholar.com/colleges-with-full-ride-scholarships" target=_blank>Prepscholar.com</a></div>
 <ul>
 <li>82 colleges with full - ride scholarships
 <li>What kind of schools offer full - tuition scholarships?
@@ -236,7 +262,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="http://money.com/collection-post/tips-winning-college-scholarships/" target=_blank>Money.com</a>
+<div class="linkbox"><a id="link" href="http://money.com/collection-post/tips-winning-college-scholarships/" target=_blank>Money.com</a></div>
 <ul>
 <li>1. apply for local scholarships
 <li>2. apply for scholarships with smaller awards

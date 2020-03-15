@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://www.gov.uk/student-finance" target=_blank>Www.gov.uk</a>
+<div class="linkbox"><a id="link" href="https://www.gov.uk/student-finance" target=_blank>Www.gov.uk</a></div>
 <ul>
 <li>Student finance
 <ul>
@@ -140,7 +166,7 @@
 <li>Support links
 </ul></td>
 <td>
-<a id="link" href="https://www.nerdwallet.com/blog/loans/student-loans/how-to-get-student-loan/" target=_blank>Nerdwallet.com</a>
+<div class="linkbox"><a id="link" href="https://www.nerdwallet.com/blog/loans/student-loans/how-to-get-student-loan/" target=_blank>Nerdwallet.com</a></div>
 <ul>
 <li>How to Get a Student Loan
 <ul>
@@ -158,7 +184,7 @@
 <li>About the author
 </ul></td>
 <td>
-<a id="link" href="https://studentaid.gov/understand-aid/types/loans" target=_blank>Studentaid.gov</a>
+<div class="linkbox"><a id="link" href="https://studentaid.gov/understand-aid/types/loans" target=_blank>Studentaid.gov</a></div>
 <ul>
 <ul>
 <li>You are here
@@ -189,7 +215,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.thebalance.com/how-to-get-a-student-loan-315839" target=_blank>Thebalance.com</a>
+<div class="linkbox"><a id="link" href="https://www.thebalance.com/how-to-get-a-student-loan-315839" target=_blank>Thebalance.com</a></div>
 <ul>
 <li>How to Get a Student Loan
 <ul>
@@ -218,7 +244,7 @@
 <li>How Much You Can Borrow in Student Loans to Help Pay for College
 </ul></td>
 <td>
-<a id="link" href="https://www.simpletuition.com/student-loans/how-to-get/" target=_blank>Simpletuition.com</a>
+<div class="linkbox"><a id="link" href="https://www.simpletuition.com/student-loans/how-to-get/" target=_blank>Simpletuition.com</a></div>
 <ul>
 <li>How to Get a Student Loan
 <ul>
@@ -233,7 +259,7 @@
 <li>Compare student loans
 </ul></td>
 <td>
-<a id="link" href="https://www.salliemae.com/college-planning/student-loans-and-borrowing/" target=_blank>Salliemae.com</a>
+<div class="linkbox"><a id="link" href="https://www.salliemae.com/college-planning/student-loans-and-borrowing/" target=_blank>Salliemae.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -261,7 +287,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.salliemae.com/student-loans/" target=_blank>Salliemae.com</a>
+<div class="linkbox"><a id="link" href="https://www.salliemae.com/student-loans/" target=_blank>Salliemae.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -283,7 +309,7 @@
 <li>Student loan resources
 </ul></td>
 <td>
-<a id="link" href="https://thecollegeinvestor.com/18701/requirements-get-student-loan/" target=_blank>Thecollegeinvestor.com</a>
+<div class="linkbox"><a id="link" href="https://thecollegeinvestor.com/18701/requirements-get-student-loan/" target=_blank>Thecollegeinvestor.com</a></div>
 <ul>
 <li>What Are The Requirements To Get A Student Loan?
 <ul>
@@ -297,7 +323,7 @@
 <li>Popular PostsFun ResourcesUltimate Guides
 </ul></td>
 <td>
-<a id="link" href="https://www.discover.com/student-loans/college-planning/how-to-pay/loans" target=_blank>Discover.com</a>
+<div class="linkbox"><a id="link" href="https://www.discover.com/student-loans/college-planning/how-to-pay/loans" target=_blank>Discover.com</a></div>
 <ul>
 <li>College Loans 101
 <ul>
@@ -327,7 +353,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.wellsfargo.com/student/" target=_blank>Wellsfargo.com</a>
+<div class="linkbox"><a id="link" href="https://www.wellsfargo.com/student/" target=_blank>Wellsfargo.com</a></div>
 <ul>
 <ul>
 <li>Popular Links
@@ -354,7 +380,7 @@
 <li>Esta página solo está disponible en inglés
 </ul></td>
 <td>
-<a id="link" href="https://loans.usnews.com/student-loans" target=_blank>Usnews.com</a>
+<div class="linkbox"><a id="link" href="https://loans.usnews.com/student-loans" target=_blank>Usnews.com</a></div>
 <ul>
 <li>Private Student Loans
 <ul>
@@ -383,7 +409,7 @@
 <li>Business
 </ul></td>
 <td>
-<a id="link" href="https://www.fool.com/student-loans/how-get-student-loans-bad-credit/" target=_blank>Fool.com</a>
+<div class="linkbox"><a id="link" href="https://www.fool.com/student-loans/how-get-student-loans-bad-credit/" target=_blank>Fool.com</a></div>
 <ul>
 <li>How to Get Student Loans With Bad Credit
 <ul>
@@ -400,7 +426,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.edvisors.com/ask/faq/how-do-student-loans-work/" target=_blank>Edvisors.com</a>
+<div class="linkbox"><a id="link" href="https://www.edvisors.com/ask/faq/how-do-student-loans-work/" target=_blank>Edvisors.com</a></div>
 <ul>
 <li>How do student loans work?
 <ul>
@@ -415,7 +441,7 @@
 <li>You Got In - Now How Do You Pay for It?
 </ul></td>
 <td>
-<a id="link" href="https://www.studylink.govt.nz/products/a-z-products/student-loan/index.html" target=_blank>Govt.nz</a>
+<div class="linkbox"><a id="link" href="https://www.studylink.govt.nz/products/a-z-products/student-loan/index.html" target=_blank>Govt.nz</a></div>
 <ul>
 <li>Student Loan
 <ul>
@@ -444,7 +470,7 @@
 <li>Index of page links
 </ul></td>
 <td>
-<a id="link" href="https://metro.co.uk/2020/03/10/im-getting-118-student-loans-company-overpaid-can-12372722/" target=_blank>Metro.co.uk</a>
+<div class="linkbox"><a id="link" href="https://metro.co.uk/2020/03/10/im-getting-118-student-loans-company-overpaid-can-12372722/" target=_blank>Metro.co.uk</a></div>
 <ul>
 <li>I’m getting £118 from the Student Loans Company because I overpaid – here’s how to see ho..
 <ul>
@@ -488,7 +514,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.standardbank.co.za/southafrica/personal/products-and-services/borrow-for-your-needs/student-loans/student-loans" target=_blank>Standardbank.co.za</a>
+<div class="linkbox"><a id="link" href="https://www.standardbank.co.za/southafrica/personal/products-and-services/borrow-for-your-needs/student-loans/student-loans" target=_blank>Standardbank.co.za</a></div>
 <ul>
 <li>Student Loan
 <ul>
@@ -501,7 +527,7 @@
 <li>How did we do?
 </ul></td>
 <td>
-<a id="link" href="https://www.forbes.com/sites/zackfriedman/2020/03/11/senate-overturns-student-loan-forgiveness-rule/" target=_blank>Forbes.com</a>
+<div class="linkbox"><a id="link" href="https://www.forbes.com/sites/zackfriedman/2020/03/11/senate-overturns-student-loan-forgiveness-rule/" target=_blank>Forbes.com</a></div>
 <ul>
 <ul>
 <li>Please help us continue to provide you with free, quality journalism by turning off your ad bloc..
@@ -520,7 +546,7 @@
 <li>TOI 700 d orbits within the hbaitbale zone of a star and may have the conditions necessary for life
 </ul></td>
 <td>
-<a id="link" href="https://studentaidbc.ca/apply/how-to-apply" target=_blank>Studentaidbc.ca</a>
+<div class="linkbox"><a id="link" href="https://studentaidbc.ca/apply/how-to-apply" target=_blank>Studentaidbc.ca</a></div>
 <ul>
 <li>How to apply for a loan
 <ul>
@@ -541,7 +567,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.axisbank.com/retail/loans/education-loan/eligibility" target=_blank>Axisbank.com</a>
+<div class="linkbox"><a id="link" href="https://www.axisbank.com/retail/loans/education-loan/eligibility" target=_blank>Axisbank.com</a></div>
 <ul>
 <ul>
 <li>Foreign Currency Exchange Rate
@@ -577,7 +603,7 @@
 <li>Connect With Us On
 </ul></td>
 <td>
-<a id="link" href="https://smartasset.com/student-loans/student-loan-calculator" target=_blank>Smartasset.com</a>
+<div class="linkbox"><a id="link" href="https://smartasset.com/student-loans/student-loan-calculator" target=_blank>Smartasset.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">

@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://www.discover.com/home-loans/articles/10-steps-to-buying-a-home" target=_blank>Discover.com</a>
+<div class="linkbox"><a id="link" href="https://www.discover.com/home-loans/articles/10-steps-to-buying-a-home" target=_blank>Discover.com</a></div>
 <ul>
 <li>Start Your Research Early
 <li>Determine How Much House You Can Afford
@@ -122,7 +148,7 @@
 <li>Close the Sale
 </ul></td>
 <td>
-<a id="link" href="https://www.trulia.com/guides/how-to-buy-a-house-in-10-steps/" target=_blank>Trulia.com</a>
+<div class="linkbox"><a id="link" href="https://www.trulia.com/guides/how-to-buy-a-house-in-10-steps/" target=_blank>Trulia.com</a></div>
 <ul>
 <li>Hire a real estate agent
 <li>Shop for a mortgage
@@ -136,7 +162,7 @@
 <li>Close on your house
 </ul></td>
 <td>
-<a id="link" href="https://www.nytimes.com/guides/realestate/how-to-buy-a-house" target=_blank>Nytimes.com</a>
+<div class="linkbox"><a id="link" href="https://www.nytimes.com/guides/realestate/how-to-buy-a-house" target=_blank>Nytimes.com</a></div>
 <ul>
 <li>The Decision to Buy
 <ul>

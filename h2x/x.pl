@@ -22,10 +22,11 @@ my $htmlstuff = <<EOF;
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -301,11 +302,16 @@ foreach my $case (@cases) {
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -318,6 +324,26 @@ foreach my $case (@cases) {
     }
     .expando {
       width: 60px;
+    }
+
+    \@media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -372,7 +398,7 @@ EOF
     $more = $& . $more if $domain =~ s|\.\w\w\w?$||;
     $domain =~ s|.*\.||;
     $domain = ucfirst $domain.$more;
-    print F "<a id=\"link\" href=\"$url\" target=_blank>$domain</a>";
+    print F "<div class=\"linkbox\"><a id=\"link\" href=\"$url\" target=_blank>$domain</a></div>";
     print F "<ul>";
     foreach my $line (@{$data{$case}{$url}}) {
       print F $line;

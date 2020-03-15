@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://blog.prepscholar.com/college-application-fee-waiver" target=_blank>Prepscholar.com</a>
+<div class="linkbox"><a id="link" href="https://blog.prepscholar.com/college-application-fee-waiver" target=_blank>Prepscholar.com</a></div>
 <ul>
 <li>How much do college applications cost?
 <li>How to qualify for college application fee waivers
@@ -119,7 +145,7 @@
 <li>Ask a question below
 </ul></td>
 <td>
-<a id="link" href="https://bigfuture.collegeboard.org/get-in/applying-101/college-application-fee-waivers" target=_blank>Collegeboard.org</a>
+<div class="linkbox"><a id="link" href="https://bigfuture.collegeboard.org/get-in/applying-101/college-application-fee-waivers" target=_blank>Collegeboard.org</a></div>
 <ul>
 <li>Why did i receive college application fee waivers?
 <li>I have registered and taken the sat using a fee waiver. when can i expect to receive my college application fee waivers?
@@ -134,7 +160,7 @@
 <li>My address listed on the college application fee waivers has changed. how do i update my contact information?
 </ul></td>
 <td>
-<a id="link" href="https://www.nerdwallet.com/blog/loans/student-loans/college-application-fee-waiver/" target=_blank>Nerdwallet.com</a>
+<div class="linkbox"><a id="link" href="https://www.nerdwallet.com/blog/loans/student-loans/college-application-fee-waiver/" target=_blank>Nerdwallet.com</a></div>
 <ul>
 <li>1. ask for act and sat fee waivers
 <li>2. request college application fee waivers
@@ -146,7 +172,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://studentloanhero.com/featured/fee-waiver-college-application/" target=_blank>Studentloanhero.com</a>
+<div class="linkbox"><a id="link" href="https://studentloanhero.com/featured/fee-waiver-college-application/" target=_blank>Studentloanhero.com</a></div>
 <ul>
 <li>Kat tretina
 <li>Don ' t let application fees stop you from applying
@@ -155,7 +181,7 @@
 <li>Student loan calculators
 </ul></td>
 <td>
-<a id="link" href="https://uadmissions.georgetown.edu/applying/fee-waiver/" target=_blank>Georgetown.edu</a>
+<div class="linkbox"><a id="link" href="https://uadmissions.georgetown.edu/applying/fee-waiver/" target=_blank>Georgetown.edu</a></div>
 <ul>
 <li>How do i request a fee waiver?
 <li>Does the fee waiver form have to be completed by a guidance counselor?

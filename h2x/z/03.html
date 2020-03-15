@@ -22,10 +22,11 @@
     }
     .prev {
       float: left;
-      padding: 0 16px;
     }
     .next {
       float: right;
+    }
+    .next, .prev {
       padding: 0 16px;
     }
     .title {
@@ -52,11 +53,16 @@
       width: 100%;
     }
     td {
-      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
       outline: 0;
       padding: 8px 8px 0 8px;
       width: 33%;
       vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
     }
     #link {
       font-weight: bold;
@@ -69,6 +75,26 @@
     }
     .expando {
       width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
     }
     </style>
 
@@ -108,7 +134,7 @@
 
 <tr>
 <td>
-<a id="link" href="https://www.salliemae.com/college-planning/college-scholarships/apply-for-scholarships/" target=_blank>Salliemae.com</a>
+<div class="linkbox"><a id="link" href="https://www.salliemae.com/college-planning/college-scholarships/apply-for-scholarships/" target=_blank>Salliemae.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -126,7 +152,7 @@
 <li>Related topics
 </ul></td>
 <td>
-<a id="link" href="https://studentaid.gov/understand-aid/types/scholarships" target=_blank>Studentaid.gov</a>
+<div class="linkbox"><a id="link" href="https://studentaid.gov/understand-aid/types/scholarships" target=_blank>Studentaid.gov</a></div>
 <ul>
 <ul>
 <li>You are here
@@ -143,7 +169,7 @@
 <li>Additional Links
 </ul></td>
 <td>
-<a id="link" href="https://www.topuniversities.com/student-info/scholarship-advice/how-get-full-scholarship" target=_blank>Topuniversities.com</a>
+<div class="linkbox"><a id="link" href="https://www.topuniversities.com/student-info/scholarship-advice/how-get-full-scholarship" target=_blank>Topuniversities.com</a></div>
 <ul>
 <ul>
 <li>You are here
@@ -167,7 +193,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.iwillteachyoutoberich.com/blog/how-to-get-scholarships/" target=_blank>Iwillteachyoutoberich.com</a>
+<div class="linkbox"><a id="link" href="https://www.iwillteachyoutoberich.com/blog/how-to-get-scholarships/" target=_blank>Iwillteachyoutoberich.com</a></div>
 <ul>
 <li>How to get college scholarships in 2020 (+ mistakes to avoid)
 <ul>
@@ -206,7 +232,7 @@
 <li>Want to 10x your confidence, productivity, and success?
 </ul></td>
 <td>
-<a id="link" href="https://www.usnews.com/education/best-colleges/paying-for-college/articles/how-to-find-and-secure-scholarships-for-college" target=_blank>Usnews.com</a>
+<div class="linkbox"><a id="link" href="https://www.usnews.com/education/best-colleges/paying-for-college/articles/how-to-find-and-secure-scholarships-for-college" target=_blank>Usnews.com</a></div>
 <ul>
 <li>How to Find and Secure Scholarships for College
 <ul>
@@ -244,7 +270,7 @@
 <li>How Borrower Defense May Apply
 </ul></td>
 <td>
-<a id="link" href="https://www.cbsnews.com/news/10-great-ways-to-win-a-college-scholarship/" target=_blank>Cbsnews.com</a>
+<div class="linkbox"><a id="link" href="https://www.cbsnews.com/news/10-great-ways-to-win-a-college-scholarship/" target=_blank>Cbsnews.com</a></div>
 <ul>
 <li>10 Great Ways to Win a College Scholarship
 <ul>
@@ -265,7 +291,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.nerdwallet.com/blog/loans/student-loans/how-to-get-a-scholarship/" target=_blank>Nerdwallet.com</a>
+<div class="linkbox"><a id="link" href="https://www.nerdwallet.com/blog/loans/student-loans/how-to-get-a-scholarship/" target=_blank>Nerdwallet.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -296,7 +322,7 @@
 <li>Check your credit
 </ul></td>
 <td>
-<a id="link" href="https://www.fastweb.com/college-scholarships/articles/ten-scholarships-you-can-apply-for-today" target=_blank>Fastweb.com</a>
+<div class="linkbox"><a id="link" href="https://www.fastweb.com/college-scholarships/articles/ten-scholarships-you-can-apply-for-today" target=_blank>Fastweb.com</a></div>
 <ul>
 <li>10+ College Scholarships You Can Apply for Today
 <ul>
@@ -314,7 +340,7 @@
 <li>Trending
 </ul></td>
 <td>
-<a id="link" href="https://www.scholarships.com/" target=_blank>Scholarships.com</a>
+<div class="linkbox"><a id="link" href="https://www.scholarships.com/" target=_blank>Scholarships.com</a></div>
 <ul>
 <li>Search Over 3.7 MillionCollege Scholarships & Grants
 <ul>
@@ -347,7 +373,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.scholarships.com/apply-for-scholarships.aspx" target=_blank>Scholarships.com</a>
+<div class="linkbox"><a id="link" href="https://www.scholarships.com/apply-for-scholarships.aspx" target=_blank>Scholarships.com</a></div>
 <ul>
 <li>Apply for Scholarships
 <ul>
@@ -368,7 +394,7 @@
 <li>Explore Scholarships.com
 </ul></td>
 <td>
-<a id="link" href="https://www.unigo.com/scholarships" target=_blank>Unigo.com</a>
+<div class="linkbox"><a id="link" href="https://www.unigo.com/scholarships" target=_blank>Unigo.com</a></div>
 <ul>
 <ul>
 <span class="expando chevron">&#xBB;</span><ul class="collapsed">
@@ -406,7 +432,7 @@
 <li>We have good news(and we have bad news)
 </ul></td>
 <td>
-<a id="link" href="https://www.goabroad.com/articles/scholarships-abroad/how-to-apply-for-study-abroad-scholarships-without-wasting-your-time" target=_blank>Goabroad.com</a>
+<div class="linkbox"><a id="link" href="https://www.goabroad.com/articles/scholarships-abroad/how-to-apply-for-study-abroad-scholarships-without-wasting-your-time" target=_blank>Goabroad.com</a></div>
 <ul>
 <li>How to Get Scholarships to Study Abroad Without Wasting Your Time
 <ul>
@@ -436,7 +462,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.youtube.com/watch?v=42-w-tMyl3Y" target=_blank>Youtube.com</a>
+<div class="linkbox"><a id="link" href="https://www.youtube.com/watch?v=42-w-tMyl3Y" target=_blank>Youtube.com</a></div>
 <ul>
 <li>This video is unavailable
 <ul>
@@ -459,7 +485,7 @@
 <li>Add to
 </ul></td>
 <td>
-<a id="link" href="https://www.scholarshipportal.com/" target=_blank>Scholarshipportal.com</a>
+<div class="linkbox"><a id="link" href="https://www.scholarshipportal.com/" target=_blank>Scholarshipportal.com</a></div>
 <ul>
 <li>Find Scholarships to Finance Your Study
 <ul>
@@ -479,7 +505,7 @@
 <li>Our other portals
 </ul></td>
 <td>
-<a id="link" href="https://blog.prepscholar.com/how-to-get-a-full-ride-scholarship" target=_blank>Prepscholar.com</a>
+<div class="linkbox"><a id="link" href="https://blog.prepscholar.com/how-to-get-a-full-ride-scholarship" target=_blank>Prepscholar.com</a></div>
 <ul>
 <ul>
 <li>Choose Your Test
@@ -515,7 +541,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://blog.prepscholar.com/colleges-with-full-ride-scholarships" target=_blank>Prepscholar.com</a>
+<div class="linkbox"><a id="link" href="https://blog.prepscholar.com/colleges-with-full-ride-scholarships" target=_blank>Prepscholar.com</a></div>
 <ul>
 <ul>
 <li>Choose Your Test
@@ -635,7 +661,7 @@
 <li>Looking for Graduate School Test Prep?
 </ul></td>
 <td>
-<a id="link" href="http://money.com/collection-post/tips-winning-college-scholarships/" target=_blank>Money.com</a>
+<div class="linkbox"><a id="link" href="http://money.com/collection-post/tips-winning-college-scholarships/" target=_blank>Money.com</a></div>
 <ul>
 <li>13 Best Tips for Winning College Scholarships
 <ul>
@@ -673,7 +699,7 @@
 <li>Sign Up for Our Newsletters
 </ul></td>
 <td>
-<a id="link" href="https://www.internationalstudent.com/study_usa/financing/scholarships/" target=_blank>Internationalstudent.com</a>
+<div class="linkbox"><a id="link" href="https://www.internationalstudent.com/study_usa/financing/scholarships/" target=_blank>Internationalstudent.com</a></div>
 <ul>
 <ul>
 <li>Don't have an Account?
@@ -694,7 +720,7 @@
 </tr>
 <tr>
 <td>
-<a id="link" href="https://www.goingmerry.com/blog/how-to-get-scholarships/" target=_blank>Goingmerry.com</a>
+<div class="linkbox"><a id="link" href="https://www.goingmerry.com/blog/how-to-get-scholarships/" target=_blank>Goingmerry.com</a></div>
 <ul>
 <li>12 Essential Tips for Winning More Scholarships
 <li>1. Go Local
@@ -717,7 +743,7 @@
 <li>1 Comments
 </ul></td>
 <td>
-<a id="link" href="https://www.studyinholland.nl/finances/scholarships/find-a-scholarship" target=_blank>Studyinholland.nl</a>
+<div class="linkbox"><a id="link" href="https://www.studyinholland.nl/finances/scholarships/find-a-scholarship" target=_blank>Studyinholland.nl</a></div>
 <ul>
 <ul>
 <li>Limit search results..
