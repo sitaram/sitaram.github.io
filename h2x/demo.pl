@@ -1,14 +1,18 @@
 #!/usr/bin/perl -lw
-# Save to text: https://docs.google.com/document/d/1QaPGS90GRlmqh3CMMBfjCKdrlE6gr5oOjhwq1REUP2E/edit#
-# demo.pl "How to X - Financial Aid.txt"
+# Save to text:
+#  - fin aid - https://docs.google.com/document/d/1QaPGS90GRlmqh3CMMBfjCKdrlE6gr5oOjhwq1REUP2E/edit#
+#  - misc    - https://docs.google.com/document/d/1RcADfV9u4IID_XkEDuRj1x5HlPMLy29SxS4QDR2GFjg/edit#
+# demo.pl *.txt
 
 use URI::Escape;
 use HTML::Entities;
 
+my $num_finaid = 12;  # for attribution to NCAN/NASFAA
+
 my $mdir = "demo/m";  # needs to exist
 my $ddir = "demo/d";  # needs to exist
 
-my @cases = @paths = @path = %seen = ();
+my @cases = @casenum = @casehasdata = @paths = @path = %seen = ();
 my $case;
 my $casenum = 0;
 my %query = %children = ();
@@ -25,6 +29,8 @@ while (<>) {
     $case = $2;
     $case =~ s/ \[demo\]//;
     push @cases, $case;
+    push @casenum, $casenum;
+    push @casehasdata, 0;
     %children = ();
     %query = ();
     @paths = ();
@@ -47,9 +53,13 @@ while (<>) {
     $seen{$subpath} = 1;
     $query{$path . " > " . $label} = $query;
     push @path, $label;
+    $casehasdata[$#casehasdata] = 1;
   }
 }
 if ($case) { printcase(); }
+
+writeindex($mdir);
+writeindex($ddir);
 
 sub printcase {
   printonecase($ddir, "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.137 Safari/537.36");
@@ -105,10 +115,8 @@ sub printonecase($$) {
         color: #1a0dab;
       }
       .expando {
-        position: absolute;
-        right: 30%;
-        top: 20px;
-        width: 60px;
+        float: right;
+        margin-right: 50%;
         font-weight: bold;
       }
       .toc {
@@ -119,7 +127,7 @@ sub printonecase($$) {
       .bar {
         white-space: nowrap;
         overflow-x: auto;
-        margin: 9px 0px;
+        margin: 8px 0px;
       }
       .bar::-webkit-scrollbar {
         display: none;
@@ -145,7 +153,7 @@ sub printonecase($$) {
       .attrib {
         border-top: 1px solid #ddd;
         display: inline-block;
-        padding: 6px;
+        padding: 6px 0;
         color: #70757a;
         font-size: 12px;
       }
@@ -168,15 +176,13 @@ sub printonecase($$) {
           width: calc(100% - 31px);
         }
         .title {
-          margin-right: 48px;
         }
         .bar {
-          margin: 9px -16px;
+          margin: 4px -16px;
           padding: 0 16px;
         }
         .expando {
-          right: 0px;
-          top: 15px;
+          margin-right: 0;
         }
       }
       </style>
@@ -184,9 +190,9 @@ sub printonecase($$) {
         \$(document).ready(function() {
           \$('.expando').click(function() {
             if (\$('.toc').is(':hidden'))
-              \$(this).text('Collapse');
+              \$(this).text('Hide');
             else
-              \$(this).text('View all');
+              \$(this).text('See all');
             \$('.toc').slideToggle(150);
           });
         });
@@ -199,6 +205,7 @@ sub printonecase($$) {
 
     my $stuff = "<div class=\"box\">";
     $stuff .= "<div class=\"title\">";
+    $stuff .= "<div class=\"expando\">See all</div>";
 
     my $n = 0;
     my @parts = split / > /, $path;
@@ -215,7 +222,6 @@ sub printonecase($$) {
     }
     $stuff .= "</div>";
 
-    $stuff .= "<div class=\"expando\">View all</div>";
     $stuff .= "<div class=\"toc\">";
     my $i = 0;
     foreach my $t (@paths) {
@@ -248,7 +254,7 @@ sub printonecase($$) {
     $stuff .= "</div>";
 
     # attribution
-    if ($casenum < 12) {  # 12+ are miscellaneous use cases.
+    if ($casenum < $num_finaid) {  # rest are miscellaneous use cases.
       $stuff .= "<div class=\"attrib\">Source: <a class=\"attriblink\"
         href=\"https://www.ncan.org/page/About\">National College Attainment
         Network</a>, <a class=\"attriblink\" href=\"https://www.nasfaa.org/About_NASFAA\">National
@@ -280,3 +286,101 @@ sub fetch_url($$$$) {
     system("wget -O \"$dir/$file-orig.html\" -U\"$ua\" \"$url\"");
   }
 }
+
+sub writeindex($) {
+  my $dir = shift;
+  open(F, ">$dir/index.html") or die "$dir/index.html: $!";
+  print F<<"EOF";
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>How to X demos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <style>
+    body {
+      font-family: Roboto, sans-serif, arial;
+      margin: 0;
+    }
+    .header {
+      background-color: #dfefff;
+      position: fixed;
+      height: 28px;
+      padding: 16px;
+      width: calc(100% - 32px);
+      border-bottom: 1px solid #ccc;
+      box-shadow: 0px 3px 3px #ddd;
+    }
+    .title {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    body {
+      position: relative;
+    }
+    .main {
+      position: fixed;
+      overflow: auto;
+      top: 60px;
+      bottom:0;
+      max-height: 100%;
+      padding: 16px;
+    }
+    .text {
+      margin: 16px 0;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    #link:focus {
+      outline: 0;
+    }
+    .treebox {
+      display: none;
+      border: 1px solid #82a5Ff;
+      background-color: #dfefff;
+      width: 300px;
+      padding: 8px;
+      margin: 8px;
+    }
+    .treebox li, .treebox ul {
+      margin: 4px;
+    }
+    </style>
+  </head>
+  <body>
+  <div class="header">
+    <span class="title">How to X demos</span>
+  </div>
+  <div class="main">
+  <div class="text">
+  <b>How to X financial aid demos:</b>
+  <ol>
+EOF
+
+  my $i = 0;
+  foreach my $case (@cases) {
+    if ($i == $num_finaid-1) {
+      print F "</ol><b>How to X misc use case demos:</b><ol>";
+    }
+    if ($casehasdata[$i]) {
+      my $this = sprintf("%02d-%02d.html", $casenum[$i], 0);
+      print F "<li><a href=\"$this\">$case</a>";
+    } else {
+      print F "<li>$case (not ready)";
+    }
+    $i++;
+  }
+  print F "</ol>";
+  print F "<b>Produced from these Google docs:</b>";
+  print F "<ul>";
+  print F "<li><a href=\"https://docs.google.com/document/d/1QaPGS90GRlmqh3CMMBfjCKdrlE6gr5oOjhwq1REUP2E/edit#\" target=_blank>How to X - Financial Aid</a>";
+  print F "<li><a href=\"https://docs.google.com/document/d/1RcADfV9u4IID_XkEDuRj1x5HlPMLy29SxS4QDR2GFjg/edit#\" target=_blank>How to X - Misc Use Cases</a>";
+  print F "</ul>";
+
+  print F "</div></div></body></html>";
+  close F;
+}
+
