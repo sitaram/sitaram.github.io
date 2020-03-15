@@ -1,7 +1,7 @@
 #!/usr/bin/perl -lw
 # Save to text:
 #  - fin aid - https://docs.google.com/document/d/1QaPGS90GRlmqh3CMMBfjCKdrlE6gr5oOjhwq1REUP2E/edit#
-#  - misc    - https://docs.google.com/document/d/1RcADfV9u4IID_XkEDuRj1x5HlPMLy29SxS4QDR2GFjg/edit#
+#  - horizontal - https://docs.google.com/document/d/1RcADfV9u4IID_XkEDuRj1x5HlPMLy29SxS4QDR2GFjg/edit#
 # demo.pl *.txt
 
 use URI::Escape;
@@ -271,7 +271,7 @@ sub printonecase($$) {
     $stuff .= "</div>";
 
     # attribution
-    if ($casenum < $num_finaid) {  # rest are miscellaneous use cases.
+    if ($casenum < $num_finaid) {  # rest are horizontal use cases.
       $stuff .= "<div class=\"attrib\">Source: <a class=\"attriblink\"
         href=\"https://www.ncan.org/page/About\">National College Attainment
         Network</a>, <a class=\"attriblink\" href=\"https://www.nasfaa.org/About_NASFAA\">National
@@ -380,7 +380,7 @@ EOF
   my $i = 0;
   foreach my $case (@cases) {
     if ($i == $num_finaid-1) {
-      print F "</ol><b>How to X misc use case demos:</b><ol>";
+      print F "</ol><b>How to X horizontal use case demos:</b><ol>";
     }
     if ($casehasdata[$i]) {
       my $this = sprintf("%02d-%02d.html", $casenum[$i], 0);
@@ -394,7 +394,7 @@ EOF
   print F "<b>Produced from these Google docs:</b>";
   print F "<ul>";
   print F "<li><a href=\"https://docs.google.com/document/d/1QaPGS90GRlmqh3CMMBfjCKdrlE6gr5oOjhwq1REUP2E/edit#\" target=_blank>How to X - Financial Aid</a>";
-  print F "<li><a href=\"https://docs.google.com/document/d/1RcADfV9u4IID_XkEDuRj1x5HlPMLy29SxS4QDR2GFjg/edit#\" target=_blank>How to X - Misc Use Cases</a>";
+  print F "<li><a href=\"https://docs.google.com/document/d/1RcADfV9u4IID_XkEDuRj1x5HlPMLy29SxS4QDR2GFjg/edit#\" target=_blank>How to X - Horizontal</a>";
   print F "</ul>";
 
   print F "</div></div></body></html>";
