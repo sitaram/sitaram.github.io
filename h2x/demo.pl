@@ -7,7 +7,7 @@ use HTML::Entities;
 
 my $dir = "demo";  # needs to exist
 
-my @cases = @paths = @path = ();
+my @cases = @paths = @path = %seen = ();
 my $case;
 my $casenum = 0;
 my %query = %children = ();
@@ -27,6 +27,7 @@ while (<>) {
     %children = ();
     %query = ();
     @paths = ();
+    %seen = ();
     @path = ($case);
     $query{$case} = lc $case;
   } elsif (/^( *)\* (.*?) *\/ *(.*)/) {  # Format:  * <label> / <query>
@@ -35,10 +36,14 @@ while (<>) {
     my $query = $3;
     $#path = $depth;
     my $path = join(" > ", @path);
-    push @paths, $path unless defined $children{$path};
+    push @paths, $path unless $seen{$path};
+    print "push $path" unless $seen{$path};
+    $seen{$path} = 1;
     push @{$children{$path}}, $label;
     my $subpath = $path." > ".$label;
-    push @paths, $subpath unless defined $children{$subpath};
+    push @paths, $subpath unless $seen{$subpath};
+    print "push sub $subpath" unless $seen{$subpath};
+    $seen{$subpath} = 1;
     $query{$path . " > " . $label} = $query;
     push @path, $label;
   }
@@ -53,14 +58,17 @@ sub printcase {
     $pathnum++;
   }
 
+  my $p = 0;
   foreach my $path (@paths) {
-    print $path, " @ ", $file{$path}, " / ", $query{$path};
+    print $path, " @ ", $file{$path}, " / ", $query{$path}, " ", $p;
     fetch_url($file{$path}, $query{$path});  # do not overwrite.
 
     open(F, "$dir/$file{$path}-orig.html") or die "$dir/$file{$path}-orig.html: $!";
     undef $/; $_ = <F>; $/ = "\n"; close F;
 
     s|^|
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <style>
       #promos { display: none; }
       #taw { display: none; }
@@ -86,10 +94,22 @@ sub printcase {
         text-decoration: underline;
         color: #1a0dab;
       }
+      .expando {
+        position: absolute;
+        left: 120%;
+        top: 20px;
+        width: 60px;
+        font-weight: bold;
+      }
+      .toc {
+        display: none;
+        line-height: 20px;
+        margin-top: 8px;
+      }
       .bar {
         white-space: nowrap;
         overflow-x: auto;
-        margin: 12px 0px;
+        margin: 9px 0px;
       }
       .bar::-webkit-scrollbar {
         display: none;
@@ -127,8 +147,15 @@ sub printcase {
         color: #70757a;
       }
       </style>
+      <script>
+        \$(document).ready(function() {
+          \$('.expando').click(function() {
+            \$('.toc').slideToggle(150);
+          });
+        });
+      </script>
       |s;
-      #<base href="https://www.google.com/">
+      # <base href="https://www.google.com/">
     s/â€Ž//gs;
     s/ Â//gs;
     s|"/images|"https://www.google.com/images|g;
@@ -152,6 +179,23 @@ sub printcase {
     }
     $stuff .= "</div>";
 
+    $stuff .= "<div class=\"expando\">View all</div>";
+    $stuff .= "<div class=\"toc\">";
+    my $i = 0;
+    foreach my $t (@paths) {
+      if ($i == 0) { $i++; next; }
+      my $u = $t;
+      $u =~ s/[^>]*> */>/g;
+      $u =~ s/(^>*)(.*)/$2/;
+      my $e = "&emsp;" x (length($1)*2);
+      if ($i == $p) { $u = "<b>$u</b>" }
+      $u = "$e<a class=\"bc\" href=\"$file{$t}.html\">$u</a>";
+      $stuff .= $u;
+      $stuff .= "<br>";
+      $i++;
+    }
+    $stuff .= "</div>";
+
     $stuff .= "<div class=\"bar\">";
     foreach my $child (@{$children{$path}}) {
       my $target = $file{$path . " > " . $child};
@@ -167,19 +211,20 @@ sub printcase {
     print "";
     $stuff .= "</div>";
 
-    # expando
-
     # attribution
-    $stuff .= "<div class=\"attrib\">Source: <a class=\"attriblink\"
-      href=\"https://www.ncan.org/page/About\">National College Attainment
-      Network</a>, <a class=\"attriblink\" href=\"https://www.nasfaa.org/About_NASFAA\">National
-      Association of Student Financial Aid Administrators</a></div>";
+    if ($casenum < 12) {  # 12+ are miscellaneous use cases.
+      $stuff .= "<div class=\"attrib\">Source: <a class=\"attriblink\"
+        href=\"https://www.ncan.org/page/About\">National College Attainment
+        Network</a>, <a class=\"attriblink\" href=\"https://www.nasfaa.org/About_NASFAA\">National
+        Association of Student Financial Aid Administrators</a></div>";
+    }
     $stuff .= "</div>";
 
     #s|<div id="topstuff">|$&$stuff|;
     s|<div id="center_col">|$&$stuff|;
 
     open(F, ">$dir/$file{$path}.html") or die "$dir/$file{$path}.html: $!"; print F; close F;
+    $p++;
   }
 }
 
