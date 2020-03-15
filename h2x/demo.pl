@@ -143,8 +143,12 @@ sub printcase {
       .attriblink:visited,
       .attriblink:hover,
       .attriblink:active {
+        text-decoration: none;
         cursor: pointer;
         color: #70757a;
+      }
+      .attriblink:active {
+        text-decoration: none;
       }
       </style>
       <script>
