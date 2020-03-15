@@ -246,12 +246,12 @@ href="javascript:void(0);" class="treelink">See this example hierarchy</a>.
 
 <li> Besides just showing users the hierarchy of subtopics, for each
 subtopic we would also like to guide the user to a <b>well-chosen Google search query</b>
-whose search results provide high-quality information on that subtopic.  This is the real
-value of the product.  This usually involves trying out a few different queries
-and tweaking the choice of query terms until the search page (including web
-results, the answer panel, etc.) collectively represents useful information.
-For example, for the option "nurse" in the hierarchy, a search query that
-brings up a useful search result page may be <a
+whose search results provide high-quality information on that subtopic. This
+usually involves trying out a few different queries and tweaking the choice of
+query terms until the search page (including web results, the answer panel,
+etc.) collectively represents useful information. For example, for the option
+"nurse" in the hierarchy, a search query that brings up a useful search result
+page may be <a
 href="https://www.google.com/search?q=student+loan+forgiveness+programs+for+nurses&pws=0&gl=us&gws_rd=cr"
 target=_blank>student loan forgiveness programs for nurses</a>.
 
