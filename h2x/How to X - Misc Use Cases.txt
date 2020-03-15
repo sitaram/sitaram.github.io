@@ -18,7 +18,7 @@
    * Check / what is a check in chess
    * Checkmate / what is a checkmate
    * Stalemate / what is a stalemate
-* Advanced moves / advanced moves in chess
+* Special moves / special moves in chess
    * Castling / Castling in chess
    * En passsant / En passant in chess
    * Promotion / Promotion in chess
