@@ -106,7 +106,7 @@ sub printonecase($$) {
       }
       .expando {
         position: absolute;
-        left: 120%;
+        right: 30%;
         top: 20px;
         width: 60px;
         font-weight: bold;
@@ -176,7 +176,6 @@ sub printonecase($$) {
         }
         .expando {
           right: 0px;
-          left: initial;
           top: 15px;
         }
       }
@@ -239,7 +238,7 @@ sub printonecase($$) {
 
       my $svg = '<svg class="icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M20.49 19l-5.73-5.73C15.53 12.2 16 10.91 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.41 0 2.7-.47 3.77-1.24L19 20.49 20.49 19zM5 9.5C5 7.01 7.01 5 9.5 5S14 7.01 14 9.5 11.99 14 9.5 14 5 11.99 5 9.5z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
       
-      my $url = $target ? "../$dir/$target.html" : search($query{$path . " > " . $child});
+      my $url = $target ? "$target.html" : search($query{$path . " > " . $child});
       $stuff .= "<a href=\"$url\"><div class=\"chip\">$svg$child</div></a>";
 
       print $child, " / ", $query{$path . " > " . $child};
