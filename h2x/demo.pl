@@ -5,7 +5,8 @@
 use URI::Escape;
 use HTML::Entities;
 
-my $dir = "demo";  # needs to exist
+my $mdir = "demo/m";  # needs to exist
+my $ddir = "demo/d";  # needs to exist
 
 my @cases = @paths = @path = %seen = ();
 my $case;
@@ -51,6 +52,14 @@ while (<>) {
 if ($case) { printcase(); }
 
 sub printcase {
+  printonecase($ddir, "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.137 Safari/537.36");
+  printonecase($mdir, "Mozilla/5.0 (Linux; Android 10; Pixel 2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36");
+}
+
+sub printonecase($$) {
+  my $dir = shift;
+  my $ua = shift;
+
   my %file = ();
   my $pathnum = 0;
   foreach my $path (@paths) {
@@ -61,7 +70,7 @@ sub printcase {
   my $p = 0;
   foreach my $path (@paths) {
     print $path, " @ ", $file{$path}, " / ", $query{$path}, " ", $p;
-    fetch_url($file{$path}, $query{$path});  # do not overwrite.
+    fetch_url($dir, $file{$path}, $query{$path}, $ua);  # do not overwrite.
 
     open(F, "$dir/$file{$path}-orig.html") or die "$dir/$file{$path}-orig.html: $!";
     undef $/; $_ = <F>; $/ = "\n"; close F;
@@ -78,6 +87,7 @@ sub printcase {
         padding: 20px 20px 0 200px;
         margin: 8px 0 18px -200px;
         width: 200%;
+        position: relative;
       }
       .title {
         font-weight: bold;
@@ -150,6 +160,26 @@ sub printcase {
       .attriblink:active {
         text-decoration: none;
       }
+
+      \@media only screen and (max-width: 600px) {
+        .box {
+          padding: 12px 16px 4px;
+          margin: 0 -1px 8px -1px;
+          width: calc(100% - 31px);
+        }
+        .title {
+          margin-right: 48px;
+        }
+        .bar {
+          margin: 9px -16px;
+          padding: 0 16px;
+        }
+        .expando {
+          right: 0px;
+          left: initial;
+          top: 15px;
+        }
+      }
       </style>
       <script>
         \$(document).ready(function() {
@@ -177,7 +207,6 @@ sub printcase {
     foreach my $part (@parts) {
       $prefix .= ($prefix eq "" ? "" : " > ") . $part;
       $stuff .= " &#x203A; " if $n;
-      $part = $n == 0 ? $part : lc $part;
       if ($n != $#parts) {
         my $target = $file{$prefix};
         $part = "<a class=\"bc\" href=\"$target.html\">$part</a>";
@@ -228,27 +257,27 @@ sub printcase {
     }
     $stuff .= "</div>";
 
-    #s|<div id="topstuff">|$&$stuff|;
-    s|<div id="center_col">|$&$stuff|;
+    #s/<div id="topstuff">/$&$stuff/;
+    s/<div id="(center_col|gsr)">/$&$stuff/;
 
     open(F, ">$dir/$file{$path}.html") or die "$dir/$file{$path}.html: $!"; print F; close F;
     $p++;
   }
 }
 
-
 sub search($) {
   my $query = shift;
   return "https://www.google.com/search?q=" . uri_escape($query) . "&pws=0&gl=us&gws_rd=cr";
 }
 
-sub fetch_url($$) {
+sub fetch_url($$$$) {
+  my $dir = shift;
   my $file = shift;
   my $query = shift;
+  my $ua = shift;
   unless (-s "$dir/$file-orig.html") {
     my $url = search($query);
     print("Fetching \"$url\"");
-    my $ua = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.137 Safari/537.36";
     system("wget -O \"$dir/$file-orig.html\" -U\"$ua\" \"$url\"");
   }
 }

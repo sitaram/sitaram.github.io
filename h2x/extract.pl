@@ -143,19 +143,37 @@ print F<<"EOF";
   .treebox li, .treebox ul {
     margin: 4px;
   }
+  .is_mobile { display: none; }
+  \@media only screen and (max-width: 600px) {
+    .is_mobile { display: block; }
+  }
   </style>
   <script>
+    function resize() {
+      var is_mobile = !\$('.is_mobile').is(':hidden');
+      if (is_mobile) {
+        \$('.demolink').attr('href',
+          \$('.demolink').attr('href').replace('/d/', '/m/'));
+      } else {
+        \$('.demolink').attr('href',
+          \$('.demolink').attr('href').replace('/m/', '/d/'));
+      }
+    }
+
     \$(document).ready(function() {
       \$('.treelink').click(function() {
         \$('.treebox').slideToggle();
       });
+      resize();
     });
+    \$(window).resize(resize);
   </script>
 </head>
 <body onLoad="document.getElementById('link').focus();">
 <div class="header">
   <span class="title">$title</span>
 </div>
+<div class="is_mobile"></div>
 <div class="main">
 
 <div class="text">
@@ -238,7 +256,7 @@ Google Search to return a diverse set of high-quality articles, videos, and
 other Search features for each query, instead of sending the user to a single article for
 the entire topic.  Putting these subtopics and queries together, the Search
 experience for student loan forgiveness could, for example, look like <b><a
-href="../demo/01-00.html" target=_blank>this demo</a></b>.
+class="demolink" href="../demo/d/01-00.html" target=_blank>this demo</a></b>.
 
 <li> We would like to combine your domain expertise with information from the
 top 20 web results for each topic, to construct this hierarchy of subtopics and
