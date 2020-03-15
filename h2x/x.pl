@@ -329,6 +329,7 @@ foreach my $case (@cases) {
     \@media only screen and (max-width: 600px) {
       td {
         display: table-row;
+        box-shadow: none;
       }
       .header {
         height: 44px;
