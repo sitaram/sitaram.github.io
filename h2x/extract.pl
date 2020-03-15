@@ -264,24 +264,29 @@ experience for student loan forgiveness could, for example, look like <b><a
 class="demolink" href="../demo/d/01-00.html">this demo</a></b> (or see <a
 class="demolink" href="../demo/d/index.html">all demos</a>).
 
-<li> We would like to <b>combine your domain expertise with information from the
+<li> We would like to ask you to <b>combine your domain expertise with information from the
 top 20 web results for each topic</b>, to construct this hierarchy of subtopics and
 the search queries. To make this easier, <a href="00.html" target=_blank>on the
-next page</a>, we have collected the sections listed in the top 20 results for
-the query "how to get student loan forgiveness".  For a birds-eye view, we have
-partially collapsed the information, but use the "Expand" link on the top of
-each page (or the "&#xBB;" links) to see more details.
+next few pages</a>, we have collected the sections listed in the top 20 results
+for the query "how to get student loan forgiveness" and for the other use
+cases. Please use this as raw material for your subtopic hierarchies. For a
+bird's-eye view, we have partially collapsed the information, but use the
+"Expand" link on the top of each page (or the "&#xBB;" links) to see more
+details.
 
 <li> To capture your work, we would like to ask you to <b>make a copy of <a
 href="https://docs.google.com/document/d/1QaPGS90GRlmqh3CMMBfjCKdrlE6gr5oOjhwq1REUP2E/edit?usp=sharing"
 target=_blank>this Google doc</a></b>, and share it with us
-(sitaram\@google.com).  For each use case listed in the doc, please look at
-the raw material from web results, then step back and think about how you would
-explain it to a student seeking advice. Then try to formulate a hierarchical breakdown of
-subtopics.  For each subtopic, please try out a few search queries that you think are
-reasonable, and try to find one that returns the most useful information. We have
-done the first one as an example, but please feel free to replace or improve
-that one as well, in addition to the others.
+(sitaram\@google.com).  For each use case listed in the doc, please look at the
+raw material from web results, and see if you spot patterns, or can select,
+arrange, and rename these entries to match your mental model. But then please
+step back and think about how you would explain it to a student seeking advice.
+Between these, try to formulate a hierarchical breakdown of subtopics for each
+use case.  For each subtopic, please try out a few search queries that you
+think are reasonable, and try to find one that returns useful information that
+you may have been expecting. We have done the first use case (student loan
+forgiveness) as an example, but please feel free to replace or improve that one
+as well, in addition to looking at the rest.
 </ol>
 
 Thank you,<br>
