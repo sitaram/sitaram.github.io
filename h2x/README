@@ -1,9 +1,0 @@
-https://codelabs.developers.google.com/codelabs/firebase-web/index.html?index=..%2F..index#0
-
-<somehow create the cloud project, the firebase project, or whatever they are called>
-
-firebase use --add
-(scroll down far to select H2x-app & default)
-
-firebase serve --only hosting
-
