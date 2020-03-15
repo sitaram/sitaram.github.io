@@ -91,11 +91,13 @@
     function resize() {
       var is_mobile = !$('.is_mobile').is(':hidden');
       if (is_mobile) {
-        $('.demolink').attr('href',
-          $('.demolink').attr('href').replace('/d/', '/m/'));
+        $('.demolink').each(function() {
+          $(this).attr('href', $(this).attr('href').replace('/d/', '/m/'));
+        });
       } else {
-        $('.demolink').attr('href',
-          $('.demolink').attr('href').replace('/m/', '/d/'));
+        $('.demolink').each(function() {
+          $(this).attr('href', $(this).attr('href').replace('/m/', '/d/'));
+        });
       }
     }
 
@@ -196,7 +198,7 @@ other Search features for each query, instead of sending the user to a single ar
 the entire topic.  Putting these subtopics and queries together, the Search
 experience for student loan forgiveness could, for example, look like <b><a
 class="demolink" href="../demo/d/01-00.html">this demo</a></b> (see <a
-class="demolink" href="../demo/d/">all demos</a>).
+class="demolink" href="../demo/d/index.html">all demos</a>).
 
 <li> We would like to combine your domain expertise with information from the
 top 20 web results for each topic, to construct this hierarchy of subtopics and
