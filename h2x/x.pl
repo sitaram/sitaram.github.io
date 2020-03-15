@@ -139,7 +139,7 @@ print F<<"EOF";
 <div class="main">
 
 <div class="text">
-Hello education/financial aid domain expert,
+Hello focus group participant,
 <ol>
 <li> For complex and important topics like the ones listed below, for example
 <b>how to get student loan forgiveness</b>, often Google search results are
