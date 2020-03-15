@@ -109,7 +109,7 @@ sub printonecase($$) {
       .bc {
         text-decoration: none;
       }
-      .bc:active, .bc:visited, .bc:hover, .bc:link {
+      .bc:active, .bc:visited, .bc:link {
         color: #222;
       }
       .bc:hover {
@@ -120,6 +120,10 @@ sub printonecase($$) {
         float: right;
         margin-right: 50%;
         font-weight: bold;
+      }
+      .expando:link, .expando:active, .expando:visited {
+        text-decoration: none;
+        color: #222;
       }
       .expando:hover {
         text-decoration: underline;
