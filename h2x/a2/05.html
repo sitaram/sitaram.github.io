@@ -1,0 +1,382 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>6. How to transfer financial aid funds</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+    body, pre {
+      font-family: Roboto, sans-serif, arial;
+      margin: 0;
+    }
+    .header {
+      background-color: #dfefff;
+      position: fixed;
+      height: 28px;
+      padding: 16px;
+      width: calc(100% - 32px);
+      border-bottom: 1px solid #ccc;
+      box-shadow: 0px 3px 3px #ddd;
+    }
+    .prev {
+      float: left;
+    }
+    .next {
+      float: right;
+    }
+    .next, .prev {
+      padding: 0 16px;
+    }
+    .title {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    body {
+      position: relative;
+    }
+    .main {
+      position: fixed;
+      overflow: auto;
+      top: 60px;
+      bottom:0;
+      max-height: 100%;
+    }
+    </style>
+
+    <style>
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+    td {
+      box-shadow: 1px 1px 1px #ccc;
+      outline: 0;
+      padding: 8px 8px 0 8px;
+      width: 33%;
+      vertical-align: top;
+    }
+    .linkbox {
+      background-color: #dfefff;
+      height: 16px;
+      padding: 8px 16px;
+    }
+    #link {
+      font-weight: bold;
+    }
+    #link:focus {
+      outline: 0;
+    }
+    .collapsed {
+      display: none;
+    }
+    .expando {
+      width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      td {
+        display: table-row;
+        box-shadow: none;
+      }
+      .header {
+        height: 44px;
+      }
+      .main {
+        top: 76px;
+      }
+      .title {
+        display: inline-block;
+        font-size: 20px;
+        padding-top: 8px;
+      }
+      .next, .prev {
+        padding: 0 8px;
+      }
+    }
+    </style>
+
+    <script>
+      $(document).ready(function() {
+        $('.expando').each(function() {
+          if ($('.collapsed').get().length == 0) {
+            $(this).css('visibility', 'hidden');
+          }
+        });
+
+        $('.expando').click(function() {
+          $('.collapsed').each(function() {
+            if ($(this).is(':hidden')) $(this).slideDown(200);
+            else $(this).slideUp(200);
+          });
+          $('.expando').each(function() {
+            $(this).text($(this).text() == "Expand" ? "Collapse" :
+                          $(this).text() == "Collapse" ? "Expand" :
+                          $(this).text() == "\u00bb" ? "\u00ab" :
+                          $(this).text() == "\u00ab" ? "\u00bb" : "");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body onLoad="document.getElementById('link').focus();">
+  <div class="header">
+    <a class="prev" href="04.html">&lt; Previous</a>
+    <a class="prev" href="index.html">Main page</a>
+    <a class="next" href="06.html">Next &gt;</a>
+    <a class="next expando" href="javascript:void(0);">Expand</a>
+    <span class="title">6.&nbsp;&nbsp;How to transfer financial aid funds</span>
+  </div>
+  <div class="main">
+  <table>
+
+<tr>
+<td>
+<div class="linkbox"><a id="link" href="https://www.collin.edu/gettingstarted/financialaid/FrequentlyAskedQuestions.html" target=_blank>Collin.edu</a></div>
+<ul>
+<li>Why are you asking for my high school transcript?
+<li>Why did i not get my full pell grant?
+<li>How do i use my financial aid to pay for my classes?
+<li>How do i use my financial aid to purchase my books and supplies?
+<li>How many hours do i have to attend to qualify for financial aid?
+<li>Do i have to apply for financial aid again for next year?
+<li>Do i need to include my stepparent's income on the fafsa?
+<li>How do i transfer my financial aid to another school?
+<li>Does financial aid pay for summer?
+<li>How do i qualify for federal work study?
+<li>I know that i am on financial aid suspension, but can i still get a student loan?
+<li>What if my parents live together but were never married?
+<li>Am i considered an independent student if i am expecting a child during the academic year for which i will receive financial aid?
+<li>Does hazelwood pay for continuing education classes?
+<li>What does selected for " verification " mean?
+<li>Why have i not received my money when other students already have theirs?
+<li>Why did i get dropped from my classes?
+<li>What is sap? why am i not eligible for financial aid?
+</ul></td>
+<td>
+<div class="linkbox"><a id="link" href="https://www.uab.edu/students/paying-for-college/first-professional/faq" target=_blank>Uab.edu</a></div>
+<ul>
+<li>When can i expect my disbursements?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Can i get my money before the academic year begins for books and moving in expenses?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Where can i find the cost of attendance for my year in school?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>How much can i borrow throughout my academic career?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>When should i apply for financial aid each year?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Does " efc / expected family contribution ” mean that i or my parents must write a check to uab for that amount each year?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>What forms do i need to fill out this year?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Do i need my parents tax information on the fafsa?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Should i include my parents ' fafsa information even if i am married?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Does it matter if my parents claimed me on their taxes?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>How do i find out how much i owe in student debt before i enter professional school?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>What are some things i can do to prepare myself financially for entry into professional school?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Can i use my student loans for purposes other than educational expenses?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Does uab include health insurance for my spouse as part of my educational expenses (will it lend me student loans for this purpose?)
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Why should i apply for direct deposit?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Why should i sign a title iv form?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Why should i complete the questionnaire?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Where can i find information about student loan interest rates, bank origination fees, loan repayment options, and applying for deferment during residency?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Do i have to make interest payments on my unsubsidized federal direct and / or graduate plus loans while i am in school?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>What happens to my financial aid if i withdraw from school?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>What happens if i become delinquent or i default on my institutional, federal, state or private loans?
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul>
+<li>Paying for college : first professional students
+<ul>
+<li>What is a disbursement?
+<li>Federal grant disbursements
+<li>Federal loan disbursements
+<li>Federal work - study
+<li>Other financial aid disbursements
+<li>4 tips for managing your financial aid funds
+<li>Questions about your financial aid
+</ul></td>
+</table></div></body></html>

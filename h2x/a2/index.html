@@ -1,8 +1,8 @@
-#!/usr/bin/perl -lw
-# for i in a a2 z; do echo $i; cd $i; ../extract.pl *.txt ; cd ..; done
-
-my $htmlstuff = <<EOF;
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>How to X - Financial Aid</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -46,68 +46,7 @@ my $htmlstuff = <<EOF;
       max-height: 100%;
     }
     </style>
-EOF
 
-
-my @cases = %urls = %data = ();
-my $case;
-my $url;
-my $cur = 0;  # current depth
-my $maxdepth = 1;
-
-while (<>) {
-  s/[\r\n]*$//;
-  next if /^$/;
-  # drop header
-  next if /Algorithmic extraction.clustering candidates/ ||
-    /make a copy of this doc to collect your set of candidates/ ||
-    /either add the candidate decompositions under each query directly/;
-
-  if (/^(\d+\.|\*|-) *(.*)/) {  # top level is use case
-    $case = $2;
-    next if $case =~ /buy a house/;  # skip this example.
-    push @cases, $case;
-    @{$urls{$case}} = ();
-    %{$data{$case}} = ();
-  } elsif (/^   (\d+\.|\*|-) *(.*)/) {  # second level is url
-    next if $case =~ /buy a house/;  # skip this example.
-    $url = $2;
-    push @{$urls{$case}}, $url;
-    @{$data{$case}{$url}} = ();
-    $cur = 0;
-  } else {  # third+ levels are the taxonomy
-    next if $case =~ /buy a house/;  # skip this example.
-    s/^      //;
-    next if /^         /;  # remove stuff too deep
-
-    s/^( *)(.*)/$2/;
-    my $depth = length($1) / 3;
-    for (; $cur > $depth; $cur--) {
-      push @{$data{$case}{$url}}, "</ul>";
-    }
-    for (; $cur < $depth; $cur++) {
-      push @{$data{$case}{$url}},
-           $cur >= $maxdepth ? "<span class=\"expando chevron\">&#xBB;</span><ul class=\"collapsed\">" : "<ul>";
-    }
-    s/^( *)[-\*] /$1/g;
-    s/ ([,?!\)\.])/$1/g;  # " , " -> ", " etc.
-    s/\( /\(/g;
-    s/\.$//;
-    push @{$data{$case}{$url}}, "<li>" . ucfirst($_);
-  }
-}
-for (; $cur > 0; $cur--) {
-  push @{$data{$case}{$url}}, "</ul>";
-}
-
-open(F, ">index.html") or die $!;
-my $title = "How to X - Financial Aid";
-print F<<"EOF";
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>$title</title>
-  $htmlstuff
   <style>
   .main {
     padding: 16px;
@@ -115,7 +54,7 @@ print F<<"EOF";
   .text {
     margin: 16px 0;
   }
-  \@media (hover: hover) {
+  @media (hover: hover) {
     .start:hover {
       text-decoration: underline;
     }
@@ -146,36 +85,36 @@ print F<<"EOF";
     margin: 4px;
   }
   .is_mobile { display: none; }
-  \@media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     .is_mobile { display: block; }
   }
   </style>
   <script>
     function resize() {
-      var is_mobile = !\$('.is_mobile').is(':hidden');
+      var is_mobile = !$('.is_mobile').is(':hidden');
       if (is_mobile) {
-        \$('.demolink').each(function() {
-          \$(this).attr('href', \$(this).attr('href').replace('/d/', '/m/'));
+        $('.demolink').each(function() {
+          $(this).attr('href', $(this).attr('href').replace('/d/', '/m/'));
         });
       } else {
-        \$('.demolink').each(function() {
-          \$(this).attr('href', \$(this).attr('href').replace('/m/', '/d/'));
+        $('.demolink').each(function() {
+          $(this).attr('href', $(this).attr('href').replace('/m/', '/d/'));
         });
       }
     }
 
-    \$(document).ready(function() {
-      \$('.treelink').click(function() {
-        \$('.treebox').slideToggle();
+    $(document).ready(function() {
+      $('.treelink').click(function() {
+        $('.treebox').slideToggle();
       });
       resize();
     });
-    \$(window).resize(resize);
+    $(window).resize(resize);
   </script>
 </head>
 <body onLoad="document.getElementById('link').focus();">
 <div class="header">
-  <span class="title">$title</span>
+  <span class="title">How to X - Financial Aid</span>
 </div>
 <div class="is_mobile"></div>
 <div class="main">
@@ -277,7 +216,7 @@ details.
 <li> To capture your work, we would like to ask you to <b>make a copy of <a
 href="https://docs.google.com/document/d/1QaPGS90GRlmqh3CMMBfjCKdrlE6gr5oOjhwq1REUP2E/edit?usp=sharing"
 target=_blank>this Google doc</a></b>, and share it with us
-(sitaram\@google.com).  For each use case listed in the doc, please look at the
+(sitaram@google.com).  For each use case listed in the doc, please look at the
 raw material from web results, and see if you spot patterns, or can select,
 arrange, and rename these entries to match your mental model. But then please
 step back and think about how you would explain it to a student seeking advice.
@@ -297,145 +236,16 @@ Education team, Google.
 <div class="text">
 <b>Or jump to a specific use case:</b>
 <ol>
-EOF
-my $num = 0;
-foreach my $case (@cases) {
-  my $this = (sprintf "%02d", $num) . ".html";
-  print F "<li><a href=\"$this\">$case</a>";
-  $num++;
-}
-print F "</ol></div></body></html>";
-close F;
 
-$num = 0;
-foreach my $case (@cases) {
-  my $this = (sprintf "%02d", $num) . ".html";
-  print $this;
-  open(F, ">$this") or die $!;
-  my $next = (sprintf "%02d", (($num + 1) % scalar(@cases))). ".html";
-  my $prev = (sprintf "%02d", (($num - 1 + scalar(@cases)) % scalar(@cases))). ".html";
-  $num++;
-
-  print F<<"EOF";
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <title>$num. $case</title>
-    $htmlstuff
-    <style>
-    table {
-      table-layout: fixed;
-      width: 100%;
-    }
-    td {
-      box-shadow: 1px 1px 1px #ccc;
-      outline: 0;
-      padding: 8px 8px 0 8px;
-      width: 33%;
-      vertical-align: top;
-    }
-    .linkbox {
-      background-color: #dfefff;
-      height: 16px;
-      padding: 8px 16px;
-    }
-    #link {
-      font-weight: bold;
-    }
-    #link:focus {
-      outline: 0;
-    }
-    .collapsed {
-      display: none;
-    }
-    .expando {
-      width: 60px;
-    }
-
-    \@media only screen and (max-width: 600px) {
-      td {
-        display: table-row;
-        box-shadow: none;
-      }
-      .header {
-        height: 44px;
-      }
-      .main {
-        top: 76px;
-      }
-      .title {
-        display: inline-block;
-        font-size: 20px;
-        padding-top: 8px;
-      }
-      .next, .prev {
-        padding: 0 8px;
-      }
-    }
-    </style>
-
-    <script>
-      \$(document).ready(function() {
-        \$('.expando').each(function() {
-          if (\$('.collapsed').get().length == 0) {
-            \$(this).css('visibility', 'hidden');
-          }
-        });
-
-        \$('.expando').click(function() {
-          \$('.collapsed').each(function() {
-            if (\$(this).is(':hidden')) \$(this).slideDown(200);
-            else \$(this).slideUp(200);
-          });
-          \$('.expando').each(function() {
-            \$(this).text(\$(this).text() == "Expand" ? "Collapse" :
-                          \$(this).text() == "Collapse" ? "Expand" :
-                          \$(this).text() == "\\u00bb" ? "\\u00ab" :
-                          \$(this).text() == "\\u00ab" ? "\\u00bb" : "");
-          });
-        });
-      });
-    </script>
-  </head>
-  <body onLoad="document.getElementById('link').focus();">
-  <div class="header">
-    <a class="prev" href="$prev">&lt; Previous</a>
-    <a class="prev" href="index.html">Main page</a>
-    <a class="next" href="$next">Next &gt;</a>
-    <a class="next expando" href="javascript:void(0);">Expand</a>
-    <span class="title">$num.&nbsp;&nbsp;$case</span>
-  </div>
-  <div class="main">
-  <table>
-EOF
-
-  my $cols = 3;
-  my $n = 0;
-  foreach my $url (@{$urls{$case}}) {
-    next unless scalar(@{$data{$case}{$url}});
-    if ($n % $cols == 0) {
-      print F "<tr>";
-    }
-    print F "<td>";
-    my $domain = $url;
-    my $more = "";
-    $domain =~ s|http.*?://||;
-    $domain =~ s|/.*||;
-    $more = $& if $domain =~ s|\.\w\w$||;
-    $more = $& . $more if $domain =~ s|\.\w\w\w?$||;
-    $domain =~ s|.*\.||;
-    $domain = ucfirst $domain.$more;
-    print F "<div class=\"linkbox\"><a id=\"link\" href=\"$url\" target=_blank>$domain</a></div>";
-    print F "<ul>";
-    foreach my $line (@{$data{$case}{$url}}) {
-      print F $line;
-    }
-    print F "</ul></td>";
-    if ($n % $cols == $cols - 1) {
-      print F "</tr>";
-    }
-    $n++;
-  }
-  print F "</table></div></body></html>";
-  close F;
-}
+<li><a href="00.html">How to get student loan forgiveness</a>
+<li><a href="01.html">How to calculate college cost</a>
+<li><a href="02.html">How to apply for fafsa</a>
+<li><a href="03.html">How to get scholarships</a>
+<li><a href="04.html">How to get student loans</a>
+<li><a href="05.html">How to transfer financial aid funds</a>
+<li><a href="06.html">How to understand my award letter</a>
+<li><a href="07.html">How to get an application fee waiver</a>
+<li><a href="08.html">How to retain qualification for student loan</a>
+<li><a href="09.html">How to refinance a student loan</a>
+<li><a href="10.html">How to manage student debt</a>
+</ol></div></body></html>
