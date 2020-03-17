@@ -66,6 +66,7 @@ while (<>) {
   if (/^(\d+\.|\*|-) *(.*)/) {  # top level is use case
     $case = $2;
     next if $case =~ /buy a house/;  # skip this example.
+    $case .= " [example]" if $case =~ /forgiveness/;
     push @cases, $case;
     @{$urls{$case}} = ();
     %{$data{$case}} = ();
