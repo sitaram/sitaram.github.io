@@ -134,7 +134,7 @@ print F<<"EOF";
   #link:focus {
     outline: 0;
   }
-  .treebox {
+/*  .treebox {
     display: none;
     border: 1px solid #82a5Ff;
     background-color: #dfefff;
@@ -144,7 +144,7 @@ print F<<"EOF";
   }
   .treebox li, .treebox ul {
     margin: 4px;
-  }
+  } */
   .is_mobile { display: none; }
   \@media only screen and (max-width: 600px) {
     .is_mobile { display: block; }
@@ -166,7 +166,7 @@ print F<<"EOF";
 
     \$(document).ready(function() {
       \$('.treelink').click(function() {
-        \$('.treebox').slideToggle();
+        alert(' foo ');
       });
       resize();
     });

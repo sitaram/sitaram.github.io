@@ -73,7 +73,7 @@
   #link:focus {
     outline: 0;
   }
-  .treebox {
+/*  .treebox {
     display: none;
     border: 1px solid #82a5Ff;
     background-color: #dfefff;
@@ -83,7 +83,7 @@
   }
   .treebox li, .treebox ul {
     margin: 4px;
-  }
+  } */
   .is_mobile { display: none; }
   @media only screen and (max-width: 600px) {
     .is_mobile { display: block; }
@@ -106,6 +106,7 @@
     $(document).ready(function() {
       $('.treelink').click(function() {
         $('.treebox').slideToggle();
+        alert(' foo ');
       });
       resize();
     });
