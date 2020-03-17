@@ -120,6 +120,7 @@ sub printonecase($$) {
         }
       }
       .nextlink {
+        font-size: 14px;
         float: right;
         margin-right: 50%;
       }
