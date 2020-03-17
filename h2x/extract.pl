@@ -163,13 +163,7 @@ print F<<"EOF";
         });
       }
     }
-
-    \$(document).ready(function() {
-      \$('.treelink').click(function() {
-        alert(' foo ');
-      });
-      resize();
-    });
+    \$(document).ready(function() { resize(); });
     \$(window).resize(resize);
   </script>
 </head>
@@ -195,8 +189,8 @@ dependent on the student knowing what to search for, and results often show a
 variety of articles on the topic, each one with a different perspective.  This
 can be overwhelming for students and lead to them not getting the information
 they need. (<a id="link"
-href="https://www.google.com/search?q=how+to+get+student+loan+forgiveness&pws=0&gl=us&gws_rd=cr">See
-example search results</a>).<p>
+href="https://www.google.com/search?q=how+to+get+student+loan+forgiveness&pws=0&gl=us&gws_rd=cr"
+target=_blank>example search results</a>).<p>
 
 Our goal is to guide the user (student) through these complex topics. To do
 that, we need to <b>unpack these topics into a set of subtopics</b> (bite-sized
@@ -211,11 +205,12 @@ search query</b> whose search results provide high-quality information on that
 subtopic (articles, web answers, videos). Putting these subtopics and queries
 together, the Search experience for student loan forgiveness could, for
 example, look like <b><a class="demolink" href="../demo/d/01-00.html"
-target=_blank>this demo</a></b>, which was built from <a href="javascript:void(0);"
-class="treelink1">this hierarchy</a> of subtopics and search
+target=_blank>this demo</a></b>, which was built from <a href="../loan.png"
+target=_blank>this hierarchy</a> of subtopics and search
 queries.  Or for [how to buy a house], it could look like
 <b><a class="demolink" href="../demo/d/14-00.html" target=_blank>this
-demo</a></b>, built from <a href="javascript:void(0);" class="treelink2">this
+demo</a></b>, built from  <a href="../house.png"
+target=_blank>this
 hierarchy</a>.<p>
 
 We would like to ask you to <b>combine your domain expertise with information
@@ -243,10 +238,9 @@ the following steps.
 subtopics to explain it to a user seeking advice.  Feel free to take scratch
 notes on your notepad.
 
-<li> Try grouping these points into a small hierarchy similar to <a
-href="javascript:void(0);" class="treelink1">the ones above</a> (ideally 1-3
-levels deep, 5-10 subtopics each), which might resemble chapters and sections
-of a book on this topic.
+<li> Try grouping these points into a hierarchy similar to <a
+href="../loan.png" target=_blank>the ones above</a> (ideally 1-3 levels deep,
+3-5 subtopics each), which might resemble chapters and sections of a book on this topic.
 
 <li> Then look over the <a href="00.html" target=_blank>raw material</a>
 extracted from web results on these pages (hit "next" to go through all the use
