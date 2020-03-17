@@ -276,7 +276,7 @@ sub printonecase($$) {
       my $n = $paths[$p+1];
       my $t = $paths[$p+1];
       $t =~ s/^.*> *//;
-      $stuff .= "<a class=\"bc nextlink\" href=\"$file{$n}.html\">Next topic: $t &#xBB;</a>";
+      $stuff .= "<a class=\"bc nextlink\" href=\"$file{$n}.html\">See next: $t &#xBB;</a>";
     }
     print "";
     $stuff .= "</div>";
