@@ -53,7 +53,7 @@ my @cases = %urls = %data = ();
 my $case;
 my $url;
 my $cur = 0;  # current depth
-my $maxdepth = 1;
+my $maxdepth = 0;
 
 while (<>) {
   s/[\r\n]*$//;
