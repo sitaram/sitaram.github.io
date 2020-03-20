@@ -58,7 +58,7 @@
 
 
 
-14. How to buy a house [demo]
+14. How to buy a house [demo: desktop / mobile]
 
 
 * Before you start / how to prepare to buy a house
@@ -81,17 +81,17 @@
    * Close the purchase / closing a house deal
 
 
-15. How to effectively work from home [demo: desktop / mobile]   [extraction: sheet]
+15. How to effectively work from home [demo desktop, mobile]  [extraction] [query patterns]
 
 
 * Should I? / Should I work from home?
    * Benefits / benefits of working from home
    * Challenges / challenges of working from home
-* Find a job / work from home jobs near me
+* Find a job / work from home jobs 
    * Popular jobs / most popular work from home jobs
    * High paying jobs / high paying work from home jobs
+   * Avoiding scams / how to avoid work-from-home job scams
 * Be productive / productivity tips for working from home
-   * Adjusting / adjusting to work from home
    * Common mistakes / common mistakes when working from home
    * Computer setup / computer setup for working from home
    * Video conferencing / video conferencing from home
@@ -107,39 +107,42 @@
    * Lunch recipes / easy lunches for working from home
    * Healthy meals / healthy meals for work
 * Work with kids around / how to work from home with kids around
-   * Entertaining kids / how to entertain kids when working from home
+   * Entertaining kids / how to entertain kids at home
 
 
 
 
-16. How to deal with staying at home 
+16. Staying at home due to coronavirus  
 
 
 * Adjust to working from home / How to adjust to working from home
-   * How to work from home / How to stay fit when working from home
+   * How to work from home / How to work from home
    * Productivity tips / productivity tips for working from home
-* Cleaning
-   * How to sanitize your hands / How to sanitize your hands
-   * How to sanitize your home / How to sanitize your home
+* Cleanliness / 
    * How to wash your hands / How to wash your hands
-* Tips 
-   * How to prevent coronavirus / How to prevent coronavirus
-   * What to do if you feel sick / What to do if you feel sick
+   * How to sanitize your home / How to sanitize your home
+* Tips / tips for a lockdown
+   * How to avoid coronavirus / How to avoid coronavirus
+   * What to do if you feel sick / What to do if you feel sick from coronavirus
    * What items to buy for staying home / What items to buy for staying home
-* Meals 
+* Meals / meals at home
    * Healthy recipes for breakfast / Healthy recipes for breakfast 
    * Healthy recipes for lunch  / Healthy recipes for lunch 
    * Healthy recipes for dinner / Healthy recipes for dinner
-* Entertainment
+* Entertainment / entertainment at home
    * What to watch / What to watch 
-   * What to read / What to read 
+   * Books to read / What to read 
+   * Online games / best online games 
    * Online games to play with friends /  Which games to play virtually with friends
    * Entertaining kids / how to entertain kids at home
-* Stay healthy / How to stay fit when working from home
-   * Home workout videos / Home workout videos 
-   * Home workout equipment / home workout equipment
-   * home workout plan / home workout plan
-   * Home workout apps / home workout apps
+   * DIY / DIY ideas 
+   * Hobbies / Easy hobbies to learn at home 
+* Stay healthy / How to stay healthy when working from home
+   * Workout videos / home workout videos 
+   * Equipment / home workout equipment
+   * Exercise routines / home exercise routines
+   * Workout apps / home workout apps
+   * Meditation / how to meditate at home
 
 
 
