@@ -11,7 +11,6 @@ How to X - News
    * Trends / coronavirus health Trends
    * Advice / coronavirus health Advice
    * Testing / coronavirus Testing
-   * Research / coronavirus health Research
 * Regional updates / coronavirus countries
    * NYC / coronavirus NYC
    * California / coronavirus California
