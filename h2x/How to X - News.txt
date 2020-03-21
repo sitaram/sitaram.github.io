@@ -11,6 +11,8 @@ How to X - News
    * Trends / coronavirus health Trends
    * Advice / coronavirus health Advice
    * Testing / coronavirus Testing
+* Lockdown / coronavirus Lockdown
+   * Tips / coronavirus Tips
 * Regional updates / coronavirus countries
    * NYC / coronavirus NYC
    * California / coronavirus California
@@ -19,15 +21,15 @@ How to X - News
    * Iran / coronavirus Iran
    * China / coronavirus China
    * South Korea / coronavirus South Korea
-* Politics / coronavirus Politics
-   * Trump / coronavirus Trump
-   * Pence / coronavirus Pence
-* Lockdown / coronavirus Lockdown
-   * Tips / coronavirus Tips
-* Celebrity / coronavirus Celebrity
 * Travel / coronavirus Travel
-* Sports / coronavirus Sports
 * Jobs / coronavirus Jobs
+   * Financial security / coronavirus Financial security
+   * Unemployment benefits / coronavirus Unemployment benefits
+   * Jobs working from home / coronavirus Jobs working from home
+   * Help paying bills / coronavirus Help paying bills
+   * Government assistance / coronavirus Government assistance
+* Economy / coronavirus Economy
+   * Stimulus / coronavirus Stimulus
    * Recession / coronavirus Recession
 * Education / coronavirus Education
    * School closure / coronavirus School closure
@@ -35,3 +37,11 @@ How to X - News
    * Higher education / coronavirus Higher education
    * Student loan / coronavirus Student loan
    * Students with disabilities / coronavirus Students with disabilities
+* Sports / coronavirus Sports
+* Politicians / coronavirus Politics
+   * Donald Trump / coronavirus Donald Trump
+   * Mike Pence / coronavirus Mike Pence
+   * Angela Merkel / coronavirus Angela Merkel
+* Celebrities / coronavirus Celebrities
+   * Tom Hanks / coronavirus Tom Hanks
+   * Prince Albert / coronavirus Prince Albert
