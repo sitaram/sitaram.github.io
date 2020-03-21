@@ -1,0 +1,30 @@
+How to X - News
+[Please make a copy and share with sitaram@google.com]
+[Format: for each topic, a hierarchy of <subtopic> / <search query>, and number these 12+]
+
+
+20. Coronavirus news
+
+* Health / coronavirus Health news
+   * Research / coronavirus health Research news
+   * Vaccines / coronavirus Vaccines news
+   * Trends / coronavirus health Trends news
+   * Advice / coronavirus health Advice news
+   * Testing / coronavirus Testing news
+* Regional updates / coronavirus Regional updates news
+   * NYC / coronavirus NYC news
+   * California / coronavirus California news
+   * USA / coronavirus USA news
+   * Italy / coronavirus Italy news
+   * China / coronavirus China news
+* Politics / coronavirus Politics news
+   * Trump / coronavirus Trump news
+   * Pence / coronavirus Pence news
+* Lockdown / coronavirus Lockdown news
+   * Tips / coronavirus Tips news
+* Celebrity / coronavirus Celebrity news
+* Travel / coronavirus Travel news
+* Sports / coronavirus Sports news
+* Jobs / coronavirus Jobs news
+* Education / coronavirus Education news
+   * Financial aid / coronavirus Financial aid news

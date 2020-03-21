@@ -92,7 +92,7 @@ sub printonecase($$) {
       #promos { display: none; }
       #taw { display: none; }
       #cnt { overflow-y: hidden; }
-      .QmUzgb, .U5LfPc, .NFQFxe { height: fit-content !important; }  /* shorten some divs */
+      .QmUzgb, .U5LfPc, .NFQFxe, .nChh6e { height: fit-content !important; }  /* shorten some divs */
       .kno-kp { background-color: white; }
       .box {
         border: 1px solid #a8c8ff;
@@ -300,8 +300,9 @@ sub printonecase($$) {
 }
 
 sub search($) {
-  my $query = shift;
-  return "https://www.google.com/search?q=" . uri_escape($query) . "&pws=0&gl=us&gws_rd=cr";
+  my $query = lc(shift);
+  return "https://www.google.com/search?q=" . uri_escape($query) . "&pws=0&gl=us&gws_rd=cr"
+    . ($query =~ /\bnews\b/ ? "&tbm=nws" : "");
 }
 
 sub fetch_url($$$$) {
