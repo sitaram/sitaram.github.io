@@ -16,7 +16,9 @@ How to X - News
    * California / coronavirus California news
    * USA / coronavirus USA news
    * Italy / coronavirus Italy news
+   * Iran / coronavirus Iran news
    * China / coronavirus China news
+   * South Korea / coronavirus South Korea news
 * Politics / coronavirus Politics news
    * Trump / coronavirus Trump news
    * Pence / coronavirus Pence news
@@ -27,4 +29,5 @@ How to X - News
 * Sports / coronavirus Sports news
 * Jobs / coronavirus Jobs news
 * Education / coronavirus Education news
-   * Financial aid / coronavirus Financial aid news
+   * College shutdown / coronavirus College shutdown news
+   * Student loan / coronavirus Student loan news
