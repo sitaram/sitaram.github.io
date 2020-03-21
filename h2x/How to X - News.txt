@@ -28,6 +28,8 @@ How to X - News
 * Travel / coronavirus Travel news
 * Sports / coronavirus Sports news
 * Jobs / coronavirus Jobs news
+   * Recession / coronavirus Recession news
 * Education / coronavirus Education news
-   * College shutdown / coronavirus College shutdown news
+   * School closure / coronavirus School closure news
+   * College / coronavirus College news
    * Student loan / coronavirus Student loan news
