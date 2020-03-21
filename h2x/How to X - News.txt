@@ -31,5 +31,7 @@ How to X - News
    * Recession / coronavirus Recession news
 * Education / coronavirus Education news
    * School closure / coronavirus School closure news
-   * College / coronavirus College news
+   * Standardized tests / coronavirus Standardized tests news
+   * Higher education / coronavirus Higher education news
    * Student loan / coronavirus Student loan news
+   * Students with disabilities / coronavirus Students with disabilities news
