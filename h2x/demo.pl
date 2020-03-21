@@ -227,7 +227,7 @@ sub printonecase($$) {
       # <base href="https://www.google.com/">
     s/â€Ž//gs;
     s/ Â//gs;
-    s|"/images|"https://www.google.com/images|g;
+    s|"/(images|logos)|"https://www.google.com/$1|g;
 
     my $stuff = "<div class=\"box\">";
     $stuff .= "<div class=\"title\">";
