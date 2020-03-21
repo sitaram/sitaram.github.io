@@ -302,7 +302,7 @@ sub printonecase($$) {
 sub search($) {
   my $query = lc(shift);
   return "https://www.google.com/search?q=" . uri_escape($query) . "&pws=0&gl=us&gws_rd=cr"
-    . ($query =~ /\bnews\b/ ? "&tbm=nws" : "");
+    . ($query =~ /^coronavirus\b/i ? "&tbm=nws" : "");
 }
 
 sub fetch_url($$$$) {

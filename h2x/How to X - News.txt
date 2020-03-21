@@ -3,35 +3,36 @@ How to X - News
 [Format: for each topic, a hierarchy of <subtopic> / <search query>, and number these 12+]
 
 
-20. Coronavirus news
+20. Coronavirus
 
-* Health / coronavirus Health news
-   * Research / coronavirus health Research news
-   * Vaccines / coronavirus Vaccines news
-   * Trends / coronavirus health Trends news
-   * Advice / coronavirus health Advice news
-   * Testing / coronavirus Testing news
-* Regional updates / coronavirus Regional updates news
-   * NYC / coronavirus NYC news
-   * California / coronavirus California news
-   * USA / coronavirus USA news
-   * Italy / coronavirus Italy news
-   * Iran / coronavirus Iran news
-   * China / coronavirus China news
-   * South Korea / coronavirus South Korea news
-* Politics / coronavirus Politics news
-   * Trump / coronavirus Trump news
-   * Pence / coronavirus Pence news
-* Lockdown / coronavirus Lockdown news
-   * Tips / coronavirus Tips news
-* Celebrity / coronavirus Celebrity news
-* Travel / coronavirus Travel news
-* Sports / coronavirus Sports news
-* Jobs / coronavirus Jobs news
-   * Recession / coronavirus Recession news
-* Education / coronavirus Education news
-   * School closure / coronavirus School closure news
-   * Standardized tests / coronavirus Standardized tests news
-   * Higher education / coronavirus Higher education news
-   * Student loan / coronavirus Student loan news
-   * Students with disabilities / coronavirus Students with disabilities news
+* Health / coronavirus Health
+   * Vaccines / coronavirus Vaccines
+   * Medicines / coronavirus Medicines
+   * Trends / coronavirus health Trends
+   * Advice / coronavirus health Advice
+   * Testing / coronavirus Testing
+   * Research / coronavirus health Research
+* Regional updates / coronavirus countries
+   * NYC / coronavirus NYC
+   * California / coronavirus California
+   * USA / coronavirus USA
+   * Italy / coronavirus Italy
+   * Iran / coronavirus Iran
+   * China / coronavirus China
+   * South Korea / coronavirus South Korea
+* Politics / coronavirus Politics
+   * Trump / coronavirus Trump
+   * Pence / coronavirus Pence
+* Lockdown / coronavirus Lockdown
+   * Tips / coronavirus Tips
+* Celebrity / coronavirus Celebrity
+* Travel / coronavirus Travel
+* Sports / coronavirus Sports
+* Jobs / coronavirus Jobs
+   * Recession / coronavirus Recession
+* Education / coronavirus Education
+   * School closure / coronavirus School closure
+   * Standardized tests / coronavirus Standardized tests
+   * Higher education / coronavirus Higher education
+   * Student loan / coronavirus Student loan
+   * Students with disabilities / coronavirus Students with disabilities
