@@ -88,7 +88,6 @@ sub printonecase($$) {
     my $top_stories = /\biows2d\b/;  # Whether it is the top stories module on the google SRP
     my $top_stories_style = $top_stories ? <<"EOF" : "";
       .box {
-        width: 50%;
         padding-top: 0;
         margin-bottom: 0;
       }
@@ -96,9 +95,9 @@ sub printonecase($$) {
         display: none;
       }
       .expando {
-        margin-right: 0;
+        margin-top: -27px;
       }
-      .chip {
+      .chip, .toc {
         font-weight: normal;
       }
       \@media only screen and (max-width: 600px) {
@@ -116,15 +115,28 @@ EOF
 
     my $blue_style = 0 && !$top_stories ? <<"EOF" : "";
     .box {
+      width: 200%;
       border: 1px solid #a8c8ff;
       background-color: #f0f6ff;
-      margin-bottom: 18px;
+      margin-bottom: 8px;
+    }
+    .expando {
+      margin-right: 50%;
     }
     .bar {
       margin-bottom: 8px;
     }
     .chip {
       border: 1px solid #a8c8ff;
+    }
+    \@media only screen and (max-width: 600px) {
+      .expando {
+        margin-right: 0;
+      }
+      .box {
+        width: calc(100% - 31px);
+        margin-bottom: 8px;
+      }
     }
 EOF
 
@@ -138,9 +150,12 @@ EOF
       .QmUzgb, .U5LfPc, .NFQFxe, .nChh6e { height: fit-content !important; }  /* shorten some divs */
       .kno-kp { background-color: white; }
       .box {
+        width: 650px;
+        font: initial;
+        font-family: Roboto, sans-serif, arial;
+        font-size: 15px;
         padding: 20px 20px 0 200px;
         margin: 8px 0 0 -200px;
-        width: 200%;
         position: relative;
         margin-bottom: 8px;
       }
@@ -165,10 +180,10 @@ EOF
         font-size: 14px;
         float: right;
         margin-right: 50%;
+        margin-top: 4px;
       }
       .expando {
         float: right;
-        margin-right: 50%;
         margin-left: 8px;
         font-weight: bold;
       }
@@ -237,13 +252,11 @@ EOF
       \@media only screen and (max-width: 600px) {
         .box {
           padding: 12px 16px 4px;
-          margin: 0 -1px 8px -1px;
+          margin: 0 -1px 0 -1px;
           width: calc(100% - 31px);
         }
-        .title {
-        }
         .bar {
-          margin: 4px -16px;
+          margin: 8px -16px 0;
           padding: 0 16px;
         }
         .nextlink {
@@ -274,8 +287,8 @@ EOF
     s|"/(images\|logos)|"https://www.google.com/$1|g;
 
     my $stuff = "<div class=\"box\">";
-    $stuff .= "<div class=\"title\">";
     $stuff .= "<div class=\"expando\">See all</div>";
+    $stuff .= "<div class=\"title\">";
 
     my $n = 0;
     my @parts = split / > /, $path;
