@@ -110,34 +110,41 @@ sub printonecase($$) {
         .chiplink:first-child {
           margin-left: 16px;
         }
+        .expando {
+          margin-right: 0;
+        }
+        .box {
+          width: calc(100% - 31px);
+          margin-bottom: 8px;
+        }
       }
 EOF
 
     my $blue_style = 0 && !$top_stories ? <<"EOF" : "";
-    .box {
-      width: 200%;
-      border: 1px solid #a8c8ff;
-      background-color: #f0f6ff;
-      margin-bottom: 8px;
-    }
-    .expando {
-      margin-right: 50%;
-    }
-    .bar {
-      margin-bottom: 8px;
-    }
-    .chip {
-      border: 1px solid #a8c8ff;
-    }
-    \@media only screen and (max-width: 600px) {
-      .expando {
-        margin-right: 0;
-      }
       .box {
-        width: calc(100% - 31px);
+        width: 200%;
+        border: 1px solid #a8c8ff;
+        background-color: #f0f6ff;
         margin-bottom: 8px;
       }
-    }
+      .expando {
+        margin-right: 50%;
+      }
+      .bar {
+        margin-bottom: 8px;
+      }
+      .chip {
+        border: 1px solid #a8c8ff;
+      }
+      \@media only screen and (max-width: 600px) {
+        .expando {
+          margin-right: 0;
+        }
+        .box {
+          width: calc(100% - 31px);
+          margin-bottom: 8px;
+        }
+      }
 EOF
 
     s|^|
