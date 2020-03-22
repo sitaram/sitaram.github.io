@@ -254,7 +254,7 @@ EOF
       \@media only screen and (max-width: 600px) {
         .box {
           padding: 12px 16px 4px;
-          margin: 0 -1px 8px -1px;
+          margin: 0 -1px 0 -1px;
           width: calc(100% - 31px);
         }
         .bar {
@@ -263,6 +263,7 @@ EOF
         }
         .nextlink {
           margin-right: 0;
+          margin-bottom: 8px;
         }
         .expando {
           margin-right: 0;
