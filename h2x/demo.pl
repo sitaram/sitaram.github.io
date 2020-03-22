@@ -110,12 +110,8 @@ sub printonecase($$) {
         .chiplink:first-child {
           margin-left: 16px;
         }
-        .expando {
-          margin-right: 0;
-        }
         .box {
-          width: calc(100% - 31px);
-          margin-bottom: 8px;
+          width: 34%;
         }
       }
 EOF
