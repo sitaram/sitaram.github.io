@@ -182,7 +182,6 @@ EOF
       .nextlink {
         font-size: 14px;
         float: right;
-        margin-right: 50%;
         margin-top: 4px;
       }
       .expando {
