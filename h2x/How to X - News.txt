@@ -13,15 +13,7 @@ How to X - News
    * Testing / coronavirus Testing
 * Lockdown / coronavirus Lockdown
    * Tips / coronavirus Tips
-* Regional updates / coronavirus countries
-   * NYC / coronavirus NYC
-   * California / coronavirus California
-   * USA / coronavirus USA
-   * Italy / coronavirus Italy
-   * Iran / coronavirus Iran
-   * China / coronavirus China
-   * South Korea / coronavirus South Korea
-* Travel / coronavirus Travel
+   * Travel / coronavirus Travel
 * Jobs / coronavirus Jobs
    * Financial security / coronavirus Financial security
    * Unemployment benefits / coronavirus Unemployment benefits
@@ -37,6 +29,14 @@ How to X - News
    * Higher education / coronavirus Higher education
    * Student loan / coronavirus Student loan
    * Students with disabilities / coronavirus Students with disabilities
+* Regional updates / coronavirus countries
+   * NYC / coronavirus NYC
+   * California / coronavirus California
+   * USA / coronavirus USA
+   * Italy / coronavirus Italy
+   * Iran / coronavirus Iran
+   * China / coronavirus China
+   * South Korea / coronavirus South Korea
 * Sports / coronavirus Sports
 * Politicians / coronavirus Politics
    * Donald Trump / coronavirus Donald Trump

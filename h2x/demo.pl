@@ -80,10 +80,53 @@ sub printonecase($$) {
   my $p = 0;
   foreach my $path (@paths) {
     print $path, " @ ", $file{$path}, " / ", $query{$path}, " ", $p;
-    fetch_url($dir, $file{$path}, $query{$path}, $ua);  # do not overwrite.
+    fetch_url($p, $dir, $file{$path}, $query{$path}, $ua);  # do not overwrite.
 
     open(F, "$dir/$file{$path}-orig.html") or die "$dir/$file{$path}-orig.html: $!";
     undef $/; $_ = <F>; $/ = "\n"; close F;
+
+    my $top_stories = /\biows2d\b/;  # Whether it is the top stories module on the google SRP
+    my $top_stories_style = $top_stories ? <<"EOF" : "";
+      .box {
+        width: 50%;
+        padding-top: 0;
+        margin-bottom: 0;
+      }
+      .title {
+        display: none;
+      }
+      .expando {
+        margin-right: 0;
+      }
+      .chip {
+        font-weight: normal;
+      }
+      \@media only screen and (max-width: 600px) {
+        .box {
+          margin-left: -8px;
+        }
+        .box, .bar {
+          padding: 0;
+        }
+        .chiplink:first-child {
+          margin-left: 16px;
+        }
+      }
+EOF
+
+    my $blue_style = 0 && !$top_stories ? <<"EOF" : "";
+    .box {
+      border: 1px solid #a8c8ff;
+      background-color: #f0f6ff;
+      margin-bottom: 18px;
+    }
+    .bar {
+      margin-bottom: 8px;
+    }
+    .chip {
+      border: 1px solid #a8c8ff;
+    }
+EOF
 
     s|^|
       <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
@@ -95,12 +138,11 @@ sub printonecase($$) {
       .QmUzgb, .U5LfPc, .NFQFxe, .nChh6e { height: fit-content !important; }  /* shorten some divs */
       .kno-kp { background-color: white; }
       .box {
-        border: 1px solid #a8c8ff;
-        background-color: #f0f6ff;
         padding: 20px 20px 0 200px;
-        margin: 8px 0 18px -200px;
+        margin: 8px 0 0 -200px;
         width: 200%;
         position: relative;
+        margin-bottom: 8px;
       }
       .title {
         font-weight: bold;
@@ -148,7 +190,7 @@ sub printonecase($$) {
       .bar {
         white-space: nowrap;
         overflow-x: auto;
-        margin: 8px 0px;
+        margin: 8px 0 0 0;
       }
       .bar::-webkit-scrollbar {
         display: none;
@@ -156,9 +198,9 @@ sub printonecase($$) {
       .chip {
         font-size: 15px;
         display: inline-block;
-        border: 1px solid #a8c8ff;
+        border: 1px solid #ddd;
         border-radius: 24px;
-        padding: 8px 16px;
+        padding: 6px 12px;
         margin: 4px;
         cursor: pointer;
         color: #222;
@@ -211,6 +253,8 @@ sub printonecase($$) {
           margin-right: 0;
         }
       }
+      $blue_style
+      $top_stories_style
       </style>
       <script>
         \$(document).ready(function() {
@@ -268,8 +312,8 @@ sub printonecase($$) {
     foreach my $child (@{$children{$path}}) {
       my $target = $file{$path . " > " . $child};
       my $svg = '<svg class="icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M20.49 19l-5.73-5.73C15.53 12.2 16 10.91 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.41 0 2.7-.47 3.77-1.24L19 20.49 20.49 19zM5 9.5C5 7.01 7.01 5 9.5 5S14 7.01 14 9.5 11.99 14 9.5 14 5 11.99 5 9.5z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
-      my $url = $target ? "$target.html" : search($query{$path . " > " . $child});
-      $stuff .= "<a href=\"$url\"><div class=\"chip\">$svg$child</div></a>";
+      my $url = $target ? "$target.html" : search($query{$path . " > " . $child}, -1);
+      $stuff .= "<a class=\"chiplink\" href=\"$url\"><div class=\"chip\">$svg$child</div></a>";
       print $child, " / ", $query{$path . " > " . $child};
       print "---> ".$target if $target;
     }
@@ -292,26 +336,34 @@ sub printonecase($$) {
     $stuff .= "</div>";
 
     #s/<div id="topstuff">/$&$stuff/;
-    s/<div id="(center_col|gsr)">/$&$stuff/;
+    if (/\biows2d\b/) {
+      s/<div class=.*?\biows2d\b.*?>Top stories/$&$stuff/;
+    } else {
+      s/<div id="(center_col|gsr)">/$&$stuff/;
+    }
 
     open(F, ">$dir/$file{$path}.html") or die "$dir/$file{$path}.html: $!"; print F; close F;
     $p++;
   }
 }
 
-sub search($) {
+sub search($$) {
   my $query = lc(shift);
+  my $pathnum = shift;
   return "https://www.google.com/search?q=" . uri_escape($query) . "&pws=0&gl=us&gws_rd=cr"
-    . ($query =~ /^coronavirus\b/i ? "&tbm=nws" : "");
+    . ($pathnum != 0 && $query =~ /^coronavirus\b/i ? "&tbm=nws" : "");
+  # if $pathnum == 0, i.e. for the first page in each case, use the google srp top stories
+  # for the rest, if it is the coronavirus use case, then use the news property with tbm=nws.
 }
 
-sub fetch_url($$$$) {
+sub fetch_url($$$$$) {
+  my $pathnum = shift;  # 0 for the first one page in this case, etc.
   my $dir = shift;
   my $file = shift;
   my $query = shift;
   my $ua = shift;
   unless (-s "$dir/$file-orig.html") {
-    my $url = search($query);
+    my $url = search($query, $pathnum);
     print("Fetching \"$url\"");
     system("wget -O \"$dir/$file-orig.html\" -U\"$ua\" \"$url\"");
   }
