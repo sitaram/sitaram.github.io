@@ -73,6 +73,9 @@
       .toc-title {
         display: none;
       }
+      .outerbar {
+        position: relative;
+      }
       .bar {
         white-space: nowrap;
         overflow-x: auto;
@@ -80,6 +83,21 @@
       }
       .bar::-webkit-scrollbar {
         display: none;
+      }
+      .scrollright {
+        position: absolute;
+        right: -12px;
+        z-index: 1000;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20);
+        border-radius: 32px;
+        background-color: white;
+        padding: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .scrollright-svg {
+        fill: #3C4043;
       }
       .chip {
         font-size: 14px;
@@ -146,6 +164,9 @@
         .bar {
           margin: 8px -16px 8px;
           padding: 0 16px;
+        }
+        .scrollright {
+          display: none;
         }
         .toc {
           padding-top: 56px;
@@ -251,7 +272,21 @@
 
       </style>
       <script>
+        function update_scrollbutton() {
+          var lastChip = $('.chip2').last();
+          if (!lastChip.get().length ||
+              lastChip.offset().left + lastChip.outerWidth() < $('.outerbar').offset().left + $('.outerbar').outerWidth()) {
+            $('.scrollright').hide();
+          }
+        }
         $(document).ready(function() {
+          update_scrollbutton();
+          $('.scrollright').click(function() {
+                                   console.log($('.bar').scrollLeft());
+            $('.bar').animate({scrollLeft: $('.bar').scrollLeft() + 300}, 200,
+                               update_scrollbutton);
+          });
+
           $('.expando').click(function() {
             var is_mobile = !$('.is_mobile').is(':hidden');
             if (is_mobile) {

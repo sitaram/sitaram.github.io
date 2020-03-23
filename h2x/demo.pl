@@ -17,6 +17,13 @@ my $case;
 my $casenum = 0;
 my %query = %children = ();
 
+sub arrow_back_svg { '<svg class="' . $_[0] . '" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>'; }
+sub search_svg { '<svg class="' . $_[0] . '" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M20.49 19l-5.73-5.73C15.53 12.2 16 10.91 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.41 0 2.7-.47 3.77-1.24L19 20.49 20.49 19zM5 9.5C5 7.01 7.01 5 9.5 5S14 7.01 14 9.5 11.99 14 9.5 14 5 11.99 5 9.5z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>'; }
+sub keyboard_arrow_right_svg { '<svg class="' . $_[0] . '" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M9.71 18.71l-1.42-1.42 5.3-5.29-5.3-5.29 1.42-1.42 6.7 6.71z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>'; }
+sub keyboard_arrow_down_svg { '<svg class="' . $_[0] . '" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M12 16.41l-6.71-6.7 1.42-1.42 5.29 5.3 5.29-5.3 1.42 1.42z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>'; }
+sub keyboard_arrow_up_svg { '<svg class="' . $_[0] . '" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M17.29 15.71L12 10.41l-5.29 5.3-1.42-1.42L12 7.59l6.71 6.7z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>'; }
+sub color_circle_icon { '<img class="' . $_[0] . '" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmZmIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiLz48cGF0aCBmaWxsPSIjMzRBODUzIiBkPSJNMTAgMThjLTIuMTQgMC00LjE1LS44My01LjY2LTIuMzRsMi4xMi0yLjEyQzcuNDEgMTQuNDggOC42NiAxNSAxMCAxNXMyLjU5LS41MiAzLjU0LTEuNDZsMi4xMiAyLjEyQTcuOTQ5IDcuOTQ5IDAgMCAxIDEwIDE4eiIvPjxwYXRoIGZpbGw9IiNFQTQzMzUiIGQ9Ik0xMy41NCA2LjQ2QzEyLjU5IDUuNTIgMTEuMzQgNSAxMCA1cy0yLjU5LjUyLTMuNTQgMS40Nkw0LjM0IDQuMzRDNS44NSAyLjgzIDcuODYgMiAxMCAyczQuMTUuODMgNS42NiAyLjM0bC0yLjEyIDIuMTJ6Ii8+PHBhdGggZmlsbD0iI0ZCQkMwNSIgZD0iTTQuMzQgMTUuNjZDMi44MyAxNC4xNSAyIDEyLjE0IDIgMTBzLjgzLTQuMTUgMi4zNC01LjY2bDIuMTIgMi4xMkM1LjUyIDcuNDEgNSA4LjY2IDUgMTBzLjUyIDIuNTkgMS40NiAzLjU0bC0yLjEyIDIuMTJ6Ii8+PHBhdGggZmlsbD0iIzQyODVGNCIgZD0iTTE1LjY2IDE1LjY2bC0yLjEyLTIuMTJjLjk0LS45NSAxLjQ2LTIuMiAxLjQ2LTMuNTRzLS41Mi0yLjU5LTEuNDYtMy41NGwyLjEyLTIuMTJDMTcuMTcgNS44NSAxOCA3Ljg2IDE4IDEwcy0uODMgNC4xNS0yLjM0IDUuNjZ6Ii8+PC9zdmc+Cg==" class="K8Ci1" alt="" data-atf="1" height="20" width="20">'; }
+
 while (<>) {
   s/[\r\n]*$//;
   next if /^$/;
@@ -131,22 +138,24 @@ sub printonecase($$) {
 EOF
 
     my $blue_style = 1 && !$top_stories ? <<"EOF" : "";
-      .box {
-        width: 200%;
-        border-bottom: 1px solid #85C2FF;
-        box-shadow: inset 0px 4px 10px 0 #DAEDFF;
-        background: radial-gradient(farthest-side circle at 108px 34px, #EDF6FF, #DAEDFF 86%);
-        margin-bottom: 8px;
-        margin-top: -8px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-      .expando {
-        margin-right: 50%;
-        background-color: white;
-        border: 1px solid #85C2FF;
-      }
       \@media only screen and (max-width: 600px) {
+        /* move above \@media if desktop needs to be blue */
+        .box {
+          width: 200%;
+          border-bottom: 1px solid #85C2FF;
+          box-shadow: inset 0px 4px 10px 0 #DAEDFF;
+          background: radial-gradient(farthest-side circle at 108px 34px, #EDF6FF, #DAEDFF 86%);
+          margin-bottom: 8px;
+          margin-top: -8px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+        .expando {
+          margin-right: 50%;
+          background-color: white;
+          border: 1px solid #85C2FF;
+        }
+        /* this part stays here for mobile */
         .box {
           margin-top: 0;
           width: calc(100% - 31px);
@@ -236,6 +245,9 @@ EOF
       .toc-title {
         display: none;
       }
+      .outerbar {
+        position: relative;
+      }
       .bar {
         white-space: nowrap;
         overflow-x: auto;
@@ -243,6 +255,21 @@ EOF
       }
       .bar::-webkit-scrollbar {
         display: none;
+      }
+      .scrollright {
+        position: absolute;
+        right: -12px;
+        z-index: 1000;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20);
+        border-radius: 32px;
+        background-color: white;
+        padding: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .scrollright-svg {
+        fill: #3C4043;
       }
       .chip {
         font-size: 14px;
@@ -310,6 +337,9 @@ EOF
           margin: 8px -16px 8px;
           padding: 0 16px;
         }
+        .scrollright {
+          display: none;
+        }
         .toc {
           padding-top: 56px;
           position: fixed;
@@ -373,7 +403,21 @@ EOF
       $top_stories_style
       </style>
       <script>
+        function update_scrollbutton() {
+          var lastChip = \$('.chip2').last();
+          if (!lastChip.get().length \|\|
+              lastChip.offset().left + lastChip.outerWidth() < \$('.outerbar').offset().left + \$('.outerbar').outerWidth()) {
+            \$('.scrollright').hide();
+          }
+        }
         \$(document).ready(function() {
+          update_scrollbutton();
+          \$('.scrollright').click(function() {
+                                   console.log(\$('.bar').scrollLeft());
+            \$('.bar').animate({scrollLeft: \$('.bar').scrollLeft() + 300}, 200,
+                               update_scrollbutton);
+          });
+
           \$('.expando').click(function() {
             var is_mobile = !\$('.is_mobile').is(':hidden');
             if (is_mobile) {
@@ -401,9 +445,9 @@ EOF
 
     my $stuff = "<div class=\"is_mobile\"></div>";
     $stuff .= "<div class=\"box\">";
-    my $keyboard_arrow_right_svg = '<svg class="expando-right-icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M9.71 18.71l-1.42-1.42 5.3-5.29-5.3-5.29 1.42-1.42 6.7 6.71z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
-    my $keyboard_arrow_down_svg = '<svg class="expando-down-icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M12 16.41l-6.71-6.7 1.42-1.42 5.29 5.3 5.29-5.3 1.42 1.42z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
-    my $keyboard_arrow_up_svg = '<svg class="expando-up-icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M17.29 15.71L12 10.41l-5.29 5.3-1.42-1.42L12 7.59l6.71 6.7z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
+    my $keyboard_arrow_up_svg = keyboard_arrow_up_svg("expando-up-icon");
+    my $keyboard_arrow_down_svg = keyboard_arrow_down_svg("expando-down-icon");
+    my $keyboard_arrow_right_svg = keyboard_arrow_right_svg("expando-right-icon");
     $stuff .= "<div class=\"chip expando\">${keyboard_arrow_down_svg} All topics${keyboard_arrow_right_svg}</div>";
     $stuff .= "<div class=\"expando-hide\">${keyboard_arrow_up_svg}Hide</div>";
     $stuff .= "<div class=\"title\">";
@@ -423,13 +467,11 @@ EOF
     }
     $stuff .= "</div>";
 
-
-    my $color_circle_icon = '<img class="subtitle-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmZmIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiLz48cGF0aCBmaWxsPSIjMzRBODUzIiBkPSJNMTAgMThjLTIuMTQgMC00LjE1LS44My01LjY2LTIuMzRsMi4xMi0yLjEyQzcuNDEgMTQuNDggOC42NiAxNSAxMCAxNXMyLjU5LS41MiAzLjU0LTEuNDZsMi4xMiAyLjEyQTcuOTQ5IDcuOTQ5IDAgMCAxIDEwIDE4eiIvPjxwYXRoIGZpbGw9IiNFQTQzMzUiIGQ9Ik0xMy41NCA2LjQ2QzEyLjU5IDUuNTIgMTEuMzQgNSAxMCA1cy0yLjU5LjUyLTMuNTQgMS40Nkw0LjM0IDQuMzRDNS44NSAyLjgzIDcuODYgMiAxMCAyczQuMTUuODMgNS42NiAyLjM0bC0yLjEyIDIuMTJ6Ii8+PHBhdGggZmlsbD0iI0ZCQkMwNSIgZD0iTTQuMzQgMTUuNjZDMi44MyAxNC4xNSAyIDEyLjE0IDIgMTBzLjgzLTQuMTUgMi4zNC01LjY2bDIuMTIgMi4xMkM1LjUyIDcuNDEgNSA4LjY2IDUgMTBzLjUyIDIuNTkgMS40NiAzLjU0bC0yLjEyIDIuMTJ6Ii8+PHBhdGggZmlsbD0iIzQyODVGNCIgZD0iTTE1LjY2IDE1LjY2bC0yLjEyLTIuMTJjLjk0LS45NSAxLjQ2LTIuMiAxLjQ2LTMuNTRzLS41Mi0yLjU5LTEuNDYtMy41NGwyLjEyLTIuMTJDMTcuMTcgNS44NSAxOCA3Ljg2IDE4IDEwcy0uODMgNC4xNS0yLjM0IDUuNjZ6Ii8+PC9zdmc+Cg==" class="K8Ci1" alt="" data-atf="1" height="20" width="20">';
-    $stuff .= "<div class=\"subtitle\">${color_circle_icon} &nbsp;Explore news topics &nbsp;&middot; &nbsp;<a class=\"bc\" href=\"#\">Learn more</a></div>";
+    my $color_circle_icon = color_circle_icon("subtitle-icon");
+    $stuff .= "<div class=\"subtitle\">${color_circle_icon} &nbsp;Explore news topics &nbsp;&middot; &nbsp;<a class=\"bc\" href=\"javascript:void(0);\">Learn more</a></div>";
 
     $stuff .= "<div class=\"toc\">";
-
-    my $arrow_back_svg = '<svg class="icon toc-back" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
+    my $arrow_back_svg = arrow_back_svg("icon toc-back");
     $stuff .= "<div class=\"toc-title\">${arrow_back_svg} <span class=\"toc-title-text\">Related topics</span></div>";
     my $i = 0;
     foreach my $t (@paths) {
@@ -455,11 +497,12 @@ EOF
     }
     $stuff .= "</div>";
 
+    $stuff .= "<div class=\"outerbar\">";
     $stuff .= "<div class=\"bar\">";
     foreach my $child (@{$children{$path}}) {
       my $target = $file{$path . " > " . $child};
-      my $search_svg = '<svg class="icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M20.49 19l-5.73-5.73C15.53 12.2 16 10.91 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.41 0 2.7-.47 3.77-1.24L19 20.49 20.49 19zM5 9.5C5 7.01 7.01 5 9.5 5S14 7.01 14 9.5 11.99 14 9.5 14 5 11.99 5 9.5z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
       my $url = $target ? "$target.html" : search($query{$path . " > " . $child}, -1);
+      my $search_svg = search_svg("icon");
       $stuff .= "<a class=\"chiplink\" href=\"$url\"><div class=\"chip chip2\">$search_svg$child</div></a>";
       print $child, " / ", $query{$path . " > " . $child};
       print "---> ".$target if $target;
@@ -471,7 +514,10 @@ EOF
       $stuff .= "<a class=\"bc nextlink\" href=\"$file{$n}.html\">See next: $t &#xBB;</a>";
     }
     print "";
-    $stuff .= "</div>";
+    $stuff .= "</div>";  # bar
+
+    $stuff .= "<div class=\"scrollright\">" . keyboard_arrow_right_svg("scrollright-svg") . "</div>";
+    $stuff .= "</div>";  # outerbar
 
     #s/<div id="topstuff">/$&$stuff/;
     if (/\biows2d\b/) {
