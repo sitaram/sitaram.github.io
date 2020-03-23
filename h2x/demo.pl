@@ -165,7 +165,7 @@ EOF
           margin-right: 0;
         }
         .nextlink {
-          margin-right: 8px;
+          margin-right: 16px;
         }
       }
 EOF
@@ -475,7 +475,7 @@ EOF
     $stuff .= "</div>";
 
     my $color_circle_icon = color_circle_icon("subtitle-icon");
-    $stuff .= "<div class=\"subtitle\">${color_circle_icon} &nbsp;Explore news topics &nbsp;&middot; &nbsp;<a class=\"bc\" href=\"javascript:void(0);\">Learn more</a></div>";
+    $stuff .= "<div class=\"subtitle\">${color_circle_icon} &nbsp;Explore this topic &nbsp;&middot; &nbsp;<a class=\"bc\" href=\"javascript:void(0);\">Learn more</a></div>";
 
     $stuff .= "<div class=\"toc\">";
     my $arrow_back_svg = arrow_back_svg("icon toc-back");
