@@ -219,6 +219,9 @@ EOF
         text-decoration: none;
         color: #222;
       }
+      .expando-hide {
+        display: none;
+      }
       \@media (hover: hover) {
         .expando:hover {
           text-decoration: underline;
@@ -264,7 +267,10 @@ EOF
         margin: 0 4px -4px 0;
         fill: #3C4043;
       }
-      .expando-icon {
+      .expando-right-icon {
+        display: none;
+      }
+      .expando-down-icon {
         margin: 0 0 -4px 0;
         fill: #3C4043;
       }
@@ -346,6 +352,14 @@ EOF
         .expando {
           margin-right: 0;
         }
+        .expando-right-icon {
+          display: block;
+          margin: 0 0 -4px 0;
+          fill: #3C4043;
+        }
+        .expando-down-icon {
+          display: none;
+        }
         .chiplink:first-child {
           margin-left: 8px;
         }
@@ -362,7 +376,7 @@ EOF
             } else {
               if (\$('.toc').is(':hidden')) {
                 \$(this).data('text', \$(this).html());
-                \$(this).html('Hide');
+                \$(this).html(\$('.expando-hide').html());
               } else {
                 \$(this).html(\$(this).data('text'));
               }
@@ -382,8 +396,11 @@ EOF
 
     my $stuff = "<div class=\"is_mobile\"></div>";
     $stuff .= "<div class=\"box\">";
-    my $keyboard_arrow_right_svg = '<svg class="expando-icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M9.71 18.71l-1.42-1.42 5.3-5.29-5.3-5.29 1.42-1.42 6.7 6.71z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
-    $stuff .= "<div class=\"chip expando\">See all$keyboard_arrow_right_svg</div>";
+    my $keyboard_arrow_right_svg = '<svg class="expando-right-icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M9.71 18.71l-1.42-1.42 5.3-5.29-5.3-5.29 1.42-1.42 6.7 6.71z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
+    my $keyboard_arrow_down_svg = '<svg class="expando-down-icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M12 16.41l-6.71-6.7 1.42-1.42 5.29 5.3 5.29-5.3 1.42 1.42z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
+    my $keyboard_arrow_up_svg = '<svg class="expando-up-icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M17.29 15.71L12 10.41l-5.29 5.3-1.42-1.42L12 7.59l6.71 6.7z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
+    $stuff .= "<div class=\"chip expando\">${keyboard_arrow_down_svg}All topics${keyboard_arrow_right_svg}</div>";
+    $stuff .= "<div class=\"expando-hide\">${keyboard_arrow_up_svg}Hide</div>";
     $stuff .= "<div class=\"title\">";
 
     my $n = 0;

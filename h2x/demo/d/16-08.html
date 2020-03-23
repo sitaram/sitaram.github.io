@@ -56,6 +56,9 @@
         text-decoration: none;
         color: #222;
       }
+      .expando-hide {
+        display: none;
+      }
       @media (hover: hover) {
         .expando:hover {
           text-decoration: underline;
@@ -101,7 +104,10 @@
         margin: 0 4px -4px 0;
         fill: #3C4043;
       }
-      .expando-icon {
+      .expando-right-icon {
+        display: none;
+      }
+      .expando-down-icon {
         margin: 0 0 -4px 0;
         fill: #3C4043;
       }
@@ -183,6 +189,14 @@
         .expando {
           margin-right: 0;
         }
+        .expando-right-icon {
+          display: block;
+          margin: 0 0 -4px 0;
+          fill: #3C4043;
+        }
+        .expando-down-icon {
+          display: none;
+        }
         .chiplink:first-child {
           margin-left: 8px;
         }
@@ -240,7 +254,7 @@
             } else {
               if ($('.toc').is(':hidden')) {
                 $(this).data('text', $(this).html());
-                $(this).html('Hide');
+                $(this).html($('.expando-hide').html());
               } else {
                 $(this).html($(this).data('text'));
               }
