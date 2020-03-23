@@ -330,7 +330,7 @@ EOF
       \@media only screen and (max-width: 600px) {
         .is_mobile { display: block; }
         .attrib {
-          padding: 6px 16px;
+          padding: 6px 16px 12px;
         }
         .box {
           padding: 12px 16px 4px;
