@@ -264,7 +264,8 @@
       <script>
         function update_scrollbutton() {
           var lastChip = $('.chip2').last();
-          if (lastChip.get().length &&
+          var is_mobile = !$('.is_mobile').is(':hidden');
+          if (!is_mobile && lastChip.get().length &&
               lastChip.offset().left + lastChip.outerWidth() > $('.outerbar').offset().left + $('.outerbar').outerWidth()) {
             $('.scrollright').show();
           } else {
