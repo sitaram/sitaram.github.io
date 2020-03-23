@@ -12,15 +12,22 @@
         font: initial;
         font-family: Roboto, sans-serif, arial;
         font-size: 15px;
-        padding: 20px 20px 0 200px;
+        padding: 0 20px 0 200px;
         margin: 8px 0 0 -200px;
         position: relative;
         margin-bottom: 8px;
       }
       .title {
         font-weight: bold;
-        font-size: 16px;
+        font-size: 18px;
         color: #222;
+      }
+      .subtitle {
+        font-size: 14px;
+        margin-top: 8px;
+      }
+      .subtitle-icon {
+        vertical-align: -30%;
       }
       .bc {
         text-decoration: none;
@@ -41,8 +48,9 @@
       }
       .expando {
         float: right;
+        font-weight: normal;
         margin-left: 8px;
-        font-weight: bold;
+        margin-top: -3px;
       }
       .expando, .expando:link, .expando:active, .expando:visited {
         text-decoration: none;
@@ -59,23 +67,29 @@
         line-height: 20px;
         margin-top: 8px;
       }
+      .toc-title {
+        display: none;
+      }
       .bar {
         white-space: nowrap;
         overflow-x: auto;
-        margin: 8px 0 0 0;
+        margin: 8px 0 8px 0;
       }
       .bar::-webkit-scrollbar {
         display: none;
       }
       .chip {
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 14px;
         display: inline-block;
         border: 1px solid #ddd;
         border-radius: 24px;
         padding: 6px 12px;
-        margin: 4px;
         cursor: pointer;
         color: #222;
+      }
+      .chip2 {
+        margin: 4px;
       }
       @media (hover: hover) {
         .chip:hover {
@@ -85,6 +99,10 @@
       }
       .icon {
         margin: 0 4px -4px 0;
+        fill: #3C4043;
+      }
+      .expando-icon {
+        margin: 0 0 -4px 0;
         fill: #3C4043;
       }
       .attrib {
@@ -105,16 +123,58 @@
       .attriblink:active {
         text-decoration: none;
       }
+      .is_mobile { display: none; }
 
       @media only screen and (max-width: 600px) {
+        .is_mobile { display: block; }
         .box {
           padding: 12px 16px 4px;
-          margin: 0 -1px 0 -1px;
+          margin: 0;
           width: calc(100% - 31px);
         }
         .bar {
-          margin: 8px -16px 0;
+          margin: 8px -16px 8px;
           padding: 0 16px;
+        }
+        .toc {
+          padding-top: 56px;
+          position: fixed;
+          overflow: scroll;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 100%;  /* off screen */
+          right: 0;
+          bottom: 0;
+          background-color: white;
+          z-index: 10000000;
+        }
+        .toc-back {
+          padding: 16px;
+          margin: -16px;
+        }
+        .toc-title {
+          position: fixed;
+          left: 0;
+          right: 0;
+          top: 0;
+          background: white;
+          display: block;
+          font-size: 18px;
+          color: #222;
+          line-height: 18px;
+          margin-bottom: 16px;
+          padding: 12px;
+          padding-top: 16px;
+          border-bottom: 1px solid #ccc;
+          box-shadow: 0 3px 3px #ddd;
+        }
+        .toc-line {
+          line-height: 32px;
+        }
+        .toc-title-text {
+          vertical-align: 33%;
+          margin-left: 12px;
         }
         .nextlink {
           margin-right: 0;
@@ -123,33 +183,50 @@
         .expando {
           margin-right: 0;
         }
+        .chiplink:first-child {
+          margin-left: 8px;
+        }
       }
       
-            .box {
+            .iows2d {
+        display: block !important;  /* no flex */
+      }
+      .box {
         padding-top: 0;
         margin-bottom: 0;
       }
       .title {
         display: none;
       }
+      .subtitle {
+        display: none;
+      }
       .expando {
-        margin-top: -27px;
+        margin-top: -32px;
       }
       .chip, .toc {
         font-weight: normal;
       }
       @media only screen and (max-width: 600px) {
         .box {
-          margin-left: -8px;
+          margin: -8px -16px 0px -8px;
+          width: 100%;
+        }
+        .expando {
+          margin-top: -30px;
+        }
+        .bar {
+          margin-top: 4px;
+          margin-bottom: 8px;
         }
         .box, .bar {
-          padding: 0;
+          padding: 0 16px 0 8px;
+        }
+        .subtitle {
+          margin: -4px 0 8px 16px;
         }
         .chiplink:first-child {
           margin-left: 16px;
-        }
-        .box {
-          width: 34%;
         }
       }
 
@@ -157,11 +234,21 @@
       <script>
         $(document).ready(function() {
           $('.expando').click(function() {
-            if ($('.toc').is(':hidden'))
-              $(this).text('Hide');
-            else
-              $(this).text('See all');
-            $('.toc').slideToggle(150);
+            var is_mobile = !$('.is_mobile').is(':hidden');
+            if (is_mobile) {
+              $('.toc').show().animate({left: 0}, 200);
+            } else {
+              if ($('.toc').is(':hidden')) {
+                $(this).data('text', $(this).html());
+                $(this).html('Hide');
+              } else {
+                $(this).html($(this).data('text'));
+              }
+              $('.toc').slideToggle(150);
+            }
+          });
+          $('.toc-back').click(function() {
+            $('.toc').animate({left: '100%'}, 200);
           });
         });
       </script>

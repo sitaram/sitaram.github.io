@@ -87,6 +87,9 @@ sub printonecase($$) {
 
     my $top_stories = /\biows2d\b/;  # Whether it is the top stories module on the google SRP
     my $top_stories_style = $top_stories ? <<"EOF" : "";
+      .iows2d {
+        display: block !important;  /* no flex */
+      }
       .box {
         padding-top: 0;
         margin-bottom: 0;
@@ -94,51 +97,66 @@ sub printonecase($$) {
       .title {
         display: none;
       }
+      .subtitle {
+        display: none;
+      }
       .expando {
-        margin-top: -27px;
+        margin-top: -32px;
       }
       .chip, .toc {
         font-weight: normal;
       }
       \@media only screen and (max-width: 600px) {
         .box {
-          margin-left: -8px;
+          margin: -8px -16px 0px -8px;
+          width: 100%;
+        }
+        .expando {
+          margin-top: -30px;
+        }
+        .bar {
+          margin-top: 4px;
+          margin-bottom: 8px;
         }
         .box, .bar {
-          padding: 0;
+          padding: 0 16px 0 8px;
+        }
+        .subtitle {
+          margin: -4px 0 8px 16px;
         }
         .chiplink:first-child {
           margin-left: 16px;
         }
-        .box {
-          width: 34%;
-        }
       }
 EOF
 
-    my $blue_style = 0 && !$top_stories ? <<"EOF" : "";
+    my $blue_style = 1 && !$top_stories ? <<"EOF" : "";
       .box {
         width: 200%;
-        border: 1px solid #a8c8ff;
-        background-color: #f0f6ff;
+        border-bottom: 1px solid #85C2FF;
+        box-shadow: inset 0px 4px 10px 0 #DAEDFF;
+        background: radial-gradient(farthest-side circle at 108px 34px, #EDF6FF, #DAEDFF 86%);
         margin-bottom: 8px;
+        margin-top: -8px;
+        padding-top: 20px;
+        padding-bottom: 20px;
       }
       .expando {
         margin-right: 50%;
-      }
-      .bar {
-        margin-bottom: 8px;
-      }
-      .chip {
-        border: 1px solid #a8c8ff;
+        background-color: white;
+        border: 1px solid #85C2FF;
       }
       \@media only screen and (max-width: 600px) {
+        .box {
+          margin-top: 0;
+          width: calc(100% - 31px);
+          margin-bottom: 8px;
+        }
         .expando {
           margin-right: 0;
         }
-        .box {
-          width: calc(100% - 31px);
-          margin-bottom: 8px;
+        .nextlink {
+          margin-right: 8px;
         }
       }
 EOF
@@ -157,15 +175,22 @@ EOF
         font: initial;
         font-family: Roboto, sans-serif, arial;
         font-size: 15px;
-        padding: 20px 20px 0 200px;
+        padding: 0 20px 0 200px;
         margin: 8px 0 0 -200px;
         position: relative;
         margin-bottom: 8px;
       }
       .title {
         font-weight: bold;
-        font-size: 16px;
+        font-size: 18px;
         color: #222;
+      }
+      .subtitle {
+        font-size: 14px;
+        margin-top: 8px;
+      }
+      .subtitle-icon {
+        vertical-align: -30%;
       }
       .bc {
         text-decoration: none;
@@ -186,8 +211,9 @@ EOF
       }
       .expando {
         float: right;
+        font-weight: normal;
         margin-left: 8px;
-        font-weight: bold;
+        margin-top: -3px;
       }
       .expando, .expando:link, .expando:active, .expando:visited {
         text-decoration: none;
@@ -204,23 +230,29 @@ EOF
         line-height: 20px;
         margin-top: 8px;
       }
+      .toc-title {
+        display: none;
+      }
       .bar {
         white-space: nowrap;
         overflow-x: auto;
-        margin: 8px 0 0 0;
+        margin: 8px 0 8px 0;
       }
       .bar::-webkit-scrollbar {
         display: none;
       }
       .chip {
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 14px;
         display: inline-block;
         border: 1px solid #ddd;
         border-radius: 24px;
         padding: 6px 12px;
-        margin: 4px;
         cursor: pointer;
         color: #222;
+      }
+      .chip2 {
+        margin: 4px;
       }
       \@media (hover: hover) {
         .chip:hover {
@@ -230,6 +262,10 @@ EOF
       }
       .icon {
         margin: 0 4px -4px 0;
+        fill: #3C4043;
+      }
+      .expando-icon {
+        margin: 0 0 -4px 0;
         fill: #3C4043;
       }
       .attrib {
@@ -250,16 +286,58 @@ EOF
       .attriblink:active {
         text-decoration: none;
       }
+      .is_mobile { display: none; }
 
       \@media only screen and (max-width: 600px) {
+        .is_mobile { display: block; }
         .box {
           padding: 12px 16px 4px;
-          margin: 0 -1px 0 -1px;
+          margin: 0;
           width: calc(100% - 31px);
         }
         .bar {
-          margin: 8px -16px 0;
+          margin: 8px -16px 8px;
           padding: 0 16px;
+        }
+        .toc {
+          padding-top: 56px;
+          position: fixed;
+          overflow: scroll;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 100%;  /* off screen */
+          right: 0;
+          bottom: 0;
+          background-color: white;
+          z-index: 10000000;
+        }
+        .toc-back {
+          padding: 16px;
+          margin: -16px;
+        }
+        .toc-title {
+          position: fixed;
+          left: 0;
+          right: 0;
+          top: 0;
+          background: white;
+          display: block;
+          font-size: 18px;
+          color: #222;
+          line-height: 18px;
+          margin-bottom: 16px;
+          padding: 12px;
+          padding-top: 16px;
+          border-bottom: 1px solid #ccc;
+          box-shadow: 0 3px 3px #ddd;
+        }
+        .toc-line {
+          line-height: 32px;
+        }
+        .toc-title-text {
+          vertical-align: 33%;
+          margin-left: 12px;
         }
         .nextlink {
           margin-right: 0;
@@ -268,6 +346,9 @@ EOF
         .expando {
           margin-right: 0;
         }
+        .chiplink:first-child {
+          margin-left: 8px;
+        }
       }
       $blue_style
       $top_stories_style
@@ -275,11 +356,21 @@ EOF
       <script>
         \$(document).ready(function() {
           \$('.expando').click(function() {
-            if (\$('.toc').is(':hidden'))
-              \$(this).text('Hide');
-            else
-              \$(this).text('See all');
-            \$('.toc').slideToggle(150);
+            var is_mobile = !\$('.is_mobile').is(':hidden');
+            if (is_mobile) {
+              \$('.toc').show().animate({left: 0}, 200);
+            } else {
+              if (\$('.toc').is(':hidden')) {
+                \$(this).data('text', \$(this).html());
+                \$(this).html('Hide');
+              } else {
+                \$(this).html(\$(this).data('text'));
+              }
+              \$('.toc').slideToggle(150);
+            }
+          });
+          \$('.toc-back').click(function() {
+            \$('.toc').animate({left: '100%'}, 200);
           });
         });
       </script>
@@ -289,8 +380,10 @@ EOF
     s/ Â//gs;
     s|"/(images\|logos)|"https://www.google.com/$1|g;
 
-    my $stuff = "<div class=\"box\">";
-    $stuff .= "<div class=\"expando\">See all</div>";
+    my $stuff = "<div class=\"is_mobile\"></div>";
+    $stuff .= "<div class=\"box\">";
+    my $keyboard_arrow_right_svg = '<svg class="expando-icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M9.71 18.71l-1.42-1.42 5.3-5.29-5.3-5.29 1.42-1.42 6.7 6.71z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
+    $stuff .= "<div class=\"chip expando\">See all$keyboard_arrow_right_svg</div>";
     $stuff .= "<div class=\"title\">";
 
     my $n = 0;
@@ -308,7 +401,14 @@ EOF
     }
     $stuff .= "</div>";
 
+
+    my $color_circle_icon = '<img class="subtitle-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmZmIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiLz48cGF0aCBmaWxsPSIjMzRBODUzIiBkPSJNMTAgMThjLTIuMTQgMC00LjE1LS44My01LjY2LTIuMzRsMi4xMi0yLjEyQzcuNDEgMTQuNDggOC42NiAxNSAxMCAxNXMyLjU5LS41MiAzLjU0LTEuNDZsMi4xMiAyLjEyQTcuOTQ5IDcuOTQ5IDAgMCAxIDEwIDE4eiIvPjxwYXRoIGZpbGw9IiNFQTQzMzUiIGQ9Ik0xMy41NCA2LjQ2QzEyLjU5IDUuNTIgMTEuMzQgNSAxMCA1cy0yLjU5LjUyLTMuNTQgMS40Nkw0LjM0IDQuMzRDNS44NSAyLjgzIDcuODYgMiAxMCAyczQuMTUuODMgNS42NiAyLjM0bC0yLjEyIDIuMTJ6Ii8+PHBhdGggZmlsbD0iI0ZCQkMwNSIgZD0iTTQuMzQgMTUuNjZDMi44MyAxNC4xNSAyIDEyLjE0IDIgMTBzLjgzLTQuMTUgMi4zNC01LjY2bDIuMTIgMi4xMkM1LjUyIDcuNDEgNSA4LjY2IDUgMTBzLjUyIDIuNTkgMS40NiAzLjU0bC0yLjEyIDIuMTJ6Ii8+PHBhdGggZmlsbD0iIzQyODVGNCIgZD0iTTE1LjY2IDE1LjY2bC0yLjEyLTIuMTJjLjk0LS45NSAxLjQ2LTIuMiAxLjQ2LTMuNTRzLS41Mi0yLjU5LTEuNDYtMy41NGwyLjEyLTIuMTJDMTcuMTcgNS44NSAxOCA3Ljg2IDE4IDEwcy0uODMgNC4xNS0yLjM0IDUuNjZ6Ii8+PC9zdmc+Cg==" class="K8Ci1" alt="" data-atf="1" height="20" width="20">';
+    $stuff .= "<div class=\"subtitle\">${color_circle_icon} &nbsp;Explore news topics &nbsp;&middot; &nbsp;<a class=\"bc\" href=\"#\">Learn more</a></div>";
+
     $stuff .= "<div class=\"toc\">";
+
+    my $arrow_back_svg = '<svg class="icon toc-back" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
+    $stuff .= "<div class=\"toc-title\">${arrow_back_svg} <span class=\"toc-title-text\">Related topics</span></div>";
     my $i = 0;
     foreach my $t (@paths) {
       if ($i == 0) { $i++; next; }
@@ -317,19 +417,28 @@ EOF
       $u =~ s/(^>*)(.*)/$2/;
       my $e = "&emsp;" x (length($1)*2);
       if ($i == $p) { $u = "<b>$u</b>" }
-      $u = "$e<a class=\"bc\" href=\"$file{$t}.html\">$u</a>";
+      $u = "$e<a class=\"bc toc-line\" href=\"$file{$t}.html\">$u</a>";
       $stuff .= $u;
       $stuff .= "<br>";
       $i++;
     }
     $stuff .= "</div>";
 
+    # attribution
+    if ($casenum < $num_finaid) {  # rest are horizontal use cases.
+      $stuff .= "<div class=\"attrib\">Source: <a class=\"attriblink\"
+        href=\"https://www.ncan.org/page/About\">National College Attainment
+        Network</a>, <a class=\"attriblink\" href=\"https://www.nasfaa.org/About_NASFAA\">National
+        Association of Student Financial Aid Administrators</a></div>";
+    }
+    $stuff .= "</div>";
+
     $stuff .= "<div class=\"bar\">";
     foreach my $child (@{$children{$path}}) {
       my $target = $file{$path . " > " . $child};
-      my $svg = '<svg class="icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M20.49 19l-5.73-5.73C15.53 12.2 16 10.91 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.41 0 2.7-.47 3.77-1.24L19 20.49 20.49 19zM5 9.5C5 7.01 7.01 5 9.5 5S14 7.01 14 9.5 11.99 14 9.5 14 5 11.99 5 9.5z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
+      my $search_svg = '<svg class="icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M20.49 19l-5.73-5.73C15.53 12.2 16 10.91 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.41 0 2.7-.47 3.77-1.24L19 20.49 20.49 19zM5 9.5C5 7.01 7.01 5 9.5 5S14 7.01 14 9.5 11.99 14 9.5 14 5 11.99 5 9.5z"/><path d="M0 0h24v24H0V0z" fill="none"/></svg>';
       my $url = $target ? "$target.html" : search($query{$path . " > " . $child}, -1);
-      $stuff .= "<a class=\"chiplink\" href=\"$url\"><div class=\"chip\">$svg$child</div></a>";
+      $stuff .= "<a class=\"chiplink\" href=\"$url\"><div class=\"chip chip2\">$search_svg$child</div></a>";
       print $child, " / ", $query{$path . " > " . $child};
       print "---> ".$target if $target;
     }
@@ -342,18 +451,9 @@ EOF
     print "";
     $stuff .= "</div>";
 
-    # attribution
-    if ($casenum < $num_finaid) {  # rest are horizontal use cases.
-      $stuff .= "<div class=\"attrib\">Source: <a class=\"attriblink\"
-        href=\"https://www.ncan.org/page/About\">National College Attainment
-        Network</a>, <a class=\"attriblink\" href=\"https://www.nasfaa.org/About_NASFAA\">National
-        Association of Student Financial Aid Administrators</a></div>";
-    }
-    $stuff .= "</div>";
-
     #s/<div id="topstuff">/$&$stuff/;
     if (/\biows2d\b/) {
-      s/<div class=.*?\biows2d\b.*?>Top stories/$&$stuff/;
+      s/<div class=.*?\biows2d\b.*?><div.*?>Top stories<\/div>/$&$stuff/;
     } else {
       s/<div id="(center_col|gsr)">/$&$stuff/;
     }
