@@ -491,13 +491,6 @@ EOF
     }
     $stuff .= "</div>";
 
-    # attribution
-    if ($casenum < $num_finaid) {  # rest are horizontal use cases.
-      $stuff .= "<div class=\"attrib\">Source: <a class=\"attriblink\"
-        href=\"https://www.ncan.org/page/About\">National College Attainment
-        Network</a>, <a class=\"attriblink\" href=\"https://www.nasfaa.org/About_NASFAA\">National
-        Association of Student Financial Aid Administrators</a></div>";
-    }
     $stuff .= "</div>";
 
     $stuff .= "<div class=\"outerbar\">";
@@ -521,6 +514,14 @@ EOF
 
     $stuff .= "<div class=\"scrollright\">" . keyboard_arrow_right_svg("scrollright-svg") . "</div>";
     $stuff .= "</div>";  # outerbar
+
+    # attribution
+    if ($casenum < $num_finaid) {  # rest are horizontal use cases.
+      $stuff .= "<div class=\"attrib\">Source: <a class=\"attriblink\"
+        href=\"https://www.ncan.org/page/About\">National College Attainment
+        Network</a>, <a class=\"attriblink\" href=\"https://www.nasfaa.org/About_NASFAA\">National
+        Association of Student Financial Aid Administrators</a></div>";
+    }
 
     #s/<div id="topstuff">/$&$stuff/;
     if (/\biows2d\b/) {
