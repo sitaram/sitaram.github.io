@@ -363,7 +363,7 @@ EOF
         }
         .toc-title {
           position: fixed;
-          left: 0;
+          left: 100%;  /* off screen */
           right: 0;
           top: 0;
           background: white;
@@ -429,6 +429,12 @@ EOF
             var is_mobile = !\$('.is_mobile').is(':hidden');
             if (is_mobile) {
               \$('.toc').show().animate({left: 0}, 200);
+              \$('.toc-title').show().animate({left: 0}, 200);
+              window.history.pushState('forward', null, '');
+              \$(window).on('popstate', function() {
+                \$('.toc').animate({left: '100%'}, 200);
+                \$('.toc-title').animate({left: '100%'}, 200);
+              });
             } else {
               if (\$('.toc').is(':hidden')) {
                 \$(this).data('text', \$(this).html());
@@ -441,8 +447,11 @@ EOF
           });
           \$('.toc-back').click(function() {
             \$('.toc').animate({left: '100%'}, 200);
+            \$('.toc-title').animate({left: '100%'}, 200);
           });
+
         });
+
       </script>
       |s;
       # <base href="https://www.google.com/">

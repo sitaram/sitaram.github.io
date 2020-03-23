@@ -191,7 +191,7 @@
         }
         .toc-title {
           position: fixed;
-          left: 0;
+          left: 100%;  /* off screen */
           right: 0;
           top: 0;
           background: white;
@@ -287,6 +287,12 @@
             var is_mobile = !$('.is_mobile').is(':hidden');
             if (is_mobile) {
               $('.toc').show().animate({left: 0}, 200);
+              $('.toc-title').show().animate({left: 0}, 200);
+              window.history.pushState('forward', null, '');
+              $(window).on('popstate', function() {
+                $('.toc').animate({left: '100%'}, 200);
+                $('.toc-title').animate({left: '100%'}, 200);
+              });
             } else {
               if ($('.toc').is(':hidden')) {
                 $(this).data('text', $(this).html());
@@ -299,8 +305,11 @@
           });
           $('.toc-back').click(function() {
             $('.toc').animate({left: '100%'}, 200);
+            $('.toc-title').animate({left: '100%'}, 200);
           });
+
         });
+
       </script>
       <!doctype html><html itemscope="" itemtype="http://schema.org/SearchResultsPage" lang="en"><head><meta content="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><meta content="origin" name="referrer"><title>coronavirus tips - Google Search</title><script nonce="ObQ40rLp9nyPPk0qdnSRgQ==">(function(){window.google={kEI:'wRp3Xt3mEsu5-wS45YDgBw',kEXPI:'0,1353746,5663,731,223,756,4348,207,2414,790,10,1051,175,364,925,510,4,60,155,548,39,75,383,140,106,5,768,242,4,5,335,436,228,109,40,28,75,5,291,116,5,83,1126350,1197695,194,135,125,41,329077,1294,7105,180,3382,1716,1604,2044,314,893,633,1770,1137,4795,5298,2488,259,69,5033,10931,279,1191,14056,861,7055,2445,2646,793,845,4693,927,9286,363,895,7930,3961,1800,512,2111,4859,1361,284,4039,4968,447,2573,4747,3121,7907,1,1812,4020,978,4788,1,3142,5297,2054,920,873,402,815,2559,416,2784,2607,315,724,1142,2792,448,12,866,12,5,7,6022,2884,20,317,3173,1345,2777,520,399,2277,8,443,2353,62,827,704,1279,2213,201,1,327,149,1103,327,513,517,1466,8,48,820,484,2954,312,1135,1,3,661,1402,606,1839,184,546,1187,43,144,377,375,1572,747,283,1,145,1033,113,328,1169,115,16,126,2801,2246,474,549,790,29,719,1039,3227,773,2074,5,1320,6313,4684,1829,2663,641,2450,2458,1226,497,965,128,153,3654,1274,3451,64,908,2,1493,6,288,1768,881,1251,265,2894,2525,226,599,396,828,1,219,10,612,185,2,293,1523,244,188,3,346,101,2,98,185,814,183,388,174,120,1,377,88,729,132,561,123,1907,440,266,151,53,134,1666,317,855,269,206,502,1,724,263,551,7,440,28,99,31,1,70,158,470,2,528,592,273,121,87,606,2,2,1173,415,49,143,921,1571,432,211,4,1306,28,2,192,142,179,181,59,75,2,5,298,70,4,218,600,471,154,180,483,141,17,219,253,60,198,105,571,406,40,64,411,180,95,378,90,314,154,136,340,794,6,45,8,63,833,1,5833732,3277,1802617,4194968,6180414,20598662,24',kBL:'Q_rD'};google.sn='newssearch';google.kHL='en';})();(function(){google.lc=[];google.li=0;google.getEI=function(a){for(var c;a&&(!a.getAttribute||!(c=a.getAttribute("eid")));)a=a.parentNode;return c||google.kEI};google.getLEI=function(a){for(var c=null;a&&(!a.getAttribute||!(c=a.getAttribute("leid")));)a=a.parentNode;return c};google.ml=function(){return null};google.time=function(){return Date.now()};google.log=function(a,c,b,d,g){if(b=google.logUrl(a,c,b,d,g)){a=new Image;var e=google.lc,f=google.li;e[f]=a;a.onerror=a.onload=a.onabort=function(){delete e[f]};google.vel&&google.vel.lu&&google.vel.lu(b);a.src=b;google.li=f+1}};google.logUrl=function(a,c,b,d,g){var e="",f=google.ls||"";b||-1!=c.search("&ei=")||(e="&ei="+google.getEI(d),-1==c.search("&lei=")&&(d=google.getLEI(d))&&(e+="&lei="+d));d="";!b&&google.cshid&&-1==c.search("&cshid=")&&"slh"!=a&&(d="&cshid="+google.cshid);b=b||"/"+(g||"gen_204")+"?atyp=i&ct="+a+"&cad="+c+e+f+"&zx="+google.time()+d;/^http:/i.test(b)&&"https:"==window.location.protocol&&(google.ml(Error("a"),!1,{src:b,glmm:1}),b="");return b};}).call(this);(function(){google.y={};google.x=function(a,b){if(a)var c=a.id;else{do c=Math.random();while(google.y[c])}google.y[c]=[a,b];return!1};google.lm=[];google.plm=function(a){google.lm.push.apply(google.lm,a)};google.lq=[];google.load=function(a,b,c){google.lq.push([[a],b,c])};google.loadAll=function(a,b){google.lq.push([a,b])};}).call(this);google.f={};(function(){
 document.documentElement.addEventListener("submit",function(b){var a;if(a=b.target){var c=a.getAttribute("data-submitfalse");a="1"==c||"q"==c&&!a.elements.q.value?!0:!1}else a=!1;a&&(b.preventDefault(),b.stopPropagation())},!0);document.documentElement.addEventListener("click",function(b){var a;a:{for(a=b.target;a&&a!=document.documentElement;a=a.parentElement)if("A"==a.tagName){a="1"==a.getAttribute("data-nohref");break a}a=!1}a&&b.preventDefault()},!0);}).call(this);(function(){google.hs={h:true,sie:false};})();var h="function"==typeof Object.defineProperties?Object.defineProperty:function(a,b,c){a!=Array.prototype&&a!=Object.prototype&&(a[b]=c.value)},k=function(a){a=["object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global,a];for(var b=0;b<a.length;++b){var c=a[b];if(c&&c.Math==Math)return c}throw Error("a");},l=k(this),m=function(a,b){if(b){var c=l;a=a.split(".");for(var d=0;d<a.length-1;d++){var e=a[d];e in c||(c[e]={});c=c[e]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&null!=

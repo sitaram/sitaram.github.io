@@ -191,7 +191,7 @@
         }
         .toc-title {
           position: fixed;
-          left: 0;
+          left: 100%;  /* off screen */
           right: 0;
           top: 0;
           background: white;
@@ -287,6 +287,12 @@
             var is_mobile = !$('.is_mobile').is(':hidden');
             if (is_mobile) {
               $('.toc').show().animate({left: 0}, 200);
+              $('.toc-title').show().animate({left: 0}, 200);
+              window.history.pushState('forward', null, '');
+              $(window).on('popstate', function() {
+                $('.toc').animate({left: '100%'}, 200);
+                $('.toc-title').animate({left: '100%'}, 200);
+              });
             } else {
               if ($('.toc').is(':hidden')) {
                 $(this).data('text', $(this).html());
@@ -299,8 +305,11 @@
           });
           $('.toc-back').click(function() {
             $('.toc').animate({left: '100%'}, 200);
+            $('.toc-title').animate({left: '100%'}, 200);
           });
+
         });
+
       </script>
       <!doctype html><html itemscope="" itemtype="http://schema.org/SearchResultsPage" lang="en"><head><meta charset="UTF-8"><meta content="width=device-width,maximum-scale=1.0,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes" name="viewport"><meta content="telephone=no" name="format-detection"><meta content="address=no" name="format-detection"><meta content="origin" name="referrer"><meta content="notranslate" name="google"><link href="https://www.google.com/images/branding/product/1x/gsa_android_144dp.png" rel="icon"><meta content="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><title>coronavirus tom hanks - Google Search</title><script nonce="yR/oJMDX8LrQA0rKQNSXwA==">(function(){window.google={kEI:'-hp3XtaDItb5-gTr5ZKABg',kBL:'Q_rD'};google.sn='newssearch';google.kHL='en';})();(function(){google.lc=[];google.li=0;google.getEI=function(a){for(var c;a&&(!a.getAttribute||!(c=a.getAttribute("eid")));)a=a.parentNode;return c||google.kEI};google.getLEI=function(a){for(var c=null;a&&(!a.getAttribute||!(c=a.getAttribute("leid")));)a=a.parentNode;return c};google.ml=function(){return null};google.time=function(){return Date.now()};google.log=function(a,c,b,d,g){if(b=google.logUrl(a,c,b,d,g)){a=new Image;var e=google.lc,f=google.li;e[f]=a;a.onerror=a.onload=a.onabort=function(){delete e[f]};google.vel&&google.vel.lu&&google.vel.lu(b);a.src=b;google.li=f+1}};google.logUrl=function(a,c,b,d,g){var e="",f=google.ls||"";b||-1!=c.search("&ei=")||(e="&ei="+google.getEI(d),-1==c.search("&lei=")&&(d=google.getLEI(d))&&(e+="&lei="+d));d="";!b&&google.cshid&&-1==c.search("&cshid=")&&"slh"!=a&&(d="&cshid="+google.cshid);b=b||"/"+(g||"gen_204")+"?atyp=i&ct="+a+"&cad="+c+e+f+"&zx="+google.time()+d;/^http:/i.test(b)&&"https:"==window.location.protocol&&(google.ml(Error("a"),!1,{src:b,glmm:1}),b="");return b};}).call(this);(function(){google.y={};google.x=function(a,b){if(a)var c=a.id;else{do c=Math.random();while(google.y[c])}google.y[c]=[a,b];return!1};google.lm=[];google.plm=function(a){google.lm.push.apply(google.lm,a)};google.lq=[];google.load=function(a,b,c){google.lq.push([[a],b,c])};google.loadAll=function(a,b){google.lq.push([a,b])};}).call(this);google.f={};(function(){
 document.documentElement.addEventListener("submit",function(b){var a;if(a=b.target){var c=a.getAttribute("data-submitfalse");a="1"==c||"q"==c&&!a.elements.q.value?!0:!1}else a=!1;a&&(b.preventDefault(),b.stopPropagation())},!0);document.documentElement.addEventListener("click",function(b){var a;a:{for(a=b.target;a&&a!=document.documentElement;a=a.parentElement)if("A"==a.tagName){a="1"==a.getAttribute("data-nohref");break a}a=!1}a&&b.preventDefault()},!0);}).call(this);(function(){google.hs={h:true,sie:false};})();(function(){google.c={gl:true,lhc:false,slp:false};(function(){
