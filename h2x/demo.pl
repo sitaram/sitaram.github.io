@@ -257,6 +257,7 @@ EOF
         display: none;
       }
       .scrollright {
+        display: none;
         position: absolute;
         right: -12px;
         z-index: 1000;
@@ -405,8 +406,10 @@ EOF
       <script>
         function update_scrollbutton() {
           var lastChip = \$('.chip2').last();
-          if (!lastChip.get().length \|\|
-              lastChip.offset().left + lastChip.outerWidth() < \$('.outerbar').offset().left + \$('.outerbar').outerWidth()) {
+          if (lastChip.get().length &&
+              lastChip.offset().left + lastChip.outerWidth() > \$('.outerbar').offset().left + \$('.outerbar').outerWidth()) {
+            \$('.scrollright').show();
+          } else {
             \$('.scrollright').hide();
           }
         }
