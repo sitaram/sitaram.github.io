@@ -1,12 +1,17 @@
-﻿How to X - Financial Well-being
-[Please make a copy and share with sitaram@google.com]
-[Format: for each topic, a hierarchy of <subtopic> / <search query>, and number these 12+]
+﻿How to X - Financial well-being
+[Cross-vertical journey]
+[Format: for each topic, a hierarchy of <subtopic> [/ <search query>]]
+[Demo: desktop / mobile]
 
 
-22. Financial Well-being
+22. Financial well-being
 
 
 * Jobs
+   * Work from home
+   * Companies hiring now
 * Benefits
-* Stimulus
+   * Unemployment
 * Student debt
+* Economy
+* Stimulus bill
