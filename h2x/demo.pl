@@ -28,7 +28,7 @@ while (<>) {
   s/[\r\n]*$//;
   next if /^$/;
   # drop header
-  next if /How to X - Financial Aid/ || /Please make a copy/ || /Format:/;
+  next if /How to X - / || /^\[.*\]/;
 
   if (/^(\d+\.) *(.*)/) {  # top level is use case
     if ($case) { printcase(); }
