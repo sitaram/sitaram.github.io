@@ -44,11 +44,10 @@ while (<>) {
     %seen = ();
     @path = ($case);
     $query{$case} = lc $case;
-  } elsif (/^( *)\* (.*?)( *\/ *(.*))*/) {  # Format:  * <label> / <query>
+  } elsif (/^( *)\* (.*?) *\/ *(.*)/) {  # Format:  * <label> / <query>
     my $depth = length($1) / 3;
     my $label = $2;
-    my $query = $3 or $label;
-    print $label, " -> ", $query, "XXXXX";
+    my $query = $3;
     $#path = $depth;
     my $path = join(" > ", @path);
     push @paths, $path unless $seen{$path};
