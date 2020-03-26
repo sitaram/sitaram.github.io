@@ -48,7 +48,6 @@ while (<>) {
     my $depth = length($1) / 3;
     my $label = $2;
     my $query = $3;
-    print $label, " -> ", $query, "XXXXX";
     $#path = $depth;
     my $path = join(" > ", @path);
     push @paths, $path unless $seen{$path};
