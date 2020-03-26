@@ -8,5 +8,5 @@
 
 * Jobs / jobs
 * Benefits / benefits
-* Stimulus / stimulus
+* Stimulus
 * Student debt / debt
