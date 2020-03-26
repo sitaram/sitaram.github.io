@@ -13,5 +13,20 @@
 * Benefits / benefits
    * Unemployment / unemployment
 * Student debt / student debt
+   * How much is my student loan debt? / How much is my student loan debt
+      * NSLDS / National student loan data system
+      * Annual Credit Report / Annual Credit Report
+   * Federal loan relief / Federal loan relief
+      * Forbearance / Forbearance
+      * Deferment / Deferment 
+      * Forgiveness / Forgiveness 
+      * Payment reduction / Payment reduction 
+   * Private loan relief / Private loan relief 
+      * Forbearance / Forbearance 
+      * Deferment / Deferment 
+      * Refinance / Refinance 
+   * Financial planning / Financial planning 
+   * Unemployment and student loan repayment / Unemployment and student loan repayment 
+   * Underemployment and student loan repayment / Underemployment and student loan repayment
 * Economy / economy
 * Stimulus bill / stimulus bill
