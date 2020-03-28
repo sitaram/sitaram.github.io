@@ -1,0 +1,314 @@
+
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <style>
+      #promos { display: none; }
+      #taw { display: none; }
+      #cnt { overflow-y: hidden; }
+      .QmUzgb, .U5LfPc, .NFQFxe, .nChh6e { height: fit-content !important; }  /* shorten some divs */
+      .kno-kp { background-color: white; }
+      .box {
+        width: 650px;
+        font: initial;
+        font-family: Roboto, sans-serif, arial;
+        font-size: 15px;
+        padding: 0 20px 0 200px;
+        margin: 8px 0 0 -200px;
+        position: relative;
+        margin-bottom: 8px;
+      }
+      .title {
+        font-weight: bold;
+        font-size: 18px;
+        color: #222;
+      }
+      .subtitle {
+        font-size: 14px;
+        margin-top: 8px;
+      }
+      .subtitle-icon {
+        vertical-align: -30%;
+      }
+      .bc {
+        text-decoration: none;
+      }
+      .bc:active, .bc:visited, .bc:link {
+        color: #222;
+      }
+      @media (hover: hover) {
+        .bc:hover {
+          text-decoration: underline;
+          color: #1a0dab;
+        }
+      }
+      .nextlink {
+        font-size: 14px;
+        float: right;
+        margin-top: 4px;
+      }
+      .expando {
+        float: right;
+        font-weight: normal;
+        margin-left: 8px;
+        margin-top: -3px;
+      }
+      .expando, .expando:link, .expando:active, .expando:visited {
+        text-decoration: none;
+        color: #222;
+      }
+      .expando-hide {
+        display: none;
+      }
+      @media (hover: hover) {
+        .expando:hover {
+          text-decoration: underline;
+          color: #1a0dab;
+        }
+      }
+      .toc {
+        display: none;
+        line-height: 20px;
+        margin-top: 8px;
+      }
+      .toc-title {
+        display: none;
+      }
+      .outerbar {
+        position: relative;
+      }
+      .bar {
+        white-space: nowrap;
+        overflow-x: auto;
+        margin: 8px 0 8px 0;
+      }
+      .bar::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollright {
+        display: none;
+        position: absolute;
+        right: -12px;
+        z-index: 1000;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20);
+        border-radius: 32px;
+        background-color: white;
+        padding: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .scrollright-svg {
+        fill: #3C4043;
+      }
+      .chip {
+        font-size: 14px;
+        line-height: 14px;
+        display: inline-block;
+        border: 1px solid #ddd;
+        border-radius: 24px;
+        padding: 6px 12px;
+        cursor: pointer;
+        color: #222;
+      }
+      .chip2 {
+        margin: 4px;
+      }
+      @media (hover: hover) {
+        .chip:hover {
+          text-decoration: underline;
+          color: #1a0dab;
+        }
+      }
+      .icon {
+        display: inline;
+        margin: 0 4px -4px 0;
+        fill: #3C4043;
+      }
+      .expando-right-icon {
+        display: none;
+      }
+      .expando-down-icon, .expando-up-icon {
+        display: inline;
+        margin: 0 0 -4px 0;
+        fill: #3C4043;
+      }
+      .expando-up-icon {
+        display: inline;
+      }
+      .attrib {
+        border-top: 1px solid #ddd;
+        display: inline-block;
+        padding: 6px 0;
+        color: #70757a;
+        font-size: 12px;
+      }
+      .attriblink:link,
+      .attriblink:visited,
+      .attriblink:hover,
+      .attriblink:active {
+        text-decoration: none;
+        cursor: pointer;
+        color: #70757a;
+      }
+      .attriblink:active {
+        text-decoration: none;
+      }
+      .is_mobile { display: none; }
+
+      @media only screen and (max-width: 600px) {
+        .is_mobile { display: block; }
+        .attrib {
+          padding: 6px 16px 12px;
+        }
+        .box {
+          padding: 12px 16px 4px;
+          margin: 0;
+          width: calc(100% - 31px);
+        }
+        .bar {
+          margin: 8px -16px 8px;
+          padding: 0 16px;
+        }
+        .scrollright {
+          display: none;
+        }
+        .toc {
+          padding-top: 56px;
+          position: fixed;
+          overflow: scroll;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 100%;  /* off screen */
+          right: 0;
+          bottom: 0;
+          background-color: white;
+          z-index: 10000000;
+        }
+        .toc-back {
+          padding: 16px;
+          margin: -16px;
+        }
+        .toc-title {
+          position: fixed;
+          left: 100%;  /* off screen */
+          right: 0;
+          top: 0;
+          background: white;
+          display: block;
+          font-size: 18px;
+          color: #222;
+          line-height: 18px;
+          margin-bottom: 16px;
+          padding: 12px;
+          padding-top: 16px;
+          border-bottom: 1px solid #ccc;
+          box-shadow: 0 3px 3px #ddd;
+        }
+        .toc-line {
+          line-height: 32px;
+        }
+        .toc-title-text {
+          vertical-align: 33%;
+          margin-left: 12px;
+        }
+        .nextlink {
+          margin-right: 0;
+          margin-bottom: 8px;
+        }
+        .expando {
+          margin-right: 0;
+        }
+        .expando-right-icon {
+          display: inline;
+          margin: 0 0 -4px 0;
+          fill: #3C4043;
+        }
+        .expando-down-icon {
+          display: none;
+        }
+        .chiplink:first-child {
+          margin-left: 8px;
+        }
+      }
+            @media only screen and (max-width: 600px) {
+        /* move above @media if desktop needs to be blue */
+        .box {
+          width: 200%;
+          border-bottom: 1px solid #85C2FF;
+          box-shadow: inset 0px 4px 10px 0 #DAEDFF;
+          background: radial-gradient(farthest-side circle at 108px 34px, #EDF6FF, #DAEDFF 86%);
+          margin-bottom: 8px;
+          margin-top: -8px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+        .expando {
+          margin-right: 50%;
+          background-color: white;
+          border: 1px solid #85C2FF;
+        }
+        /* this part stays here for mobile */
+        .box {
+          margin-top: 0;
+          width: calc(100% - 31px);
+          margin-bottom: 8px;
+        }
+        .expando {
+          margin-right: 0;
+        }
+        .nextlink {
+          margin-right: 16px;
+        }
+      }
+
+      
+      </style>
+      <script>
+        function update_scrollbutton() {
+          var lastChip = $('.chip2').last();
+          var is_mobile = !$('.is_mobile').is(':hidden');
+          if (!is_mobile && lastChip.get().length &&
+              lastChip.offset().left + lastChip.outerWidth() > $('.outerbar').offset().left + $('.outerbar').outerWidth()) {
+            $('.scrollright').show();
+          } else {
+            $('.scrollright').hide();
+          }
+        }
+        $(document).ready(function() {
+          update_scrollbutton();
+          $('.scrollright').click(function() {
+                                   console.log($('.bar').scrollLeft());
+            $('.bar').animate({scrollLeft: $('.bar').scrollLeft() + 300}, 200,
+                               update_scrollbutton);
+          });
+
+          $('.expando').click(function() {
+            var is_mobile = !$('.is_mobile').is(':hidden');
+            if (is_mobile) {
+              $('.toc').show().animate({left: 0}, 200);
+              $('.toc-title').show().animate({left: 0}, 200);
+              window.history.pushState('forward', null, '');
+              $(window).on('popstate', function() {
+                $('.toc').animate({left: '100%'}, 200);
+                $('.toc-title').animate({left: '100%'}, 200);
+              });
+            } else {
+              if ($('.toc').is(':hidden')) {
+                $(this).data('text', $(this).html());
+                $(this).html($('.expando-hide').html());
+              } else {
+                $(this).html($(this).data('text'));
+              }
+              $('.toc').slideToggle(150);
+            }
+          });
+          $('.toc-back').click(function() {
+            $('.toc').animate({left: '100%'}, 200);
+            $('.toc-title').animate({left: '100%'}, 200);
+          });
+
+        });
+
+      </script>
+      
