@@ -52,18 +52,8 @@ How to X - News
 
 * Country / coronavirus country
    * United States / coronavirus united states
-      * Americans / coronavirus americans
-      * California / coronavirus california
-      * New York / coronavirus new york
    * Japan / coronavirus japan
-      * Japanese people / coronavirus japanese people
-      * Japanese Language / coronavirus japanese language
-      * Prefectures of Japan / coronavirus prefectures of japan
    * United Kingdom / coronavirus united kingdom
-      * British people / coronavirus british people
-      * London / coronavirus london
-      * British Empire / coronavirus british empire
-      * West Midlands / coronavirus west midlands
 * Health / coronavirus health
    * Disease / coronavirus disease
       * Infection / coronavirus infection
@@ -85,12 +75,8 @@ How to X - News
       * Crisis / coronavirus crisis
       * Family / coronavirus family
       * Economy / coronavirus economy
-      * Communication / coronavirus communication
-      * Disaster / coronavirus disaster
    * Gastronomy / coronavirus gastronomy
-      * Restaurant / coronavirus restaurant
 * President / coronavirus president
-   * President of the United States / coronavirus president of the united states
 * Politics / coronavirus politics
    * European Union / coronavirus european union
    * National security / coronavirus national security
@@ -104,9 +90,7 @@ How to X - News
    * Illinois / coronavirus illinois
    * Colorado / coronavirus colorado
 * Disaster / coronavirus disaster
-   * Emergency management / coronavirus emergency management
 * Mass media / coronavirus mass media
-   * Journalism / coronavirus journalism
 * Public health / coronavirus public health
    * Epidemiology / coronavirus epidemiology
    * Community health / coronavirus community health
