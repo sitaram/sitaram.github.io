@@ -73,4 +73,18 @@
 11. How to manage student debt
 
 
-*
+* How much is my student loan debt? / How much is my student loan debt
+   * NSLDS / National student loan data system
+   * Annual Credit Report / Free annual credit report
+* Federal loan relief / Managing federal loans
+   * Forbearance / Student loan forbearance
+   * Deferment / Student loan deferment
+   * Payment reduction / Lower federal loan payments
+   * Forgiveness / Student loan forgiveness
+* Private loan relief / Reduce private loan payments
+   * Forbearance / Private student loan forbearance
+   * Deferment / Private student loan deferment
+   * Refinance / Refinance private student loans
+* Planning for student loan repayment / Prepare student loan plan
+* Unemployment and student loan repayment / Repaying student loans while unemployed
+* Underemployment and student loan repayment / Financial hardship and student loans
